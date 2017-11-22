@@ -40,6 +40,8 @@ gem 'rack'
 
 gem 'byebug'
 
+gem 'pry-rails'
+
 
 
 # Use Capistrano for deployment
