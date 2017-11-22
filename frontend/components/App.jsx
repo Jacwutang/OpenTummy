@@ -8,7 +8,6 @@ import {Route,
 
 const App = () => (
   <div>
-      <Route path = "/" component={SessionFormContainer} />
       <Route path = "/login" component={SessionFormContainer} />
       <Route path = "/signup" component={SessionFormContainer} />
 
