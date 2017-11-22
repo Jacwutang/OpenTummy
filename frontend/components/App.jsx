@@ -6,10 +6,12 @@ import {Route,
   Link,
   HashRouter} from 'react-router-dom';
 
+import {AuthRoute} from '../utils/route_util';
+
 const App = () => (
   <div>
-      <Route path = "/login" component={SessionFormContainer} />
-      <Route path = "/signup" component={SessionFormContainer} />
+      <AuthRoute path = "/login" component={SessionFormContainer} />
+      <AuthRoute path = "/signup" component={SessionFormContainer} />
 
   </div>
 
@@ -17,3 +19,6 @@ const App = () => (
 );
 
 export default App;
+
+// <Route path = "/login" component={SessionFormContainer} />
+// <Route path = "/signup" component={SessionFormContainer} />

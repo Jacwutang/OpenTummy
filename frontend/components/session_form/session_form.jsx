@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link, withRouter} from 'react-router-dom';
+import { Link} from 'react-router-dom';
+// import {withRouter} from 'react-router';
 
 
 //SessionForm is class bc needs to hold state
@@ -11,6 +12,7 @@ class SessionForm extends React.Component{
   }
 
   componentWillReceiveProps(nextProps) {
+    //after render, activate this method
   if (nextProps.loggedIn) {
     this.props.history.push('/');
   }
@@ -95,4 +97,4 @@ class SessionForm extends React.Component{
 }
 
 
-export default withRouter(SessionForm);
+export default SessionForm;
