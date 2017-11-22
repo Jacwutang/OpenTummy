@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 import NavBar from './nav_bar';
 import {logout} from '../../actions/session_actions';
 const mapStateToProps = (state) => ({
-  currentUser: Boolean(state.session.currentUser)
+  currentUser: state.session.currentUser
 
 
 });

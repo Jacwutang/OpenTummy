@@ -13,17 +13,17 @@ const sessionLinks = () => {
 };
 
 
-const loggedInShow = () => {
-  return {};
+const loggedInShow = (currentUser,logout) => (
+  <span>
+    Welcome, {currentUser.username}
+    <button onClick={logout}>Logout</button>
+  </span>
 
-
-}
-
-
-
+);
 
 const NavBar = ({currentUser,logout}) => (
-  currentUser? loggedInShow(currentUser, logout) : sessionLinks()
+
+  currentUser ? loggedInShow(currentUser,logout) : sessionLinks()
 
 );
 
