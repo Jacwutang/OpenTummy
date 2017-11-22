@@ -2,19 +2,19 @@ import React from 'react';
 import {connect} from 'react-redux';
 // import {withRouter} from 'react-router';
 import NavBar from './nav_bar';
-
-const mapStateToProps = (state) => {
-  return {};
-
-
-};
+import {logout} from '../../actions/session_actions';
+const mapStateToProps = (state) => ({
+  currentUser: Boolean(state.session.currentUser)
 
 
-const mapDispatchToProps = (dispatch) => {
+});
 
-  return{};
 
-};
+const mapDispatchToProps = (dispatch) => ({
+  logout: () => dispatch(logout())
+
+
+});
 
 
 export default connect(mapStateToProps,mapDispatchToProps)(NavBar);
