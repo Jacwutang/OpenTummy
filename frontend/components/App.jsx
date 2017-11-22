@@ -7,12 +7,20 @@ import {Route,
   HashRouter} from 'react-router-dom';
 
 import {AuthRoute} from '../utils/route_util';
+import NavBarContainer from './navbar/nav_bar_container';
+import FooterContainer from './footer/footer_container';
 
 const App = () => (
   <div>
+      <Route path = "/" component={NavBarContainer} />
+
+
       <AuthRoute path = "/login" component={SessionFormContainer} />
       <AuthRoute path = "/signup" component={SessionFormContainer} />
 
+
+
+      <Route path = "/" component={FooterContainer} />
   </div>
 
 
