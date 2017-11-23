@@ -9,6 +9,7 @@ const sessionLinks = () => {
       <a href="/">
       <i className="fa fa-cutlery fa-4x" aria-hidden="false"></i>
       </a>
+      </span>
 
       <span className = "location-search-container">
         <span>
@@ -20,7 +21,12 @@ const sessionLinks = () => {
         placeholder="Locations"></input>
       </span>
 
+      <span className = "header-title">
+            OpenTummy
+
       </span>
+
+
 
       <nav className = "header-nav-session">
         <Link to= "/login">Login</Link>
