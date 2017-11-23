@@ -62,12 +62,14 @@
 
 }
 
+
+
 .header-nav-session button {
   font-size: 15px;
   outline: 3;
   border: 1px;
   color: white;
-  background-color: red;
+  background-color: $red;
   margin-left: 2px;
 
 }
@@ -81,7 +83,7 @@
 }
 
 .fa-cutlery {
-    color: red;
+    color: $red;
 }
 
 .header-title{

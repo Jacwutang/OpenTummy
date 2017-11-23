@@ -10,7 +10,7 @@
 .session-form-li{
   list-style: none;
   font-weight: 1000px;
-  color: $red;
+  // color: $red;
 }
 
 .input-session-form{
@@ -24,7 +24,7 @@
 
 .input-button{
   width: 50%;
-  background: red;
+  background: $red;
   text-align: center;
 
   display: flex;

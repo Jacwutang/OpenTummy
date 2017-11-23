@@ -47,7 +47,7 @@ const sessionLinks = () => {
 
 
 const loggedInShow = (currentUser,logout) => (
-  <span>
+  <span className = "header-nav-session">
     Welcome, {currentUser.username}
     <button onClick={logout}>Logout</button>
   </span>
