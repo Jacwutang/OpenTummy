@@ -9,9 +9,17 @@ class SessionForm extends React.Component{
     super(props);
     this.state = {username: '', password: ''};
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.demoLogin = this.demoLogin.bind(this);
+    this.userDemoLogin = this.userDemoLogin.bind(this);
   }
 
+  userDemoLogin(){
+    return( () => {
+      const demoUser = {username: 'demo', password: 'password'}
+      this.props.demoLogin({user:demoUser})
+    })
+
+
+  }
   componentWillReceiveProps(nextProps) {
     //after render, activate this method
   if (nextProps.loggedIn) {
@@ -42,14 +50,6 @@ class SessionForm extends React.Component{
 
   }
 
-  demoLogin(e){
-    e.preventDefault();
-
-  }
-
-
-
-
   renderErrors(){
     //if there are any errors render them
 
@@ -68,6 +68,7 @@ class SessionForm extends React.Component{
 
     render(){
       return(
+     <div>
       <form className="session-form" onSubmit={this.handleSubmit}>
         Welcome to OpenTable
 
@@ -101,10 +102,15 @@ class SessionForm extends React.Component{
 
         <br/>
 
-        <button className = "input-button"> {this.props.formType} </button>
-        <button className = "input-button" onClick={this.demoLogin()}> Demo Login </button>
-      </form>
+        <button type="submit" className = "input-button"> {this.props.formType} </button>
 
+        <button type="button" className = "input-button"                onClick={this.userDemoLogin()} > Demo Login </button>
+
+        </form>
+
+
+
+      </div>
     )
 
   }
@@ -114,3 +120,5 @@ class SessionForm extends React.Component{
 
 
 export default SessionForm;
+
+// <button className = "input-button" onClick={this.userDemoLogin()} > Demo Login </button>
