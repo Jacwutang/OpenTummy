@@ -9,6 +9,7 @@ class SessionForm extends React.Component{
     super(props);
     this.state = {username: '', password: ''};
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.demoLogin = this.demoLogin.bind(this);
   }
 
   componentWillReceiveProps(nextProps) {
@@ -41,6 +42,14 @@ class SessionForm extends React.Component{
 
   }
 
+  demoLogin(e){
+    e.preventDefault();
+
+  }
+
+
+
+
   renderErrors(){
     //if there are any errors render them
 
@@ -55,9 +64,11 @@ class SessionForm extends React.Component{
    );
   }
 
+
+
     render(){
       return(
-      <form onSubmit={this.handleSubmit}>
+      <form className="session-form" onSubmit={this.handleSubmit}>
         Welcome to OpenTable
 
         <br/>
@@ -68,8 +79,10 @@ class SessionForm extends React.Component{
         <br/>
 
 
-        <label> Username:
+        <label>
         <input
+          className = "input-session-form"
+          placeholder = "Enter Username"
           value={this.state.username}
           type="text"
           onChange={this.handleInput('username')} />
@@ -77,8 +90,10 @@ class SessionForm extends React.Component{
 
         <br/>
 
-        <label> Password:
+        <label>
           <input
+            className = "input-session-form"
+            placeholder = "Enter Password"
             value={this.state.password}
             type="password"
             onChange={this.handleInput('password')} />
@@ -86,7 +101,8 @@ class SessionForm extends React.Component{
 
         <br/>
 
-        <button> {this.props.formType} </button>
+        <button className = "input-button"> {this.props.formType} </button>
+        <button className = "input-button" onClick={this.demoLogin()}> Demo Login </button>
       </form>
 
     )

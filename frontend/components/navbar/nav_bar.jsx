@@ -3,10 +3,18 @@ import {Link} from 'react-router-dom';
 
 const sessionLinks = () => {
   return(
-    <nav>
-      <Link to= "/login">Login</Link>
-      <Link to= "/signup">Sign Up</Link>
-    </nav>
+    <header className = "header-nav">
+      <span className = "header-nav-icon">
+      <a href="/">
+      <i className="fa fa-cutlery fa-2x" aria-hidden="false"></i>
+      </a>
+      </span>
+      <nav className = "header-nav-session">
+        <Link to= "/login">Login</Link>
+        <Link to= "/signup">Sign Up</Link>
+      </nav>
+
+    </header>
   )
 
 
