@@ -4,11 +4,24 @@ import {Link} from 'react-router-dom';
 const sessionLinks = () => {
   return(
     <header className = "header-nav">
+
       <span className = "header-nav-icon">
       <a href="/">
       <i className="fa fa-cutlery fa-4x" aria-hidden="false"></i>
       </a>
+
+      <span className = "location-search-container">
+        <span>
+          <i className="fa fa-map-marker location-search-container" aria-hidden="true"></i>
+        </span>
+
+        <input className = "location-search-input"
+        type="text"
+        placeholder="Locations"></input>
       </span>
+
+      </span>
+
       <nav className = "header-nav-session">
         <Link to= "/login">Login</Link>
         <Link to= "/signup">Sign Up</Link>
