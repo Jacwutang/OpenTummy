@@ -14,7 +14,7 @@ class SessionForm extends React.Component{
 
   userDemoLogin(){
     return( () => {
-      const demoUser = {username: 'demo', password: 'password'}
+      const demoUser = {username: 'demo_user', password: 'password'}
       this.props.demoLogin({user:demoUser})
     })
 
