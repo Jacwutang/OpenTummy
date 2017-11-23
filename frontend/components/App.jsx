@@ -9,11 +9,13 @@ import {Route,
 import {AuthRoute} from '../utils/route_util';
 import NavBarContainer from './navbar/nav_bar_container';
 import FooterContainer from './footer/footer_container';
-
+import ReservationContainer from './reservation/reservation_container';
+import MainPage from './main_page';
 const App = () => (
   <div>
       <Route path = "/" component={NavBarContainer} />
 
+      <Route exact path = "/" component={MainPage} />
 
       <AuthRoute path = "/login" component={SessionFormContainer} />
       <AuthRoute path = "/signup" component={SessionFormContainer} />
@@ -27,6 +29,6 @@ const App = () => (
 );
 
 export default App;
-
+// <Route exact path = "/" component={ReservationContainer} />
 // <Route path = "/login" component={SessionFormContainer} />
 // <Route path = "/signup" component={SessionFormContainer} />

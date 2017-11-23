@@ -2,6 +2,11 @@
   background: $light-blue;
   display: flex;
   justify-content: flex-end;
+  position: absolute;
+  bottom: 0;
+  height: 25px;
+  width: 90%
+
 }
 
 .footer-container > nav > i{
