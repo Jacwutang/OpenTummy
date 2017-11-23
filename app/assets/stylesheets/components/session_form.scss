@@ -24,11 +24,12 @@
 
 .input-button{
   width: 50%;
-  background: $red;
+  background: red;
   text-align: center;
 
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin: auto;
+  margin: 0 auto;
+  margin-bottom: 5px;
 }

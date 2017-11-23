@@ -29,8 +29,14 @@ const sessionLinks = () => {
 
 
       <nav className = "header-nav-session">
-        <Link to= "/login">Login</Link>
-        <Link to= "/signup">Sign Up</Link>
+        <Link to= "/login">
+          <button type="button">Login</button>
+        </Link>
+
+        <Link to= "/signup">
+          <button type="button">Sign Up</button>
+        </Link>
+
       </nav>
 
     </header>
