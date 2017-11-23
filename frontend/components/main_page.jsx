@@ -5,7 +5,7 @@ const MainPage = () => (
   <form>
 
   <span>
-    <i className="fa fa-search fa-3x" aria-hidden="true"></i>
+
     <input type="text" className = "search-input"
     name="search"
     placeholder="Location, Restaurant.."></input>
@@ -20,3 +20,5 @@ const MainPage = () => (
 )
 
 export default MainPage;
+
+// <i className="fa fa-search fa-3x" aria-hidden="true"></i>

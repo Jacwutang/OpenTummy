@@ -6,7 +6,7 @@ import {Route,
   Link,
   HashRouter} from 'react-router-dom';
 
-import {AuthRoute} from '../utils/route_util';
+import {AuthRoute, ProtectedRoute} from '../utils/route_util';
 import NavBarContainer from './navbar/nav_bar_container';
 import FooterContainer from './footer/footer_container';
 import ReservationContainer from './reservation/reservation_container';
