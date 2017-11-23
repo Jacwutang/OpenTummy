@@ -1,11 +1,17 @@
 .footer-container{
-  background: $light-blue;
+  // background: $light-blue;
   display: flex;
   justify-content: flex-end;
-  position: absolute;
-  bottom: 0;
-  height: 25px;
-  width: 90%
+  // position: absolute;
+  // bottom: 0;
+  // height: 10%;
+  // width: 100%
+  height:50px;
+    width:100%;
+    bottom:0px;
+    left:0px;
+    background: #CCCCCC;
+    position:fixed;
 
 }
 
@@ -14,8 +20,8 @@
 }
 
 .footer-container > nav > a:last-child{
-  padding-left: 10px;
-  padding-right: 3px;
+  padding-left: 20px;
+  padding-right: 5px;
 
 }
 

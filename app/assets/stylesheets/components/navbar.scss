@@ -1,7 +1,18 @@
 .header-nav{
-  background: $light-blue;
+  // background: $light-blue;
   display: flex;
   justify-content: space-between;
+  // position: absolute;
+  // height: 10%;
+  // padding-top: 15px;
+  // width: 100%;
+  height:50px;
+    width:100%;
+    top:0px;
+    left:0px;
+    background: #CCCCCC;
+    position:fixed;
+
 }
 
 .header-nav-session > a:last-child{
@@ -11,10 +22,12 @@
 
 .header-nav-session{
   padding-top: 5px;
+  font-size: 20px;
+  padding-top: 15px;
 
 }
 
 .header-nav-icon{
   padding-left: 5px;
-
+  padding-right: 5px;
 }

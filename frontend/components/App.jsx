@@ -13,7 +13,7 @@ import ReservationContainer from './reservation/reservation_container';
 import MainPage from './main_page';
 const App = () => (
   <div>
-      <Route path = "/" component={NavBarContainer} />
+      <Route path = "/" component={NavBarContainer}/>
 
       <Route exact path = "/" component={MainPage} />
 

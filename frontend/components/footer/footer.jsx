@@ -8,11 +8,11 @@ const Footer = (props) => {
       <nav>
 
       <a href="https://github.com/Jacwutang">
-      <i className="fa fa-github fa-2x" aria-hidden="false"></i>
+      <i className="fa fa-github fa-4x" aria-hidden="false"></i>
       </a>
 
       <a href="https://www.linkedin.com/in/jacwutang/">
-      <i className="fa fa-linkedin fa-2x" aria-hidden="true"></i>
+      <i className="fa fa-linkedin fa-4x" aria-hidden="true"></i>
       </a>
 
       </nav>
