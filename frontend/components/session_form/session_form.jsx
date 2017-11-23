@@ -12,6 +12,10 @@ class SessionForm extends React.Component{
     this.userDemoLogin = this.userDemoLogin.bind(this);
   }
 
+  componentDidMount(){
+    this.props.clearErrors();
+  }
+
   userDemoLogin(){
     return( () => {
       const demoUser = {username: 'demo_user', password: 'password'}
