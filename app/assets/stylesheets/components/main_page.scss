@@ -4,10 +4,35 @@
   // height: 85%;
   // width: 100%;
   // text-align: center;
+
   box-sizing: border-box;
+
   height:100%;
   padding: 0 20px;
   border: 1px solid black;
   margin-top: 50px;
   text-align: center;
+  background-image: url(https://static.pexels.com/photos/370984/pexels-photo-370984.jpeg);
+  background-size: cover;
+
+}
+
+.search-button{
+  background: $red;
+
+}
+
+.search-input{
+  width: 175px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+
+}
+
+
+
+
+/* When the input field gets focus, change its width to 100% */
+input[type=text]:focus {
+
 }
