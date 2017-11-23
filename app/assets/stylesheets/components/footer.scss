@@ -1,5 +1,5 @@
 .footer-container{
-  background-color: purple;
+  background: $light-blue;
   display: flex;
   justify-content: flex-end;
 }
@@ -10,6 +10,7 @@
 
 .footer-container > nav > a:last-child{
   padding-left: 10px;
+  padding-right: 3px;
 
 }
 
