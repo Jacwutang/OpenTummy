@@ -25,13 +25,14 @@ class SessionForm extends React.Component{
 
   }
 
-  // componentWillReceiveProps(nextProps) {
-  //   //after render, activate this method
-  //   if (nextProps.loggedIn) {
-  //    this.props.history.push('/');
-  //   }
-  //
-  // }
+  componentWillReceiveProps(nextProps) {
+    //after render, activate this method
+    console.log(this.props, nextProps);
+    if (nextProps.match.path !== this.props.match.path) {
+     this.props.clearErrors();
+    }
+
+  }
 
   handleSubmit(e){
     e.preventDefault();

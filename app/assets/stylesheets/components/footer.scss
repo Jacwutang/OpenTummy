@@ -1,7 +1,7 @@
 .footer-container{
   // background: $light-blue;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   // position: absolute;
   // bottom: 0;
   // height: 10%;
@@ -17,7 +17,7 @@
 }
 
 .footer-container > nav > i{
-
+  color: black;
 }
 
 .footer-container > nav > a:last-child{
@@ -27,5 +27,10 @@
 }
 
 .fa-linkedin, .fa-linkedin-square {
-    color: #007bb6
+    // color: #007bb6
+    color: gray;
+}
+
+.fa-github{
+  color: gray;
 }
