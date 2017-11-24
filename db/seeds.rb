@@ -9,3 +9,39 @@
 User.destroy_all
 User.create!(username: 'jack', password: 'password')
 User.create!(username: 'demo_user', password: 'password')
+Restaurant.create!(
+  name: 'McDonalds',
+  address: '825 Battery Street',
+  city: 'SF',
+  state: 'CA',
+  postal_code: '94122',
+  country: 'USA',
+  price: 1,
+  category: 'American',
+  owner_id: 1
+)
+
+
+Restaurant.create!(
+  name: 'Subway',
+  address: '725 Battery Street',
+  city: 'SF',
+  state: 'CA',
+  postal_code: '94122',
+  country: 'USA',
+  price: 1,
+  category: 'American',
+  owner_id: 1
+)
+
+Restaurant.create!(
+  name: 'Subway',
+  address: '725 Battery Street',
+  city: 'SF',
+  state: 'CA',
+  postal_code: '94122',
+  country: 'USA',
+  price: 1,
+  category: 'American',
+  owner_id: 2
+)

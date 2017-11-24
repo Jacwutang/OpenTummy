@@ -5,9 +5,17 @@ class User < ApplicationRecord
   validates :username, uniqueness: true
   validates :password, length: {minimum: 1}, allow_nil: true
 
+
   after_initialize :ensure_session_token
 
   attr_reader :password
+
+  has_many :restaurants,
+    primary_key: :id,
+    foreign_key: :owner_id,
+    class_name: 'Restaurant'
+
+
 
 
   def self.find_by_credentials(username,password)
