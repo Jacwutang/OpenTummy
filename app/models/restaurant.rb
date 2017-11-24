@@ -1,7 +1,5 @@
 class Restaurant < ApplicationRecord
   validates :name,:address,:city,:state,:postal_code,:country,:price, presence: true
-  validates :name, :address, uniqueness: true
-
 
 
   belongs_to :user,

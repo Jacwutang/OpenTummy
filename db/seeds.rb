@@ -45,3 +45,15 @@ Restaurant.create!(
   category: 'American',
   owner_id: 2
 )
+
+Restaurant.create!(
+  name: 'Omars Taqueria',
+  address: 'estacion 4',
+  city: 'SF',
+  state: 'CA',
+  postal_code: '94122',
+  country: 'USA',
+  price: 1,
+  category: 'Mexican',
+  owner_id: 2
+)
