@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link} from 'react-router-dom';
+import { Link, Redirect} from 'react-router-dom';
 // import {withRouter} from 'react-router';
 
 
@@ -24,12 +24,14 @@ class SessionForm extends React.Component{
 
 
   }
-  componentWillReceiveProps(nextProps) {
-    //after render, activate this method
-  if (nextProps.loggedIn) {
-    this.props.history.push('/');
-  }
-  }
+
+  // componentWillReceiveProps(nextProps) {
+  //   //after render, activate this method
+  //   if (nextProps.loggedIn) {
+  //    this.props.history.push('/');
+  //   }
+  //
+  // }
 
   handleSubmit(e){
     e.preventDefault();
@@ -108,7 +110,7 @@ class SessionForm extends React.Component{
 
         <button type="submit" className = "input-button"> {this.props.formType} </button>
 
-        <button type="button" className = "input-button"                onClick={this.userDemoLogin()} > Demo Login </button>
+        <button type="button" className = "input-button"  onClick={this.userDemoLogin()} > Demo Login </button>
 
         </form>
 

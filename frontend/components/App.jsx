@@ -10,19 +10,22 @@ import {AuthRoute, ProtectedRoute} from '../utils/route_util';
 import NavBarContainer from './navbar/nav_bar_container';
 import FooterContainer from './footer/footer_container';
 import ReservationContainer from './reservation/reservation_container';
+import ProfileContainer from './profile/profile_container';
+
 import MainPage from './main_page';
 const App = () => (
+
   <div>
-      <Route path = "/" component={NavBarContainer}/>
-
-      <Route exact path = "/" component={MainPage} />
-
+    <Route path = "/" component={NavBarContainer}/>
+    <Route path = "/" component={FooterContainer} />
+    <Switch>
       <AuthRoute path = "/login" component={SessionFormContainer} />
       <AuthRoute path = "/signup" component={SessionFormContainer} />
+      <ProtectedRoute path = "/profile" component={ProfileContainer} />
+      <Route exact path = "/" component={MainPage} />
+    </Switch>
 
 
-
-      <Route path = "/" component={FooterContainer} />
   </div>
 
 
@@ -32,3 +35,4 @@ export default App;
 // <Route exact path = "/" component={ReservationContainer} />
 // <Route path = "/login" component={SessionFormContainer} />
 // <Route path = "/signup" component={SessionFormContainer} />
+// <Route exact path = "/profile" component={ProfileContainer} />
