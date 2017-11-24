@@ -74,7 +74,7 @@ class SessionForm extends React.Component{
       return(
      <div>
       <form className="session-form" onSubmit={this.handleSubmit}>
-        Welcome to OpenTable
+        Welcome to OpenTummy
 
         <br/>
 

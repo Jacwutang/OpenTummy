@@ -42,6 +42,8 @@ gem 'byebug'
 
 gem 'pry-rails'
 
+gem 'rename'
+
 
 
 # Use Capistrano for deployment

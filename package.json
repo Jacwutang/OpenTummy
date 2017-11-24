@@ -1,5 +1,5 @@
 {
-  "name": "OpenTable",
+  "name": "OpenTummy",
   "private": true,
   "dependencies": {
     "babel-core": "^6.26.0",
@@ -33,14 +33,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Jacwutang/OpenTable.git"
+    "url": "git+https://github.com/Jacwutang/OpenTummy.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Jacwutang/OpenTable/issues"
+    "url": "https://github.com/Jacwutang/OpenTummy/issues"
   },
-  "homepage": "https://github.com/Jacwutang/OpenTable#readme",
+  "homepage": "https://github.com/Jacwutang/OpenTummy#readme",
   "devDependencies": {}
 }
