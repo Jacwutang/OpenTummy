@@ -16,6 +16,15 @@
 
 }
 
+.main-div{
+  display: flex;
+  justify-content: space-between;
+  max-width: 75%;
+  margin-left: 0px;
+  box-sizing: border-box;
+
+}
+
 .location-search-icon{
   font-weight: 600;
   color: $red;
@@ -58,9 +67,12 @@
 .header-nav-session{
   padding-top: 10px;
   padding-right: 5px;
-  padding-left: 5px;
+  // padding-left: 5px;
   display: flex;
   justify-content: flex-end;
+
+
+
 }
 
 
@@ -91,5 +103,7 @@
   font-family: 'Quicksand', sans-serif;
   font-size: 36px;
   text-align: center;
-  margin-right: 18%;
+
+
+
 }

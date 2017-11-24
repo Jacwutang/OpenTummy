@@ -5,6 +5,7 @@ const sessionLinks = () => {
   return(
     <header className = "header-nav">
 
+    <div className = "main-div">
       <span className = "header-nav-icon">
       <a href="/">
       <i className="fa fa-cutlery fa-4x" aria-hidden="false"></i>
@@ -25,6 +26,9 @@ const sessionLinks = () => {
             OpenTummy
 
       </span>
+
+    </div>
+
 
 
 
@@ -47,11 +51,38 @@ const sessionLinks = () => {
 
 
 const loggedInShow = (currentUser,logout) => (
-  <span className = "header-nav-session">
-    Welcome, {currentUser.username}
-    <button onClick={logout}>Logout</button>
-  </span>
+  <header className = "header-nav">
+  <div className = "main-div">
+    <span className = "header-nav-icon">
+      <a href="/">
+      <i className="fa fa-cutlery fa-4x" aria-hidden="false"></i>
+      </a>
+     </span>
 
+    <span className = "location-search-container">
+      <span>
+        <i className="fa fa-map-marker location-search-container" aria-hidden="true"></i>
+      </span>
+
+      <input className = "location-search-input"
+      type="text"
+      placeholder="Locations"></input>
+    </span>
+
+    <span className = "header-title">
+          OpenTummy
+    </span>
+
+    </div>
+
+    <span className = "header-nav-session">
+      Welcome, {currentUser.username}
+      <button onClick={logout}>Logout</button>
+    </span>
+
+
+
+  </header>
 );
 
 const NavBar = ({currentUser,logout}) => (
