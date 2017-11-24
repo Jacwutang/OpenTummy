@@ -77,7 +77,12 @@ const loggedInShow = (currentUser,logout) => (
 
     <span className = "header-nav-session">
       Welcome, {currentUser.username}
+      <Link to= "/profile">
+        <button type="button">Profile</button>
+      </Link>
+
       <button onClick={logout}>Logout</button>
+
     </span>
 
 

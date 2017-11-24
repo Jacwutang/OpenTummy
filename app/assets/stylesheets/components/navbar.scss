@@ -18,7 +18,7 @@
 
 .main-div{
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   max-width: 75%;
   margin-left: 0px;
   box-sizing: border-box;
@@ -77,6 +77,7 @@
 
 
 
+
 .header-nav-session button {
   font-size: 15px;
   outline: 3;
@@ -84,8 +85,13 @@
   color: white;
   background-color: $red;
   margin-left: 2px;
-
+  margin-bottom: 9px;
 }
+
+// .header-nav-session button:first-of-type {
+//   padding-left: 10px;
+// }
+
 
 
 
@@ -103,7 +109,6 @@
   font-family: 'Quicksand', sans-serif;
   font-size: 36px;
   text-align: center;
-
-
+  margin-left: 25%;
 
 }
