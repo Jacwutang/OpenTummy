@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import configureStore from './store/store.js';
 import Root from './components/Root';
 import {signup, login, logout} from './actions/session_actions';
-import {postRestaurant} from './actions/restaurant_actions';
+import {createRestaurant} from './actions/restaurant_actions';
 document.addEventListener("DOMContentLoaded", () =>{
   const root = document.getElementById('root');
 
@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () =>{
   window.login = login;
   window.logout = logout;
 
-  window.postRestaurant = postRestaurant;
+  window.createRestaurant = createRestaurant;
 
 
 

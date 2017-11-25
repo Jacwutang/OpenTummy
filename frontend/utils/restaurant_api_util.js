@@ -5,12 +5,12 @@ export const fetchRestaurants = () => (
     url: '/api/restaurants',
     method: 'GET'
   })
-)
+);
 
-export const postRestaurant = restaurant => (
+export const createRestaurant = restaurant => (
   $.ajax({
     url: '/api/restaurants`',
     method: 'POST',
     data: {restaurant}
   })
-)
+);
