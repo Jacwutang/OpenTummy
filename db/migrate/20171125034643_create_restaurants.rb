@@ -1,4 +1,4 @@
-class CreateRestaurant < ActiveRecord::Migration[5.1]
+class CreateRestaurants < ActiveRecord::Migration[5.1]
   def change
     create_table :restaurants do |t|
       t.string :name, null:false
@@ -8,16 +8,23 @@ class CreateRestaurant < ActiveRecord::Migration[5.1]
       t.string :postal_code, null:false
       t.string :country, null:false
       t.integer :price, null:false
-      t.string :category, null:false
+
+      t.string :category
+      t.string :thumbnail
+
+      t.text :description
+      t.float :lat
+      t.float :lng
+
+
       t.string :image_urls, array:true, default: []
       t.integer :owner_id
       t.integer :max_reservations
-  end
+
+    end
 
     add_index :restaurants, :name
     add_index :restaurants, :address
 
-
   end
-
 end

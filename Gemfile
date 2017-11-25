@@ -44,6 +44,10 @@ gem 'pry-rails'
 
 gem 'rename'
 
+gem 'faraday'
+
+gem 'faraday_middleware'
+
 
 
 # Use Capistrano for deployment

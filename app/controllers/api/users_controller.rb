@@ -1,12 +1,10 @@
 class Api::UsersController < ApplicationController
-  def index
-  end
 
   def create
     #if user succesfully created, return json from "api/users/show"
 
     @user = User.new(user_params)
-    
+
     if @user.save
       login(@user)
       render "api/users/show"

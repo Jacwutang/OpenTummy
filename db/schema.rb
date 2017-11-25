@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171124222850) do
+ActiveRecord::Schema.define(version: 20171125034643) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,7 +23,11 @@ ActiveRecord::Schema.define(version: 20171124222850) do
     t.string "postal_code", null: false
     t.string "country", null: false
     t.integer "price", null: false
-    t.string "category", null: false
+    t.string "category"
+    t.string "thumbnail"
+    t.text "description"
+    t.float "lat"
+    t.float "lng"
     t.string "image_urls", default: [], array: true
     t.integer "owner_id"
     t.integer "max_reservations"
