@@ -9,7 +9,7 @@ export const fetchRestaurants = () => (
 
 export const createRestaurant = restaurant => (
   $.ajax({
-    url: '/api/restaurants`',
+    url: '/api/restaurants',
     method: 'POST',
     data: {restaurant}
   })

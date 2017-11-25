@@ -4,6 +4,8 @@ import configureStore from './store/store.js';
 import Root from './components/Root';
 import {signup, login, logout} from './actions/session_actions';
 import {createRestaurant} from './actions/restaurant_actions';
+
+
 document.addEventListener("DOMContentLoaded", () =>{
   const root = document.getElementById('root');
 
@@ -32,3 +34,14 @@ document.addEventListener("DOMContentLoaded", () =>{
 
   ReactDOM.render(<Root store={store}/>, root);
 });
+
+// res = {restaurant: {  name: "10pin Bowling Lounge",
+//             address: "330 N State Street",
+//             city: "Chicago",
+//             state: "IL",
+//             postal_code: "60610",
+//             country: "US",
+//             price: 3,
+//             lat: 41.888634,
+//             lng: -87.628091,
+//             thumbnail: "https://www.opentable.com/img/restimages/7267.jpg"}
