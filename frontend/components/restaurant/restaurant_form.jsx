@@ -5,8 +5,8 @@ class RestaurantForm extends React.Component{
   constructor(props){
     super(props);
     this.state = {
-        name: 'Joe', address: '123 Street', city: 'Davis', state: 'CA', postal_code: '94122', country: 'USA', price: 2,
-        category: 'Fast Food', thumbnail: '', description: '', lat: '', lng: '', image_urls: [], max_reservations: ''
+        name: 'Joe', address: '123 Street', city: 'Davis', state: '', postal_code: '94122', country: 'USA', price: '',
+        category: '', thumbnail: '', description: '', lat: '', lng: '', image_urls: [], max_reservations: ''
       }
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -84,42 +84,43 @@ class RestaurantForm extends React.Component{
 
                 <br/>
 
-                <select className = "input-select" name="state">
-                    <option disabled selected = "California">
-                    Select State</option>
+                <select onChange={this.handleInput('state')} value={this.state.state}>
+                    <option value="" disabled>
+                      Select State</option>
 
+                    <option value="California" type ="text">California</option>
+                      <option value="Illnois" type ="text">Illnois</option>
+                    <option value="New York" type ="text">New York</option>
+                    <option value="Texas" type = "text">Texas</option>
+                    <option value="Florida" type = "text">Florida</option>
 
-                    <option value={this.state.state}>California</option>
-                    <option value={this.state.state}>New York</option>
-                    <option value={this.state.state}>Illnois</option>
-
-                  </select>
+                </select>
 
                   <br/>
 
-                <select name="price">
-                    <option disabled selected = "selected">
+                <select onChange={this.handleInput('price')} value={this.state.price}>
+                    <option value="" disabled >
                     Select Price</option>
 
 
-                    <option value={this.state.price}>1 - Budget </option>
-                    <option value={this.state.price}>2 -  </option>
-                    <option value={this.state.price}>3 - Neutral</option>
-                    <option value={this.state.price}>4 - </option>
-                    <option value={this.state.price}>5 - Expensive</option>
+                    <option value={1}> 1 - Budget </option>
+                    <option value={2}> 2 </option>
+                    <option value={3}> 3 - Neutral</option>
+                    <option value={4}> 4 </option>
+                    <option value={5}> 5 - Expensive</option>
 
                   </select>
 
                   <br/>
 
-                  <select  name="category">
-                      <option disabled selected = "selected">
+                  <select  onChange={this.handleInput('category')} value={this.state.category} >
+                      <option value=""disabled>
                       Optional: Select Category</option>
 
-                      <option value={this.state.category}> Brunch </option>
-                      <option value={this.state.category}> Casual </option>
-                      <option value={this.state.category}>Fast Food </option>
-                      <option value={this.state.category}> Fine Dining</option>
+                      <option value="Brunch" type="text"> Brunch </option>
+                      <option value="Casual" type="text"> Casual </option>
+                      <option value="Fast Food" type="text">Fast Food </option>
+                      <option value="Fine Dining" type="text"> Fine Dining</option>
                 </select>
 
                   <br/>
@@ -156,7 +157,7 @@ class RestaurantForm extends React.Component{
 
                   <input
                     className = "input-restaurant-form"
-                    placeholder = "Optional: Enter Max Number of Reservations"
+                    placeholder = "Optional:  Enter Max Number of Reservations"
                     value={this.state.max_reservations}
                     type="text"
 
@@ -194,3 +195,6 @@ class RestaurantForm extends React.Component{
 };
 
 export default RestaurantForm;
+
+// <option disabled selected = "selected">
+// Select State</option>
