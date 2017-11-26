@@ -28,12 +28,9 @@ const App = () => (
       <AuthRoute path = "/signup" component={SessionFormContainer} />
 
       <Route exact path = "/restaurants" component={RestaurantIndexContainer} />
-
-      <Route path="/restaurants/:restId" component={RestaurantDetailContainer} />
-
       <ProtectedRoute path = "/profile" component={ProfileContainer} />
       <ProtectedRoute path = "/restaurants/new" component={RestaurantFormContainer} />
-
+      <Route exact path="/restaurants/:restId" component={RestaurantDetailContainer} />
 
       <Route exact path = "/" component={MainPage} />
 
