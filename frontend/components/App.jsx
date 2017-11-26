@@ -15,6 +15,7 @@ import ProfileContainer from './profile/profile_container';
 import RestaurantFormContainer from './restaurant/restaurant_form_container';
 import RestaurantIndexContainer from './restaurant/restaurant_index_container';
 import MainPage from './main_page';
+import RestaurantDetailContainer from './restaurant/restaurant_detail_container';
 
 const App = () => (
 
@@ -28,6 +29,7 @@ const App = () => (
 
       <Route exact path = "/restaurants" component={RestaurantIndexContainer} />
 
+      <Route path="/restaurants/:restId" component={RestaurantDetailContainer} />
 
       <ProtectedRoute path = "/profile" component={ProfileContainer} />
       <ProtectedRoute path = "/restaurants/new" component={RestaurantFormContainer} />
