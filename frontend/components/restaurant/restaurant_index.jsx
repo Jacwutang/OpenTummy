@@ -18,14 +18,15 @@ class RestaurantIndex extends React.Component{
         console.log(restaurants);
 
         return(
-        <div className = "profile-main">
+        <div className = "restaurant-index">
+
           <h1> Restaurant Index </h1>
           <ul>
-            {restaurants.map( (rest) => (
+            {restaurants.map( (rest,idx) => (
               <RestaurantIndexItem
-              key={rest.id}
+              key={`rest-${idx}`}
               rest={rest}
-              
+
               />
             ))
             }

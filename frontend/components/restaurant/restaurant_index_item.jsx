@@ -6,6 +6,8 @@ const RestaurantIndexItem = ({rest,idx}) => {
   return(
     <li>
     {rest.name}
+    {rest.address}
+    {rest.city}
     Restaurant here
     </li>
 
@@ -13,4 +15,3 @@ const RestaurantIndexItem = ({rest,idx}) => {
 };
 
 export default RestaurantIndexItem;
-// {rest[idx].name}

@@ -6,7 +6,7 @@ import {withRouter} from 'react-router';
 
 
 const mapStateToProps = (state) => {
-  // restaurants: state.restaurants
+
 
   return({
      restaurants: Object.keys(state.restaurants).map(id => state.restaurants[id])
