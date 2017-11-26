@@ -1,5 +1,9 @@
 import React from 'react';
-
+import {Route,
+  Redirect,
+  Switch,
+  Link,
+  HashRouter} from 'react-router-dom';
 
 class RestaurantForm extends React.Component{
   constructor(props){
@@ -17,7 +21,9 @@ class RestaurantForm extends React.Component{
 
     const restaurant = this.state;
 
-    this.props.createRestaurant(restaurant);
+    this.props.createRestaurant(restaurant).then(() => this.props.history.push('/profile'))
+
+
 
   }
 
@@ -27,18 +33,21 @@ class RestaurantForm extends React.Component{
     )
   }
 
-  componentDidMount(){
-    window.scrollTo(0,0);
+  componentWillMount(){
     this.props.clearErrors();
   }
+
+
+  //
+  // componentWillReceiveProps(nextProps) {
+  //
+  // }
 
 
 
 
   renderErrors(){
-      if(this.props.errors.length > 0){
-        alert("Check Error Messages on Bottom of Page")
-      }
+
 
       return (
         <ul>

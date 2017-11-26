@@ -2,6 +2,7 @@ import {connect} from 'react-redux';
 import RestaurantForm from './restaurant_form';
 // import {withRouter} from 'react-router';
 import {createRestaurant,receiveErrors} from '../../actions/restaurant_actions';
+import {withRouter} from 'react-router';
 
 
 const mapStateToProps = (state) => ({
@@ -19,4 +20,4 @@ const mapDispatchToProps = (dispatch) => ({
 
 });
 
-export default connect(mapStateToProps,mapDispatchToProps)(RestaurantForm);
+export default withRouter( connect(mapStateToProps,mapDispatchToProps)(RestaurantForm));
