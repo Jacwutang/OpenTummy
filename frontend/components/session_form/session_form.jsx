@@ -27,7 +27,7 @@ class SessionForm extends React.Component{
 
   componentWillReceiveProps(nextProps) {
     //after render, activate this method
-    console.log(this.props, nextProps);
+    
     if (nextProps.match.path !== this.props.match.path) {
      this.props.clearErrors();
     }
@@ -127,5 +127,3 @@ class SessionForm extends React.Component{
 
 
 export default SessionForm;
-
-// <button className = "input-button" onClick={this.userDemoLogin()} > Demo Login </button>

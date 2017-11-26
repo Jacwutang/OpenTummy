@@ -7,10 +7,19 @@ export const fetchRestaurants = () => (
   })
 );
 
-export const createRestaurant = restaurant => (
-  $.ajax({
+// export const createRestaurant = restaurant => (
+//   $.ajax({
+//     url: '/api/restaurants',
+//     method: 'POST',
+//     data: {restaurant}
+//   })
+// );
+export const createRestaurant = restaurant => {
+  
+  return($.ajax({
     url: '/api/restaurants',
     method: 'POST',
     data: {restaurant}
-  })
-);
+    })
+  )
+};

@@ -15,9 +15,17 @@ export const receiveRestaurant = (restaurant) => ({
 // });
 
 
-export const createRestaurant = restaurant => (
-  RESTAURANTutil.createRestaurant(restaurant).then(resp => (
-    dispatch(receiveRestaurant(resp))
-  ))); //, err => (
+export const createRestaurant = restaurant => dispatch => (
+  RESTAURANTutil.createRestaurant(restaurant).then(restaurant => (
+    dispatch(receiveRestaurant(restaurant))
+  )));
+
+//, err => (
     //   dispatch(receiveRestaurantErrors(err.responseJSON))
     // ))
+
+    // export const createRestaurant = restaurant => dispatch => {
+    //   debugger;
+    //     return(RESTAURANTutil.createRestaurant(restaurant).then(restaurant => (
+    //     dispatch(receiveRestaurant(restaurant)))))
+    //   };

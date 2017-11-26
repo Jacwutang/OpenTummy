@@ -9,15 +9,17 @@ class Api::RestaurantsController < ApplicationController
   end
 
   def create
+
     @rest = Restaurant.new(rest_params)
     if @rest.save
-      print ("hello world")
-      print(@rest.id)
-      print( @rest)
+      # print ("hello world")
+      # print(@rest.id)
+      # print( @rest)
       render "api/restaurants/show"
 
 
     else
+      
       render json: @rest.errors.full_messages, status: 422
     end
 

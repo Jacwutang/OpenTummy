@@ -14,6 +14,7 @@ import {connect} from 'react-redux';
 import {withRouter} from 'react-router';
 import {Route, Redirect} from 'react-router-dom';
 
+//if logged in, don't allow links to be visited
 const Auth = ({component: Component, path, loggedIn}) => (
   <Route path={path} render={(props) => (
     !loggedIn ? (
@@ -24,6 +25,8 @@ const Auth = ({component: Component, path, loggedIn}) => (
   )}/>
 );
 
+
+//render component only if logged in
 const Protected = ({ component: Component, path, loggedIn }) => (
   <Route path={path} render={(props) => (
      loggedIn ? (

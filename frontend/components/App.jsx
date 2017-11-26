@@ -12,6 +12,8 @@ import FooterContainer from './footer/footer_container';
 import ReservationContainer from './reservation/reservation_container';
 import ProfileContainer from './profile/profile_container';
 
+import RestaurantFormContainer from './restaurant/restaurant_form_container';
+
 import MainPage from './main_page';
 const App = () => (
 
@@ -22,7 +24,10 @@ const App = () => (
     <Switch>
       <AuthRoute path = "/login" component={SessionFormContainer} />
       <AuthRoute path = "/signup" component={SessionFormContainer} />
+
       <ProtectedRoute path = "/profile" component={ProfileContainer} />
+      <ProtectedRoute path = "/restaurants/new" component={RestaurantFormContainer} />
+
       <Route exact path = "/" component={MainPage} />
 
       <Route component={MainPage} />
