@@ -7,8 +7,8 @@ import {withRouter} from 'react-router';
 
 const mapStateToProps = (state) => ({
   loggedIn: Boolean(state.session.currentUser),
-  errors: state.errors.restaurant
-
+  errors: state.errors.restaurant,
+  currentUser: state.session.currentUser
 
 
 });

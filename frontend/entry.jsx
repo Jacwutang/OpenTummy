@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import configureStore from './store/store.js';
 import Root from './components/Root';
 import {signup, login, logout} from './actions/session_actions';
-import {createRestaurant} from './actions/restaurant_actions';
+import {createRestaurant, requestAllRestaurants} from './actions/restaurant_actions';
 
 
 document.addEventListener("DOMContentLoaded", () =>{
@@ -28,12 +28,17 @@ document.addEventListener("DOMContentLoaded", () =>{
   window.login = login;
   window.logout = logout;
 
+
   window.createRestaurant = createRestaurant;
+  window.requestAllRestaurants = requestAllRestaurants;
 
 
 
   ReactDOM.render(<Root store={store}/>, root);
 });
+
+//USE window.dispatch(logout())
+//
 
 // res = {restaurant: {  name: "10pin Bowling Lounge",
 //             address: "330 N State Street",

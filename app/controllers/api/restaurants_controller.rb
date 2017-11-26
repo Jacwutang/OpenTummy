@@ -1,7 +1,7 @@
 class Api::RestaurantsController < ApplicationController
   def index
-    # @restaurants = Resturant.all
-    # render "api/restaurants/index"
+    @restaurants = Restaurant.all
+    render "api/restaurants/index"
   end
 
   def show
@@ -15,11 +15,12 @@ class Api::RestaurantsController < ApplicationController
       # print ("hello world")
       # print(@rest.id)
       # print( @rest)
+
       render "api/restaurants/show"
 
 
     else
-      
+
       render json: @rest.errors.full_messages, status: 422
     end
 

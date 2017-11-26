@@ -10,7 +10,7 @@ class RestaurantForm extends React.Component{
     super(props);
     this.state = {
         name: 'Joe', address: '123 Street', city: 'Davis', state: '', postal_code: '94122', country: 'USA', price: '',
-        category: '', thumbnail: '', description: '', lat: '', lng: '', image_urls: [], max_reservations: ''
+        category: '', thumbnail: '', description: '', lat: '', lng: '', image_urls: [], max_reservations: '', owner_id: 0
       }
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -19,7 +19,9 @@ class RestaurantForm extends React.Component{
 
     e.preventDefault();
 
+    this.state.owner_id = this.props.currentUser.id;
     const restaurant = this.state;
+    
 
     this.props.createRestaurant(restaurant).then(() => this.props.history.push('/profile'))
 

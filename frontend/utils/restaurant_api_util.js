@@ -1,11 +1,20 @@
-//check fetchPokemon
 
-export const fetchRestaurants = () => (
-  $.ajax({
+// export const fetchAllRestaurants = () => (
+//   $.ajax({
+//     url: '/api/restaurants',
+//     method: 'GET'
+//   })
+// );
+
+
+export const fetchAllRestaurants = () => {
+
+  return ($.ajax({
     url: '/api/restaurants',
     method: 'GET'
-  })
-);
+    })
+  );
+};
 
 // export const createRestaurant = restaurant => (
 //   $.ajax({
