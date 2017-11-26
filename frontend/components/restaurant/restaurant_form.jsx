@@ -17,8 +17,8 @@ class RestaurantForm extends React.Component{
 
     const restaurant = this.state;
 
-
     this.props.createRestaurant(restaurant);
+
   }
 
   handleInput(field){
@@ -28,10 +28,18 @@ class RestaurantForm extends React.Component{
   }
 
   componentDidMount(){
+    window.scrollTo(0,0);
     this.props.clearErrors();
   }
 
+
+
+
   renderErrors(){
+      if(this.props.errors.length > 0){
+        alert("Check Error Messages on Bottom of Page")
+      }
+
       return (
         <ul>
           {this.props.errors.map( (e,idx) =>(
@@ -48,10 +56,11 @@ class RestaurantForm extends React.Component{
     return(
       <div>
        <form className="restaurant-form" onSubmit={this.handleSubmit}>
+
          Add a Restaurant
 
          <br/>
-         {this.renderErrors()}
+
 
          <input
            className = "input-restaurant-form"
@@ -195,6 +204,7 @@ class RestaurantForm extends React.Component{
 
                 <button type="submit" className = "input-button"> Create Restaurant </button>
 
+                {this.renderErrors()}
                 </form>
 
 

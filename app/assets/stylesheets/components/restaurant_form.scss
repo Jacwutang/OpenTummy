@@ -1,6 +1,7 @@
 .restaurant-form{
   text-align: center;
   height: 85%;
+  // height: 500px;
   position: inherit;
   overflow: scroll;
   width: 100%;
@@ -13,8 +14,11 @@
 .restaurant-form-li{
   list-style: none;
   font-weight: 1000px;
-  color: $red;
+  font-size: 20px;
+  color: red;
   font-family: $sans-serif;
+  text-align: center;
+
 }
 
 .input-restaurant-form, select{
