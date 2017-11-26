@@ -26,8 +26,8 @@ class SessionForm extends React.Component{
   }
 
   componentWillReceiveProps(nextProps) {
-    //after render, activate this method
     
+
     if (nextProps.match.path !== this.props.match.path) {
      this.props.clearErrors();
     }

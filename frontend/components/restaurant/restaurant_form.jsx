@@ -27,6 +27,23 @@ class RestaurantForm extends React.Component{
     )
   }
 
+  componentDidMount(){
+    this.props.clearErrors();
+  }
+
+  renderErrors(){
+      return (
+        <ul>
+          {this.props.errors.map( (e,idx) =>(
+            <li className = "restaurant-form-li"
+            key={`error-${idx}`}>
+            {e}
+            </li>
+          ))}
+          </ul>
+        );
+    }
+
   render(){
     return(
       <div>
@@ -34,6 +51,7 @@ class RestaurantForm extends React.Component{
          Add a Restaurant
 
          <br/>
+         {this.renderErrors()}
 
          <input
            className = "input-restaurant-form"

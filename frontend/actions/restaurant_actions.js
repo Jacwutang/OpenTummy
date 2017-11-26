@@ -1,8 +1,15 @@
 import * as RESTAURANTutil from '../utils/restaurant_api_util';
 
 export const RECEIVE_RESTAURANT = "RECEIVE_RESTAURANT";
+export const RECEIVE_RESTAURANT_ERRORS = "RECEIVE_RESTAURANT_ERRORS";
+
 // export const RECEIVE_RESTAURANT_ERRORS = "RECEIVE_RESTAURANT_ERRORS";
 
+export const receiveErrors = errors => ({
+  type: RECEIVE_RESTAURANT_ERRORS,
+  errors
+
+});
 
 export const receiveRestaurant = (restaurant) => ({
   type: RECEIVE_RESTAURANT,
@@ -18,7 +25,8 @@ export const receiveRestaurant = (restaurant) => ({
 export const createRestaurant = restaurant => dispatch => (
   RESTAURANTutil.createRestaurant(restaurant).then(restaurant => (
     dispatch(receiveRestaurant(restaurant))
-  )));
+  ), err => (dispatch(receiveErrors(err.responseJSON)))
+  ));
 
 //, err => (
     //   dispatch(receiveRestaurantErrors(err.responseJSON))
