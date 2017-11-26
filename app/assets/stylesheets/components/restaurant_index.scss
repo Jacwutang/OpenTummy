@@ -1,7 +1,29 @@
-.restaurant-index{
-text-align: center;
-height: 85%;
+// .restaurant-index{
+// text-align: center;
+// height: 85%;
 // height: 500px;
-position: inherit;
-overflow: scroll;
+// position: inherit;
+// overflow: scroll;
+// }
+
+.restaurant-index-ul{
+  display: flex;
+  flex-wrap: wrap;
+  overflow: scroll;
+}
+
+
+
+.restaurant-index-li{
+  width: 100%;
+  box-sizing: border-box;
+  border-bottom: 1px solid black;
+
+}
+
+.restaurant-index-li, img:last-of-type{
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+
 }
