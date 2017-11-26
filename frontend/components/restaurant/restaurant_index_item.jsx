@@ -1,14 +1,16 @@
 import React from 'react';
 
 
-const RestaurantIndexItem = (props) => (
-  <li>
-    
+const RestaurantIndexItem = ({rest,idx}) => {
+
+  return(
+    <li>
+    {rest.name}
     Restaurant here
+    </li>
 
-
-  </li>
-
-);
+  );
+};
 
 export default RestaurantIndexItem;
+// {rest[idx].name}

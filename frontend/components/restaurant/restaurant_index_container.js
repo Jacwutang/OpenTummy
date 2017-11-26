@@ -5,12 +5,16 @@ import {requestAllRestaurants} from '../../actions/restaurant_actions';
 import {withRouter} from 'react-router';
 
 
-const mapStateToProps = (state) => ({
-  restaurants: state.restaurants
-  //loading spinner?
+const mapStateToProps = (state) => {
+  // restaurants: state.restaurants
 
+  return({
+     restaurants: Object.keys(state.restaurants).map(id => state.restaurants[id])
+    //restaurants: state.restaurants
 
-});
+  });
+
+};
 
 const mapDispatchToProps = (dispatch) => ({
   requestAllRestaurants: () => dispatch(requestAllRestaurants())

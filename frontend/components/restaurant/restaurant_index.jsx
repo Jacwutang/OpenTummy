@@ -14,15 +14,19 @@ class RestaurantIndex extends React.Component{
     if(Object.keys(restaurants).length === 0){
       return null;
     } else{
+
         console.log(restaurants);
+
         return(
         <div className = "profile-main">
           <h1> Restaurant Index </h1>
           <ul>
-            {this.props.restaurants.map( (rest,idx) => (
+            {restaurants.map( (rest) => (
               <RestaurantIndexItem
-              key={`rest-${idx}`}
-              rest={rest} />
+              key={rest.id}
+              rest={rest}
+              
+              />
             ))
             }
 
