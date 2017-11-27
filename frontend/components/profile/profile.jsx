@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-
+import ProfileRestaurants from './profile_restaurants';
 
 
 class Profile extends React.Component{
@@ -17,8 +17,8 @@ class Profile extends React.Component{
           <button className = "restaurant-form-button" type="button">Add a Restaurant</button>
         </Link>
 
-        <span> My Restaurants
-
+        <span>
+          <ProfileRestaurants />
 
         </span>
 

@@ -29,6 +29,7 @@ const App = () => (
 
       <Route exact path = "/restaurants" component={RestaurantIndexContainer} />
       <ProtectedRoute path = "/profile" component={ProfileContainer} />
+
       <ProtectedRoute path = "/restaurants/new" component={RestaurantFormContainer} />
       <Route exact path="/restaurants/:restId" component={RestaurantDetailContainer} />
 
