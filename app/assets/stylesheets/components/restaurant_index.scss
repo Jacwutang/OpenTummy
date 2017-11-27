@@ -18,6 +18,7 @@
   width: 100%;
   box-sizing: border-box;
   border-bottom: 1px solid black;
+  display: flex;
 
 }
 
@@ -27,5 +28,16 @@
   margin-bottom: 12px;
   border-radius: 5%;
   padding-right: 3px;
+
+}
+.restaurant-index-left-div{
+
+
+}
+
+
+.restaurant-index-right-div{
+  display: flex;
+  justify-content: center;
 
 }

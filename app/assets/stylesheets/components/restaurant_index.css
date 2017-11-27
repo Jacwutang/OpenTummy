@@ -1,0 +1,21 @@
+.restaurant-index-ul {
+  display: flex;
+  flex-wrap: wrap;
+  overflow: scroll; }
+
+.restaurant-index-li {
+  width: 100%;
+  box-sizing: border-box;
+  border-bottom: 1px solid black;
+  display: flex; }
+
+.restaurant-index-li, img:last-of-type {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-bottom: 12px;
+  border-radius: 5%;
+  padding-right: 3px; }
+
+.restaurant-index-right-div {
+  display: flex;
+  justify-content: center; }

@@ -8,7 +8,7 @@ const RestaurantIndexItem = ({rest,idx}) => {
 
   return(
     <li className = "restaurant-index-li">
-        <div>
+        <div className = "restaurant-index-left-div">
         <Link to={`/restaurants/${rest.id}`}>
           <img className = "thumbnail" src={rest.thumbnail}/>
         </Link>
@@ -22,6 +22,15 @@ const RestaurantIndexItem = ({rest,idx}) => {
           <br/>
             {category} | {rest.city}
           <br/>
+
+        </div>
+
+        <div className = "restaurant-index-right-div">
+          Dope af. Would come again 10/10.
+          <br/>
+          -Username
+
+
 
         </div>
 
