@@ -15,7 +15,7 @@ class RestaurantIndex extends React.Component{
       return null;
     } else{
 
-        console.log(restaurants);
+        
 
         return(
         <div>

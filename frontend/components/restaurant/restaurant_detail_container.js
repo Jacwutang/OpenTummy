@@ -1,7 +1,7 @@
 import {connect} from 'react-redux';
 import {withRouter} from 'react-router';
 import RestaurantDetail from './restaurant_detail';
-
+import {requestSingleRestaurant} from '../../actions/restaurant_actions';
 
 
 const mapStateToProps = (state) => ({
@@ -10,8 +10,9 @@ const mapStateToProps = (state) => ({
 
 });
 
-const mapDispatchToProps = (dispatch) => ({
-
+const mapDispatchToProps = (dispatch,ownProps) => ({
+  //make reservation, //favorite,
+  requestSingleRestaurant: (id) => dispatch(requestSingleRestaurant(id))
 
 
 });

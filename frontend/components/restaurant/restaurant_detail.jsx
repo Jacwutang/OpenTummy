@@ -3,7 +3,13 @@ import React from 'react';
 const RestaurantDetail = () => {
 
   return(
-    <h1> Restaurant Detail </h1>
+    <section className = "restaurant-detail-main">
+      <h1> Restaurant Detail </h1>
+      <div className = "restaurant-detail-header">
+        
+      </div>
+
+    </section>
   );
 
 

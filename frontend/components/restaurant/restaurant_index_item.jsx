@@ -23,7 +23,7 @@ const RestaurantIndexItem = ({rest,idx}) => {
             {category} | {rest.city}
           <br/>
 
-        <i class="fa fa-fire fa-2x" aria-hidden="true"></i>  Booked 25 times today!
+        <i className="fa fa-fire fa-2x" aria-hidden="true"></i>  Booked 25 times today!
 
         </div>
 

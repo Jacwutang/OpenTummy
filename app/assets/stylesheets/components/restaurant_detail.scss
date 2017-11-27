@@ -1,0 +1,11 @@
+.restaurant-detail-main{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.restaurant-detail-header{
+  height: 100px;
+  width: 100%;
+  background: linear-gradient(gray, brown);
+}
