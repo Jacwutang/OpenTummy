@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import ReservationForm from './reservation_form';
-
+import {withRouter} from 'react-router';
 const mapStateToProps = (state) => {
   return {};
 
@@ -16,4 +16,4 @@ const mapDispatchToProps = (dispatch) => {
 };
 
 
-export default connect(mapStateToProps,mapDispatchToProps)(ReservationForm);
+export default withRouter( connect(mapStateToProps,mapDispatchToProps)(ReservationForm));

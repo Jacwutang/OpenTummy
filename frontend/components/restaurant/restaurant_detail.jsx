@@ -1,10 +1,11 @@
 import React from 'react';
+import ReservationContainer from '../reservation/reservation_container';
 
 class RestaurantDetail extends React.Component{
   constructor(props){
     super(props);
 
-    
+
   }
 
   componentWillMount(){
@@ -40,6 +41,10 @@ class RestaurantDetail extends React.Component{
 
 
 
+          </div>
+
+          <div>
+            <ReservationContainer />
           </div>
 
         </section>
