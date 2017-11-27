@@ -3,6 +3,7 @@ import RestaurantIndexItem from './restaurant_index_item';
 
 class RestaurantIndex extends React.Component{
   componentWillMount(){
+    debugger;
     this.props.requestAllRestaurants();
   }
 
@@ -15,7 +16,7 @@ class RestaurantIndex extends React.Component{
       return null;
     } else{
 
-        
+
 
         return(
         <div>

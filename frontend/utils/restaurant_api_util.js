@@ -1,10 +1,13 @@
 
-// export const fetchAllRestaurants = () => (
-//   $.ajax({
-//     url: '/api/restaurants',
-//     method: 'GET'
-//   })
-// );
+export const fetchRestaurant = (id) => {
+
+  return ($.ajax({
+    url: '/api/restaurants',
+    method: 'GET',
+    data: id
+  })
+  );
+};
 
 
 export const fetchAllRestaurants = () => {

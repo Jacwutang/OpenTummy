@@ -35,6 +35,13 @@ export const createRestaurant = restaurant => dispatch => (
   ), err => (dispatch(receiveErrors(err.responseJSON)))
   ));
 
+  export const requestRestaurant = (id) => dispatch => (
+    RESTAURANTutil.fetchRestaurant(id).then( restaurant => (
+      dispatch(receiveRestaurant(restaurant))
+    ))
+
+  );
+
 export const requestAllRestaurants = () => dispatch => (
   RESTAURANTutil.fetchAllRestaurants().then( restaurants => (
     dispatch(receiveAllRestaurants(restaurants))

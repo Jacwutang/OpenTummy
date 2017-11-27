@@ -1,16 +1,27 @@
 import React from 'react';
 
-const RestaurantDetail = () => {
+class RestaurantDetail extends React.Component{
+  constructor(props){
+    super(props);
+  }
 
-  return(
-    <section className = "restaurant-detail-main">
-      <h1> Restaurant Detail </h1>
-      <div className = "restaurant-detail-header">
-        
-      </div>
+  componentWillMount(){
+    this.props.requestRestaurant(this.props.match.params.restId);
+  }
 
-    </section>
-  );
+  render(){
+    return(
+      <section className = "restaurant-detail-main">
+        <h1> Restaurant Detail </h1>
+        <div className = "restaurant-detail-header">
+
+        </div>
+
+      </section>
+    );
+
+  }
+
 
 
 }

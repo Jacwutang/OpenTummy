@@ -5,7 +5,8 @@ class Api::RestaurantsController < ApplicationController
   end
 
   def show
-
+    @rest = Restaurant.find(params[:id])
+    render "api/restaurants/show"
   end
 
   def create
@@ -29,7 +30,7 @@ class Api::RestaurantsController < ApplicationController
   def destroy
 
     @restaurant = Restaurant.find(params[:id])
-    
+
     if @restaurant
       @restaurant.owner_id = nil
       @restaurant.save
