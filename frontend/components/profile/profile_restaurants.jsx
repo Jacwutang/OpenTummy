@@ -37,10 +37,10 @@ class ProfileRestaurants extends React.Component{
                       <img className = "thumbnail" src={rest.thumbnail}/>
                     </Link>
 
-                      <span>
-                        <h2> {rest.name} </h2>
-                        <h2> $$$$$ </h2>
-                      </span>
+                      <h2> {rest.name} </h2>
+                      <br/>
+                      <h2> $$$$$ </h2>
+
 
 
                     </div>

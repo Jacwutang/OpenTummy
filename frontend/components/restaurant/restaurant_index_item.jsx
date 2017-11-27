@@ -4,7 +4,12 @@ import {Link, Route} from 'react-router-dom';
 
 
 const RestaurantIndexItem = ({rest,idx}) => {
+
+
   const category = (rest.category === null) ? "No Category" : rest.category;
+
+
+
 
   return(
     <li className = "restaurant-index-li">
@@ -13,8 +18,8 @@ const RestaurantIndexItem = ({rest,idx}) => {
           <img className = "thumbnail" src={rest.thumbnail}/>
         </Link>
 
-            <h2> {rest.name} </h2>
-            <h2> $$$$$ </h2>
+            <h2 className = ""> {rest.name} </h2>
+            <h2 className = ""> $$$$$ </h2>
 
 
           <br/>

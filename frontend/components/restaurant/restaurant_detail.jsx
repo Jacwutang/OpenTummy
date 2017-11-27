@@ -3,11 +3,15 @@ import React from 'react';
 class RestaurantDetail extends React.Component{
   constructor(props){
     super(props);
+
+    
   }
 
   componentWillMount(){
     this.props.requestRestaurant(this.props.match.params.restId);
   }
+
+
 
 
   render(){
