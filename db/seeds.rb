@@ -17,7 +17,8 @@
             "price": 3,
             "lat": 41.888634,
             "lng": -87.628091,
-            "thumbnail": "https://www.opentable.com/img/restimages/7267.jpg"
+            "thumbnail": "https://www.opentable.com/img/restimages/7267.jpg",
+            "owner_id": 2
         },
         {
             "name": "Chicago Chop House",
@@ -657,7 +658,8 @@
             "lat": 40.71476,
             "lng": -73.990943,
             "price": 3,
-            "thumbnail": "https://www.opentable.com/img/restimages/139675.jpg"
+            "thumbnail": "https://www.opentable.com/img/restimages/139675.jpg",
+            "owner_id": 2
         },
         {
             "name": "MINT",
@@ -777,7 +779,8 @@
             "lat": 40.750228,
             "lng": -73.983714,
             "price": 3,
-            "thumbnail": "https://www.opentable.com/img/restimages/52969.jpg"
+            "thumbnail": "https://www.opentable.com/img/restimages/52969.jpg",
+            "owner_id": 2
         },
         {
             "name": "Spina",
@@ -849,7 +852,8 @@
             "lat": 40.71781,
             "lng": -74.005445,
             "price": 2,
-            "thumbnail": "https://www.opentable.com/img/restimages/63154.jpg"
+            "thumbnail": "https://www.opentable.com/img/restimages/63154.jpg",
+            "owner_id": 2
         },
         {
             "name": "Kafana",
@@ -861,7 +865,8 @@
             "lat": 40.724426,
             "lng": -73.978581,
             "price": 2,
-            "thumbnail": "https://www.opentable.com/img/restimages/69439.jpg"
+            "thumbnail": "https://www.opentable.com/img/restimages/69439.jpg",
+            "owner_id": 2
         },
         {
             "name": "Nick & Toni's Cafe Manhattan",
@@ -909,7 +914,8 @@
             "lat": 40.734985,
             "lng": -74.000451,
             "price": 2,
-            "thumbnail": "https://www.opentable.com/img/restimages/146086.jpg"
+            "thumbnail": "https://www.opentable.com/img/restimages/146086.jpg",
+            "owner_id": 2
         }
   ]
 

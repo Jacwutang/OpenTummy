@@ -15,9 +15,9 @@ const restaurantsReducer = (state = {}, action) => {
     case RECEIVE_ALL_RESTAURANTS:
       return merge({},state,action.restaurants);
       //return(action.restaurants);
-    // case REMOVE_RESTAURANT:
-    // delete newState.currentUser.restaurants[action.id];
-    //     return newState;
+     case REMOVE_RESTAURANT:
+     delete newState.currentUser.restaurants[action.id];
+      return newState;
 
 
     default:

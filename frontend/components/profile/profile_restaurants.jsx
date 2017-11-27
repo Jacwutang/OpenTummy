@@ -4,13 +4,17 @@ class ProfileRestaurants extends React.Component{
 
   constructor(props){
     super(props);
-    // this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  // handleSubmit(id){
-  //
-  //   this.props.deleteRestaurant(id);
-  // }
+  handleSubmit(id){
+
+    return(e => {
+      e.preventDefault();
+      this.props.deleteRestaurant(id)
+    })
+
+  }
 
 
 
@@ -41,7 +45,9 @@ class ProfileRestaurants extends React.Component{
 
                     </div>
 
-
+                    <div className = "profile-restaurants-index-div-right">
+                      <button type="button" onClick={this.handleSubmit(rest.id)}> Delete </button>
+                    </div>
 
 
             </li>

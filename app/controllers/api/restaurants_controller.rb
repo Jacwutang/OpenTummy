@@ -29,9 +29,10 @@ class Api::RestaurantsController < ApplicationController
   def destroy
 
     @restaurant = Restaurant.find(params[:id])
-
-    if @restaurant.destroy
-      render "api/restaurants/show"
+    
+    if @restaurant
+      @restaurant.owner_id = nil
+      @restaurant.save
     else
       render json: ['Invalid'], status: 404
     end
