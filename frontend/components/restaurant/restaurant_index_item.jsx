@@ -12,16 +12,18 @@ const RestaurantIndexItem = ({rest,idx}) => {
         <Link to={`/restaurants/${rest.id}`}>
           <img className = "thumbnail" src={rest.thumbnail}/>
         </Link>
-          <span>
-            <h2> {rest.name}
+
+            <h2> {rest.name} </h2>
             <h2> $$$$$ </h2>
-          </h2>
-          </span>
+
+
           <br/>
           Put stars here ******
           <br/>
             {category} | {rest.city}
           <br/>
+
+        <i class="fa fa-fire fa-2x" aria-hidden="true"></i>  Booked 25 times today!
 
         </div>
 
