@@ -1,0 +1,41 @@
+.profile-restaurants-index-ul{
+  display: flex;
+  flex-wrap: wrap;
+  overflow: scroll;
+
+}
+
+
+
+.profile-restaurants-index-li{
+  width: 100%;
+  box-sizing: border-box;
+  border-bottom: 1px solid black;
+  display: flex;
+}
+
+ img:last-of-type{
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-bottom: 12px;
+  border-radius: 5%;
+  padding-right: 3px;
+
+}
+
+.profile-restaurants-index-div-left{
+  width: 60%;
+  margin-left: 0;
+
+
+}
+
+.profile-restaurants-index-div-right{
+  width: 40%;
+  margin-right: 0;
+  padding-top: 15%;
+  height: inherit;
+  padding-top: 8%;
+
+
+}
