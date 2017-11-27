@@ -5,7 +5,37 @@
 }
 
 .restaurant-detail-header{
-  height: 100px;
+  height: 200px;
   width: 100%;
-  background: linear-gradient(gray, brown);
+  background: linear-gradient(gray, #c19b6c);
+  display: flex;
+  justify-content: space-between;
+}
+
+.thumbnail-restaurant-detail{
+    height: 125px;
+    width: 150px;
+    float: left;
+    margin-left: 15%;
+    margin-top: 3%;
+    border-radius: 2px;
+
+}
+
+.h1-restaurant-title{
+    color: #fff;
+    text-shadow: 5px;
+    font-weight: bold;
+    margin-top: 5%;
+
+}
+
+.fav-button-restaurant-item{
+  height: 50px;
+}
+
+
+.restaurant-detail-header-left{
+  margin-left: 1%;
+
 }

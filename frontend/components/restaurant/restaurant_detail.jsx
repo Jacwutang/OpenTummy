@@ -23,7 +23,19 @@ class RestaurantDetail extends React.Component{
         <section className = "restaurant-detail-main">
           <h1> Restaurant Detail </h1>
           <div className = "restaurant-detail-header">
-            {restaurant.name}
+
+            <img className="thumbnail-restaurant-detail" src={restaurant.thumbnail}/>
+
+            <div className = "restaurant-detail-header-left">
+              <h1 className = "h1-restaurant-title">{restaurant.name} </h1>
+              <span> <h3> ******* </h3> <h3> 35 Reviews </h3> </span>
+              <br/>
+            </div>
+
+            <button className = "fav-button-restaurant-item"> <i className="fa fa-star" aria-hidden="true"></i> Fav </button>
+
+
+
           </div>
 
         </section>
