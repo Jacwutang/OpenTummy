@@ -9,11 +9,11 @@ class Profile extends React.Component{
 
   }
   render(){
-
+    
     let restaurants = Object.keys(this.props.currentUser.restaurants).map(el => (
       this.props.currentUser.restaurants[el]));
 
-
+    const{deleteRestaurant} = this.props;
 
     return(
       <div className = "profile-main">
@@ -23,11 +23,12 @@ class Profile extends React.Component{
           <button className = "restaurant-form-button" type="button">Add a Restaurant</button>
         </Link>
 
-        <span>
+        <div>
           <ProfileRestaurants
-          restaurants={restaurants}/>
+          restaurants={restaurants}
+          deleteRestaurant={deleteRestaurant}/>
 
-        </span>
+        </div>
 
       </div>
     );

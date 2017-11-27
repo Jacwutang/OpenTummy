@@ -24,7 +24,7 @@ export const fetchAllRestaurants = () => {
 //   })
 // );
 export const createRestaurant = restaurant => {
-  
+
   return($.ajax({
     url: '/api/restaurants',
     method: 'POST',
@@ -32,3 +32,12 @@ export const createRestaurant = restaurant => {
     })
   )
 };
+
+export const deleteRestaurant = (id) => (
+  $.ajax({
+    url: `/api/restaurants/${id}`,
+    method: 'DELETE',
+    data: id
+  })
+
+);

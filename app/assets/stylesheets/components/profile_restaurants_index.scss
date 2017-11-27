@@ -26,16 +26,22 @@
 .profile-restaurants-index-div-left{
   width: 60%;
   margin-left: 0;
+  display: flex;
+  justify-content: flex-start;
 
 
 }
 
 .profile-restaurants-index-div-right{
-  width: 40%;
-  margin-right: 0;
-  padding-top: 15%;
-  height: inherit;
-  padding-top: 8%;
+   width: 40%;
+   margin-right: 0;
+   padding-top: 15%;
+   height: inherit;
+   padding-top: 5%;
+
+  // display: flex;
+  // justify-content: flex-end;
+
 
 
 }

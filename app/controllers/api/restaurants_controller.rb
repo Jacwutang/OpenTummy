@@ -26,6 +26,18 @@ class Api::RestaurantsController < ApplicationController
 
   end
 
+  def destroy
+
+    @restaurant = Restaurant.find(params[:id])
+
+    if @restaurant.destroy
+      render "api/restaurants/show"
+    else
+      render json: ['Invalid'], status: 404
+    end
+
+  end
+
   private
   def rest_params
     params.require(:restaurant).permit(:name,:address,:city,:state,:postal_code,:country,:price,:category,:price,:thumbnail,:image_urls,:owner_id,:max_reservations,:lng,:lat, :description)

@@ -2,6 +2,19 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 class ProfileRestaurants extends React.Component{
 
+  constructor(props){
+    super(props);
+    // this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  // handleSubmit(id){
+  //
+  //   this.props.deleteRestaurant(id);
+  // }
+
+
+
+
   render(){
     const {restaurants} = this.props;
 
@@ -28,9 +41,7 @@ class ProfileRestaurants extends React.Component{
 
                     </div>
 
-                    <div className = "profile-restaurants-index-div-right">
-                      <button> Delete </button>
-                    </div>
+
 
 
             </li>
@@ -46,3 +57,7 @@ class ProfileRestaurants extends React.Component{
 
 
 export default ProfileRestaurants;
+
+// <div className = "profile-restaurants-index-div-right">
+//   <button onClick={this.handleSubmit(rest.id)}> Delete </button>
+// </div>
