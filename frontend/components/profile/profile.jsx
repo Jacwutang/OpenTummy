@@ -9,6 +9,12 @@ class Profile extends React.Component{
 
   }
   render(){
+
+    let restaurants = Object.keys(this.props.currentUser.restaurants).map(el => (
+      this.props.currentUser.restaurants[el]));
+
+
+
     return(
       <div className = "profile-main">
         <h1> Splash Page </h1>
@@ -18,7 +24,8 @@ class Profile extends React.Component{
         </Link>
 
         <span>
-          <ProfileRestaurants />
+          <ProfileRestaurants
+          restaurants={restaurants}/>
 
         </span>
 
