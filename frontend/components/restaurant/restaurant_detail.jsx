@@ -9,16 +9,27 @@ class RestaurantDetail extends React.Component{
     this.props.requestRestaurant(this.props.match.params.restId);
   }
 
+
   render(){
-    return(
-      <section className = "restaurant-detail-main">
-        <h1> Restaurant Detail </h1>
-        <div className = "restaurant-detail-header">
+    const {restaurant} = this.props;
 
-        </div>
 
-      </section>
-    );
+    if (typeof restaurant === "undefined"){
+      return null;
+    }
+    else{
+
+      return(
+        <section className = "restaurant-detail-main">
+          <h1> Restaurant Detail </h1>
+          <div className = "restaurant-detail-header">
+            {restaurant.name}
+          </div>
+
+        </section>
+      );
+    }
+
 
   }
 

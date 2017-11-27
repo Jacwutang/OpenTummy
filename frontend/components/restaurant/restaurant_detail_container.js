@@ -5,11 +5,14 @@ import {requestRestaurant} from '../../actions/restaurant_actions';
 
 
 
-const mapStateToProps = (state) => ({
-    currentUser: state.session.currentUser
+const mapStateToProps = (state, ownProps) => {
 
 
-});
+    return{
+    currentUser: state.session.currentUser,
+    restaurant: state.restaurants[ownProps.match.params.restId]
+    }
+};
 
 const mapDispatchToProps = (dispatch,ownProps) => ({
   //make reservation, //favorite,

@@ -10,12 +10,13 @@ const restaurantsReducer = (state = {}, action) => {
   switch(action.type){
     case RECEIVE_RESTAURANT:
       const newRestaurant = {[action.restaurant.id]: action.restaurant};
-      //return merge({}, state , newRestaurant);
-      return newRestaurant;
+        return merge({}, state , newRestaurant);
+        
 
     case RECEIVE_ALL_RESTAURANTS:
       return merge({},state,action.restaurants);
       //return(action.restaurants);
+
      case REMOVE_RESTAURANT:
      delete newState.currentUser.restaurants[action.id];
       return newState;
