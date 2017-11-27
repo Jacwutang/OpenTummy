@@ -28,11 +28,26 @@
   transition: width 0.4s ease-in-out;
   height: 25px;
   border-radius: 5px;
-  margin-left: 5%;
+ margin-left: 1%;
+  height: 44px;
+  font-size: 20px;
 
   // background-image: url(http://www.9zap.com/wp-content/uploads/2010/08/329.jpg);
   // background-position: 10px 10px;
   // background-repeat: no-repeat;
+}
+
+.main-page-reservation{
+  width: 75%;
+
+}
+
+.main-page-reservation-select{
+  width: 125px;
+  height: 50px;
+  font-size: 20px;
+
+
 }
 
 

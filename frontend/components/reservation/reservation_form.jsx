@@ -6,19 +6,9 @@ class ReservationForm extends React.Component{
     super(props);
   }
 
-  renderSearch(){
-    if(this.props.location.pathname === "/"){
-      return(
-        <h1> Home Page Search Container </h1>
-      );
-    } else{
-      return null;
-    }
-
-
-  }
 
   render(){
+
     return(
     <div>
       <div className = "reservation-div">
@@ -43,7 +33,6 @@ class ReservationForm extends React.Component{
 
         </select>
 
-        {this.renderSearch()}
 
         <button type="button" className = "reservation-form-button"> Book this Restaurant </button>
 
