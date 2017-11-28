@@ -14,7 +14,7 @@ class Api::ReservationsController < ApplicationController
 
 
   def destroy
-
+    
   end
 
   def reservation_params
