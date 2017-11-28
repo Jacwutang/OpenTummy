@@ -43,8 +43,24 @@ class RestaurantDetail extends React.Component{
 
           </div>
 
-          <div>
+          <div className = "content-div">
             <ReservationContainer />
+          </div>
+
+          <br/>
+
+          <div className = "content-div">
+            <h1> About {restaurant.name} </h1>
+            <hr/>
+            <span> {restaurant.description} Contemporary Food. Styled in Georgian </span>
+          </div>
+
+          <br/>
+
+          <div className = "content-div">
+            <h1> Ratings and Reviews </h1>
+            <hr/>
+            <span> Gooooood stuff. I love it </span>
           </div>
 
         </section>
