@@ -49,6 +49,11 @@ class ProfileReservations extends React.Component{
     return(
       <div>
         <h1 className = "h1-profile-main"> My Reservations </h1>
+
+        <Link to="/restaurants">
+          <button type="button">Browse all Restaurants</button>
+        </Link>
+
         <ul className = "profile-restaurants-index-ul">
           {reservations.map( (res) => (
 

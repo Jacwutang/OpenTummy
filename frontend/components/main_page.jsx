@@ -1,5 +1,5 @@
 import React from 'react';
-
+import {Link} from 'react-router-dom';
 const MainPage = () => (
 
 
@@ -7,6 +7,10 @@ const MainPage = () => (
     MainPage
 
     <div className= "main-page-reservation">
+
+    <Link to="/restaurants">
+      <button type="button">Browse all Restaurants</button>
+    </Link>
 
     <select className = "main-page-reservation-select">
         <option value="" disabled >
@@ -40,6 +44,7 @@ const MainPage = () => (
 
 
     </div>
+
 
   </div>
 
