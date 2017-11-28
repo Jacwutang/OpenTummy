@@ -15,7 +15,8 @@ class Api::ReservationsController < ApplicationController
 
   def destroy
     @reservation = Reservation.find(params[:id])
-    print(params[:id])
+    
+    #currentUser -> reservations 1,2,3,4,5,6, restaurants:{} User Jack
   end
 
   def reservation_params
