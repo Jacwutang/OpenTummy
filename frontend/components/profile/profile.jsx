@@ -35,7 +35,7 @@ class Profile extends React.Component{
           <Link to= "/restaurants/new">
             <button className = "restaurant-form-button" type="button">Add a Restaurant</button>
           </Link>
-
+          
 
           <div>
             <ProfileReservations

@@ -23,17 +23,34 @@ class ProfileReservations extends React.Component{
     return(
       <div>
         <h1> My Reservations </h1>
-        <ul>
+        <ul className = "profile-restaurants-index-ul">
           {reservations.map( (res) => (
 
-            <li
+            <li className = "profile-restaurants-index-li"
             key = {res.id}>
 
-                    <div>
+                    <div  className = "profile-restaurants-index-div-left">
 
                     <Link to={`/restaurants/${res.restaurant_id}`}>
                        <img className = "thumbnail" src={restaurantsIndex[res.restaurant_id].thumbnail}/>
                     </Link>
+
+                      <h2> {restaurantsIndex[res.restaurant_id].name} </h2>
+
+                      <h2>
+                        Party-Size: {res.head_count}
+
+                      </h2>
+
+                      <h2>
+                        Time: {res.timeslot}
+
+                      </h2>
+
+                      <h2>
+                        Date: {res.date}
+
+                      </h2>
 
 
 
@@ -42,8 +59,9 @@ class ProfileReservations extends React.Component{
 
                     </div>
 
-                    <div>
-                      <button type="button" onClick={this.handleSubmit(res.id)}> Delete </button>
+                    <div className = "profile-restaurants-index-div-right">
+                      <button
+                      type="button" onClick={this.handleSubmit(res.id)}> Delete </button>
                     </div>
 
 
