@@ -4,6 +4,7 @@ import configureStore from './store/store.js';
 import Root from './components/Root';
 import {signup, login, logout} from './actions/session_actions';
 import {createRestaurant, requestAllRestaurants} from './actions/restaurant_actions';
+import {createReservation} from './actions/reservation_actions';
 
 
 document.addEventListener("DOMContentLoaded", () =>{
@@ -31,6 +32,7 @@ document.addEventListener("DOMContentLoaded", () =>{
 
   window.createRestaurant = createRestaurant;
   window.requestAllRestaurants = requestAllRestaurants;
+  window.createReservation = createReservation;
 
 
 

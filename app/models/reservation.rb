@@ -4,7 +4,8 @@ class Reservation < ApplicationRecord
   belongs_to :user,
     primary_key: :id,
     foreign_key: :owner_id,
-    class_name: 'User'
+    class_name: 'User',
+    optional: true
 
   belongs_to :restaurant,
     primary_key: :id,

@@ -21,9 +21,9 @@ class RestaurantForm extends React.Component{
 
     this.state.owner_id = this.props.currentUser.id;
     const restaurant = this.state;
-    
 
-    this.props.createRestaurant(restaurant).then(() => this.props.history.push('/profile'))
+
+    this.props.createRestaurant(restaurant).then(() => this.props.history.push('/profile'));
 
 
 

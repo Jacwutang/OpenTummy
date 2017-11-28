@@ -13,6 +13,16 @@ if user.restaurants.count > 0
   else
     json.restaurants Object
 
+end
 
-
+if user.reservations.count > 0
+  json.reservations do
+    user.reservations.each do |res|
+      json.set! res.id do
+        json.extract! res, :id, :restaurant_id, :user_id, :head_count, :date, :timeslot
+      end
+    end
+  end
+else
+  json.reservations Object
 end

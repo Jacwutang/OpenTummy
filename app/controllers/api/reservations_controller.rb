@@ -1,8 +1,9 @@
-class ReservationsController < ApplicationController
+class Api::ReservationsController < ApplicationController
   def create
     @reservation = Reservation.new(reservation_params)
 
     if @reservation.save!
+      print("hello world")
       render "api/reservations/show"
 
     else
