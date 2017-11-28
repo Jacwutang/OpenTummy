@@ -23,5 +23,5 @@ export const createReservation = reservation => dispatch => (
 
 export const deleteReservation = (id) => dispatch => (
     RESERVATIONutil.deleteReservation(id).then (resp => (
-      dispatch(removeReservation(id))
+      dispatch(removeReservation(resp))
     )));
