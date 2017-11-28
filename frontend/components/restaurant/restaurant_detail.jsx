@@ -44,7 +44,8 @@ class RestaurantDetail extends React.Component{
           </div>
 
           <div>
-            <ReservationContainer />
+            <ReservationContainer
+            restaurant={restaurant}/>
           </div>
 
           <br/>
