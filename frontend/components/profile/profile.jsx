@@ -8,44 +8,49 @@ class Profile extends React.Component{
     super(props);
 
   }
+
+  componentWillMount(){
+    this.props.requestAllRestaurants();
+  }
   render(){
 
-    let restaurants = Object.keys(this.props.currentUser.restaurants).map(el => (
+    let my_restaurants = Object.keys(this.props.currentUser.restaurants).map(el => (
       this.props.currentUser.restaurants[el]));
 
     let reservations = Object.keys(this.props.currentUser.reservations).map(res => (
         this.props.currentUser.reservations[res]));
 
 
-    const{deleteRestaurant,deleteReservation} = this.props;
+    const{deleteRestaurant,deleteReservation,restaurantsIndex} = this.props;
 
 
-    return(
+    if(Object.keys(restaurantsIndex).length === 0){
+      return null;
+    } else{
+      return(
 
-      <div className = "profile-main">
-        <h1> Splash Page </h1>
+        <div className = "profile-main">
+          <h1> Splash Page </h1>
 
-        <Link to= "/restaurants/new">
-          <button className = "restaurant-form-button" type="button">Add a Restaurant</button>
-        </Link>
+          <Link to= "/restaurants/new">
+            <button className = "restaurant-form-button" type="button">Add a Restaurant</button>
+          </Link>
 
 
-        <div>
-          <ProfileReservations
-          reservations={reservations}
-          restaurants={restaurants}
-          deleteReservation={deleteReservation} />
+          <div>
+            <ProfileReservations
+            reservations={reservations}
+            restaurantsIndex={restaurantsIndex}
+            deleteReservation={deleteReservation} />
+          </div>
+
+
         </div>
+      );
 
+    }
 
-        </div>
-    );
   }
-
-
-
-
-
 
 };
 
@@ -54,6 +59,6 @@ export default Profile;
 
 // <div>
 //   <ProfileRestaurants
-//   restaurants={restaurants}
+//   my_restaurants={my_restaurants}
 //   deleteRestaurant={deleteRestaurant}/>
 // </div>

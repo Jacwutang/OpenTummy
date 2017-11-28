@@ -18,7 +18,7 @@ class ProfileReservations extends React.Component{
   }
 
   render(){
-    const {reservations,restaurants} = this.props;
+    const {reservations,restaurantsIndex} = this.props;
 
     return(
       <div>
@@ -32,7 +32,7 @@ class ProfileReservations extends React.Component{
                     <div>
 
                     <Link to={`/restaurants/${res.restaurant_id}`}>
-
+                       <img className = "thumbnail" src={restaurantsIndex[res.restaurant_id].thumbnail}/>
                     </Link>
 
 
