@@ -16,8 +16,9 @@ class Profile extends React.Component{
     let reservations = Object.keys(this.props.currentUser.reservations).map(res => (
         this.props.currentUser.reservations[res]));
 
+
     const{deleteRestaurant,deleteReservation} = this.props;
-    
+
 
     return(
 
@@ -32,6 +33,7 @@ class Profile extends React.Component{
         <div>
           <ProfileReservations
           reservations={reservations}
+          restaurants={restaurants}
           deleteReservation={deleteReservation} />
         </div>
 

@@ -18,7 +18,7 @@ class ProfileReservations extends React.Component{
   }
 
   render(){
-    const {reservations} = this.props;
+    const {reservations,restaurants} = this.props;
 
     return(
       <div>
