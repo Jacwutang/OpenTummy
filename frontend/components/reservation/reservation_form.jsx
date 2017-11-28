@@ -4,6 +4,27 @@ import React from 'react';
 class ReservationForm extends React.Component{
   constructor(props){
     super(props);
+    this.handleSubmit = this.handleSubmit.bind(this);
+
+    this.state = {timeslot: "12:00:00", head_count: 1};
+  }
+
+  handleSubmit(){
+    debugger;
+    e.preventDefault();
+    // this.state.owner_id = this.props.currentUser.id;
+    const reservation = this.state;
+
+
+    this.props.createReservation(reservation).then(() => this.props.history.push('/profile'));
+  }
+
+
+  handleInput(field){
+
+    return ( e =>
+      this.setState({[field]: e.target.value })
+    )
   }
 
 
@@ -12,10 +33,7 @@ class ReservationForm extends React.Component{
     return(
     <div>
       <div className = "reservation-div">
-      <select className = "reservation-select">
-          <option value="" disabled >
-          1 People</option>
-
+      <select onChange={this.handleInput('head_count')} value={this.state.head_count} className = "reservation-select">
 
           <option value={1}> 1 people</option>
           <option value={2}> 2 people</option>
@@ -25,16 +43,27 @@ class ReservationForm extends React.Component{
 
         </select>
 
-        <select className = "reservation-select">
-            <option value="" disabled>
-              7:00 PM </option>
+        <input className = "reservation-input"
+        onChange={this.handleInput('date')}
+        value={this.state.date}
+        type="date"/>
 
-            <option value="7:00 PM" type ="text">7:00 PM</option>
+
+        <select onChange={this.handleInput('timeslot')} value={this.state.timeslot} className = "reservation-select">
+
+
+            <option value="12:00:00" type ="text">12:00 PM</option>
+            <option value="01:00:00" type ="text">1:00 PM</option>
+            <option value="02:00:00" type ="text">2:00 PM</option>
+            <option value="03:00:00" type ="text">3:00 PM</option>
+            <option value="04:00:00" type ="text">4:00 PM</option>
+            <option value="05:00:00" type ="text">5:00 PM</option>
+            <option value="06:00:00" type ="text">6:00 PM</option>
 
         </select>
 
 
-        <button type="button" className = "reservation-form-button"> Book this Restaurant </button>
+        <button type="button" onClick={this.handleSubmit} className = "reservation-form-button"> Book this Restaurant </button>
 
         </div>
 
@@ -50,3 +79,9 @@ class ReservationForm extends React.Component{
 }
 
 export default ReservationForm;
+
+
+
+
+// <option value="" disabled>
+//   12:00 PM </option>

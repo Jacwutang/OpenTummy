@@ -9,9 +9,19 @@
 }
 
 .reservation-select{
-  height: 50px;
+  height: 45px;
   padding-top: 0px;
   margin-top: auto;
+  width: 33%;
+}
+
+.reservation-input{
+  height: 50px;
+  padding-top: 0px;
+  margin-top: 0;
+  width: 33%;
+  height: 42px;
+  border-radius: 3px;
 }
 
 .reservation-form-button{
