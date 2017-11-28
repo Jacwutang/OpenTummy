@@ -14,13 +14,13 @@ class ReservationForm extends React.Component{
     // e.preventDefault();
     // this.state.owner_id = this.props.currentUser.id;
     e.preventDefault();
-    debugger;
+
     this.state.user_id = this.props.currentUser.id;
     this.state.restaurant_id = this.props.match.params.restId;
     this.state.thumbnail = this.props.restaurant.thumbnail;
 
     const reservation = this.state;
-
+  
     this.props.createReservation(reservation).then(() => this.props.history.push('/profile'));
   }
 

@@ -8,6 +8,32 @@ class ProfileReservations extends React.Component{
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  handleTime(timeslot){
+    var time = timeslot.slice(12,-5)
+    // 07:00:00
+
+
+    return(
+      time
+    );
+
+  }
+
+  handleDate(date){
+    var date = date.slice(0,10);
+
+    // 2017-11-05
+
+    let year = date.slice(0,4);
+    let month = date.slice(5,7);
+    let day = date.slice(8);
+
+    return(
+      month + '-' + day + '-' + year
+    );
+  }
+
+
   handleSubmit(id){
 
     return(e => {
@@ -43,12 +69,12 @@ class ProfileReservations extends React.Component{
                       </h2>
 
                       <h2>
-                        Time: {res.timeslot}
+                        Time: {this.handleTime(res.timeslot)} PM
 
                       </h2>
 
                       <h2>
-                        Date: {res.date}
+                        Date: {this.handleDate(res.date)}
 
                       </h2>
 
