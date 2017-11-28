@@ -7,6 +7,6 @@ import reservationsReducer from './reservations_reducer';
 export default combineReducers({
   session: sessionReducer,
   errors: errorsReducer,
-  restaurants: restaurantsReducer,
-  reservations: reservationsReducer
+  restaurants: restaurantsReducer
+  // reservations: reservationsReducer
 })

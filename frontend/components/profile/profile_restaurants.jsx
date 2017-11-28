@@ -24,7 +24,7 @@ class ProfileRestaurants extends React.Component{
 
     return(
       <div>
-        <h1> My Restaurantssss </h1>
+        <h1> My Restaurants </h1>
         <ul className = "profile-restaurants-index-ul">
           {restaurants.map( (rest) => (
 
@@ -55,6 +55,8 @@ class ProfileRestaurants extends React.Component{
           ))}
 
         </ul>
+
+
       </div>
     );
   }
