@@ -9,6 +9,10 @@ if user.restaurants.count > 0
       end
     end
   end
+
   else
     json.restaurants Object
+
+
+
 end

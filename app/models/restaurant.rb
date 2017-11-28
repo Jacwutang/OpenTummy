@@ -8,6 +8,11 @@ class Restaurant < ApplicationRecord
     class_name: 'User',
     optional: true
 
+  has_many :reservations,
+  primary_key: :id,
+  foreign_key: :restaurant_id,
+  class_name: 'Reservation'  
+
 
 
 

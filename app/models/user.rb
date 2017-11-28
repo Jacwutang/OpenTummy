@@ -3,7 +3,7 @@ class User < ApplicationRecord
 
   validates :username, :password_digest, :session_token, presence: true
   validates :username, uniqueness: true
-  validates :password, length: {minimum: 1}, allow_nil: true
+  validates :password, length: {minimum: 6}, allow_nil: true
 
 
   after_initialize :ensure_session_token
@@ -14,6 +14,11 @@ class User < ApplicationRecord
     primary_key: :id,
     foreign_key: :owner_id,
     class_name: 'Restaurant'
+
+  has_many :reservations,
+    primary_key: :id,
+    foreign_key: :user_id,
+    class_name: 'Reservation'
 
 
 
