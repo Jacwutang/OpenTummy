@@ -30,12 +30,12 @@ class Profile extends React.Component{
       return(
 
         <div className = "profile-main">
-          <h1> Splash Page </h1>
+          <h1 className = "h1-profile-main"> Splash Page </h1>
 
           <Link to= "/restaurants/new">
             <button className = "restaurant-form-button" type="button">Add a Restaurant</button>
           </Link>
-          
+
 
           <div>
             <ProfileReservations
@@ -44,6 +44,14 @@ class Profile extends React.Component{
             deleteReservation={deleteReservation} />
           </div>
 
+          <div>
+
+
+
+
+
+
+          </div>
 
         </div>
       );
