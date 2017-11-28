@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171128005037) do
+ActiveRecord::Schema.define(version: 20171128182809) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 20171128005037) do
     t.integer "head_count", null: false
     t.datetime "date", null: false
     t.datetime "timeslot", null: false
+    t.string "thumbnail"
     t.index ["restaurant_id"], name: "index_reservations_on_restaurant_id"
     t.index ["user_id"], name: "index_reservations_on_user_id"
   end
@@ -43,9 +44,6 @@ ActiveRecord::Schema.define(version: 20171128005037) do
     t.integer "max_reservations"
     t.index ["address"], name: "index_restaurants_on_address"
     t.index ["name"], name: "index_restaurants_on_name"
-  end
-
-  create_table "restaurantv2s", force: :cascade do |t|
   end
 
   create_table "users", force: :cascade do |t|

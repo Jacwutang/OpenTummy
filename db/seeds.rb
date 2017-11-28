@@ -924,6 +924,7 @@
 require 'faker'
 User.destroy_all
 Restaurant.destroy_all
+Reservation.destroy_all
 
 User.create!(username: 'jack', password: 'password')
 User.create!(username: 'demo_user', password: 'password')
@@ -943,6 +944,17 @@ end
 SAN_FRANCISCO.each do |restaurant|
   Restaurant.create!(restaurant)
 end
+
+
+
+Reservation.create!(user_id: 1, restaurant_id: 1, head_count: 5, date:" 17/11/28", timeslot: "07:00:00")
+Reservation.create!(user_id: 1, restaurant_id: 2, head_count: 4, date: "17/11/28", timeslot: "08:00:00")
+Reservation.create!(user_id: 1, restaurant_id: 3, head_count: 3, date: "17/11/29", timeslot: "09:00:00")
+
+
+Reservation.create!(user_id: 2, restaurant_id: 5, head_count: 5, date: "17/11/27", timeslot: "07:00:00")
+Reservation.create!(user_id: 2, restaurant_id: 6, head_count: 5, date: "17/11/28", timeslot: "08:00:00")
+Reservation.create!(user_id: 2, restaurant_id: 7, head_count: 5, date: "17/11/29", timeslot: "09:00:00")
 
 
 
