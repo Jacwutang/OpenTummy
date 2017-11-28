@@ -3,14 +3,19 @@ import {connect} from 'react-redux';
 import ReservationForm from './reservation_form';
 import {withRouter} from 'react-router';
 const mapStateToProps = (state) => {
-  return {};
+  return{
+    currentUser: state.session.currentUser
+  }
 
 
 };
 
 
 const mapDispatchToProps = (dispatch) => {
-  return {};
+  return {
+    //createReservation
+    
+  };
 
 
 };
