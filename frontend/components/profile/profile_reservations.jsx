@@ -12,7 +12,7 @@ class ProfileReservations extends React.Component{
 
     return(e => {
       e.preventDefault();
-      this.props.deleteRestaurant(id)
+      this.props.deleteReservation(id)
     })
 
   }
@@ -32,7 +32,7 @@ class ProfileReservations extends React.Component{
                     <div>
 
                     <Link to={`/restaurants/${res.restaurant_id}`}>
-                      
+
                     </Link>
 
 
