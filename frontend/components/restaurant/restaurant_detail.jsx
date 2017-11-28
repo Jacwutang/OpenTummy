@@ -43,7 +43,7 @@ class RestaurantDetail extends React.Component{
 
           </div>
 
-          <div className = "content-div">
+          <div>
             <ReservationContainer />
           </div>
 
