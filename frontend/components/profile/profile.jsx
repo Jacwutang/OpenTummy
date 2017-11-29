@@ -3,10 +3,6 @@ import {Link} from 'react-router-dom';
 import ProfileRestaurants from './profile_restaurants';
 import ProfileReservations from './profile_reservations';
 
-var scrollToElement = require('scroll-to-element');
-
-
-
 class Profile extends React.Component{
   constructor(props){
     super(props);
