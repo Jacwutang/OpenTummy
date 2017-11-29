@@ -52,22 +52,22 @@ class ProfileReservations extends React.Component{
         <div className = "profile-tabs">
 
           <div className = "profile-tabs-left">
-            <Link to="/restaurants/new">
-              <button className="profile-reservations-button" >My Reservations </button>
+            <Link className="header-links" to="/restaurants/new">
+              My Reservations
               </Link>
-            <Link to="/restaurants">
-              <button className= "profile-reservations-button">My Restaurants </button>
+            <Link className="header-links" to="/restaurants">
+            My Restaurants
             </Link>
 
           </div>
 
           <div className = "profile-tabs-right">
 
-          <Link to="/restaurants">
-            <button className= "profile-reservations-button" type="button">Browse all Restaurants</button>
+          <Link className="header-links" to="/restaurants">
+            Browse all Restaurants
             </Link>
-            <Link to= "/restaurants/new">
-              <button className = "profile-reservations-button" type="button">Add a Restaurant</button>
+            <Link className="header-links" to= "/restaurants/new">
+              Add a Restaurant
             </Link>
           </div>
 
