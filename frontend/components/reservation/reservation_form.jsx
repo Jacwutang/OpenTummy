@@ -10,6 +10,7 @@ class ReservationForm extends React.Component{
   }
 
   componentWillMount(){
+    
     this.props.clearErrors();
   }
 
