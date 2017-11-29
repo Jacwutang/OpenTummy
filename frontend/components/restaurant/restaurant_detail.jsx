@@ -26,14 +26,14 @@ class RestaurantDetail extends React.Component{
 
       return(
         <section className = "restaurant-detail-main">
-          <h1> Restaurant Detail </h1>
+
           <div className = "restaurant-detail-header">
 
             <img className="thumbnail-restaurant-detail" src={restaurant.thumbnail}/>
 
             <div className = "restaurant-detail-header-left">
               <h1 className = "h1-restaurant-title">{restaurant.name} </h1>
-              <span> <h3> ******* </h3> <h3> 35 Reviews </h3> </span>
+              <span> <h3> *** </h3> <h3> 40 Reviews </h3> </span>
               <br/>
             </div>
 
@@ -63,6 +63,11 @@ class RestaurantDetail extends React.Component{
             <hr/>
             <span> Gooooood stuff. I love it </span>
           </div>
+
+        <div className = "placeholder-div">
+        </div>
+
+
 
         </section>
       );

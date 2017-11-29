@@ -9,18 +9,23 @@ class ReservationForm extends React.Component{
     this.state = {timeslot: "12:00:00", head_count: 1};
   }
 
+  componentWillMount(){
+    this.props.clearErrors();
+  }
+
   handleSubmit(e){
     // debugger;
     // e.preventDefault();
     // this.state.owner_id = this.props.currentUser.id;
+
     e.preventDefault();
 
-    this.state.user_id = this.props.currentUser.id;
+    this.props.currentUser === null ? this.state.user_id = 0 : this.state.user_id = this.props.currentUser.id
     this.state.restaurant_id = this.props.match.params.restId;
     this.state.thumbnail = this.props.restaurant.thumbnail;
 
     const reservation = this.state;
-  
+
     this.props.createReservation(reservation).then(() => this.props.history.push('/profile'));
   }
 
@@ -32,12 +37,27 @@ class ReservationForm extends React.Component{
     )
   }
 
+  renderErrors(){
+    //if there are any errors render them
+
+    return(
+     <ul>
+       {this.props.errors.map((error, i) => (
+         <li className = "reservation-form-li" key={`error-${i}`}>
+           {error}
+         </li>
+       ))}
+     </ul>
+   );
+  }
+
 
   render(){
 
     return(
     <div>
       <div className = "reservation-div">
+
       <select onChange={this.handleInput('head_count')} value={this.state.head_count} className = "reservation-select">
 
           <option value={1}> 1 people</option>
@@ -68,12 +88,15 @@ class ReservationForm extends React.Component{
         </select>
 
 
+
+
+
         <button type="button" onClick={this.handleSubmit} className = "reservation-form-button"> Book this Restaurant </button>
 
         </div>
 
 
-
+        {this.renderErrors()}
 
 
       </div>

@@ -8,7 +8,7 @@ const sessionLinks = () => {
     <div className = "main-div">
       <span className = "header-nav-icon">
       <a href="/">
-      <i className="fa fa-cutlery fa-4x" aria-hidden="false"></i>
+       <i className="fa fa-cutlery fa-3x" aria-hidden="false"></i>
       </a>
       </span>
 
@@ -58,7 +58,7 @@ const loggedInShow = (currentUser,logout) => (
   <div className = "main-div">
     <span className = "header-nav-icon">
       <a href="/">
-      <i className="fa fa-cutlery fa-4x" aria-hidden="false"></i>
+      <i className="fa fa-cutlery fa-3x" aria-hidden="false"></i>
       </a>
      </span>
 

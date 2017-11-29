@@ -23,7 +23,7 @@ const RestaurantIndexItem = ({rest,idx}) => {
 
 
           <br/>
-          Put stars here ******
+          Put stars here ***
           <br/>
             {category} | {rest.city}
           <br/>
@@ -33,7 +33,7 @@ const RestaurantIndexItem = ({rest,idx}) => {
         </div>
 
         <div className = "restaurant-index-right-div">
-          Dope af. Would come again 10/10.
+          Dope. Would come again 10/10.
           <br/>
           -Username
 

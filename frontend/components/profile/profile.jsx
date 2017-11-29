@@ -13,7 +13,7 @@ class Profile extends React.Component{
   }
 
   componentWillMount(){
-    this.props.requestAllRestaurants();
+    this.props.requestAllRestaurants().then(() => this.props.history.push('/profile'));
   }
 
   // componentDidUpdate() {
