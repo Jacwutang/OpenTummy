@@ -39,8 +39,12 @@ class ProfileRestaurants extends React.Component{
                     </Link>
 
                       <h2> {rest.name} </h2>
-                      <br/>
                       <h2> $$$$$ </h2>
+                      <h2> {rest.address} </h2>
+                      <h2> {rest.city} , {rest.state}</h2>
+
+
+
 
 
 

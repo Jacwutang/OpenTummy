@@ -102,7 +102,7 @@ class Profile extends React.Component{
 
 
           <div id="profile-reservations">
-            <h1> My Reservations </h1>
+            <h1 className = "profile-reservations-h1"> My Reservations </h1>
             <ProfileReservations
             reservations={reservations}
             restaurantsIndex={restaurantsIndex}
@@ -114,7 +114,7 @@ class Profile extends React.Component{
           </div>
 
           <div id="profile-restaurants">
-            <h1> My Restaurants </h1>
+            <h1 className = "profile-restaurants-h1"> My Restaurants </h1>
             <ProfileRestaurants
             my_restaurants={my_restaurants}
             deleteRestaurant={deleteRestaurant}/>
