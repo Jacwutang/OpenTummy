@@ -8,9 +8,7 @@ const MainPage = () => (
 
     <div className= "main-page-reservation">
 
-    <Link to="/restaurants">
-      <button type="button">Browse all Restaurants</button>
-    </Link>
+    
 
     <select className = "main-page-reservation-select">
         <option value="" disabled >

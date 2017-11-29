@@ -34,6 +34,10 @@ a:hover {
 	text-decoration: underline;
 }
 
+a:visited{
+	text-decoration: none;
+}
+
 .hidden {
 	display: none;
 }
@@ -47,6 +51,7 @@ h1 {
 	font-style: italic;
 	font-weight: bold;
 	margin-top: 10%;
+	font-family: 'Boogaloo', cursive;
 }
 
 h2 {
@@ -54,6 +59,8 @@ h2 {
 	margin-bottom: 5px;
 	font-weight: bold;
 	padding-top: 0px;
+	
+	font-family: 'Boogaloo', cursive;
 
 }
 

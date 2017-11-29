@@ -48,11 +48,34 @@ class ProfileReservations extends React.Component{
 
     return(
       <div>
-        <h1 className = "h1-profile-main"> My Reservations </h1>
 
-        <Link to="/restaurants">
-          <button type="button">Browse all Restaurants</button>
-        </Link>
+        <div className = "profile-tabs">
+
+          <div className = "profile-tabs-left">
+            <Link to="/restaurants/new">
+              <button className="profile-reservations-button" >My Reservations </button>
+              </Link>
+            <Link to="/restaurants">
+              <button className= "profile-reservations-button">My Restaurants </button>
+            </Link>
+
+          </div>
+
+          <div className = "profile-tabs-right">
+
+          <Link to="/restaurants">
+            <button className= "profile-reservations-button" type="button">Browse all Restaurants</button>
+            </Link>
+            <Link to= "/restaurants/new">
+              <button className = "profile-reservations-button" type="button">Add a Restaurant</button>
+            </Link>
+          </div>
+
+        </div>
+
+
+
+
 
         <ul className = "profile-restaurants-index-ul">
           {reservations.map( (res) => (

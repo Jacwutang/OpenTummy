@@ -32,9 +32,7 @@ class Profile extends React.Component{
         <div className = "profile-main">
           <h1 className = "h1-profile-main"> Splash Page </h1>
 
-          <Link to= "/restaurants/new">
-            <button className = "restaurant-form-button" type="button">Add a Restaurant</button>
-          </Link>
+        
 
 
           <div>

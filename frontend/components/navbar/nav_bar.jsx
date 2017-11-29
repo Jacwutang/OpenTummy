@@ -23,7 +23,10 @@ const sessionLinks = () => {
       </span>
 
       <span className = "header-title">
-            OpenTummy
+
+
+         OpenTummy
+
 
       </span>
 
