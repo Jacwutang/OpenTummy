@@ -47,8 +47,8 @@ export const deleteRestaurant = (id) => (
 
 export const searchRestaurants = (query) => (
   $.ajax({
-    url: 'api/restaurants/restaurant_searches',
+    url: 'api/restaurant_searches',
     method: 'GET',
-    data: {query}
+    data: {search: {query} }
   })
 );
