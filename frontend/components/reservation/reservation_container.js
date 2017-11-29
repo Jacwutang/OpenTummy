@@ -5,9 +5,9 @@ import {withRouter} from 'react-router';
 import {createReservation, receiveReservationErrors} from '../../actions/reservation_actions';
 
 const mapStateToProps = (state,ownProps) => {
-  const formType = Object.keys(state.session.currentUser.reservations).includes(ownProps.match.params.restId)? 'edit': 'new'
+  const formType = Object.keys(state.session.currentUser.reservations).includes(ownProps.match.params.restId)? 'Edit this Reservation': 'Book this Restaurant'
 
-  debugger;
+
   return{
     currentUser: state.session.currentUser,
     errors: state.errors.reservation,

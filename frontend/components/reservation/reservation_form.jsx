@@ -10,7 +10,7 @@ class ReservationForm extends React.Component{
   }
 
   componentWillMount(){
-    
+
     this.props.clearErrors();
   }
 
@@ -28,6 +28,8 @@ class ReservationForm extends React.Component{
     const reservation = this.state;
 
     this.props.createReservation(reservation).then(() => this.props.history.push('/profile'));
+
+    
   }
 
 
@@ -92,7 +94,7 @@ class ReservationForm extends React.Component{
 
 
 
-        <button type="button" onClick={this.handleSubmit} className = "reservation-form-button"> Book this Restaurant </button>
+        <button type="button" onClick={this.handleSubmit} className = "reservation-form-button"> {this.props.formType} </button>
 
         </div>
 
