@@ -52,6 +52,13 @@ class ProfileRestaurants extends React.Component{
 
                     <div className = "profile-restaurants-index-div-right">
                       <button type="button" onClick={this.handleSubmit(rest.id)}> Delete </button>
+                      <br/>
+                      <br/>
+                      <Link to="/restaurants/new">
+                      <button type="button" className = "button-bandaid"> Edit </button>
+
+                      </Link>
+
                     </div>
 
 

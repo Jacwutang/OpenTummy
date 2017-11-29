@@ -6,6 +6,7 @@ class ProfileReservations extends React.Component{
   constructor(props){
     super(props);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleEdit = this.handleEdit.bind(this);
   }
 
   handleTime(timeslot){
@@ -39,6 +40,15 @@ class ProfileReservations extends React.Component{
     return(e => {
       e.preventDefault();
       this.props.deleteReservation(id)
+    })
+
+  }
+
+  handleEdit(id){
+
+    return(e => {
+      e.preventDefault();
+      // this.props.deleteReservation(id)
     })
 
   }
@@ -88,6 +98,14 @@ class ProfileReservations extends React.Component{
                     <div className = "profile-restaurants-index-div-right">
                       <button
                       type="button" onClick={this.handleSubmit(res.id)}> Delete </button>
+                      <br/>
+                      <br/>
+
+                        <Link to={`/restaurants/${res.restaurant_id}`}>
+                        <button type="button" className = "button-bandaid"> Edit </button>
+
+                        </Link>
+
                     </div>
 
 
