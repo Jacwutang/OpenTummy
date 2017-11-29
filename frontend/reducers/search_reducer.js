@@ -9,7 +9,8 @@ const searchReducer = (state = {}, action) => {
   let newState = merge({},state);
 
   switch(action.type){
-
+      case RECEIVE_ALL_SEARCH_RESTAURANTS:
+      return merge({},state, {searchRestaurants: action.restaurants});
 
 
     default:
