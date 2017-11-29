@@ -88,7 +88,7 @@ class Profile extends React.Component{
               <button className = "header-links" type="button" onClick={() => {this.handleButton()}}> Restaurants </button>
 
 
-                <button className = "header-links" type="button" onClick={() => {this.handleButtonAdd()}}> Add Restaurant </button>
+                <button className = "header-links" type="button" onClick={() => {this.handleButtonAddRestaurant()}} > Add Restaurant </button>
 
 
 
