@@ -3,9 +3,16 @@ import {Link} from 'react-router-dom';
 import ProfileRestaurants from './profile_restaurants';
 import ProfileReservations from './profile_reservations';
 
+var scrollToElement = require('scroll-to-element');
+
+
+
 class Profile extends React.Component{
   constructor(props){
     super(props);
+    this.handeClick = this.handleClick.bind(this);
+    this.handleButton = this.handleButton.bind(this);
+    this.handleButtonAddRestaurant = this.handleButtonAddRestaurant.bind(this);
 
   }
 
@@ -13,14 +20,36 @@ class Profile extends React.Component{
     this.props.requestAllRestaurants();
   }
 
-  componentDidUpdate() {
-    let hash = this.props.location.hash.replace('#', '');
-    if (hash) {
-        let node = ReactDOM.findDOMNode(this.refs[hash]);
-        if (node) {
-            node.scrollIntoView();
-        }
+  // componentDidUpdate() {
+  //   let hash = this.props.location.hash.replace('#', '');
+  //   if (hash) {
+  //       let node = ReactDOM.findDOMNode(this.refs[hash]);
+  //       if (node) {
+  //           node.scrollIntoView();
+  //       }
+  //   }
+  // }
+
+  handleClick(field){
+
+    if(field === 'profile-reservations'){
+
+      document.getElementById('profile-reservations').scrollIntoView(true);
+      // window.scrollTo(0,0);
+    } else{
+      document.getElementById('profile-restaurants').scrollIntoView(false);
     }
+
+  }
+
+  handleButton(){
+
+    this.props.history.push('/restaurants/');
+  }
+
+  handleButtonAddRestaurant(){
+
+    this.props.history.push('/restaurants/new');
   }
 
   render(){
@@ -38,6 +67,7 @@ class Profile extends React.Component{
     if(Object.keys(restaurantsIndex).length === 0){
       return null;
     } else{
+
       return(
 
         <div className = "profile-main">
@@ -46,30 +76,32 @@ class Profile extends React.Component{
           <div className = "profile-tabs">
 
             <div className = "profile-tabs-left">
-              <a href="#profile-reservations" className="header-links">
+              <button type="button" onClick={() => {this.handleClick('profile-reservations')}} className="header-links">
                 My Reservations
-                </a>
+                </button>
 
-              <a href="#profile-restaurants" className="header-links">
-              My Restaurants
-              </a>
+              <button type="button" onClick={() => {this.handleClick('profile-restaurants')}} className="header-links" className="header-links">
+                My Restaurants
+              </button>
 
             </div>
 
             <div className = "profile-tabs-right">
 
-            <Link className="header-links" to="/restaurants">
-              Browse all Restaurants
-              </Link>
-              <Link className="header-links" to= "/restaurants/new">
-                Add a Restaurant
-              </Link>
+
+              <button className = "header-links" type="button" onClick={() => {this.handleButton()}}> Restaurants </button>
+
+
+                <button className = "header-links" type="button" onClick={() => {this.handleButtonAdd()}}> Add Restaurant </button>
+
+
+
             </div>
 
           </div>
 
 
-          <div ref="profile-reservations">
+          <div id="profile-reservations">
             <ProfileReservations
             reservations={reservations}
             restaurantsIndex={restaurantsIndex}
@@ -80,11 +112,13 @@ class Profile extends React.Component{
 
           </div>
 
-          <div ref="profile-restaurants">
+          <div id="profile-restaurants">
             <ProfileRestaurants
             my_restaurants={my_restaurants}
             deleteRestaurant={deleteRestaurant}/>
           </div>
+
+
 
         </div>
       );
