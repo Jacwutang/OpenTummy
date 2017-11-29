@@ -8,6 +8,18 @@ export const createReservation = reservation => {
   )
 };
 
+
+export const editReservation = reservation => {
+
+  return($.ajax({
+    url: `/api/reservations${reservation.id}`,
+    method: 'PATCH',
+    data: {reservation}
+    })
+  )
+};
+
+
 export const deleteReservation = (id) => (
   $.ajax({
     url: `/api/reservations/${id}`,

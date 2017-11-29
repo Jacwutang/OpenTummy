@@ -4,6 +4,7 @@ export const RECEIVE_RESERVATION = "RECEIVE_RESERVATION";
 export const REMOVE_RESERVATION = "REMOVE_RESERVATION";
 export const RECEIVE_RESERVATION_ERRORS = "RECEIVE_RESERVATION_ERRORS";
 
+
 export const removeReservation = id => ({
   type: REMOVE_RESERVATION,
   id
@@ -25,10 +26,19 @@ export const createReservation = reservation => dispatch => (
     dispatch(receiveReservation(reservation))), err => (dispatch(receiveReservationErrors(err.responseJSON)))
 ));
 
+export const editReservation = reservation => dispatch => (
+  RESERVATIONutil.editReservation(reservation).then(reservation => (
+    dispatch(receiveReservation(reservation))), err => (dispatch(receiveReservationErrors(err.responseJSON)))
+));
+
+
 export const deleteReservation = (id) => dispatch => (
     RESERVATIONutil.deleteReservation(id).then (resp => (
       dispatch(removeReservation(resp))
     )));
+
+
+
 
 
 

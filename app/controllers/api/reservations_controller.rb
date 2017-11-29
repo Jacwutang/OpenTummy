@@ -18,6 +18,13 @@ class Api::ReservationsController < ApplicationController
 
   end
 
+  def edit
+    @reservation = Reservation.find(params[:reservation][:id])
+
+    # if @reservation
+
+  end
+
 
   def destroy
     @reservation = Reservation.find(params[:id])

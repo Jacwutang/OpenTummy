@@ -17,8 +17,8 @@ Rails.application.routes.draw do
   namespace :api, defaults: {format: :json} do
     resource :session, only: [:create,:destroy]
     resources :users, only:[:create,:show,:destroy]
-    resources :restaurants, only: [:create,:show,:index, :destroy]
-    resources :reservations, only: [:create,:destroy]
+    resources :restaurants, only: [:create,:show,:index, :destroy, :edit]
+    resources :reservations, only: [:create,:destroy,:edit]
     # resources :music_searches, only: [:index] do
     #   get "songs by artist", on: :collection
     #

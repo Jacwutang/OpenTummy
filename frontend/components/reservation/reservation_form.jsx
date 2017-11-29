@@ -27,9 +27,9 @@ class ReservationForm extends React.Component{
 
     const reservation = this.state;
 
-    this.props.createReservation(reservation).then(() => this.props.history.push('/profile'));
+    this.props.processReservation(reservation).then(() => this.props.history.push('/profile'));
 
-    
+
   }
 
 

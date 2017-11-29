@@ -10,6 +10,7 @@ class RestaurantDetail extends React.Component{
 
   componentWillMount(){
     this.props.requestRestaurant(this.props.match.params.restId);
+    window.scrollTo(0,0);
   }
 
 
