@@ -33,8 +33,12 @@ const App = () => (
 
       <ProtectedRoute path = "/profile" component={ProfileContainer} />
 
+    
+
+
 
       <ProtectedRoute exact path = "/restaurants/new" component={RestaurantFormContainer} />
+
       <Route exact path="/restaurants/:restId" component={RestaurantDetailContainer} />
 
 

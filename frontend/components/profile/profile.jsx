@@ -32,7 +32,7 @@ class Profile extends React.Component{
         <div className = "profile-main">
           <h1 className = "h1-profile-main"> Splash Page </h1>
 
-        
+
 
 
           <div>
@@ -42,13 +42,14 @@ class Profile extends React.Component{
             deleteReservation={deleteReservation} />
           </div>
 
+          <div className ="placeholder-div">
+
+          </div>
+
           <div>
-
-
-
-
-
-
+            <ProfileRestaurants
+            my_restaurants={my_restaurants}
+            deleteRestaurant={deleteRestaurant}/>
           </div>
 
         </div>
@@ -64,7 +65,7 @@ export default Profile;
 
 
 // <div>
-//   <ProfileRestaurants
-//   my_restaurants={my_restaurants}
-//   deleteRestaurant={deleteRestaurant}/>
+  // <ProfileRestaurants
+  // my_restaurants={my_restaurants}
+  // deleteRestaurant={deleteRestaurant}/>
 // </div>

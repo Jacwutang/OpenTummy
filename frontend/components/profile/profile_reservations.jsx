@@ -55,7 +55,7 @@ class ProfileReservations extends React.Component{
             <Link className="header-links" to="/restaurants/new">
               My Reservations
               </Link>
-            <Link className="header-links" to="/restaurants">
+            <Link className="header-links" to="/profile/restaurants/my">
             My Restaurants
             </Link>
 

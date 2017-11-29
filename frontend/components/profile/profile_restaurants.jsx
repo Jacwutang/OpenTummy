@@ -20,13 +20,13 @@ class ProfileRestaurants extends React.Component{
 
 
   render(){
-    const {restaurants} = this.props;
+    const {my_restaurants} = this.props;
 
     return(
       <div>
-        <h1> My Restaurants </h1>
+
         <ul className = "profile-restaurants-index-ul">
-          {restaurants.map( (rest) => (
+          {my_restaurants.map( (rest) => (
 
             <li className = "profile-restaurants-index-li"
             key = {rest.id}>
