@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import configureStore from './store/store.js';
 import Root from './components/Root';
 import {signup, login, logout} from './actions/session_actions';
-import {createRestaurant, requestAllRestaurants} from './actions/restaurant_actions';
+import {createRestaurant, requestAllRestaurants,searchAllRestaurants} from './actions/restaurant_actions';
 import {createReservation, deleteReservation} from './actions/reservation_actions';
 
 
@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () =>{
   window.requestAllRestaurants = requestAllRestaurants;
   window.createReservation = createReservation;
   window.deleteReservation = deleteReservation;
-
+  window.searchAllRestaurants = searchAllRestaurants;
 
 
   ReactDOM.render(<Root store={store}/>, root);
