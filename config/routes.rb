@@ -23,6 +23,7 @@ Rails.application.routes.draw do
     #   get "songs by artist", on: :collection
     #
     # end
+    resources :restaurant_searches, only:[ :index]
   end
 
 

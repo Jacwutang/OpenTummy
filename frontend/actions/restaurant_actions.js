@@ -4,6 +4,7 @@ export const RECEIVE_RESTAURANT = "RECEIVE_RESTAURANT";
 export const RECEIVE_RESTAURANT_ERRORS = "RECEIVE_RESTAURANT_ERRORS";
 export const RECEIVE_ALL_RESTAURANTS = "RECEIVE_ALL_RESTAURANTS";
 export const REMOVE_RESTAURANT = "REMOVE_RESTAURANT";
+export const RECEIVE_ALL_SEARCH_RESTAURANTS = "RECEIVE_ALL_SEARCH_RESTAURANTS";
 
 // export const RECEIVE_RESTAURANT_ERRORS = "RECEIVE_RESTAURANT_ERRORS";
 
@@ -26,6 +27,12 @@ export const receiveRestaurant = (restaurant) => ({
 export const receiveAllRestaurants = (restaurants) => ({
   type: RECEIVE_ALL_RESTAURANTS,
   restaurants
+});
+
+export const showAllRestaurants = (restaurants) => ({
+  type: RECEIVE_ALL_SEARCH_RESTAURANTS,
+  restaurants
+
 });
 
 
@@ -52,5 +59,12 @@ export const requestAllRestaurants = () => dispatch => (
 export const deleteRestaurant = (id) => dispatch => (
   RESTAURANTutil.deleteRestaurant(id).then (resp => (
     dispatch(removeRestaurant(resp))
+  ))
+);
+
+
+export const searchAllRestaurants = (query) => dispatch => (
+  RESTAURANTutil.searchRestaurants(query).then( restaurants => (
+    dispatch(showAllRestaurants(restaurants))
   ))
 );

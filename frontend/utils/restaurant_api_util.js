@@ -44,3 +44,11 @@ export const deleteRestaurant = (id) => (
   })
 
 );
+
+export const searchRestaurants = (query) => (
+  $.ajax({
+    url: 'api/restaurants/restaurant_searches',
+    method: 'GET',
+    data: {query}
+  })
+);
