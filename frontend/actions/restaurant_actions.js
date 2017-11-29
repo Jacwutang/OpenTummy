@@ -51,6 +51,6 @@ export const requestAllRestaurants = () => dispatch => (
 
 export const deleteRestaurant = (id) => dispatch => (
   RESTAURANTutil.deleteRestaurant(id).then (resp => (
-    dispatch(removeRestaurant(id))
+    dispatch(removeRestaurant(resp))
   ))
 );

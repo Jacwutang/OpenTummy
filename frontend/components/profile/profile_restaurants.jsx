@@ -11,7 +11,7 @@ class ProfileRestaurants extends React.Component{
 
     return(e => {
       e.preventDefault();
-      this.props.deleteRestaurant(id)
+      this.props.deleteRestaurant(id);
     })
 
   }

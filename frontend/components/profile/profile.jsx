@@ -12,6 +12,17 @@ class Profile extends React.Component{
   componentWillMount(){
     this.props.requestAllRestaurants();
   }
+
+  componentDidUpdate() {
+    let hash = this.props.location.hash.replace('#', '');
+    if (hash) {
+        let node = ReactDOM.findDOMNode(this.refs[hash]);
+        if (node) {
+            node.scrollIntoView();
+        }
+    }
+  }
+
   render(){
 
     let my_restaurants = Object.keys(this.props.currentUser.restaurants).map(el => (
@@ -32,10 +43,33 @@ class Profile extends React.Component{
         <div className = "profile-main">
           <h1 className = "h1-profile-main"> Splash Page </h1>
 
+          <div className = "profile-tabs">
+
+            <div className = "profile-tabs-left">
+              <a href="#profile-reservations" className="header-links">
+                My Reservations
+                </a>
+
+              <a href="#profile-restaurants" className="header-links">
+              My Restaurants
+              </a>
+
+            </div>
+
+            <div className = "profile-tabs-right">
+
+            <Link className="header-links" to="/restaurants">
+              Browse all Restaurants
+              </Link>
+              <Link className="header-links" to= "/restaurants/new">
+                Add a Restaurant
+              </Link>
+            </div>
+
+          </div>
 
 
-
-          <div>
+          <div ref="profile-reservations">
             <ProfileReservations
             reservations={reservations}
             restaurantsIndex={restaurantsIndex}
@@ -46,7 +80,7 @@ class Profile extends React.Component{
 
           </div>
 
-          <div>
+          <div ref="profile-restaurants">
             <ProfileRestaurants
             my_restaurants={my_restaurants}
             deleteRestaurant={deleteRestaurant}/>
