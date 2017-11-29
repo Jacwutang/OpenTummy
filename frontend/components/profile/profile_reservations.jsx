@@ -67,7 +67,7 @@ class ProfileReservations extends React.Component{
 
                     <div  className = "profile-restaurants-index-div-left">
 
-                    <Link to={`/restaurants/${res.restaurant_id}`}>
+                    <Link to={`/restaurants/${res.restaurant_id}/edit`}>
                        <img className = "thumbnail" src={restaurantsIndex[res.restaurant_id].thumbnail}/>
                     </Link>
 
@@ -101,7 +101,8 @@ class ProfileReservations extends React.Component{
                       <br/>
                       <br/>
 
-                        <Link to={`/restaurants/${res.restaurant_id}`}>
+                        <Link to={`/restaurants/${res.restaurant_id}/edit/${res.id}`}>
+
                         <button type="button" className = "button-bandaid"> Edit </button>
 
                         </Link>

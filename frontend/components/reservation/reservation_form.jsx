@@ -15,9 +15,6 @@ class ReservationForm extends React.Component{
   }
 
   handleSubmit(e){
-    // debugger;
-    // e.preventDefault();
-    // this.state.owner_id = this.props.currentUser.id;
 
     e.preventDefault();
 

@@ -17,7 +17,7 @@ const mapStateToProps = (state,ownProps) => {
 
    const formType = permittedValuesToString.includes(ownProps.match.params.restId)? 'Edit this Reservation': 'Book this Restaurant'
 
-   
+
 
   return{
     currentUser: state.session.currentUser,
@@ -30,9 +30,10 @@ const mapStateToProps = (state,ownProps) => {
 
 
 const mapDispatchToProps = (dispatch,ownProps) => {
-  // let formType2 = ownProps.location.pathname.slice(1);
-  //
-  // const processReservation = (formType2  === 'edit')? editReservation : createReservation;
+
+  let formTypeCheck = ownProps.match.params.edit
+
+  const processReservation = (formTypeCheck  === 'edit')? editReservation : createReservation;
 
   return {
     createReservation: (reservation) => dispatch(createReservation(reservation)),
