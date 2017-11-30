@@ -8,9 +8,10 @@ import {searchAllRestaurants} from '../../actions/restaurant_actions';
 const mapStateToProps = (state) => {
 
 
+
     return{
       currentUser:  state.session.currentUser,
-      searchResults: state.search.searchRestaurants
+      results: state.search.restaurants
 
     }
 };

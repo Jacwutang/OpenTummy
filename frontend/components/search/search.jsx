@@ -17,15 +17,35 @@ class Search extends React.Component{
 
     findMatches(){
       // this.props.searchAllRestaurants(this.state.query)
-      this.props.searchAllRestaurants(this.state.query).then( (restaurants) => console.log(restaurants));
+      this.props.searchAllRestaurants(this.state.query);
       // return(
       //   this.props.searchAllRestaurants(this.state.query).then( (resturants) => this.renderMatches(restaurants) )
       // );
       //  this.props.processRestaurant(restaurant).then(() => this.props.history.push('/profile'));
     }
 
-    renderMatches(restaurants){
-      // {this.findMatches()}
+    renderMatches(){
+
+      if(this.props.results === undefined){
+        return;
+      }
+
+      var results = Object.keys(this.props.results).map( (id) => this.props.results[id] )
+
+      return(
+        <ul>
+          {results.map( (restaurant) =>
+            <li
+            key= {restaurant.id}>
+            {restaurant.name}
+
+            </li>
+
+           )}
+
+        </ul>
+      );
+
     }
 
 
@@ -47,6 +67,7 @@ class Search extends React.Component{
           value={this.state.query}
           placeholder="Locations">
           </input>
+          {this.renderMatches()}
 
 
 
