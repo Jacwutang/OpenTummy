@@ -9,7 +9,7 @@ class RestaurantForm extends React.Component{
   constructor(props){
     super(props);
     this.state = {
-        name: 'Joe', address: '123 Street', city: 'Davis', state: '', postal_code: '94122', country: 'USA', price: '',
+        name: '', address: '', city: '', state: '', postal_code: '', country: '', price: '',
         category: '', thumbnail: '', description: '', lat: '', lng: '', image_urls: [], max_reservations: '', owner_id: 0
       }
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -36,6 +36,7 @@ class RestaurantForm extends React.Component{
   }
 
   componentWillMount(){
+
     this.props.clearErrors();
   }
 
@@ -64,6 +65,8 @@ class RestaurantForm extends React.Component{
     }
 
   render(){
+    let restaurantId = parseInt(this.props.match.params.restaurantId);
+    console.log(restaurantId);
     return(
       <div>
        <form className="restaurant-form" onSubmit={this.handleSubmit}>

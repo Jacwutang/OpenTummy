@@ -33,7 +33,7 @@ class ReservationForm extends React.Component{
     this.state.thumbnail = this.props.restaurant.thumbnail;
 
     const reservation = this.state;
-    
+
     this.props.processReservation(reservation).then(() => this.props.history.push('/profile'));
 
 
@@ -63,6 +63,8 @@ class ReservationForm extends React.Component{
 
 
   render(){
+    let restaurantId = parseInt(this.props.match.params.restaurantId);
+    debugger;
 
     return(
     <div>

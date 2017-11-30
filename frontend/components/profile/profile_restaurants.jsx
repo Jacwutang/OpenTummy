@@ -34,19 +34,14 @@ class ProfileRestaurants extends React.Component{
 
                     <div className = "profile-restaurants-index-div-left">
 
-                    <Link to={`/restaurants/${rest.id}`}>
-                      <img className = "thumbnail" src={rest.thumbnail}/>
-                    </Link>
+                      <Link to={`/restaurants/${rest.id}`}>
+                        <img className = "thumbnail" src={rest.thumbnail}/>
+                      </Link>
 
-                      <h2> {rest.name} </h2>
-                      <h2> $$$$$ </h2>
-                      <h2> {rest.address} </h2>
-                      <h2> {rest.city} , {rest.state}</h2>
-
-
-
-
-
+                        <h2> {rest.name} </h2>
+                        <h2> $$$$$ </h2>
+                        <h2> {rest.address} </h2>
+                        <h2> {rest.city} , {rest.state}</h2>
 
                     </div>
 
@@ -54,7 +49,8 @@ class ProfileRestaurants extends React.Component{
                       <button type="button" onClick={this.handleSubmit(rest.id)}> Delete </button>
                       <br/>
                       <br/>
-                      <Link to="/restaurants/new">
+
+                      <Link to={`/restaurants/new/${rest.id}`} >
                       <button type="button" className = "button-bandaid"> Edit </button>
 
                       </Link>

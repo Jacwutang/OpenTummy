@@ -67,7 +67,7 @@ class ProfileReservations extends React.Component{
 
                     <div  className = "profile-restaurants-index-div-left">
 
-                    <Link to={`/restaurants/${res.restaurant_id}/edit`}>
+                    <Link to={`/restaurants/${res.restaurant_id}/edit/${res.id}`}>
                        <img className = "thumbnail" src={restaurantsIndex[res.restaurant_id].thumbnail}/>
                     </Link>
 
