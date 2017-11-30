@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import SearchBarContainer from '../search/search_container';
 
-const sessionLinks = () => {
+const sessionLinks = (searchResults,searchAllRestaurants) => {
   return(
     <header className = "header-nav">
 
@@ -53,7 +53,7 @@ const sessionLinks = () => {
 
 };
 
-const loggedInShow = (currentUser,logout) => (
+const loggedInShow = (currentUser,logout, searchResults,searchAllRestaurants) => (
   <header className = "header-nav">
   <div className = "main-div">
     <span className = "header-nav-icon">
@@ -63,7 +63,7 @@ const loggedInShow = (currentUser,logout) => (
      </span>
 
      <SearchBarContainer
-     props={this.props}
+     props={searchResults,searchAllRestaurants}
      />
 
       <span className = "location-search-container">
