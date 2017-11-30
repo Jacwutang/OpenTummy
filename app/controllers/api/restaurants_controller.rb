@@ -28,6 +28,21 @@ class Api::RestaurantsController < ApplicationController
 
   end
 
+  def edit
+    @rest = Restaurant.find(params[:id])
+    render "api/restaurants/show"
+  end
+
+  def update
+    @rest = Restaurant.find(params[:id])
+    
+
+    if @rest.update(rest_params)
+      render "api/restaurants/show"
+    end
+
+  end
+
   def destroy
 
     @restaurant = Restaurant.find(params[:id])

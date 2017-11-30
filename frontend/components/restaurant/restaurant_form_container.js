@@ -16,7 +16,8 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = (dispatch,ownProps) => {
   // createRestaurant: (restaurant) => dispatch(createRestaurant(restaurant)),
   // editRestaurant: (restaurant) => dispatch(editRestaurant(restaurant)),
-  let processRestaurant = (ownProps.match.params.restaurantId !== null) ? editRestaurant: createRestaurant
+
+  const processRestaurant = (ownProps.match.params.restaurantId !== null) ? editRestaurant: createRestaurant
 
   // const processRestaurant = (formTypeCheck  === '')? editrestaurant : createrestaurant;
   return{

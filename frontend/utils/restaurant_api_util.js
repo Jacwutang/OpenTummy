@@ -36,6 +36,17 @@ export const createRestaurant = restaurant => {
   )
 };
 
+export const editRestaurant = restaurant => {
+
+  return($.ajax({
+    url: `/api/restaurants/${restaurant.id}`,
+    method: 'PATCH',
+    data: {restaurant}
+    })
+  )
+};
+
+
 export const deleteRestaurant = (id) => (
   $.ajax({
     url: `/api/restaurants/${id}`,
