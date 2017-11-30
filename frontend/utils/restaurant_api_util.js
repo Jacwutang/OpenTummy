@@ -58,7 +58,7 @@ export const deleteRestaurant = (id) => (
 
 export const searchRestaurants = (query) => (
   $.ajax({
-    url: 'api/restaurant_searches',
+    url: '/api/searches',
     method: 'GET',
     data: {search: {query} }
   })

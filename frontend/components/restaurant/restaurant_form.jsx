@@ -18,7 +18,7 @@ class RestaurantForm extends React.Component{
 
       this.state = this.props.editRestaurantState;
     } else{
-      
+
       this.state = {
           name: '', address: '', city: '', state: '', postal_code: '', country: '', price: '',
           category: '', thumbnail: '', description: '', lat: '', lng: '', image_urls: [], max_reservations: '', owner_id: 0
@@ -60,6 +60,7 @@ class RestaurantForm extends React.Component{
     //
     // }
     // debugger;
+   window.scrollTo(0,0);
   }
 
   renderErrors(){

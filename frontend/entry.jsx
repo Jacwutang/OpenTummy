@@ -36,6 +36,7 @@ document.addEventListener("DOMContentLoaded", () =>{
   window.deleteReservation = deleteReservation;
   window.searchAllRestaurants = searchAllRestaurants;
   window.editReservation = editReservation;
+  
 
 
   ReactDOM.render(<Root store={store}/>, root);

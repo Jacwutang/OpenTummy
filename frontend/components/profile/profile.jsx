@@ -34,7 +34,7 @@ class Profile extends React.Component{
       document.getElementById('profile-reservations').scrollIntoView(true);
       // window.scrollTo(0,0);
     } else{
-      document.getElementById('profile-restaurants').scrollIntoView(false);
+      document.getElementById('profile-restaurants').scrollIntoView(true);
     }
 
   }

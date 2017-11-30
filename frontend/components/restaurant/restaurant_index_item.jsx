@@ -18,12 +18,12 @@ const RestaurantIndexItem = ({rest,idx}) => {
           <img className = "thumbnail" src={rest.thumbnail}/>
         </Link>
 
-            <h2 className = ""> {rest.name} </h2>
-            <h2 className = ""> $$$$$ </h2>
+            <h2> {rest.name} </h2>
+            <h2> $$$$$ </h2>
 
 
           <br/>
-          Put stars here ***
+          <h2> Average Rating *** </h2>
           <br/>
             {category} | {rest.city}
           <br/>
@@ -33,9 +33,10 @@ const RestaurantIndexItem = ({rest,idx}) => {
         </div>
 
         <div className = "restaurant-index-right-div">
-          Dope. Would come again 10/10.
+          <h3 className ="review-h3"> Dope. Would come again 10/10. </h3>
           <br/>
-          -Username
+          <br/>
+          <h4 className = "user-h4"> -Username </h4>
 
 
 

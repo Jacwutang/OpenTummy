@@ -1,7 +1,8 @@
-class Api::RestaurantsSearchController < ApplicationController
+class Api::SearchesController < ApplicationController
+
   def index
     @restaurants = Restaurant.list_matches(search_params[:query])
-    render "api/search/index"
+    render "api/searches/index"
   end
 
 
