@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import SearchBarContainer from '../search/search_container';
 
 const sessionLinks = () => {
   return(
@@ -52,7 +53,6 @@ const sessionLinks = () => {
 
 };
 
-
 const loggedInShow = (currentUser,logout) => (
   <header className = "header-nav">
   <div className = "main-div">
@@ -62,15 +62,19 @@ const loggedInShow = (currentUser,logout) => (
       </a>
      </span>
 
-    <span className = "location-search-container">
-      <span>
-        <i className="fa fa-map-marker location-search-container" aria-hidden="true"></i>
-      </span>
+     <SearchBarContainer
+     props={this.props}
+     />
 
-      <input className = "location-search-input"
-      type="text"
-      placeholder="Locations"></input>
-    </span>
+      <span className = "location-search-container">
+        <span>
+          <i className="fa fa-map-marker location-search-container" aria-hidden="true"></i>
+        </span>
+
+        <input className = "location-search-input"
+        type="text"
+        placeholder="Locations"></input>
+      </span>
 
     <span className = "header-title">
           OpenTummy
@@ -100,3 +104,15 @@ const NavBar = ({currentUser,logout}) => (
 );
 
 export default NavBar;
+
+
+
+// <span className = "location-search-container">
+//   <span>
+//     <i className="fa fa-map-marker location-search-container" aria-hidden="true"></i>
+//   </span>
+//
+//   <input className = "location-search-input"
+//   type="text"
+//   placeholder="Locations"></input>
+// </span>

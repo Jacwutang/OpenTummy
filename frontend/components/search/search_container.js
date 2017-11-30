@@ -9,15 +9,15 @@ const mapStateToProps = (state, ownProps) => {
 
 
     return{
-
+      currentUser:  state.session.currentUser,
+      searchResults: state.search.searchRestaurants
 
     }
 };
 
 const mapDispatchToProps = (dispatch,ownProps) => ({
   //make reservation, //favorite,
-
-
+  searchAllRestaurants: (query) => dispatch(searchAllRestaurants(query))
 
 });
 
