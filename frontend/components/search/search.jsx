@@ -15,6 +15,12 @@ class Search extends React.Component{
 
     }
 
+    renderMatches(){
+      this.props.searchAllRestaurants(this.state.query);
+      
+    }
+
+
 
     render(){
 
@@ -28,7 +34,10 @@ class Search extends React.Component{
           type="text"
           onChange={this.handleInput('query')}
           value={this.state.query}
-          placeholder="Locations"></input>
+          placeholder="Locations">
+          </input>
+          {this.renderMatches()}
+
         </span>
       );
     }

@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import SearchBarContainer from '../search/search_container';
+import SearchContainer from '../search/search_container';
 
 const sessionLinks = (searchResults,searchAllRestaurants) => {
   return(
@@ -62,7 +62,7 @@ const loggedInShow = (currentUser,logout) => (
       </a>
      </span>
 
-     <SearchBarContainer
+     <SearchContainer
 
      />
 

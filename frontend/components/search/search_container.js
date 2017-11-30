@@ -5,7 +5,7 @@ import {searchAllRestaurants} from '../../actions/restaurant_actions';
 
 
 
-const mapStateToProps = (state, ownProps) => {
+const mapStateToProps = (state) => {
 
 
     return{
@@ -15,7 +15,7 @@ const mapStateToProps = (state, ownProps) => {
     }
 };
 
-const mapDispatchToProps = (dispatch,ownProps) => ({
+const mapDispatchToProps = (dispatch) => ({
   //make reservation, //favorite,
   searchAllRestaurants: (query) => dispatch(searchAllRestaurants(query))
 
