@@ -53,7 +53,7 @@ const sessionLinks = (searchResults,searchAllRestaurants) => {
 
 };
 
-const loggedInShow = (currentUser,logout, searchResults,searchAllRestaurants) => (
+const loggedInShow = (currentUser,logout) => (
   <header className = "header-nav">
   <div className = "main-div">
     <span className = "header-nav-icon">
@@ -63,18 +63,8 @@ const loggedInShow = (currentUser,logout, searchResults,searchAllRestaurants) =>
      </span>
 
      <SearchBarContainer
-     props={searchResults,searchAllRestaurants}
+
      />
-
-      <span className = "location-search-container">
-        <span>
-          <i className="fa fa-map-marker location-search-container" aria-hidden="true"></i>
-        </span>
-
-        <input className = "location-search-input"
-        type="text"
-        placeholder="Locations"></input>
-      </span>
 
     <span className = "header-title">
           OpenTummy
@@ -98,9 +88,9 @@ const loggedInShow = (currentUser,logout, searchResults,searchAllRestaurants) =>
 );
 
 
-const NavBar = ({currentUser,logout,searchResults,searchAllRestaurants}) => (
+const NavBar = ({currentUser,logout}) => (
 
-  currentUser ? loggedInShow(currentUser,logout,searchResults,searchAllRestaurants)
+  currentUser ? loggedInShow(currentUser,logout)
   : sessionLinks()
 
 );
