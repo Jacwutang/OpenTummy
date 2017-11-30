@@ -42,7 +42,7 @@ class Search extends React.Component{
           {results.map( (restaurant) =>
              <Link to={`/restaurants/${restaurant.id}`}>
 
-            <li id = "search-bar-item" className = "search-bar-item"
+            <li id = "search-bar-item" className = "search-bar-item" onClick={() =>this.handleListClick(restaurant.id)}
 
             key= {restaurant.id}>
             {restaurant.name}
@@ -58,9 +58,16 @@ class Search extends React.Component{
 
     }
 
+    handleListClick(id){
+      this.props.history.push(`/restaurants/${id}`);
+      this.state.query = '';
+      document.getElementById('search-bar').style.visibility = "hidden";
+    }
+
+
     handleBlur(bool){
       if(bool === true){
-
+        //but first redirect
         document.getElementById('search-bar').style.visibility = "hidden";
       } else{
         document.getElementById('search-bar').style.visibility = "visible";
@@ -87,7 +94,7 @@ class Search extends React.Component{
           onChange={ (e) => this.handleInput(e,'query') }
           value={this.state.query}
           placeholder="Locations"
-          onBlur= {() => this.handleBlur(true)}
+
           onClick={() => this.handleBlur(false)}>
           </input>
           {this.renderMatches()}
@@ -109,3 +116,5 @@ export default Search;
 
 // onClick={ () => this.handleBlur(false)}
 //onBlur={ () => this.handleBlur(true)}>
+
+// onBlur= {() => this.handleBlur(true)}
