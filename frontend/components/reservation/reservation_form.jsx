@@ -64,7 +64,7 @@ class ReservationForm extends React.Component{
 
   render(){
     let restaurantId = parseInt(this.props.match.params.restaurantId);
-    debugger;
+    
 
     return(
     <div>

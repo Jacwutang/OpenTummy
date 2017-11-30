@@ -16,15 +16,20 @@ class RestaurantForm extends React.Component{
   }
 
   handleSubmit(e){
-
     e.preventDefault();
+    let restaurantId = parseInt(this.props.match.params.restaurantId);
+
+    if(restaurantId !== null){
+      this.state.id = restaurantId;
+    }
 
     this.state.owner_id = this.props.currentUser.id;
+
     const restaurant = this.state;
 
 
-    this.props.createRestaurant(restaurant).then(() => this.props.history.push('/profile'));
-
+    // this.props.createRestaurant(restaurant).then(() => this.props.history.push('/profile'));
+    this.props.processRestaurant(restaurant).then(() => this.props.history.push('/profile'));
 
 
   }
@@ -65,8 +70,9 @@ class RestaurantForm extends React.Component{
     }
 
   render(){
-    let restaurantId = parseInt(this.props.match.params.restaurantId);
-    console.log(restaurantId);
+
+
+
     return(
       <div>
        <form className="restaurant-form" onSubmit={this.handleSubmit}>
