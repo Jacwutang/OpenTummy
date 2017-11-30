@@ -4,14 +4,17 @@ import {Link} from 'react-router-dom';
 class Search extends React.Component{
     constructor(props){
       super(props);
-      this.state = {query: '', restaurants: []};
+      this.state = {query: '', results: []};
     }
 
     handleInput(e, query){
-
+        console.log(this.state);
         this.setState({query: e.target.value });
         this.findMatches();
-        this.handleBlur(false);
+
+        // var bool = true;
+
+
     }
 
     findMatches(){
@@ -32,15 +35,18 @@ class Search extends React.Component{
       }
 
       var results = Object.keys(this.props.results).map( (id) => this.props.results[id] )
+      this.state.results = results;
 
       return(
         <ul id="search-bar" className = "search-bar">
           {results.map( (restaurant) =>
-            <Link to={`/restaurants/${restaurant.id}`}>
-            <li className = "search-bar-item"
+             <Link to={`/restaurants/${restaurant.id}`}>
+
+            <li id = "search-bar-item" className = "search-bar-item"
 
             key= {restaurant.id}>
             {restaurant.name}
+
 
             </li>
             </Link>
@@ -53,10 +59,16 @@ class Search extends React.Component{
     }
 
     handleBlur(bool){
-      (bool === true) ? document.getElementById('search-bar').style.visibility = "hidden" :
-      document.getElementById('search-bar').style.visibility = "visible"
+      if(bool === true){
+
+        document.getElementById('search-bar').style.visibility = "hidden";
+      } else{
+        document.getElementById('search-bar').style.visibility = "visible";
+      }
+
 
     }
+
 
 
     render(){
@@ -75,8 +87,8 @@ class Search extends React.Component{
           onChange={ (e) => this.handleInput(e,'query') }
           value={this.state.query}
           placeholder="Locations"
-          onBlur={ () => this.handleBlur(true)}
-          onClick={ () => this.handleBlur(false)}>
+          onBlur= {() => this.handleBlur(true)}
+          onClick={() => this.handleBlur(false)}>
           </input>
           {this.renderMatches()}
 
@@ -94,3 +106,6 @@ class Search extends React.Component{
 
 
 export default Search;
+
+// onClick={ () => this.handleBlur(false)}
+//onBlur={ () => this.handleBlur(true)}>
