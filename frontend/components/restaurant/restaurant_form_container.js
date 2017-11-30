@@ -17,12 +17,14 @@ const mapDispatchToProps = (dispatch,ownProps) => {
   // createRestaurant: (restaurant) => dispatch(createRestaurant(restaurant)),
   // editRestaurant: (restaurant) => dispatch(editRestaurant(restaurant)),
 
-  const processRestaurant = (ownProps.match.params.restaurantId !== null) ? editRestaurant: createRestaurant
+  const processRestaurant = (ownProps.match.params.restaurantId !== null) ? editRestaurant: createRestaurant;
 
+  const formType = (ownProps.match.params.restaurantId !== null) ? 'Edit this Restaurant': 'Create new Restaurant';
   // const processRestaurant = (formTypeCheck  === '')? editrestaurant : createrestaurant;
   return{
     clearErrors: () => dispatch(receiveErrors([])),
-    processRestaurant: (restaurant) => dispatch(processRestaurant(restaurant))
+    processRestaurant: (restaurant) => dispatch(processRestaurant(restaurant)),
+    formType: formType
   }
 
 

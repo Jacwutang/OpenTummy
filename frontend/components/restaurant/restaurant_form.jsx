@@ -222,7 +222,7 @@ class RestaurantForm extends React.Component{
 
                   <br/>
 
-                <button type="submit" className = "input-button"> Create Restaurant </button>
+                <button type="submit" className = "input-button"> {this.props.formType} </button>
 
                 {this.renderErrors()}
                 </form>
