@@ -34,17 +34,26 @@ class Search extends React.Component{
         return;
       }
 
-      var results = Object.keys(this.props.results).map( (id) => this.props.results[id] )
+
+
+      var results = Object.keys(this.props.results).map( (id) =>
+
+
+      this.props.results[id] )
       this.state.results = results;
 
       return(
         <ul id="search-bar" className = "search-bar">
+          <h1> {this.state.results[0].city} </h1>
           {results.map( (restaurant) =>
+
+
              <Link to={`/restaurants/${restaurant.id}`}>
 
-            <li id = "search-bar-item" className = "search-bar-item" onClick={() =>this.handleListClick(restaurant.id)}
+            <li id ="search-bar-item" className ="search-bar-item" onClick={() =>this.handleListClick(restaurant.id)}
 
             key= {restaurant.id}>
+
             {restaurant.name}
 
 
@@ -59,19 +68,25 @@ class Search extends React.Component{
     }
 
     handleListClick(id){
-      this.props.history.push(`/restaurants/${id}`);
-      this.state.query = '';
-      document.getElementById('search-bar').style.visibility = "hidden";
+
+      console.log('inside');
+      this.props.requestRestaurant(id);
+        // console.log($('location-header'))
+        // console.log(document.getElementById("location-header"));
+      // document.getElementById("location-header").style.visibility = "hidden";
+      // document.getElementById("search-bar").style.visibility = "hidden";
+
+
     }
 
 
     handleBlur(bool){
-      if(bool === true){
-        //but first redirect
-        document.getElementById('search-bar').style.visibility = "hidden";
-      } else{
-        document.getElementById('search-bar').style.visibility = "visible";
-      }
+      // if(bool === true){
+      //   //but first redirect
+      //   document.getElementById('search-bar').style.visibility = "hidden";
+      // } else{
+      //   document.getElementById('search-bar').style.visibility = "visible";
+      // }
 
 
     }
@@ -82,8 +97,12 @@ class Search extends React.Component{
       // if(this.state.query !== ''){
       //     this.findMatches();
       // }
-
-      return(
+      window.onclick = function(event) {
+        if (!event.target.matches('.search-bar')){
+            $('ul').css('display', 'none');
+        }
+      }
+          return(
         <span className = "location-search-container">
           <span>
             <i className="fa fa-map-marker location-search-container" aria-hidden="true"></i>

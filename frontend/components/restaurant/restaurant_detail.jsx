@@ -9,16 +9,26 @@ class RestaurantDetail extends React.Component{
 
   }
 
+  componentDidMount(){
+      // this.props.requestRestaurant(this.props.match.params.restId);
+  }
+
   componentWillMount(){
     this.props.requestRestaurant(this.props.match.params.restId);
     window.scrollTo(0,0);
+
+
+    // document.getElementById("search-bar").style.visibility = "hidden";
+
   }
 
 
 
 
   render(){
-
+    console.log('mount');
+    $('ul').css('display', 'none');
+    // document.getElementById('search-bar').style.visibility = 'none'
     const {restaurant} = this.props;
 
     let reservationId = parseInt(this.props.match.params.reservationId);

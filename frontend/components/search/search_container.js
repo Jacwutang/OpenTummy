@@ -1,7 +1,7 @@
 import {connect} from 'react-redux';
 import {withRouter} from 'react-router';
 import Search from './search';
-import {searchAllRestaurants} from '../../actions/restaurant_actions';
+import {searchAllRestaurants, requestRestaurant} from '../../actions/restaurant_actions';
 
 
 
@@ -18,8 +18,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => ({
   //make reservation, //favorite,
-  searchAllRestaurants: (query) => dispatch(searchAllRestaurants(query))
-
+  searchAllRestaurants: (query) => dispatch(searchAllRestaurants(query)),
+  requestRestaurant: (id) => dispatch(requestRestaurant(id))
 });
 
 export default withRouter(connect(mapStateToProps,mapDispatchToProps)(Search));
