@@ -11,7 +11,7 @@ class Search extends React.Component{
 
         this.setState({query: e.target.value });
         this.findMatches();
-
+        this.handleBlur(false);
     }
 
     findMatches(){
@@ -34,7 +34,7 @@ class Search extends React.Component{
       var results = Object.keys(this.props.results).map( (id) => this.props.results[id] )
 
       return(
-        <ul className = "search-bar">
+        <ul id="search-bar" className = "search-bar">
           {results.map( (restaurant) =>
             <Link to={`/restaurants/${restaurant.id}`}>
             <li className = "search-bar-item"
@@ -52,13 +52,18 @@ class Search extends React.Component{
 
     }
 
+    handleBlur(bool){
+      (bool === true) ? document.getElementById('search-bar').style.visibility = "hidden" :
+      document.getElementById('search-bar').style.visibility = "visible"
+
+    }
 
 
     render(){
       // if(this.state.query !== ''){
       //     this.findMatches();
       // }
-      console.log(this.state)
+
       return(
         <span className = "location-search-container">
           <span>
@@ -69,9 +74,11 @@ class Search extends React.Component{
           type="text"
           onChange={ (e) => this.handleInput(e,'query') }
           value={this.state.query}
-          placeholder="Locations">
-
+          placeholder="Locations"
+          onBlur={ () => this.handleBlur(true)}
+          onClick={ () => this.handleBlur(false)}>
           </input>
+          {this.renderMatches()}
 
 
 

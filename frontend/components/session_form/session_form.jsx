@@ -26,7 +26,7 @@ class SessionForm extends React.Component{
   }
 
   componentWillReceiveProps(nextProps) {
-    
+
 
     if (nextProps.match.path !== this.props.match.path) {
      this.props.clearErrors();
@@ -92,6 +92,7 @@ class SessionForm extends React.Component{
           className = "input-session-form"
           placeholder = "Enter Username"
           value={this.state.username}
+          
           type="text"
           onChange={this.handleInput('username')} />
         </label>
