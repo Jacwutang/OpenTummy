@@ -9,7 +9,7 @@ class Search extends React.Component{
 
     render(){
       return(
-        <h1></h1>
+        <h1>Inside Search Bar</h1>
       );
     }
 

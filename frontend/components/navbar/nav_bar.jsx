@@ -97,9 +97,11 @@ const loggedInShow = (currentUser,logout) => (
   </header>
 );
 
-const NavBar = ({currentUser,logout}) => (
 
-  currentUser ? loggedInShow(currentUser,logout) : sessionLinks()
+const NavBar = ({currentUser,logout,searchResults,searchAllRestaurants}) => (
+
+  currentUser ? loggedInShow(currentUser,logout,searchResults,searchAllRestaurants)
+  : sessionLinks()
 
 );
 
