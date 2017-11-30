@@ -8,10 +8,23 @@ import {Route,
 class RestaurantForm extends React.Component{
   constructor(props){
     super(props);
-    this.state = {
-        name: '', address: '', city: '', state: '', postal_code: '', country: '', price: '',
-        category: '', thumbnail: '', description: '', lat: '', lng: '', image_urls: [], max_reservations: '', owner_id: 0
-      }
+    // this.state = {
+    //     name: '', address: '', city: '', state: '', postal_code: '', country: '', price: '',
+    //     category: '', thumbnail: '', description: '', lat: '', lng: '', image_urls: [], max_reservations: '', owner_id: 0
+    //   }
+    // console.log(this.props.editRestaurantState);
+
+    if(this.props.editRestaurantState !== undefined ){
+
+      this.state = this.props.editRestaurantState;
+    } else{
+      
+      this.state = {
+          name: '', address: '', city: '', state: '', postal_code: '', country: '', price: '',
+          category: '', thumbnail: '', description: '', lat: '', lng: '', image_urls: [], max_reservations: '', owner_id: 0
+        }
+    }
+
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
@@ -41,18 +54,13 @@ class RestaurantForm extends React.Component{
   }
 
   componentWillMount(){
-
     this.props.clearErrors();
+    // if(this.props.match.params.restaurantId !== null){
+    //   this.props.requestRestaurant(parseInt(this.props.match.params.restaurantId)).then(rest => this.setState({state}: rest));
+    //
+    // }
+    // debugger;
   }
-
-
-  //
-  // componentWillReceiveProps(nextProps) {
-  //
-  // }
-
-
-
 
   renderErrors(){
 
@@ -77,15 +85,15 @@ class RestaurantForm extends React.Component{
       <div>
        <form className="restaurant-form" onSubmit={this.handleSubmit}>
 
-         Add a Restaurant
+         {this.props.formType}
 
          <br/>
 
 
          <input
            className = "input-restaurant-form"
-           placeholder = "Enter Restaurant Name"
-           value={this.state.name}
+           placeholder = "Enter Name"
+           value= {this.state.name}
            type="text"
            onChange={this.handleInput('name')} />
 
