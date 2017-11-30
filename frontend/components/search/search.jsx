@@ -4,7 +4,7 @@ import React from 'react';
 class Search extends React.Component{
     constructor(props){
       super(props);
-      this.state = {query: ''};
+      this.state = {query: '', restaurants: []};
     }
 
     handleInput(query){
@@ -15,14 +15,25 @@ class Search extends React.Component{
 
     }
 
-    renderMatches(){
-      this.props.searchAllRestaurants(this.state.query);
-      
+    findMatches(){
+      // this.props.searchAllRestaurants(this.state.query)
+      this.props.searchAllRestaurants(this.state.query).then( (restaurants) => console.log(restaurants));
+      // return(
+      //   this.props.searchAllRestaurants(this.state.query).then( (resturants) => this.renderMatches(restaurants) )
+      // );
+      //  this.props.processRestaurant(restaurant).then(() => this.props.history.push('/profile'));
+    }
+
+    renderMatches(restaurants){
+      // {this.findMatches()}
     }
 
 
 
     render(){
+      if(this.state.query !== ''){
+          this.findMatches();
+      }
 
       return(
         <span className = "location-search-container">
@@ -36,7 +47,9 @@ class Search extends React.Component{
           value={this.state.query}
           placeholder="Locations">
           </input>
-          {this.renderMatches()}
+
+
+
 
         </span>
       );
