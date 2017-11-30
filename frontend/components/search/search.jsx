@@ -1,5 +1,5 @@
 import React from 'react';
-
+import {Link} from 'react-router-dom';
 
 class Search extends React.Component{
     constructor(props){
@@ -7,16 +7,16 @@ class Search extends React.Component{
       this.state = {query: '', restaurants: []};
     }
 
-    handleInput(query){
-      // console.log(this.state.query);
-      return ( e =>
-        this.setState({query: e.target.value })
-      );
+    handleInput(e, query){
+
+        this.setState({query: e.target.value });
+        this.findMatches();
 
     }
 
     findMatches(){
       // this.props.searchAllRestaurants(this.state.query)
+
       this.props.searchAllRestaurants(this.state.query);
       // return(
       //   this.props.searchAllRestaurants(this.state.query).then( (resturants) => this.renderMatches(restaurants) )
@@ -25,6 +25,7 @@ class Search extends React.Component{
     }
 
     renderMatches(){
+      // if(this.props.match.)
 
       if(this.props.results === undefined){
         return;
@@ -33,13 +34,16 @@ class Search extends React.Component{
       var results = Object.keys(this.props.results).map( (id) => this.props.results[id] )
 
       return(
-        <ul>
+        <ul className = "search-bar">
           {results.map( (restaurant) =>
-            <li
+            <Link to={`/restaurants/${restaurant.id}`}>
+            <li className = "search-bar-item"
+
             key= {restaurant.id}>
             {restaurant.name}
 
             </li>
+            </Link>
 
            )}
 
@@ -51,10 +55,10 @@ class Search extends React.Component{
 
 
     render(){
-      if(this.state.query !== ''){
-          this.findMatches();
-      }
-
+      // if(this.state.query !== ''){
+      //     this.findMatches();
+      // }
+      console.log(this.state)
       return(
         <span className = "location-search-container">
           <span>
@@ -63,11 +67,12 @@ class Search extends React.Component{
 
           <input className = "location-search-input"
           type="text"
-          onChange={this.handleInput('query')}
+          onChange={ (e) => this.handleInput(e,'query') }
           value={this.state.query}
           placeholder="Locations">
+
           </input>
-          {this.renderMatches()}
+
 
 
 
