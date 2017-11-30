@@ -6,7 +6,7 @@ class ReservationForm extends React.Component{
     super(props);
     this.handleSubmit = this.handleSubmit.bind(this);
 
-    this.state = {timeslot: "12:00:00", head_count: 1};
+    this.state = {id: 0, timeslot: "12:00:00", head_count: 1};
   }
 
   componentWillMount(){
@@ -15,15 +15,25 @@ class ReservationForm extends React.Component{
   }
 
   handleSubmit(e){
+    //this.props.reservationId
 
     e.preventDefault();
+
+    if(this.props.reservationId === null){
+          this.state.id = 0;
+
+    }else{
+      this.state.id = this.props.reservationId;
+    }
+
+
 
     this.props.currentUser === null ? this.state.user_id = 0 : this.state.user_id = this.props.currentUser.id
     this.state.restaurant_id = this.props.match.params.restId;
     this.state.thumbnail = this.props.restaurant.thumbnail;
 
     const reservation = this.state;
-
+    
     this.props.processReservation(reservation).then(() => this.props.history.push('/profile'));
 
 

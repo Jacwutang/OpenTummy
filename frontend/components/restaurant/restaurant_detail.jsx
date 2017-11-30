@@ -21,7 +21,7 @@ class RestaurantDetail extends React.Component{
 
     const {restaurant} = this.props;
 
-    let reservation_id = parseInt(this.props.match.params.reservationId);
+    let reservationId = parseInt(this.props.match.params.reservationId);
 
     if (typeof restaurant === "undefined"){
       return null;
@@ -49,7 +49,8 @@ class RestaurantDetail extends React.Component{
 
           <div>
             <ReservationContainer
-            restaurant={restaurant}/>
+            restaurant={restaurant}
+            reservationId={reservationId}/>
           </div>
 
           <br/>
