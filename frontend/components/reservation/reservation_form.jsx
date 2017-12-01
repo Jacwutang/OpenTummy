@@ -61,7 +61,9 @@ class ReservationForm extends React.Component{
 
   renderErrors(){
     //if there are any errors render them
-    
+    if(this.props.errors === undefined){
+      return;
+    }
     return(
      <ul>
        {this.props.errors.map((error, i) => (

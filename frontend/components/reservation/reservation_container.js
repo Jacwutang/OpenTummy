@@ -8,6 +8,10 @@ var _ = require('lodash')
 
 const mapStateToProps = (state,ownProps) => {
 
+  if(state.session.currentUser === null){
+    return {};
+  }
+
    let resValues = Object.values(state.session.currentUser.reservations);
 
 

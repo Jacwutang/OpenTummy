@@ -6,12 +6,19 @@ import {deleteReservation} from '../../actions/reservation_actions';
 import {withRouter} from 'react-router'
 
 //profile container needs to know currentUser
-const mapStateToProps = (state,ownProps) => ({
-  currentUser: state.session.currentUser,
-  favorites: state.session.currentUser.favorite_restaurants,
-  errors: state.errors.favorites
+const mapStateToProps = (state,ownProps) => {
+  if(state.session.currentUser === null){
+    return {};
+  }
 
-});
+
+  return{
+    currentUser: state.session.currentUser,
+    favorites: state.session.currentUser.favorite_restaurants,
+    errors: state.errors.favorites
+  }
+
+};
 
 
 

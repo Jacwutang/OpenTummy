@@ -23,7 +23,10 @@ const sessionReducer = (state = _nullUser, action) => {
 
     case RECEIVE_RESTAURANT:
     newState = merge({},state);
-    newState.currentUser.restaurants[action.restaurant.id] = action.restaurant;
+    if(newState.currentUser !== null){
+      newState.currentUser.restaurants[action.restaurant.id] = action.restaurant;
+      
+    }
     return newState;
 
     case REMOVE_RESTAURANT:
