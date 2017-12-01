@@ -14,7 +14,7 @@ const _nullUser = {
 //returns POJO
 const sessionReducer = (state = _nullUser, action) => {
   Object.freeze(state);
-
+  let newState = merge({},state)
   switch(action.type){
     case RECEIVE_CURRENT_USER:
       const currentUser = action.currentUser;
@@ -23,8 +23,11 @@ const sessionReducer = (state = _nullUser, action) => {
     // case RECEIVE_RESTAURANT:
 
     case REMOVE_RESTAURANT:
-    let newState = merge({},state.currentUser.restaurants)
+    newState = merge({},state.currentUser.restaurants)
 
+    case REMOVE_FAVORITE:
+      delete newState.currentUser.favorite_restaurants[action.favorite.id];
+      return newState;
     //delete newState.restaurants[action.id];
 
 

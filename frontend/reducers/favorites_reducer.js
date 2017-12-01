@@ -13,8 +13,7 @@ const favoritesReducer = (state = {}, action) => {
 
         return merge({}, state , newFavorite);
 
-    case REMOVE_FAVORITE:
-    return newState;
+    
 
 
     default:

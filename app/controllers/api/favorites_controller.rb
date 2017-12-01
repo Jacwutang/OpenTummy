@@ -16,13 +16,16 @@ class Api::FavoritesController < ApplicationController
       end
     end
 
-  
+
 
 
   def destroy
-    @favorite = Favorite.find(params[:id])
+    favorite = Favorite.find(params[:id])
 
-    if @favorite.destroy
+    @favorite = favorite
+
+    if favorite.destroy
+      render "api/favorites/show"
     else
 
 

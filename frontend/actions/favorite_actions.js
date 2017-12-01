@@ -5,9 +5,9 @@ export const REMOVE_FAVORITE = "REMOVE_FAVORITE";
 export const RECEIVE_FAVORITE_ERRORS = "RECEIVE_FAVORITE_ERRORS";
 
 
-export const removeFavorite = id => ({
+export const removeFavorite = favorite => ({
   type: REMOVE_FAVORITE,
-  id
+  favorite
 })
 
 export const receiveFavoriteErrors = errors => ({
