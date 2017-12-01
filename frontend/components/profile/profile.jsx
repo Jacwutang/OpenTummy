@@ -53,11 +53,13 @@ class Profile extends React.Component{
 
   render(){
 
+
     let my_restaurants = Object.keys(this.props.currentUser.restaurants).map(el => (
       this.props.currentUser.restaurants[el]));
 
     let reservations = Object.keys(this.props.currentUser.reservations).map(res => (
         this.props.currentUser.reservations[res]));
+
 
     let my_favorites = Object.keys(this.props.currentUser.favorite_restaurants).map(fav => (this.props.currentUser.favorite_restaurants[fav]));
 
@@ -128,11 +130,12 @@ class Profile extends React.Component{
           </div>
 
 
-          <div id="profile-restaurants">
+          <div id="profile-favorites">
             <h1 className = "profile-restaurants-h1"> My Favorites </h1>
             <ProfileFavorites
             my_favorites={my_favorites}
-            deleteFavorite={deleteFavorite}/>
+            deleteFavorite={deleteFavorite}
+            restaurantsIndex={restaurantsIndex}/>
           </div>
 
 
