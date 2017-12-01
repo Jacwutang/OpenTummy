@@ -22,8 +22,9 @@ const sessionReducer = (state = _nullUser, action) => {
       //merge merges empty {} with {currentUser: id:2, username: jack2}
 
     case RECEIVE_RESTAURANT:
-    const newRest = {[action.restaurant.id]: action.restaurant};
-    return merge({},state,newRest);
+    newState = merge({},state);
+    newState.currentUser.restaurants[action.restaurant.id] = action.restaurant;
+    return newState;
 
     case REMOVE_RESTAURANT:
     delete newState.currentUser.restaurants[action.restaurant.id];
@@ -48,8 +49,9 @@ const sessionReducer = (state = _nullUser, action) => {
 
 
     case RECEIVE_RESERVATION:
-    const newReservation = {[action.reservation.id]: action.reservation};
-    return merge({},state,newReservation);
+    newState = merge({},state);
+    newState.currentUser.reservations[action.reservation.id] = action.reservation;
+    return newState;
 
 
 

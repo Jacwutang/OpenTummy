@@ -78,20 +78,20 @@ class ProfileReservations extends React.Component{
 
                       <h2> {restaurantsIndex[res.restaurant_id].name} </h2>
 
-                      <h2>
+                      <h3>
                         Party-Size: {res.head_count}
 
-                      </h2>
+                      </h3>
 
-                      <h2>
+                      <h3>
                         Time: {this.handleTime(res.timeslot)} PM
 
-                      </h2>
+                      </h3>
 
-                      <h2>
+                      <h3>
                         Date: {this.handleDate(res.date)}
 
-                      </h2>
+                      </h3>
 
 
 
@@ -103,8 +103,7 @@ class ProfileReservations extends React.Component{
                     <div className = "profile-restaurants-index-div-right">
                       <button
                       type="button" onClick={this.handleSubmit(res.id)}> Delete </button>
-                      <br/>
-                      <br/>
+                      
 
                         <Link to={`/restaurants/${res.restaurant_id}/edit/${res.id}`}>
 

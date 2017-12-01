@@ -42,16 +42,15 @@ class ProfileRestaurants extends React.Component{
                       </Link>
 
                         <h2> {rest.name} </h2>
-                        <h2> $$$$$ </h2>
-                        <h2> {rest.address} </h2>
-                        <h2> {rest.city} , {rest.state}</h2>
+                        <h3> $$$$$ </h3>
+                        <h3> {rest.address} </h3>
+                        <h3> {rest.city} , {rest.state}</h3>
 
                     </div>
 
                     <div className = "profile-restaurants-index-div-right">
                       <button type="button" onClick={this.handleSubmit(rest.id)}> Delete </button>
-                      <br/>
-                      <br/>
+                      
 
                       <Link to={`/restaurants/new/${rest.id}`} >
                       <button type="button" className = "button-bandaid"> Edit </button>
