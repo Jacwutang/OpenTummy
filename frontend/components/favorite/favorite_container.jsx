@@ -8,7 +8,7 @@ import {withRouter} from 'react-router'
 //profile container needs to know currentUser
 const mapStateToProps = (state,ownProps) => ({
   currentUser: state.session.currentUser,
-  favorites: state.session.currentUser.favorites,
+  favorites: state.session.currentUser.favorite_restaurants,
   errors: state.errors.favorites
 
 });

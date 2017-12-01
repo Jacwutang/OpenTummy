@@ -8,12 +8,12 @@ const favoritesReducer = (state = {}, action) => {
   let newState = merge({},state);
 
   switch(action.type){
-    case RECEIVE_FAVORITE:
-      const newFavorite = {[action.favorite.id]: action.favorite};
+    // case RECEIVE_FAVORITE:
+    //   const newFavorite = {[action.favorite.id]: action.favorite};
+    //
+    //     return merge({}, state , newFavorite);
 
-        return merge({}, state , newFavorite);
 
-    
 
 
     default:

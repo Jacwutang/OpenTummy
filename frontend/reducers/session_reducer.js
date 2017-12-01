@@ -23,6 +23,7 @@ const sessionReducer = (state = _nullUser, action) => {
 
     case RECEIVE_RESTAURANT:
     const newRest = {[action.restaurant.id]: action.restaurant};
+    return merge({},state,newRest);
 
     case REMOVE_RESTAURANT:
     delete newState.currentUser.restaurants[action.restaurant.id];
@@ -31,7 +32,12 @@ const sessionReducer = (state = _nullUser, action) => {
 
 
     case RECEIVE_FAVORITE:
-    const newFav = {[action.favorite.id]: action.favorite};
+    // const newFav = {[action.favorite.id]: action.favorite};
+    newState = merge({},state);
+    newState.currentUser.favorite_restaurants[action.favorite.id] = action.favorite;
+    return newState;
+
+
 
     case REMOVE_FAVORITE:
       delete newState.currentUser.favorite_restaurants[action.favorite.id];
@@ -39,14 +45,20 @@ const sessionReducer = (state = _nullUser, action) => {
     //delete newState.restaurants[action.id];
 
 
+
+
     case RECEIVE_RESERVATION:
     const newReservation = {[action.reservation.id]: action.reservation};
-    return newState;
+    return merge({},state,newReservation);
 
 
-    case REMOVE_FAVORITE:
+
+    case REMOVE_RESERVATION:
     delete newState.currentUser.reservations[action.reservation.id];
     return newState;
+
+
+
 
 
 

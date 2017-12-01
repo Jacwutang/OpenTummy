@@ -26,7 +26,7 @@ class Api::ReservationsController < ApplicationController
 
   def update
       @reservation = Reservation.find(params[:id])
-      
+
     if @reservation.update(reservation_params)
       render "api/reservations/show"
     end
@@ -36,6 +36,7 @@ class Api::ReservationsController < ApplicationController
 
   def destroy
     reservation = Reservation.find(params[:id])
+
     @reservation = reservation
     if reservation.destroy
       render "api/reservations/show"

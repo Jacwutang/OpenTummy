@@ -8,13 +8,13 @@ const reservationsReducer = (state = {}, action) => {
   let newState = merge({},state);
 
   switch(action.type){
-    case RECEIVE_RESERVATION:
-      const newReservation = {[action.reservation.id]: action.reservation};
+    // case RECEIVE_RESERVATION:
+    //   const newReservation = {[action.reservation.id]: action.reservation};
+    //
+    //     return merge({}, state , newReservation);
 
-        return merge({}, state , newReservation);
-
-    case REMOVE_RESERVATION:
-    return newState;
+    // case REMOVE_RESERVATION:
+    // return newState;
 
 
     default:
