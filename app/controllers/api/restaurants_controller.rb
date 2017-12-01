@@ -44,10 +44,11 @@ class Api::RestaurantsController < ApplicationController
   end
 
   def destroy
-    print(params);
-    @restaurant = Restaurant.find(params[:id])
 
-    if @restaurant.destroy
+    rest = Restaurant.find(params[:id])
+    @rest = rest
+
+    if rest.destroy
       # @restaurant.owner_id = nil
       # @restaurant.save
       render "api/restaurants/show"

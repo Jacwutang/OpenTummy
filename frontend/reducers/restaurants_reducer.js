@@ -8,18 +8,18 @@ const restaurantsReducer = (state = {}, action) => {
   let newState = merge({},state);
 
   switch(action.type){
-    case RECEIVE_RESTAURANT:
-      const newRestaurant = {[action.restaurant.id]: action.restaurant};
-        return merge({}, state , newRestaurant);
+    // case RECEIVE_RESTAURANT:
+    //   const newRestaurant = {[action.restaurant.id]: action.restaurant};
+    //     return merge({}, state , newRestaurant);
 
 
     case RECEIVE_ALL_RESTAURANTS:
       return merge({},state,action.restaurants);
       //return(action.restaurants);
 
-     case REMOVE_RESTAURANT:
-    //  delete newState.session.currentUser.restaurants[action.id];
-     return newState;
+    //  case REMOVE_RESTAURANT:
+    // //  delete newState.session.currentUser.restaurants[action.id];
+    //  return newState;
 
 
     default:
