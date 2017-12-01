@@ -22,6 +22,9 @@ class ProfileRestaurants extends React.Component{
 
   render(){
     const {my_restaurants} = this.props;
+    if(Object.keys(my_restaurants).length === 0){
+      return null;
+    }
 
     return(
       <div>
