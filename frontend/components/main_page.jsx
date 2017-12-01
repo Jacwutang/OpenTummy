@@ -4,11 +4,11 @@ const MainPage = () => (
 
 
   <div className = "main-page">
-    MainPage
+    
 
     <div className= "main-page-reservation">
 
-    
+
 
     <select className = "main-page-reservation-select">
         <option value="" disabled >
