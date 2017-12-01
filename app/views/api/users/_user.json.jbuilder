@@ -26,3 +26,16 @@ if user.reservations.count > 0
 else
   json.reservations Object
 end
+
+
+if user.favorite_restaurants.count > 0
+  json.favorite_restaurants do
+    user.favorite_restaurants.each do |fav|
+      json.set! fav.id do
+        json.extract! fav, :id,:user_id, :restaurant_id
+      end
+    end
+  end
+else
+  json.favorite_restaurants Object
+end

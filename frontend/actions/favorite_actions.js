@@ -1,4 +1,4 @@
-import * as FAVORITEutil from '../utils/Favorite_api_util';
+import * as FAVORITEutil from '../utils/favorite_api_util';
 
 export const RECEIVE_FAVORITE = "RECEIVE_FAVORITE";
 export const REMOVE_FAVORITE = "REMOVE_FAVORITE";
