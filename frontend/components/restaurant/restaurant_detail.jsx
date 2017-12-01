@@ -77,7 +77,7 @@ class RestaurantDetail extends React.Component{
           <br/>
 
           <div className = "content-div">
-            <h1> About {restaurant.name} </h1>
+            <h1 className="h1-content-div"> About {restaurant.name} </h1>
             <hr/>
             <span> {restaurant.description} Contemporary Food. Styled in Georgian </span>
           </div>
