@@ -20,6 +20,11 @@ class User < ApplicationRecord
     foreign_key: :user_id,
     class_name: 'Reservation'
 
+    has_many :favorite_restaurants,
+    primary_key: :id,
+    foreign_key: :user_id,
+    class_name: 'Favorite'
+
 
 
 

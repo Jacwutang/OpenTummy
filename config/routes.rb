@@ -20,6 +20,7 @@ Rails.application.routes.draw do
     resources :restaurants, only: [:create,:show,:index, :destroy, :edit,:update]
     resources :reservations, only: [:create,:destroy,:edit,:update]
     resources :searches, only:[ :index]
+    resources :favorites, only:[:index,:create,:destroy]
     # resources :music_searches, only: [:index] do
     #   get "songs by artist", on: :collection
     #
