@@ -17,6 +17,8 @@ import RestaurantIndexContainer from './restaurant/restaurant_index_container';
 import MainPage from './main_page';
 import RestaurantDetailContainer from './restaurant/restaurant_detail_container';
 
+
+
 const App = () => (
 
   <div>

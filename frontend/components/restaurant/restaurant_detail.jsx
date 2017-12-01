@@ -1,5 +1,7 @@
 import React from 'react';
 import ReservationContainer from '../reservation/reservation_container';
+import FavoriteContainer from '../favorite/favorite_container';
+
 
 class RestaurantDetail extends React.Component{
   constructor(props){
@@ -57,6 +59,8 @@ class RestaurantDetail extends React.Component{
               <br/>
             </div>
 
+            <FavoriteContainer />
+
             <button className = "fav-button-restaurant-item"> <i className="fa fa-star" aria-hidden="true"></i> Fav </button>
 
 
@@ -102,3 +106,6 @@ class RestaurantDetail extends React.Component{
 }
 
 export default RestaurantDetail;
+
+
+// <button className = "fav-button-restaurant-item"> <i className="fa fa-star" aria-hidden="true"></i> Fav </button>
