@@ -1,5 +1,9 @@
 
 import {RECEIVE_CURRENT_USER} from '../actions/session_actions';
+import {RECEIVE_RESTAURANT, REMOVE_RESTAURANT} from '../actions/restaurant_actions';
+import {RECEIVE_FAVORITE, REMOVE_FAVORITE} from '../actions/favorite_actions';
+import {RECEIVE_RESERVATION, REMOVE_RESERVATION} from '../actions/reservation_actions';
+
 import merge from 'lodash/merge';
 
 const _nullUser = {
