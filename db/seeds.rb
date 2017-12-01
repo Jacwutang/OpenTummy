@@ -957,6 +957,23 @@ Reservation.create!(user_id: 2, restaurant_id: 6, head_count: 5, date: "17/11/28
 Reservation.create!(user_id: 2, restaurant_id: 7, head_count: 5, date: "17/11/29", timeslot: "09:00:00")
 
 
+Favorite.create!(user_id:2, restaurant_id: 10)
+Favorite.create!(user_id:2, restaurant_id: 9)
+Favorite.create!(user_id:2, restaurant_id: 8)
+Favorite.create!(user_id:2, restaurant_id: 7)
+Favorite.create!(user_id:2, restaurant_id: 15)
+
+
+Favorite.create!(user_id:1, restaurant_id: 10)
+Favorite.create!(user_id:1, restaurant_id: 9)
+Favorite.create!(user_id:1, restaurant_id: 8)
+Favorite.create!(user_id:1, restaurant_id: 7)
+Favorite.create!(user_id:1, restaurant_id: 15)
+
+
+
+
+
 
 # CITIES.each do |city|
 #   city.each do |restaurant|
