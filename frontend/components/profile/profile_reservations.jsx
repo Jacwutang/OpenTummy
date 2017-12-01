@@ -57,7 +57,9 @@ class ProfileReservations extends React.Component{
 
     const {reservations,restaurantsIndex} = this.props;
 
-    
+    if(Object.keys(reservations).length === 0){
+      return null;
+    }
 
     return(
       <div>

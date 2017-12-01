@@ -17,8 +17,8 @@ class Favorite extends React.Component{
 
     if(this.props.currentUser){
       favorite.user_id = this.props.currentUser.id;
-      favorite.restaurant_id = this.props.match.params.restId;
-      debugger;
+      favorite.restaurant_id = parseInt(this.props.match.params.restId);
+      
     }
 
 
