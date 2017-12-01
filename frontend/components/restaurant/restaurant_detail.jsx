@@ -59,9 +59,10 @@ class RestaurantDetail extends React.Component{
               <br/>
             </div>
 
-            <FavoriteContainer />
+            <FavoriteContainer
+            restaurant={restaurant} />
 
-            <button className = "fav-button-restaurant-item"> <i className="fa fa-star" aria-hidden="true"></i> Fav </button>
+
 
 
 

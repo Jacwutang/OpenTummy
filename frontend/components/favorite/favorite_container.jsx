@@ -21,4 +21,4 @@ const mapDispatchToProps = (dispatch) => ({
   clearErrors: () => dispatch(receiveFavoriteErrors([]))
 });
 
-export default connect(mapStateToProps,mapDispatchToProps)(Favorite);
+export default withRouter(connect(mapStateToProps,mapDispatchToProps)(Favorite));
