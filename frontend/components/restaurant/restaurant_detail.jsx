@@ -55,7 +55,7 @@ class RestaurantDetail extends React.Component{
 
             <div className = "restaurant-detail-header-left">
               <h1 className = "h1-restaurant-title">{restaurant.name} </h1>
-              <span> <h3> *** </h3> <h3> 40 Reviews </h3> </span>
+              <span> <h4> *** </h4> <h4> 40 Reviews </h4> </span>
               <br/>
             </div>
 

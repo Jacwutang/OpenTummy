@@ -76,7 +76,7 @@ class Profile extends React.Component{
       return(
 
         <div className = "profile-main">
-          <h1 className = "h1-profile-main"> Splash Page </h1>
+          <h1 className = "h1-profile-main"> </h1>
 
           <div className = "profile-tabs">
 

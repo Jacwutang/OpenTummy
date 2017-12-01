@@ -16,7 +16,12 @@ class RestaurantIndexItem extends React.Component{
 
   // const category = (rest.category === null) ? "No Category" : rest.category;
 
-
+  samplePrice(){
+    let sampleArr = ['$','$$','$$$','$$$$','$$$$$'];
+    let sampleRes = sampleArr[Math.floor(Math.random() * sampleArr.length)];
+    
+    return sampleRes;
+  }
 
   render(){
     const {rest} = this.props;
@@ -33,7 +38,7 @@ class RestaurantIndexItem extends React.Component{
           </Link>
 
               <h2> {rest.name} </h2>
-              <h3 className = "h3-restaurant-index-item-price"> $$$$$ </h3>
+              <h3 className = "h3-restaurant-index-item-price"> {this.samplePrice()} </h3>
 
 
             <br/>
