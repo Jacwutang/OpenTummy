@@ -5,7 +5,7 @@ class ReservationForm extends React.Component{
   constructor(props){
     super(props);
     this.handleSubmit = this.handleSubmit.bind(this);
-    
+
 
     if(!Number.isNaN(this.props.reservationId)) {
       this.state = this.props.reservation[this.props.reservationId];
@@ -86,7 +86,7 @@ class ReservationForm extends React.Component{
       onChange={this.handleInput('head_count')}
       value={this.state.head_count}
       placeholder = "Enter Number of People"
-      type="number"/>
+      type="text"/>
 
 
         <input className = "reservation-input"

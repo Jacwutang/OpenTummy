@@ -8,8 +8,16 @@ class Search extends React.Component{
     }
 
     handleInput(e, query){
-        console.log(this.state);
+
         this.setState({query: e.target.value });
+        // if(this.state.query === ""){
+        //
+        //   debugger;
+        //
+        //   $('.search-bar').css('display','none');
+        // }
+
+
         this.findMatches();
 
         // var bool = true;
@@ -66,7 +74,7 @@ class Search extends React.Component{
 
     handleListClick(id){
 
-      console.log('inside');
+
       this.props.requestRestaurant(id);
         // console.log($('location-header'))
         // console.log(document.getElementById("location-header"));

@@ -39,7 +39,7 @@ class RestaurantIndexItem extends React.Component{
             <br/>
             <h2> Average Rating *** </h2>
             <br/>
-              {category} | {rest.city}
+              <h4> {category} | {rest.city} </h4>
             <br/>
 
           <i className="fa fa-fire fa-2x" aria-hidden="true"></i>  Booked 25 times today!
