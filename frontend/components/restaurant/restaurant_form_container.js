@@ -22,11 +22,11 @@ const mapDispatchToProps = (dispatch,ownProps) => {
   // createRestaurant: (restaurant) => dispatch(createRestaurant(restaurant)),
   // editRestaurant: (restaurant) => dispatch(editRestaurant(restaurant)),
 
-  const processRestaurant = (ownProps.match.params.restaurantId !== null) ? editRestaurant: createRestaurant;
-
+  const processRestaurant = (ownProps.match.params.restaurantId !== undefined) ? editRestaurant: createRestaurant;
+  
 
   const formType = (ownProps.match.params.restaurantId !== undefined) ? 'Edit this Restaurant': 'Create new Restaurant';
-  
+
   return{
     clearErrors: () => dispatch(receiveErrors([])),
     processRestaurant: (restaurant) => dispatch(processRestaurant(restaurant)),

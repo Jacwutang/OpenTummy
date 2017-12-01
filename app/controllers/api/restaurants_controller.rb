@@ -35,7 +35,7 @@ class Api::RestaurantsController < ApplicationController
 
   def update
     @rest = Restaurant.find(params[:id])
-    
+
 
     if @rest.update(rest_params)
       render "api/restaurants/show"
@@ -44,12 +44,13 @@ class Api::RestaurantsController < ApplicationController
   end
 
   def destroy
-
+    print(params);
     @restaurant = Restaurant.find(params[:id])
 
-    if @restaurant
-      @restaurant.owner_id = nil
-      @restaurant.save
+    if @restaurant.destroy
+      # @restaurant.owner_id = nil
+      # @restaurant.save
+      render "api/restaurants/show"
     else
       render json: ['Invalid'], status: 404
     end

@@ -20,6 +20,15 @@ const sessionReducer = (state = _nullUser, action) => {
       const currentUser = action.currentUser;
       return merge({}, {currentUser}) ;
       //merge merges empty {} with {currentUser: id:2, username: jack2}
+    // case RECEIVE_RESTAURANT:
+
+    case REMOVE_RESTAURANT:
+    let newState = merge({},state.currentUser.restaurants)
+
+    //delete newState.restaurants[action.id];
+
+
+
     default:
       return state;
   }
