@@ -8,9 +8,9 @@ export const RECEIVE_ALL_SEARCH_RESTAURANTS = "RECEIVE_ALL_SEARCH_RESTAURANTS";
 
 // export const RECEIVE_RESTAURANT_ERRORS = "RECEIVE_RESTAURANT_ERRORS";
 
-export const removeRestaurant = id => ({
+export const removeRestaurant = restaurant => ({
   type: REMOVE_RESTAURANT,
-  id
+  restaurant
 })
 
 export const receiveErrors = errors => ({

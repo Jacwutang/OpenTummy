@@ -5,9 +5,9 @@ export const REMOVE_RESERVATION = "REMOVE_RESERVATION";
 export const RECEIVE_RESERVATION_ERRORS = "RECEIVE_RESERVATION_ERRORS";
 
 
-export const removeReservation = id => ({
+export const removeReservation = reservation => ({
   type: REMOVE_RESERVATION,
-  id
+  reservation
 })
 
 export const receiveReservationErrors = errors => ({

@@ -15,7 +15,7 @@ export const receiveFavoriteErrors = errors => ({
   errors
 });
 
-export const receiveFavorite = (favorite) => ({
+export const receiveFavorite = favorite => ({
   type: RECEIVE_FAVORITE,
   favorite
 });

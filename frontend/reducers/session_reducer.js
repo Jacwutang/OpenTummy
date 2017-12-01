@@ -20,15 +20,35 @@ const sessionReducer = (state = _nullUser, action) => {
       const currentUser = action.currentUser;
       return merge({}, {currentUser}) ;
       //merge merges empty {} with {currentUser: id:2, username: jack2}
-    // case RECEIVE_RESTAURANT:
+
+    case RECEIVE_RESTAURANT:
+    const newRest = {[action.restaurant.id]: action.restaurant};
 
     case REMOVE_RESTAURANT:
-    newState = merge({},state.currentUser.restaurants)
+    delete newState.currentUser.restaurants[action.restaurant.id];
+    return newState;
+
+
+
+    case RECEIVE_FAVORITE:
+    const newFav = {[action.favorite.id]: action.favorite};
 
     case REMOVE_FAVORITE:
       delete newState.currentUser.favorite_restaurants[action.favorite.id];
       return newState;
     //delete newState.restaurants[action.id];
+
+
+    case RECEIVE_RESERVATION:
+    const newReservation = {[action.reservation.id]: action.reservation};
+    return newState;
+
+
+    case REMOVE_FAVORITE:
+    delete newState.currentUser.reservations[action.reservation.id];
+    return newState;
+
+
 
 
 
