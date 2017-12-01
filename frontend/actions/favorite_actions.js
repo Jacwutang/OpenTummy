@@ -15,9 +15,9 @@ export const receiveFavoriteErrors = errors => ({
   errors
 });
 
-export const receiveFavorite = (reservation) => ({
+export const receiveFavorite = (favorite) => ({
   type: RECEIVE_FAVORITE,
-  reservation
+  favorite
 });
 
 
@@ -30,4 +30,4 @@ export const createFavorite = Favorite => dispatch => (
 export const deleteFavorite = (id) => dispatch => (
     FAVORITEutil.deleteFavorite(id).then (resp => (
       dispatch(removeFavorite(resp))
-    )));
+)));

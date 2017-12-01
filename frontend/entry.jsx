@@ -5,7 +5,7 @@ import Root from './components/Root';
 import {signup, login, logout} from './actions/session_actions';
 import {createRestaurant, requestAllRestaurants,searchAllRestaurants} from './actions/restaurant_actions';
 import {createReservation, deleteReservation, editReservation} from './actions/reservation_actions';
-
+import {createFavorite, deleteFavorite} from './actions/favorite_actions';
 
 document.addEventListener("DOMContentLoaded", () =>{
   const root = document.getElementById('root');
@@ -36,7 +36,8 @@ document.addEventListener("DOMContentLoaded", () =>{
   window.deleteReservation = deleteReservation;
   window.searchAllRestaurants = searchAllRestaurants;
   window.editReservation = editReservation;
-  
+  window.createFavorite = createFavorite;
+  window.deleteFavorite = deleteFavorite;
 
 
   ReactDOM.render(<Root store={store}/>, root);
