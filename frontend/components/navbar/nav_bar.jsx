@@ -13,15 +13,11 @@ const sessionLinks = (searchResults,searchAllRestaurants) => {
       </a>
       </span>
 
-      <span className = "location-search-container">
-        <span>
-          <i className="fa fa-map-marker location-search-container" aria-hidden="true"></i>
-        </span>
+      <SearchContainer
 
-        <input className = "location-search-input"
-        type="text"
-        placeholder="Locations"></input>
-      </span>
+      />
+
+    
 
       <span className = "header-title">
 
