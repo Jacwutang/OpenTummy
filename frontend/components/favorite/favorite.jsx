@@ -5,6 +5,10 @@ class Favorite extends React.Component{
     super(props);
   }
 
+  componentWillMount(){
+    this.props.clearErrors();
+  }
+
   render(){
     return(
       <h1> Favorite Container </h1>

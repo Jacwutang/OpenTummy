@@ -1,14 +1,15 @@
 import React from 'react';
 import Favorite from './favorite';
 import {connect} from 'react-redux';
-import {deleteFavorite,requestAllFavorites} from '../../actions/favorite_actions';
+import {deleteFavorite,requestAllFavorites, receiveFavoriteErrors} from '../../actions/favorite_actions';
 import {deleteReservation} from '../../actions/reservation_actions';
 import {withRouter} from 'react-router'
 
 //profile container needs to know currentUser
 const mapStateToProps = (state,ownProps) => ({
-  currentUser: state.session.currentUser
-
+  currentUser: state.session.currentUser,
+  favorites: state.session.currentUser.favorites,
+  errors: state.errors.favorites
 
 });
 
@@ -16,8 +17,8 @@ const mapStateToProps = (state,ownProps) => ({
 
 const mapDispatchToProps = (dispatch) => ({
   deleteFavorite: (id) => dispatch(deleteFavorite(id)),
-  createFavorite: (favorite) => dispatch(createFavorite)
-
+  createFavorite: (favorite) => dispatch(createFavorite(favorite)),
+  clearErrors: () => dispatch(receiveFavoriteErrors([]))
 });
 
 export default connect(mapStateToProps,mapDispatchToProps)(Favorite);

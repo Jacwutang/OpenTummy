@@ -8,13 +8,15 @@ class Api::FavoritesController < ApplicationController
   def create
     @favorite = Favorite.new(fav_params)
 
-    if @favorite.save
-      render "api/favorites/show"
-    else
+    if !current_user
+      render json: ["Please Login before adding Favorite"], status: 401
 
+    elsif @favorite.save && current_user
+      render "api/favorites/show"
+      end
     end
 
-  end
+  
 
 
   def destroy
