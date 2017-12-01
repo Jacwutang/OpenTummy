@@ -22,22 +22,22 @@ document.addEventListener("DOMContentLoaded", () =>{
   }
 
 
-  window.getState = store.getState;
-  window.dispatch = store.dispatch;
-  window.store = store;
-  window.signup = signup;
-  window.login = login;
-  window.logout = logout;
-
-
-  window.createRestaurant = createRestaurant;
-  window.requestAllRestaurants = requestAllRestaurants;
-  window.createReservation = createReservation;
-  window.deleteReservation = deleteReservation;
-  window.searchAllRestaurants = searchAllRestaurants;
-  window.editReservation = editReservation;
-  window.createFavorite = createFavorite;
-  window.deleteFavorite = deleteFavorite;
+  // window.getState = store.getState;
+  // window.dispatch = store.dispatch;
+  // window.store = store;
+  // window.signup = signup;
+  // window.login = login;
+  // window.logout = logout;
+  //
+  //
+  // window.createRestaurant = createRestaurant;
+  // window.requestAllRestaurants = requestAllRestaurants;
+  // window.createReservation = createReservation;
+  // window.deleteReservation = deleteReservation;
+  // window.searchAllRestaurants = searchAllRestaurants;
+  // window.editReservation = editReservation;
+  // window.createFavorite = createFavorite;
+  // window.deleteFavorite = deleteFavorite;
 
 
   ReactDOM.render(<Root store={store}/>, root);
