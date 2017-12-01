@@ -33,13 +33,13 @@ class RestaurantIndexItem extends React.Component{
           </Link>
 
               <h2> {rest.name} </h2>
-              <h2> $$$$$ </h2>
+              <h3> $$$$$ </h3>
 
 
             <br/>
-            <h2> Average Rating *** </h2>
+            <h3> Average Rating *** </h3>
             <br/>
-              <h4> {category} | {rest.city} </h4>
+              <h3 className = "h3-restaurant-index-item"> {category} | {rest.city} </h3>
             <br/>
 
           <i className="fa fa-fire fa-2x" aria-hidden="true"></i>  Booked 25 times today!

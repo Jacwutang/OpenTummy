@@ -26,7 +26,7 @@ class RestaurantIndex extends React.Component{
         return(
         <div>
 
-          <h1> Restaurant Index </h1>
+          <h1 className = "restaurant-index-h1"> Restaurant Index </h1>
           <ul className = "restaurant-index-ul">
             {restaurants.map( (rest,idx) => (
               <RestaurantIndexItem
