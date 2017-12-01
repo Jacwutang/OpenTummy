@@ -13,7 +13,7 @@ class Search extends React.Component{
         this.findMatches();
 
         // var bool = true;
-
+        $('ul').css('display','block');
 
     }
 
@@ -34,17 +34,13 @@ class Search extends React.Component{
         return;
       }
 
+      var results = Object.keys(this.props.results).map( (id) => this.props.results[id] );
 
-
-      var results = Object.keys(this.props.results).map( (id) =>
-
-
-      this.props.results[id] )
       this.state.results = results;
 
       return(
         <ul id="search-bar" className = "search-bar">
-          <h1> {this.state.results[0].city} </h1>
+          <h1>  </h1>
           {results.map( (restaurant) =>
 
 
@@ -81,11 +77,13 @@ class Search extends React.Component{
 
 
     handleBlur(bool){
+      // $('ul').css('display', 'block');
+
       // if(bool === true){
       //   //but first redirect
       //   document.getElementById('search-bar').style.visibility = "hidden";
       // } else{
-      //   document.getElementById('search-bar').style.visibility = "visible";
+        //  document.getElementById('search-bar').style.visibility = "visible";
       // }
 
 
@@ -94,6 +92,7 @@ class Search extends React.Component{
 
 
     render(){
+      console.log(this.state);
       // if(this.state.query !== ''){
       //     this.findMatches();
       // }
@@ -112,9 +111,7 @@ class Search extends React.Component{
           type="text"
           onChange={ (e) => this.handleInput(e,'query') }
           value={this.state.query}
-          placeholder="Locations"
-
-          onClick={() => this.handleBlur(false)}>
+          placeholder="Locations">
           </input>
           {this.renderMatches()}
 
