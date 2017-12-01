@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 class Search extends React.Component{
     constructor(props){
       super(props);
-      this.state = {query: '', results: []};
+      this.state = {query: '', results: [], city: ''};
     }
 
     handleInput(e, query){
@@ -13,7 +13,7 @@ class Search extends React.Component{
         this.findMatches();
 
         // var bool = true;
-        $('ul').css('display','block');
+        $('.search-bar').css('display','block');
 
     }
 
@@ -30,7 +30,7 @@ class Search extends React.Component{
     renderMatches(){
       // if(this.props.match.)
 
-      if(this.props.results === undefined){
+      if(this.props.results === undefined || Object.keys(this.props.results).length === 0){
         return;
       }
 
@@ -38,9 +38,10 @@ class Search extends React.Component{
 
       this.state.results = results;
 
+
       return(
         <ul id="search-bar" className = "search-bar">
-          <h1>  </h1>
+          <h1> {this.state.results[0].city} </h1>
           {results.map( (restaurant) =>
 
 
@@ -48,7 +49,7 @@ class Search extends React.Component{
 
             <li id ="search-bar-item" className ="search-bar-item" onClick={() =>this.handleListClick(restaurant.id)}
 
-            key= {restaurant.id}>
+            key={restaurant.id}>
 
             {restaurant.name}
 
@@ -98,7 +99,7 @@ class Search extends React.Component{
       // }
       window.onclick = function(event) {
         if (!event.target.matches('.search-bar')){
-            $('ul').css('display', 'none');
+            $('.search-bar').css('display', 'none');
         }
       }
           return(

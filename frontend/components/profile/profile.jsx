@@ -63,7 +63,9 @@ class Profile extends React.Component{
 
     if(Object.keys(restaurantsIndex).length === 0){
       return null;
-    } else{
+    }
+
+    else{
 
       return(
 

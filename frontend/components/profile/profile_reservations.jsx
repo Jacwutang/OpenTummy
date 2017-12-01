@@ -54,7 +54,10 @@ class ProfileReservations extends React.Component{
   }
 
   render(){
+
     const {reservations,restaurantsIndex} = this.props;
+
+    
 
     return(
       <div>

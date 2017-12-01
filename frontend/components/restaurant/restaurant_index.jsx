@@ -3,15 +3,20 @@ import RestaurantIndexItem from './restaurant_index_item';
 
 class RestaurantIndex extends React.Component{
   componentWillMount(){
-    
     this.props.requestAllRestaurants();
+  }
+
+  componentWillReceiveProps(nextProps){
+    if(this.props.location.pathname !== nextProps.location.pathname){
+      this.props.requestAllRestaurants();
+    }
   }
 
 
   render(){
 
     const {restaurants} = this.props;
-
+    // debugger;
     if(Object.keys(restaurants).length === 0){
       return null;
     } else{

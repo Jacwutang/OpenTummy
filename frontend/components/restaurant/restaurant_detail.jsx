@@ -9,6 +9,12 @@ class RestaurantDetail extends React.Component{
 
   }
 
+  componentWillReceiveProps(nextProps){
+    if(this.props.location.pathname !== nextProps.location.pathname){
+      this.props.requestRestaurant(this.props.match.params.restId);
+    }
+  }
+
   componentDidMount(){
       // this.props.requestRestaurant(this.props.match.params.restId);
   }

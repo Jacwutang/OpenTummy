@@ -26,7 +26,7 @@ const mapDispatchToProps = (dispatch,ownProps) => {
 
 
   const formType = (ownProps.match.params.restaurantId !== undefined) ? 'Edit this Restaurant': 'Create new Restaurant';
-  debugger;
+  
   return{
     clearErrors: () => dispatch(receiveErrors([])),
     processRestaurant: (restaurant) => dispatch(processRestaurant(restaurant)),
