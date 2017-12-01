@@ -10,13 +10,6 @@ class Search extends React.Component{
     handleInput(e, query){
 
         this.setState({query: e.target.value });
-        // if(this.state.query === ""){
-        //
-        //   debugger;
-        //
-        //   $('.search-bar').css('display','none');
-        // }
-
 
         this.findMatches();
 
@@ -101,7 +94,7 @@ class Search extends React.Component{
 
 
     render(){
-      console.log(this.state);
+      
       // if(this.state.query !== ''){
       //     this.findMatches();
       // }

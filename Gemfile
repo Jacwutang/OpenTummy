@@ -38,9 +38,9 @@ gem 'better_errors'
 
 gem 'rack'
 
-gem 'byebug'
 
-gem 'pry-rails'
+
+
 
 gem 'rename'
 
@@ -59,6 +59,9 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+  gem 'pry-rails'
+  
+
 end
 
 group :development do
