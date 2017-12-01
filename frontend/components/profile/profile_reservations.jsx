@@ -60,7 +60,7 @@ class ProfileReservations extends React.Component{
     if(Object.keys(reservations).length === 0){
       return null;
     }
-
+    debugger;
     return(
       <div>
 
@@ -103,7 +103,7 @@ class ProfileReservations extends React.Component{
                     <div className = "profile-restaurants-index-div-right">
                       <button
                       type="button" onClick={this.handleSubmit(res.id)}> Delete </button>
-                      
+
 
                         <Link to={`/restaurants/${res.restaurant_id}/edit/${res.id}`}>
 
