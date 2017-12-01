@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import ProfileRestaurants from './profile_restaurants';
 import ProfileReservations from './profile_reservations';
-
+import ProfileFavorites from './profile_favorites';
 class Profile extends React.Component{
   constructor(props){
     super(props);
@@ -33,8 +33,10 @@ class Profile extends React.Component{
 
       document.getElementById('profile-reservations').scrollIntoView(true);
       // window.scrollTo(0,0);
-    } else{
+    } else if (field === 'profile-restaurants'){
       document.getElementById('profile-restaurants').scrollIntoView(true);
+    } else{
+        document.getElementById('profile-favorites').scrollIntoView(true);
     }
 
   }
@@ -57,8 +59,10 @@ class Profile extends React.Component{
     let reservations = Object.keys(this.props.currentUser.reservations).map(res => (
         this.props.currentUser.reservations[res]));
 
+    let my_favorites = Object.keys(this.props.currentUser.favorite_restaurants).map(fav => (this.props.currentUser.favorite_restaurants[fav]));
 
-    const{deleteRestaurant,deleteReservation,restaurantsIndex} = this.props;
+
+    const{deleteRestaurant,deleteReservation,restaurantsIndex,deleteFavorite} = this.props;
 
 
     if(Object.keys(restaurantsIndex).length === 0){
@@ -81,6 +85,10 @@ class Profile extends React.Component{
 
               <button type="button" onClick={() => {this.handleClick('profile-restaurants')}} className="header-links" className="header-links">
                 My Restaurants
+              </button>
+
+              <button type="button" onClick={() => {this.handleClick('profile-favorites')}} className="header-links" className="header-links">
+                My Favorites
               </button>
 
             </div>
@@ -118,6 +126,17 @@ class Profile extends React.Component{
             my_restaurants={my_restaurants}
             deleteRestaurant={deleteRestaurant}/>
           </div>
+
+
+          <div id="profile-restaurants">
+            <h1 className = "profile-restaurants-h1"> My Favorites </h1>
+            <ProfileFavorites
+            my_favorites={my_favorites}
+            deleteFavorite={deleteFavorite}/>
+          </div>
+
+
+
 
 
 
