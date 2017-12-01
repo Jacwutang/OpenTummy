@@ -5,8 +5,14 @@ class ReservationForm extends React.Component{
   constructor(props){
     super(props);
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.state = this.props.reservation[this.props.reservationId];
-    // this.state = {id: 0, timeslot: "12:00:00", head_count: 1};
+    if(this.props.reservationId !== NaN){
+      this.state = this.props.reservation[this.props.reservationId];
+      this.state.date = this.props.reservation[this.props.reservationId].date.slice(0,10);
+    } else{
+      this.state = {id: 0, timeslot: "12:00:00", head_count: 1};
+    }
+    //this.state = this.props.reservation[this.props.reservationId];
+     //this.state = {id: 0, timeslot: "12:00:00", head_count: 1};
   }
 
   componentWillMount(){
@@ -49,7 +55,7 @@ class ReservationForm extends React.Component{
 
   renderErrors(){
     //if there are any errors render them
-
+    console.log(this.state);
     return(
      <ul>
        {this.props.errors.map((error, i) => (
@@ -88,7 +94,7 @@ class ReservationForm extends React.Component{
 
         <select onChange={this.handleInput('timeslot')} value={this.state.timeslot} className = "reservation-select">
 
-            
+
             <option value="12:00:00" type ="text">12:00 PM</option>
             <option value="01:00:00" type ="text">1:00 PM</option>
             <option value="02:00:00" type ="text">2:00 PM</option>
