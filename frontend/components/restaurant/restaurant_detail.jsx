@@ -34,7 +34,7 @@ class RestaurantDetail extends React.Component{
 
 
   render(){
-    console.log('mount');
+    // console.log('mount');
     $('ul').css('display', 'none');
     // document.getElementById('search-bar').style.visibility = 'none'
     const {restaurant} = this.props;
