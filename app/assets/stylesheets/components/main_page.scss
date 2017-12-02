@@ -17,6 +17,59 @@
 
 }
 
+.featured-areas{
+  width: 65%;
+  border: 1px gray;
+  height: 40%;
+  margin-top: 10%;
+  margin-left: 35%;
+  background: white;
+  border-radius: 5px;
+  position: relative;
+  text-align: center;
+  
+}
+
+.featured-areas-row1{
+  height: auto;
+  margin-top: 0;
+  display: flex;
+  justify-content: center;
+
+}
+
+.featured-areas-img{
+  position: relative;
+  opacity: 1;
+  left: 0;
+  width: 250px;
+  height: 200px;
+  filter: brightness(75%);
+
+
+
+}
+
+.center{
+   position: absolute;
+   top: 75%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   z-index: 100px;
+   color: white;
+   font-weight: bold;
+   font-size: 20px;
+}
+
+
+.main-page-h1{
+  margin-top: 0px;
+  text-align: left;
+  margin-left: 5px;
+
+}
+
+
 .search-button{
   background: $red;
 
@@ -39,7 +92,7 @@
 
 .main-page-reservation{
   width: 75%;
-  
+
 }
 
 .main-page-reservation-select{
