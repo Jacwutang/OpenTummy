@@ -66,13 +66,13 @@ class ReservationForm extends React.Component{
       return;
     }
     return(
-     <ul>
+      <div>
        {this.props.errors.map((error, i) => (
          <li className = "reservation-form-li" key={`error-${i}`}>
            {error}
          </li>
        ))}
-     </ul>
+     </div>
    );
   }
 
