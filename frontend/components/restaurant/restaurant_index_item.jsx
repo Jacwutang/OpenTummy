@@ -19,14 +19,14 @@ class RestaurantIndexItem extends React.Component{
   samplePrice(){
     let sampleArr = ['$','$$','$$$','$$$$','$$$$$'];
     let sampleRes = sampleArr[Math.floor(Math.random() * sampleArr.length)];
-    
+
     return sampleRes;
   }
 
   render(){
     const {rest} = this.props;
     // console.log(rest);
-    console.log(this.props);
+
     const category = (rest.category === null) ? "No Category" : rest.category;
 
     return(
