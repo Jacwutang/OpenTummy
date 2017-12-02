@@ -56,7 +56,7 @@ class RestaurantDetail extends React.Component{
 
             <div className = "restaurant-detail-header-left">
               <h1 className = "h1-restaurant-title">{restaurant.name} </h1>
-              <span> <h4> *** </h4> <h4> 40 Reviews </h4> </span>
+              <span> <h4> <i className="fa fa-star" aria-hidden="true"></i> <i className="fa fa-star" aria-hidden="true"></i> <i className="fa fa-star" aria-hidden="true"></i></h4> <h4> 40 Reviews </h4> </span>
               <br/>
             </div>
 
@@ -86,7 +86,7 @@ class RestaurantDetail extends React.Component{
           <br/>
 
           <div className = "content-div">
-            <h1> Ratings and Reviews </h1>
+            <h1 className="h1-content-div"> Ratings and Reviews </h1>
             <hr/>
             <span> Gooooood stuff. I love it </span>
           </div>
