@@ -12,9 +12,9 @@ class ProfileReservations extends React.Component{
   handleTime(timeslot){
 
     var time = timeslot.slice(11,-5)
-    console.log(time);
+
     var minutes = timeslot.slice(14,-8);
-    console.log(minutes);
+
 
     var hours = time.slice(0,1) + time.slice(1,2);
     // console.log(time, "TIME");
