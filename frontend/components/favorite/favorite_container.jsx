@@ -1,7 +1,7 @@
 import React from 'react';
 import Favorite from './favorite';
 import {connect} from 'react-redux';
-import {deleteFavorite,requestAllFavorites, receiveFavoriteErrors} from '../../actions/favorite_actions';
+import {deleteFavorite,requestAllFavorites, receiveFavoriteErrors,createFavorite} from '../../actions/favorite_actions';
 import {deleteReservation} from '../../actions/reservation_actions';
 import {withRouter} from 'react-router'
 
