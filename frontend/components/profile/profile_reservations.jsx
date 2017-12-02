@@ -60,7 +60,7 @@ class ProfileReservations extends React.Component{
     if(Object.keys(reservations).length === 0){
       return null;
     }
-    debugger;
+    
     return(
       <div>
 
