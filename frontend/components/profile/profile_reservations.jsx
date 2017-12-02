@@ -10,12 +10,36 @@ class ProfileReservations extends React.Component{
   }
 
   handleTime(timeslot){
-    var time = timeslot.slice(12,-5)
-    // 07:00:00
+
+    var time = timeslot.slice(11,-5)
+    console.log(time);
+    var minutes = timeslot.slice(14,-8);
+    console.log(minutes);
+
+    var hours = time.slice(0,1) + time.slice(1,2);
+    // console.log(time, "TIME");
+    // console.log(time.slice(0,1));
+    // console.log(time.slice(1,2));
+    // console.log( parseInt(time.slice(0,1) + time.slice(1,2)) > 12 );
+
+    if(parseInt(time.slice(0,1) + time.slice(1,2)) >= 12){
+      if(parseInt(time.slice(0,1) + time.slice(1,2)) - 12 === 0){
+        hours = 12;
+      } else{
+        hours = parseInt(time.slice(0,1) + time.slice(1,2)) - 12;
+      }
+
+      return (
+
+        hours + ':' + minutes + ' ' + 'PM'
+      );
+    }
+
+
 
 
     return(
-      time
+      hours + ':' + minutes + ' ' + 'AM'
     );
 
   }
@@ -60,7 +84,7 @@ class ProfileReservations extends React.Component{
     if(Object.keys(reservations).length === 0){
       return null;
     }
-    
+
     return(
       <div>
 
@@ -84,7 +108,7 @@ class ProfileReservations extends React.Component{
                       </h3>
 
                       <h3>
-                        Time: {this.handleTime(res.timeslot)} PM
+                        Time: {this.handleTime(res.timeslot)}
 
                       </h3>
 
