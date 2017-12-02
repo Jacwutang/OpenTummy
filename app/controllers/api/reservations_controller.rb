@@ -29,6 +29,8 @@ class Api::ReservationsController < ApplicationController
 
     if @reservation.update(reservation_params)
       render "api/reservations/show"
+    else
+      render json: ["Please fill all input fields"], status: 401
     end
 
   end
@@ -45,7 +47,7 @@ class Api::ReservationsController < ApplicationController
   end
 
   def reservation_params
-    params.require(:reservation).permit(:restaurant_id, :user_id, :head_count, :date, :timeslot,:thumbnail)
+    params.require(:reservation).permit(:id, :restaurant_id, :user_id, :head_count, :date, :timeslot,:thumbnail)
   end
 
 end

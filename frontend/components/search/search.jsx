@@ -5,6 +5,7 @@ class Search extends React.Component{
     constructor(props){
       super(props);
       this.state = {query: '', results: [], city: ''};
+      
     }
 
     handleInput(e, query){
@@ -94,12 +95,13 @@ class Search extends React.Component{
 
 
     render(){
-      
+
       // if(this.state.query !== ''){
       //     this.findMatches();
       // }
+
       window.onclick = function(event) {
-        if (!event.target.matches('.search-bar')){
+        if (!event.target.matches('.search-bar') ){
             $('.search-bar').css('display', 'none');
         }
       }

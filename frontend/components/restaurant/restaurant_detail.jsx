@@ -44,6 +44,7 @@ class RestaurantDetail extends React.Component{
     if (typeof restaurant === "undefined"){
       return null;
     }
+
     else{
 
       return(
