@@ -5,7 +5,7 @@ class Search extends React.Component{
     constructor(props){
       super(props);
       this.state = {query: '', results: [], city: ''};
-      
+
     }
 
     handleInput(e, query){
@@ -69,7 +69,7 @@ class Search extends React.Component{
     handleListClick(id){
 
 
-      this.props.requestRestaurant(id);
+      // this.props.requestRestaurant(id);
         // console.log($('location-header'))
         // console.log(document.getElementById("location-header"));
       // document.getElementById("location-header").style.visibility = "hidden";

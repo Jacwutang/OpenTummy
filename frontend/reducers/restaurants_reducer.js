@@ -1,6 +1,6 @@
 import merge from 'lodash/merge';
 
-import {RECEIVE_RESTAURANT, RECEIVE_ALL_RESTAURANTS,REMOVE_RESTAURANT} from '../actions/restaurant_actions';
+import {RECEIVE_RESTAURANT, RECEIVE_ALL_RESTAURANTS,RECEIVE_ALL_SEARCH_RESTAURANTS,REMOVE_RESTAURANT} from '../actions/restaurant_actions';
 
 const restaurantsReducer = (state = {}, action) => {
   Object.freeze(state);
@@ -16,6 +16,9 @@ const restaurantsReducer = (state = {}, action) => {
     case RECEIVE_ALL_RESTAURANTS:
       return merge({},state,action.restaurants);
       //return(action.restaurants);
+
+      case RECEIVE_ALL_SEARCH_RESTAURANTS:
+      return merge({},state,{restaurants: action.restaurants});
 
     //  case REMOVE_RESTAURANT:
     // //  delete newState.session.currentUser.restaurants[action.id];

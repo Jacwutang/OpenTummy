@@ -14,7 +14,7 @@ import ProfileContainer from './profile/profile_container';
 
 import RestaurantFormContainer from './restaurant/restaurant_form_container';
 import RestaurantIndexContainer from './restaurant/restaurant_index_container';
-import MainPage from './main_page';
+import MainPageContainer from './main_page_container';
 import RestaurantDetailContainer from './restaurant/restaurant_detail_container';
 
 
@@ -43,9 +43,9 @@ const App = () => (
 
       <Route path="/restaurants/:restId/:edit/:reservationId" component={RestaurantDetailContainer} />
 
-      <Route exact path = "/" component={MainPage} />
+      <Route exact path = "/" component={MainPageContainer} />
 
-      <Route component={MainPage} />
+      <Route component={MainPageContainer} />
     </Switch>
 
 
