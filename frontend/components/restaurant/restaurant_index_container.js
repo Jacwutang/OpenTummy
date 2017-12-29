@@ -7,18 +7,18 @@ import {withRouter} from 'react-router';
 
 const mapStateToProps = (state,ownProps) => {
 
-  ;
+
   return({
      restaurants: Object.keys(state.restaurants).map(id => state.restaurants[id]),
 
-     area: ownProps.location.pathname.slice(1)
+     region: ownProps.location.pathname.slice(1)
 
   });
 
 };
 
 const mapDispatchToProps = (dispatch) => ({
-  requestAllRestaurants: () => dispatch(requestAllRestaurants())
+  requestAllRestaurants: (region) => dispatch(requestAllRestaurants(region))
 
 
 });

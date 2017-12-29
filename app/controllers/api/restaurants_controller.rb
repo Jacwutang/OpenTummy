@@ -1,7 +1,8 @@
 class Api::RestaurantsController < ApplicationController
   def index
     p params, "HERE WE ARE"
-    
+    p params[:region]
+
     @restaurants = Restaurant.all
     render "api/restaurants/index"
   end

@@ -55,8 +55,8 @@ export const createRestaurant = restaurant => dispatch => (
 
   );
 
-export const requestAllRestaurants = () => dispatch => (
-  RESTAURANTutil.fetchAllRestaurants().then( restaurants => (
+export const requestAllRestaurants = (region) => dispatch => (
+  RESTAURANTutil.fetchAllRestaurants(region).then( restaurants => (
     dispatch(receiveAllRestaurants(restaurants))
   ))
 
