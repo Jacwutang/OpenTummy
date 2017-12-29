@@ -9,11 +9,6 @@ class RestaurantIndexItem extends React.Component{
     super(props);
 
   }
-
-
-
-
-
   // const category = (rest.category === null) ? "No Category" : rest.category;
 
   samplePrice(){
@@ -25,7 +20,7 @@ class RestaurantIndexItem extends React.Component{
 
   render(){
     const {rest} = this.props;
-    // console.log(rest);
+
 
     const category = (rest.category === null) ? "No Category" : rest.category;
 
@@ -37,29 +32,49 @@ class RestaurantIndexItem extends React.Component{
             <img className = "thumbnail" src={rest.thumbnail}/>
           </Link>
 
-              <h2> {rest.name} </h2>
-              <h3 className = "h3-restaurant-index-item-price"> {this.samplePrice()} </h3>
+            <div className = "restaurant-index-left-div-rest">
+
+              <Link to={`/restaurants/${rest.id}`}>
+                <h2 className = "restaurant-index-title">     {rest.name} </h2>
+              </Link>
+              
+
+              <span>
+              <h3>  *****
+              <span> 165 Reviews </span>
+              </h3>
 
 
-            <br/>
-            <h3 className = "h3-restaurant-index-item"> Average Rating *** </h3>
-            <br/>
-              <h3 className = "h3-restaurant-index-item"> {category} | {rest.city} </h3>
-            <br/>
 
-          <i className="fa fa-fire fa-2x" aria-hidden="true"></i>  Booked 25 times today!
+              </span>
+
+              <h3> {category} </h3>
+
+
+              <div>
+                <i className="fa fa-fire fa-2x" aria-hidden="true"></i>
+                <span className = "icon-span-restaurant-index"> Booked 25 times today! </span>
+              </div>
+
+            </div>
 
           </div>
 
           <div className = "restaurant-index-right-div">
-            <h3 className ="review-h3"> Dope. Would come again 10/10. </h3>
-            <br/>
-            <br/>
-            <h4 className = "user-h4"> -Username </h4>
+          <h2>
+            $$$$
+          </h2>
 
-
+          <h2>
+            Chicago
+          </h2>
 
           </div>
+
+
+
+
+
 
 
 
@@ -72,3 +87,8 @@ class RestaurantIndexItem extends React.Component{
 };
 
 export default RestaurantIndexItem;
+
+// <div className = "restaurant-index-right-div">
+//   $$$$
+//   Chicago
+// </div>
