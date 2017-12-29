@@ -5,12 +5,13 @@ import {requestAllRestaurants} from '../../actions/restaurant_actions';
 import {withRouter} from 'react-router';
 
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state,ownProps) => {
 
-
+  ;
   return({
-     restaurants: Object.keys(state.restaurants).map(id => state.restaurants[id])
-    //restaurants: state.restaurants
+     restaurants: Object.keys(state.restaurants).map(id => state.restaurants[id]),
+
+     area: ownProps.location.pathname.slice(1)
 
   });
 

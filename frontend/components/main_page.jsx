@@ -20,22 +20,29 @@ class MainPage extends React.Component{
 
           <div className = "featured-areas">
             <div className = "media">
+            <Link to = "/New-York">
               <img className = "featured-areas-img" src="http://travelhdwallpapers.com/wp-content/uploads/2014/04/Statue-Of-Liberty-24.jpg"/>
+            </Link>
               <div className = "center">
                 New York City
               </div>
+
             </div>
 
             <div className = "media">
+            <Link to="/Chicago">
               <img className = "featured-areas-img" src="https://upload.wikimedia.org/wikipedia/commons/2/26/Chicago_Theatre_blend.jpg"/>
+            </Link>
               <div className = "center">
                 Chicago
               </div>
             </div>
 
             <div className = "media">
-               <img className = "featured-areas-img" src="http://dobsonchronicles.com/wp-content/uploads/2016/08/SF.jpg"/>
-               <div className = "center">
+              <Link to="/San-Francisco">
+                 <img className = "featured-areas-img" src="http://dobsonchronicles.com/wp-content/uploads/2016/08/SF.jpg"/>
+              </Link>
+              <div className = "center">
                  San Francisco
                </div>
             </div>
