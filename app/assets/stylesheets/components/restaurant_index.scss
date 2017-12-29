@@ -25,18 +25,22 @@
   padding-top: 5px;
   padding-bottom: 5px;
   margin-bottom: 12px;
-  border-radius: 5%;
-  padding-right: 3px;
+  padding-right: 25px;
 
 }
 .restaurant-index-left-div{
-  display: flex;
-  justify-content: space-between;
-  flex-grow: 1
+  // display: flex;
+  // justify-content: space-between;
+  // flex-grow: 1;
+
 }
 
 .restaurant-index-left-div-rest{
     width:auto;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    
 }
 
 
@@ -44,6 +48,7 @@
   width: auto;
   display: flex;
   justify-content: flex-start;
+  flex-direction: column;
 
 }
 
@@ -67,4 +72,13 @@
 
 .h3-restaurant-index-item-price{
   color: green;
+}
+
+.icon-span-restaurant-index{
+  color: dimgray;
+  font-size: 18px;
+}
+
+.restaurant-index-title{
+  color: #237B98;
 }

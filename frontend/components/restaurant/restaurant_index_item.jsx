@@ -33,27 +33,42 @@ class RestaurantIndexItem extends React.Component{
           </Link>
 
             <div className = "restaurant-index-left-div-rest">
-              <h2> {rest.name} </h2>
-              <h3 className = "h3-restaurant-index-item-price"> {this.samplePrice()} </h3>
+              <h2 className = "restaurant-index-title"> {rest.name} </h2>
+
+              <span>
+              <h3>  *****
+              <span> 165 Reviews </span>
+              </h3>
 
 
-            <br/>
-            <h3> Average Rating *** </h3>
-            <br/>
-              <h3> {category} | {rest.city} </h3>
-            <br/>
+
+              </span>
+
+              <h3> {category} </h3>
 
 
-          <i className="fa fa-fire fa-2x" aria-hidden="true"></i>  Booked 25 times today!
+              <div>
+                <i className="fa fa-fire fa-2x" aria-hidden="true"></i>
+                <span className = "icon-span-restaurant-index"> Booked 25 times today! </span>
+              </div>
+
+            </div>
+
           </div>
 
           <div className = "restaurant-index-right-div">
+          <h2>
             $$$$
+          </h2>
+
+          <h2>
             Chicago
+          </h2>
+
           </div>
 
 
-          </div>
+
 
 
 
