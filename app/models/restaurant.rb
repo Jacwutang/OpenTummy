@@ -26,7 +26,7 @@ class Restaurant < ApplicationRecord
 
   def self.list_matches(query_param)
     param = '%' + query_param.downcase + '%'
-    Restaurant.where('lower(city) LIKE ?', param).limit(10)
+    Restaurant.where('lower(city) LIKE ?', param)
   end
 
 

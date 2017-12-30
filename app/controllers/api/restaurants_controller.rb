@@ -1,10 +1,25 @@
 class Api::RestaurantsController < ApplicationController
   def index
-    p params, "HERE WE ARE"
-    p params[:region]
+    # params[:region] #San-Francisco  restaurants
+    case params[:region]
+      when "San-Francisco"
+        @restaurants = Restaurant.list_matches("San Francisco")
+        render "api/restaurants/index"
+      when "Chicago"
+        @restaurants = Restaurant.list_matches("Chicago")
+        render "api/restaurants/index"
+      when "New-York"
+        @restaurants = Restaurant.list_matches("New York")
+        render "api/restaurants/index"
+      else
+        @restaurants = Restaurant.all
+        render "api/restaurants/index"
+        
 
-    @restaurants = Restaurant.all
-    render "api/restaurants/index"
+    end
+
+
+
   end
 
   def show

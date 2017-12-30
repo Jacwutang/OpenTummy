@@ -6,11 +6,11 @@ class RestaurantIndex extends React.Component{
     this.props.requestAllRestaurants(this.props.region);
   }
 
-  componentWillReceiveProps(nextProps){
-    if(this.props.location.pathname !== nextProps.location.pathname){
-      this.props.requestAllRestaurants();
-    }
-  }
+  // componentWillReceiveProps(nextProps){
+  //   if(this.props.location.pathname !== nextProps.location.pathname){
+  //     this.props.requestAllRestaurants();
+  //   }
+  // }
 
 
   render(){

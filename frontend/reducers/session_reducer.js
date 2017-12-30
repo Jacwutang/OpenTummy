@@ -25,7 +25,7 @@ const sessionReducer = (state = _nullUser, action) => {
     newState = merge({},state);
     if(newState.currentUser !== null){
       newState.currentUser.restaurants[action.restaurant.id] = action.restaurant;
-      
+
     }
     return newState;
 
@@ -61,12 +61,6 @@ const sessionReducer = (state = _nullUser, action) => {
     case REMOVE_RESERVATION:
     delete newState.currentUser.reservations[action.reservation.id];
     return newState;
-
-
-
-
-
-
 
 
     default:
