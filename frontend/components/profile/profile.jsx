@@ -14,7 +14,7 @@ class Profile extends React.Component{
 
   componentWillMount(){
     this.props.requestAllRestaurants();
-    // .then(() => this.props.history.push('/profile'));
+
   }
 
   // componentDidUpdate() {
@@ -43,7 +43,7 @@ class Profile extends React.Component{
 
   handleButton(){
 
-    this.props.history.push('/restaurants/');
+    this.props.history.push('/restaurants');
   }
 
   handleButtonAddRestaurant(){
@@ -66,7 +66,7 @@ class Profile extends React.Component{
 
     const{deleteRestaurant,deleteReservation,restaurantsIndex,deleteFavorite} = this.props;
 
-
+    
     if(Object.keys(restaurantsIndex).length === 0){
       return null;
     }

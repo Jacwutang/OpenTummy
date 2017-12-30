@@ -5,7 +5,7 @@ import {RECEIVE_RESTAURANT, RECEIVE_ALL_RESTAURANTS,RECEIVE_ALL_SEARCH_RESTAURAN
 const restaurantsReducer = (state = {}, action) => {
   Object.freeze(state);
 
-  let newState = merge({},state);
+   let newState = merge({},state);
 
   switch(action.type){
     // case RECEIVE_RESTAURANT:
@@ -14,15 +14,19 @@ const restaurantsReducer = (state = {}, action) => {
 
 
     case RECEIVE_ALL_RESTAURANTS:
-      return merge({},state,action.restaurants);
-      //return(action.restaurants);
+    // newState = merge({},state);
+    // newState.currentUser.reservations[action.reservation.id] = action.reservation;
+    // return newState;
 
-      case RECEIVE_ALL_SEARCH_RESTAURANTS:
-      return merge({},state,{restaurants: action.restaurants});
 
-    //  case REMOVE_RESTAURANT:
-    // //  delete newState.session.currentUser.restaurants[action.id];
-    //  return newState;
+    return merge({},state,action.restaurants);
+
+
+
+    // case RECEIVE_ALL_SEARCH_RESTAURANTS:
+    //   return merge({},state,{restaurants: action.restaurants});
+
+
 
 
     default:

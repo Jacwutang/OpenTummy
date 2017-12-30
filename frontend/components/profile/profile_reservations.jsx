@@ -81,73 +81,82 @@ class ProfileReservations extends React.Component{
 
     const {reservations,restaurantsIndex} = this.props;
 
+    // {reservations.map( (res) => (
+    //   console.log(res)
+    // ))
+    // }
+
     if(Object.keys(reservations).length === 0){
       return null;
     }
+    else{
+      return(
+        <div>
 
-    return(
-      <div>
+          <ul className = "profile-restaurants-index-ul">
+            {reservations.map( (res) => (
 
-        <ul className = "profile-restaurants-index-ul">
-          {reservations.map( (res) => (
+              <li className = "profile-restaurants-index-li"
+              key = {res.id}>
 
-            <li className = "profile-restaurants-index-li"
-            key = {res.id}>
+                      <div  className = "profile-restaurants-index-div-left">
 
-                    <div  className = "profile-restaurants-index-div-left">
+                      <Link to={`/restaurants/${res.restaurant_id}/edit/${res.id}`}>
+                         <img className = "thumbnail" src={restaurantsIndex[res.restaurant_id].thumbnail}/>
+                      </Link>
 
-                    <Link to={`/restaurants/${res.restaurant_id}/edit/${res.id}`}>
-                       <img className = "thumbnail" src={restaurantsIndex[res.restaurant_id].thumbnail}/>
-                    </Link>
+                        <h2> {restaurantsIndex[res.restaurant_id].name} </h2>
 
-                      <h2> {restaurantsIndex[res.restaurant_id].name} </h2>
+                        <h3>
+                          Party-Size: {res.head_count}
 
-                      <h3>
-                        Party-Size: {res.head_count}
+                        </h3>
 
-                      </h3>
+                        <h3>
+                          Time: {this.handleTime(res.timeslot)}
 
-                      <h3>
-                        Time: {this.handleTime(res.timeslot)}
+                        </h3>
 
-                      </h3>
+                        <h3>
+                          Date: {this.handleDate(res.date)}
 
-                      <h3>
-                        Date: {this.handleDate(res.date)}
-
-                      </h3>
-
-
-
-                      <br/>
+                        </h3>
 
 
-                    </div>
 
-                    <div className = "profile-restaurants-index-div-right">
-                      <button
-                      type="button" onClick={this.handleSubmit(res.id)}> Delete </button>
+                        <br/>
 
 
-                        <Link to={`/restaurants/${res.restaurant_id}/edit/${res.id}`}>
+                      </div>
 
-                        <button type="button" className = "button-bandaid"> Edit </button>
-
-                        </Link>
-
-                    </div>
+                      <div className = "profile-restaurants-index-div-right">
+                        <button
+                        type="button" onClick={this.handleSubmit(res.id)}> Delete </button>
 
 
-            </li>
+                          <Link to={`/restaurants/${res.restaurant_id}/edit/${res.id}`}>
 
-          ))}
+                          <button type="button" className = "button-bandaid"> Edit </button>
 
-        </ul>
+                          </Link>
+
+                      </div>
 
 
-      </div>
+              </li>
 
-    );
+            ))}
+
+          </ul>
+
+
+        </div>
+
+      );
+
+    }
+
+
 
   }
 

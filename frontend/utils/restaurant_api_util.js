@@ -10,22 +10,17 @@ export const fetchRestaurant = (id) => {
 };
 
 
-export const fetchAllRestaurants = () => {
+export const fetchAllRestaurants = (region) => {
 
   return ($.ajax({
     url: '/api/restaurants',
-    method: 'GET'
+    method: 'GET',
+    data: {region}
     })
   );
 };
 
-// export const createRestaurant = restaurant => (
-//   $.ajax({
-//     url: '/api/restaurants',
-//     method: 'POST',
-//     data: {restaurant}
-//   })
-// );
+
 export const createRestaurant = restaurant => {
 
   return($.ajax({

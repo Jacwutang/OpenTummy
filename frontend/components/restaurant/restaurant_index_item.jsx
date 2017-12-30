@@ -37,7 +37,8 @@ class RestaurantIndexItem extends React.Component{
               <Link to={`/restaurants/${rest.id}`}>
                 <h2 className = "restaurant-index-title">     {rest.name} </h2>
               </Link>
-              
+
+
 
               <span>
               <h3>  *****
@@ -66,7 +67,7 @@ class RestaurantIndexItem extends React.Component{
           </h2>
 
           <h2>
-            Chicago
+            {rest.city}
           </h2>
 
           </div>

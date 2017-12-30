@@ -21,13 +21,25 @@
 
 }
 
-.restaurant-index-li, img:last-of-type{
+// .restaurant-index-li, img:last-of-type{
+//   padding-top: 5px;
+//   padding-bottom: 5px;
+//   margin-bottom: 12px;
+//   padding-right: 25px;
+//
+// }
+
+.restaurant-index-li img:last-of-type{
   padding-top: 5px;
   padding-bottom: 5px;
   margin-bottom: 12px;
   padding-right: 25px;
 
 }
+
+
+
+
 .restaurant-index-left-div{
   // display: flex;
   // justify-content: space-between;
@@ -40,7 +52,7 @@
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-    
+
 }
 
 
