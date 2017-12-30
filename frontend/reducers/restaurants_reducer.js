@@ -5,7 +5,7 @@ import {RECEIVE_RESTAURANT, RECEIVE_ALL_RESTAURANTS,RECEIVE_ALL_SEARCH_RESTAURAN
 const restaurantsReducer = (state = {}, action) => {
   Object.freeze(state);
 
-   let newState = merge({},state);
+  let newState = merge({},state);
 
   switch(action.type){
     // case RECEIVE_RESTAURANT:
@@ -18,8 +18,27 @@ const restaurantsReducer = (state = {}, action) => {
     // newState.currentUser.reservations[action.reservation.id] = action.reservation;
     // return newState;
 
+    // case REMOVE_FAVORITE:
+    //   delete newState.currentUser.favorite_restaurants[action.favorite.id];
+    //   return newState;
+    // delete state.restaurants;
 
-    return merge({},state,action.restaurants);
+
+
+
+     return merge({},action.restaurants);
+
+
+
+
+
+
+
+
+    // return merge({},state,action.restaurants);
+
+
+    // return merge({},state,action.restaurants);
 
 
 
