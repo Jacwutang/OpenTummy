@@ -8,21 +8,12 @@ const restaurantsReducer = (state = {}, action) => {
   let newState = merge({},state);
 
   switch(action.type){
-    // case RECEIVE_RESTAURANT:
-    //   const newRestaurant = {[action.restaurant.id]: action.restaurant};
-    //     return merge({}, state , newRestaurant);
+    case RECEIVE_RESTAURANT:
+      const newRestaurant = {[action.restaurant.id]: action.restaurant};
+        return merge({}, state , newRestaurant);
 
 
     case RECEIVE_ALL_RESTAURANTS:
-    // newState = merge({},state);
-    // newState.currentUser.reservations[action.reservation.id] = action.reservation;
-    // return newState;
-
-    // case REMOVE_FAVORITE:
-    //   delete newState.currentUser.favorite_restaurants[action.favorite.id];
-    //   return newState;
-    // delete state.restaurants;
-
 
 
 
@@ -33,17 +24,6 @@ const restaurantsReducer = (state = {}, action) => {
 
 
 
-
-
-    // return merge({},state,action.restaurants);
-
-
-    // return merge({},state,action.restaurants);
-
-
-
-    // case RECEIVE_ALL_SEARCH_RESTAURANTS:
-    //   return merge({},state,{restaurants: action.restaurants});
 
 
 

@@ -6,12 +6,11 @@ import {requestRestaurant} from '../../actions/restaurant_actions';
 
 
 const mapStateToProps = (state, ownProps) => {
-
+      // state.session.currentUser.restaurants[ownProps.match.params.restId]
 
     return{
     currentUser: state.session.currentUser,
-    // restaurant: state.restaurants[ownProps.match.params.restId]
-    restaurant: state.session.currentUser.restaurants[ownProps.match.params.restId]
+    restaurant: state.restaurants[ownProps.match.params.restId]
     }
 };
 

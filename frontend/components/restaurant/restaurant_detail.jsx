@@ -28,8 +28,11 @@ class RestaurantDetail extends React.Component{
 
 
   onOpenModal(){
-    console.log("clicked")
-    this.setState({ open: true })
+    const {currentUser} = this.props;
+
+    (currentUser === null) ?
+    console.log("HERE")
+     : this.setState({ open: true })
   }
 
   onCloseModal(){
@@ -102,7 +105,13 @@ class RestaurantDetail extends React.Component{
             <h1 className="h1-content-div"> Ratings and Reviews
             <button onClick={() => this.onOpenModal() }>Leave a Review</button>
               <Modal open={open} onClose={() => {this.onCloseModal()} } little>
-                <h2>Simple centered modal</h2>
+                <h2>Leave a Review</h2>
+                <h3> ***** </h3>
+                <textarea rows="5" cols="50">
+
+                </textarea>
+                <button> Submit </button>
+
               </Modal>
             </h1>
 
@@ -127,6 +136,3 @@ class RestaurantDetail extends React.Component{
 }
 
 export default RestaurantDetail;
-
-
-// <button className = "fav-button-restaurant-item"> <i className="fa fa-star" aria-hidden="true"></i> Fav </button>
