@@ -74,13 +74,23 @@
 
 
 
-.content-div h1 span{
+.content-div h1{
   margin-top: 0;
   font-family: cursive;
   font-family: 'Boogaloo', cursive;
-  font-size: 16px;
-
+  font-size: 24px;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  margin-top: 10px;
 }
+
+
+
+// .content-div span{
+//   margin-right: 0;
+//
+// }
 
 .h1-content-div{
 font-size: 24px;

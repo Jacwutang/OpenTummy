@@ -1,4 +1,5 @@
 import React from 'react';
+import Modal from 'react-responsive-modal';
 import ReservationContainer from '../reservation/reservation_container';
 import FavoriteContainer from '../favorite/favorite_container';
 
@@ -6,9 +7,11 @@ import FavoriteContainer from '../favorite/favorite_container';
 class RestaurantDetail extends React.Component{
   constructor(props){
     super(props);
-    this.state = {loaded:false};
+    this.state = {
+      loaded:false,
+      open: false
 
-
+    };
   }
 
   // componentWillReceiveProps(nextProps){
@@ -22,10 +25,16 @@ class RestaurantDetail extends React.Component{
     window.scrollTo(0,0);
   }
 
-  componentWillMount(){
 
+
+  onOpenModal(){
+    console.log("clicked")
+    this.setState({ open: true })
   }
 
+  onCloseModal(){
+    this.setState({ open: false })
+  }
 
 
 
@@ -33,6 +42,7 @@ class RestaurantDetail extends React.Component{
 
 
     const {restaurant} = this.props;
+    const { open } = this.state;
 
     if (this.state.loaded !== true || typeof restaurant === undefined){
 
@@ -40,7 +50,7 @@ class RestaurantDetail extends React.Component{
     }
 
     else{
-      console.log(restaurant);
+
       $('ul').css('display', 'none');
 
       let reservationId = parseInt(this.props.match.params.reservationId);
@@ -91,7 +101,14 @@ class RestaurantDetail extends React.Component{
           <br/>
 
           <div className = "content-div">
-            <h1 className="h1-content-div"> Ratings and Reviews </h1>
+            <h1 className="h1-content-div"> Ratings and Reviews
+            <button onClick={() => this.onOpenModal() }>Open modal</button>
+              <Modal open={open} onClose={() => {this.onCloseModal()} } little>
+                <h2>Simple centered modal</h2>
+              </Modal>
+
+            </h1>
+
             <hr/>
             <span> Gooooood stuff. I love it </span>
           </div>
