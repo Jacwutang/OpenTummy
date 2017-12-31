@@ -35,7 +35,7 @@ class RestaurantDetail extends React.Component{
     const {restaurant} = this.props;
 
     if (this.state.loaded !== true || typeof restaurant === undefined){
-      
+
       return null;
     }
 
@@ -78,10 +78,12 @@ class RestaurantDetail extends React.Component{
           <div className = "content-div">
             <h1 className="h1-content-div"> About {restaurant.name} </h1>
             <hr/>
-            <p> {restaurant.description} Contemporary Food. Styled in Georgian
+            <p className = "restaurant-detail-about"> {restaurant.description} Contemporary Food. Styled in Georgian
               Not bad I like this place very wells
               Would definintely come again if i get a chance :).
               Not what happens next time. I'll try the lobster i guess.
+              Hopefully this text fucking wraps
+              I guess it don't
             </p>
 
           </div>
