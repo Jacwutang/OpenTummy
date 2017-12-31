@@ -48,14 +48,15 @@ const mapStateToProps = (state,ownProps) => {
 
 const mapDispatchToProps = (dispatch,ownProps) => {
 
-  let formTypeCheck = ownProps.match.params.edit
-
-  const processReservation = (formTypeCheck  === 'edit')? editReservation : createReservation;
+  // let formTypeCheck = ownProps.match.params.edit
+  //
+  // const processReservation = (formTypeCheck  === 'edit')? editReservation : createReservation;
 
   return {
-    createReservation: (reservation) => dispatch(createReservation(reservation)),
     clearErrors: () => dispatch(receiveReservationErrors([])),
-    processReservation: (reservation) => dispatch(processReservation(reservation))
+    createReservation: (reservation) => dispatch(createReservation(reservation)),
+    editReservation: (reservation) => dispatch(editReservation(reservation))
+    // processReservation: (reservation) => dispatch(processReservation(reservation))
   };
 
 
