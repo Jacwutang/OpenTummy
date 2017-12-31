@@ -7,7 +7,7 @@ class ReservationForm extends React.Component{
     this.handleSubmit = this.handleSubmit.bind(this);
 
 
-    if(!Number.isNaN(this.props.reservationId)) {
+    if(this.props.formType === 'Edit this Reservation') {
       this.state = this.props.reservation[this.props.reservationId];
       this.state.date = this.props.reservation[this.props.reservationId].date.slice(0,10);
 
@@ -45,7 +45,16 @@ class ReservationForm extends React.Component{
 
     const reservation = this.state;
 
-    this.props.processReservation(reservation).then(() => this.props.history.push('/profile'));
+    console.log(this.props.reservationId);
+
+    if(this.props.reservationId !== null){
+      console.log("HERE");
+      this.props.editReservation(reservation).then(() => this.props.history.push('/profile'));
+    } else{
+      console.log("NOT HERE");
+      this.props.createReservation(reservation).then(() => this.props.history.push('/profile'));
+    }
+
 
 
   }
@@ -100,7 +109,7 @@ class ReservationForm extends React.Component{
         <input className = "reservation-input"
         onChange={this.handleInput('timeslot')}
         value={this.state.timeslot}
-        placeholder = "Enter timeslot in hh::mm format"
+        placeholder = "Enter timeslot in hh::mm:ss format"
         type="text"/>
 
 

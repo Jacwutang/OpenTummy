@@ -79,8 +79,7 @@ class RestaurantDetail extends React.Component{
 
           <div>
             <ReservationContainer
-            restaurant={restaurant}
-            reservationId={reservationId}/>
+            restaurant={restaurant}/>
           </div>
 
 

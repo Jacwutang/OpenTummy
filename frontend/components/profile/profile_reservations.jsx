@@ -94,14 +94,14 @@ class ProfileReservations extends React.Component{
           <ul className = "profile-restaurants-index-ul">
             {reservations.map( (res) => {
 
-            
+
               return (
               <li className = "profile-restaurants-index-li"
               key = {res.id}>
 
                       <div  className = "profile-restaurants-index-div-left">
 
-                      <Link to={`/restaurants/${res.restaurant_id}/edit/${res.id}`}>
+                      <Link to={`/restaurants/${res.restaurant_id}`}>
                          <img className = "thumbnail" src={restaurantsIndex[res.restaurant_id].thumbnail}/>
                       </Link>
 
@@ -134,7 +134,7 @@ class ProfileReservations extends React.Component{
                         type="button" onClick={this.handleSubmit(res.id)}> Delete </button>
 
 
-                          <Link to={`/restaurants/${res.restaurant_id}/edit/${res.id}`}>
+                          <Link to={`/restaurants/${res.restaurant_id}`}>
 
                           <button type="button" className = "button-bandaid"> Edit </button>
 

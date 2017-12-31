@@ -15,6 +15,15 @@ const mapStateToProps = (state,ownProps) => {
    let resValues = Object.values(state.session.currentUser.reservations);
 
 
+    let reservationId = null;
+    resValues.forEach( (el) => {
+     if (el.restaurant_id === parseInt(ownProps.match.params.restId)){
+         reservationId = el.id;
+     }
+    });
+
+
+
    var permittedValues = _.map(resValues, 'restaurant_id');
 
    var permittedValuesToString = permittedValues.map(value => value.toString());
@@ -28,7 +37,9 @@ const mapStateToProps = (state,ownProps) => {
     currentUser: state.session.currentUser,
     errors: state.errors.reservation,
     formType,
-    reservation: state.session.currentUser.reservations
+    reservationId,
+    reservation: state.session.currentUser.reservations,
+
   }
 
 
@@ -37,14 +48,15 @@ const mapStateToProps = (state,ownProps) => {
 
 const mapDispatchToProps = (dispatch,ownProps) => {
 
-  let formTypeCheck = ownProps.match.params.edit
-
-  const processReservation = (formTypeCheck  === 'edit')? editReservation : createReservation;
+  // let formTypeCheck = ownProps.match.params.edit
+  //
+  // const processReservation = (formTypeCheck  === 'edit')? editReservation : createReservation;
 
   return {
-    createReservation: (reservation) => dispatch(createReservation(reservation)),
     clearErrors: () => dispatch(receiveReservationErrors([])),
-    processReservation: (reservation) => dispatch(processReservation(reservation))
+    createReservation: (reservation) => dispatch(createReservation(reservation)),
+    editReservation: (reservation) => dispatch(editReservation(reservation))
+    // processReservation: (reservation) => dispatch(processReservation(reservation))
   };
 
 
