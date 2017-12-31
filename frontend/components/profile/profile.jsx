@@ -10,10 +10,11 @@ class Profile extends React.Component{
     this.handleButton = this.handleButton.bind(this);
     this.handleButtonAddRestaurant = this.handleButtonAddRestaurant.bind(this);
 
+    this.state = {loaded: false};
   }
 
   componentWillMount(){
-    this.props.requestAllRestaurants();
+    this.props.requestAllRestaurants().then( () => this.setState({loaded:true}))
 
   }
 
@@ -54,24 +55,26 @@ class Profile extends React.Component{
   render(){
 
 
-    let my_restaurants = Object.keys(this.props.currentUser.restaurants).map(el => (
-      this.props.currentUser.restaurants[el]));
+    // Object.keys(restaurantsIndex).length === 0
 
-    let reservations = Object.keys(this.props.currentUser.reservations).map(res => (
-        this.props.currentUser.reservations[res]));
-
-
-    let my_favorites = Object.keys(this.props.currentUser.favorite_restaurants).map(fav => (this.props.currentUser.favorite_restaurants[fav]));
-
-
-    const{deleteRestaurant,deleteReservation,restaurantsIndex,deleteFavorite} = this.props;
-
-    
-    if(Object.keys(restaurantsIndex).length === 0){
+    if(this.state.loaded !== true){
       return null;
     }
 
     else{
+
+          let my_restaurants = Object.keys(this.props.currentUser.restaurants).map(el => (
+            this.props.currentUser.restaurants[el]));
+
+          let reservations = Object.keys(this.props.currentUser.reservations).map(res => (
+              this.props.currentUser.reservations[res]));
+
+
+
+          let my_favorites = Object.keys(this.props.currentUser.favorite_restaurants).map(fav => (this.props.currentUser.favorite_restaurants[fav]));
+
+
+          const{deleteRestaurant,deleteReservation,restaurantsIndex,deleteFavorite} = this.props;
 
       return(
 
@@ -153,10 +156,3 @@ class Profile extends React.Component{
 };
 
 export default Profile;
-
-
-// <div>
-  // <ProfileRestaurants
-  // my_restaurants={my_restaurants}
-  // deleteRestaurant={deleteRestaurant}/>
-// </div>

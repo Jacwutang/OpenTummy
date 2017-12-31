@@ -17,8 +17,7 @@ class ReservationForm extends React.Component{
 
       this.state = {id: 0, timeslot: "12:00:00", head_count: 1, date: "2017-11-30"};
     }
-    //this.state = this.props.reservation[this.props.reservationId];
-     //this.state = {id: 0, timeslot: "12:00:00", head_count: 1};
+
   }
 
   componentWillMount(){
@@ -27,7 +26,7 @@ class ReservationForm extends React.Component{
   }
 
   handleSubmit(e){
-    //this.props.reservationId
+
 
     e.preventDefault();
 
@@ -60,7 +59,7 @@ class ReservationForm extends React.Component{
   }
 
   renderErrors(){
-    //if there are any errors render them
+
 
     if(this.props.errors === undefined){
       return;
@@ -88,7 +87,7 @@ class ReservationForm extends React.Component{
       <input className = "reservation-input"
       onChange={this.handleInput('head_count')}
       value={this.state.head_count}
-      placeholder = "Enter Number of People"
+      placeholder = "Party Size"
       type="text"/>
 
 
@@ -101,7 +100,7 @@ class ReservationForm extends React.Component{
         <input className = "reservation-input"
         onChange={this.handleInput('timeslot')}
         value={this.state.timeslot}
-        placeholder = "Enter timeslot in hh::mm::ss format"
+        placeholder = "Enter timeslot in hh::mm format"
         type="text"/>
 
 
@@ -123,38 +122,3 @@ class ReservationForm extends React.Component{
 }
 
 export default ReservationForm;
-
-
-
-
-// <option value="" disabled>
-//   12:00 PM </option>
-
-
-
-// <select onChange={this.handleInput('head_count')} value={this.state.head_count} className = "reservation-select">
-//
-//     <option value={this.state.head_count}> {this.state.head_count} people </option>
-//     <option value={1}> 1 people</option>
-//     <option value={2}> 2 people</option>
-//     <option value={3}> 3 people</option>
-//     <option value={4}> 4 people</option>
-//     <option value={5}> 5 people</option>
-//
-//   </select>
-
-
-
-
-// <select onChange={this.handleInput('timeslot')} value={this.state.timeslot} className = "reservation-select">
-//
-//
-//     <option value="12:00:00" type ="text">12:00 PM</option>
-//     <option value="01:00:00" type ="text">1:00 PM</option>
-//     <option value="02:00:00" type ="text">2:00 PM</option>
-//     <option value="03:00:00" type ="text">3:00 PM</option>
-//     <option value="04:00:00" type ="text">4:00 PM</option>
-//     <option value="05:00:00" type ="text">5:00 PM</option>
-//     <option value="06:00:00" type ="text">6:00 PM</option>
-//
-// </select>

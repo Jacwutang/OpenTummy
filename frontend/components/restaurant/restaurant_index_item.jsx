@@ -9,7 +9,7 @@ class RestaurantIndexItem extends React.Component{
     super(props);
 
   }
-  // const category = (rest.category === null) ? "No Category" : rest.category;
+
 
   samplePrice(){
     let sampleArr = ['$','$$','$$$','$$$$','$$$$$'];

@@ -18,20 +18,24 @@ class Favorite extends React.Component{
     if(this.props.currentUser){
       favorite.user_id = this.props.currentUser.id;
       favorite.restaurant_id = parseInt(this.props.match.params.restId);
-      
     }
-
-
-
 
     this.props.createFavorite(favorite).then(() => this.props.history.push('/profile'));
   }
 
   render(){
+    const {currentUser} = this.props;
+    if(currentUser === undefined){
 
-    return(
-      <button onClick={this.handleSubmit} type="button" className = "fav-button-restaurant-item"> <i className="fa fa-star" aria-hidden="true"></i> Fav </button>
-    );
+      return null;
+    }
+    else{
+      
+      return(
+        <button onClick={this.handleSubmit} type="button" className = "fav-button-restaurant-item"> <i className="fa fa-star" aria-hidden="true"></i> Fav </button>
+      );
+    }
+
   }
 
 

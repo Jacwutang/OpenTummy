@@ -1,4 +1,5 @@
 import React from 'react';
+import Modal from 'react-responsive-modal';
 import ReservationContainer from '../reservation/reservation_container';
 import FavoriteContainer from '../favorite/favorite_container';
 
@@ -6,46 +7,56 @@ import FavoriteContainer from '../favorite/favorite_container';
 class RestaurantDetail extends React.Component{
   constructor(props){
     super(props);
+    this.state = {
+      loaded:false,
+      open: false
 
-
-
+    };
   }
 
-  componentWillReceiveProps(nextProps){
-    if(this.props.location.pathname !== nextProps.location.pathname){
-      this.props.requestRestaurant(this.props.match.params.restId);
-    }
-  }
+  // componentWillReceiveProps(nextProps){
+  //   if(this.props.location.pathname !== nextProps.location.pathname){
+  //     this.props.requestRestaurant(this.props.match.params.restId);
+  //   }
+  // }
 
   componentDidMount(){
-      // this.props.requestRestaurant(this.props.match.params.restId);
-  }
-
-  componentWillMount(){
-    this.props.requestRestaurant(this.props.match.params.restId);
+    this.props.requestRestaurant(this.props.match.params.restId).then(() => this.setState({loaded:true}));
     window.scrollTo(0,0);
-
-
-    // document.getElementById("search-bar").style.visibility = "hidden";
-
   }
 
+
+
+  onOpenModal(){
+    const {currentUser} = this.props;
+
+    (currentUser === null) ?
+    console.log("HERE")
+     : this.setState({ open: true })
+  }
+
+  onCloseModal(){
+    this.setState({ open: false })
+  }
 
 
 
   render(){
-    // console.log('mount');
-    $('ul').css('display', 'none');
-    // document.getElementById('search-bar').style.visibility = 'none'
+
+
     const {restaurant} = this.props;
+    const { open } = this.state;
 
-    let reservationId = parseInt(this.props.match.params.reservationId);
+    if (this.state.loaded !== true || typeof restaurant === undefined){
 
-    if (typeof restaurant === "undefined"){
       return null;
     }
 
     else{
+
+      $('ul').css('display', 'none');
+
+      let reservationId = parseInt(this.props.match.params.reservationId);
 
       return(
         <section className = "restaurant-detail-main">
@@ -62,12 +73,9 @@ class RestaurantDetail extends React.Component{
 
             <FavoriteContainer
             restaurant={restaurant} />
-
-
-
-
-
           </div>
+
+
 
           <div>
             <ReservationContainer
@@ -75,18 +83,38 @@ class RestaurantDetail extends React.Component{
             reservationId={reservationId}/>
           </div>
 
+
           <br/>
 
           <div className = "content-div">
             <h1 className="h1-content-div"> About {restaurant.name} </h1>
             <hr/>
-            <span> {restaurant.description} Contemporary Food. Styled in Georgian </span>
+            <p className = "restaurant-detail-about"> {restaurant.description} Contemporary Food. Styled in Georgian
+              Not bad I like this place very wells
+              Would definintely come again if i get a chance :).
+              Not what happens next time. I'll try the lobster i guess.
+              Hopefully this text fucking wraps
+              I guess it don't
+            </p>
+
           </div>
 
           <br/>
 
           <div className = "content-div">
-            <h1 className="h1-content-div"> Ratings and Reviews </h1>
+            <h1 className="h1-content-div"> Ratings and Reviews
+            <button onClick={() => this.onOpenModal() }>Leave a Review</button>
+              <Modal open={open} onClose={() => {this.onCloseModal()} } little>
+                <h2>Leave a Review</h2>
+                <h3> ***** </h3>
+                <textarea rows="5" cols="50">
+
+                </textarea>
+                <button> Submit </button>
+
+              </Modal>
+            </h1>
+
             <hr/>
             <span> Gooooood stuff. I love it </span>
           </div>
@@ -108,6 +136,3 @@ class RestaurantDetail extends React.Component{
 }
 
 export default RestaurantDetail;
-
-
-// <button className = "fav-button-restaurant-item"> <i className="fa fa-star" aria-hidden="true"></i> Fav </button>

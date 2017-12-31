@@ -9,6 +9,7 @@ class ProfileReservations extends React.Component{
     this.handleEdit = this.handleEdit.bind(this);
   }
 
+
   handleTime(timeslot){
 
     var time = timeslot.slice(11,-5)
@@ -80,11 +81,8 @@ class ProfileReservations extends React.Component{
   render(){
 
     const {reservations,restaurantsIndex} = this.props;
+    let x = 2;
 
-    // {reservations.map( (res) => (
-    //   console.log(res)
-    // ))
-    // }
 
     if(Object.keys(reservations).length === 0){
       return null;
@@ -94,8 +92,10 @@ class ProfileReservations extends React.Component{
         <div>
 
           <ul className = "profile-restaurants-index-ul">
-            {reservations.map( (res) => (
+            {reservations.map( (res) => {
 
+            
+              return (
               <li className = "profile-restaurants-index-li"
               key = {res.id}>
 
@@ -145,7 +145,9 @@ class ProfileReservations extends React.Component{
 
               </li>
 
-            ))}
+            )})
+
+            }
 
           </ul>
 
