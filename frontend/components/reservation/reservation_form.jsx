@@ -7,7 +7,7 @@ class ReservationForm extends React.Component{
     this.handleSubmit = this.handleSubmit.bind(this);
 
 
-    if(!Number.isNaN(this.props.reservationId)) {
+    if(this.props.formType === 'Edit this Reservation') {
       this.state = this.props.reservation[this.props.reservationId];
       this.state.date = this.props.reservation[this.props.reservationId].date.slice(0,10);
 
