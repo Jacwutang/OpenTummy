@@ -6,27 +6,23 @@ import FavoriteContainer from '../favorite/favorite_container';
 class RestaurantDetail extends React.Component{
   constructor(props){
     super(props);
-
+    this.state = {loaded:false};
 
 
   }
 
-  componentWillReceiveProps(nextProps){
-    if(this.props.location.pathname !== nextProps.location.pathname){
-      this.props.requestRestaurant(this.props.match.params.restId);
-    }
-  }
+  // componentWillReceiveProps(nextProps){
+  //   if(this.props.location.pathname !== nextProps.location.pathname){
+  //     this.props.requestRestaurant(this.props.match.params.restId);
+  //   }
+  // }
 
   componentDidMount(){
-      // this.props.requestRestaurant(this.props.match.params.restId);
+    this.props.requestRestaurant(this.props.match.params.restId).then(() => this.setState({loaded:true}));
+    window.scrollTo(0,0);
   }
 
   componentWillMount(){
-    this.props.requestRestaurant(this.props.match.params.restId);
-    window.scrollTo(0,0);
-
-
-    // document.getElementById("search-bar").style.visibility = "hidden";
 
   }
 
@@ -34,18 +30,20 @@ class RestaurantDetail extends React.Component{
 
 
   render(){
-    // console.log('mount');
-    $('ul').css('display', 'none');
-    // document.getElementById('search-bar').style.visibility = 'none'
+
+
     const {restaurant} = this.props;
 
-    let reservationId = parseInt(this.props.match.params.reservationId);
-
-    if (typeof restaurant === "undefined"){
+    if (this.state.loaded !== true || typeof restaurant === undefined){
+      
       return null;
     }
 
     else{
+      console.log(restaurant);
+      $('ul').css('display', 'none');
+
+      let reservationId = parseInt(this.props.match.params.reservationId);
 
       return(
         <section className = "restaurant-detail-main">
@@ -80,7 +78,12 @@ class RestaurantDetail extends React.Component{
           <div className = "content-div">
             <h1 className="h1-content-div"> About {restaurant.name} </h1>
             <hr/>
-            <span> {restaurant.description} Contemporary Food. Styled in Georgian </span>
+            <p> {restaurant.description} Contemporary Food. Styled in Georgian
+              Not bad I like this place very wells
+              Would definintely come again if i get a chance :).
+              Not what happens next time. I'll try the lobster i guess.
+            </p>
+
           </div>
 
           <br/>

@@ -93,12 +93,8 @@ class ProfileReservations extends React.Component{
 
           <ul className = "profile-restaurants-index-ul">
             {reservations.map( (res) => {
-              console.log(restaurantsIndex);
-              console.log(x);
-              // console.log("HERE");
-              // console.log(res);
-              // console.log(restaurantsIndex[res.restaurant_id].thumbnail);
-              // console.log("second HERE");
+
+            
               return (
               <li className = "profile-restaurants-index-li"
               key = {res.id}>
