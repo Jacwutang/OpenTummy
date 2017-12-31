@@ -70,18 +70,16 @@ class RestaurantDetail extends React.Component{
 
             <FavoriteContainer
             restaurant={restaurant} />
-
-
-
-
-
           </div>
+
+
 
           <div>
             <ReservationContainer
             restaurant={restaurant}
             reservationId={reservationId}/>
           </div>
+
 
           <br/>
 
@@ -102,11 +100,10 @@ class RestaurantDetail extends React.Component{
 
           <div className = "content-div">
             <h1 className="h1-content-div"> Ratings and Reviews
-            <button onClick={() => this.onOpenModal() }>Open modal</button>
+            <button onClick={() => this.onOpenModal() }>Leave a Review</button>
               <Modal open={open} onClose={() => {this.onCloseModal()} } little>
                 <h2>Simple centered modal</h2>
               </Modal>
-
             </h1>
 
             <hr/>
