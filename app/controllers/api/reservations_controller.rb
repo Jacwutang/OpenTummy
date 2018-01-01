@@ -8,6 +8,7 @@ class Api::ReservationsController < ApplicationController
     @reservation = Reservation.new(reservation_params)
 
     if !current_user
+      
       render json: ["Please Login before making a reservation"], status: 401
 
     elsif @reservation.save && current_user

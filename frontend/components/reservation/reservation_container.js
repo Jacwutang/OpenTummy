@@ -9,7 +9,11 @@ var _ = require('lodash')
 const mapStateToProps = (state,ownProps) => {
 
   if(state.session.currentUser === null){
-    return {};
+    return {
+      formType: 'Book this Reservation',
+      errors: state.errors.reservation
+
+    };
   }
 
    let resValues = Object.values(state.session.currentUser.reservations);
@@ -48,15 +52,12 @@ const mapStateToProps = (state,ownProps) => {
 
 const mapDispatchToProps = (dispatch,ownProps) => {
 
-  // let formTypeCheck = ownProps.match.params.edit
-  //
-  // const processReservation = (formTypeCheck  === 'edit')? editReservation : createReservation;
 
   return {
     clearErrors: () => dispatch(receiveReservationErrors([])),
     createReservation: (reservation) => dispatch(createReservation(reservation)),
     editReservation: (reservation) => dispatch(editReservation(reservation))
-    // processReservation: (reservation) => dispatch(processReservation(reservation))
+
   };
 
 

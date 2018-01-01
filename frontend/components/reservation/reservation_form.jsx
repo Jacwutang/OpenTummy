@@ -30,7 +30,7 @@ class ReservationForm extends React.Component{
 
     e.preventDefault();
 
-    if(this.props.reservationId === null){
+    if(this.props.reservationId === undefined){
           this.state.id = null;
 
     }else{
@@ -39,7 +39,7 @@ class ReservationForm extends React.Component{
 
 
 
-    this.props.currentUser === null ? this.state.user_id = 0 : this.state.user_id = this.props.currentUser.id
+    this.props.currentUser === undefined ? this.state.user_id = 0 : this.state.user_id = this.props.currentUser.id
     this.state.restaurant_id = this.props.match.params.restId;
     this.state.thumbnail = this.props.restaurant.thumbnail;
 
@@ -47,7 +47,7 @@ class ReservationForm extends React.Component{
 
     console.log(this.props.reservationId);
 
-    if(this.props.reservationId !== null){
+    if(this.props.reservationId !== null && this.props.reservationId !== undefined){
       console.log("HERE");
       this.props.editReservation(reservation).then(() => this.props.history.push('/profile'));
     } else{
