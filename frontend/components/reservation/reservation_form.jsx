@@ -31,7 +31,7 @@ class ReservationForm extends React.Component{
     e.preventDefault();
 
     if(this.props.reservationId === null){
-          this.state.id = 0;
+          this.state.id = null;
 
     }else{
       this.state.id = this.props.reservationId;
@@ -51,7 +51,7 @@ class ReservationForm extends React.Component{
       console.log("HERE");
       this.props.editReservation(reservation).then(() => this.props.history.push('/profile'));
     } else{
-      console.log("NOT HERE");
+      console.log("null reservationId");
       this.props.createReservation(reservation).then(() => this.props.history.push('/profile'));
     }
 
