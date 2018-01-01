@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactStars from 'react-stars'
 import Modal from 'react-responsive-modal';
 import ReservationContainer from '../reservation/reservation_container';
 import FavoriteContainer from '../favorite/favorite_container';
@@ -23,6 +24,10 @@ class RestaurantDetail extends React.Component{
   componentDidMount(){
     this.props.requestRestaurant(this.props.match.params.restId).then(() => this.setState({loaded:true}));
     window.scrollTo(0,0);
+  }
+
+  ratingChanged(newRating){
+    console.log(newRating);
   }
 
 
@@ -105,12 +110,16 @@ class RestaurantDetail extends React.Component{
             <button onClick={() => this.onOpenModal() }>Leave a Review</button>
               <Modal open={open} onClose={() => {this.onCloseModal()} } little>
                 <h2>Leave a Review</h2>
-                <h3> ***** </h3>
-                <textarea rows="5" cols="50">
-
-                </textarea>
-                <button> Submit </button>
-
+                <ReactStars
+                    className = "rating-div"
+                    count={5}
+                    onChange={(rating) => {this.ratingChanged(rating)} }
+                    size={24}
+                    value={0}
+                    half={false}
+                    color2={'#ffd700'}/>
+                    <textarea rows="5" cols="50"/>
+                    <button> Submit </button>
               </Modal>
             </h1>
 
