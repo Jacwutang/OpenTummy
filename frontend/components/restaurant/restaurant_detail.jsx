@@ -24,23 +24,23 @@ class RestaurantDetail extends React.Component{
     window.scrollTo(0,0);
   }
 
-  ratingChanged(newRating){
-    console.log(newRating);
-  }
-
-
-
-  onOpenModal(){
-    const {currentUser} = this.props;
-
-    (currentUser === null) ? null
-
-     : this.setState({ open: true })
-  }
-
-  onCloseModal(){
-    this.setState({ open: false })
-  }
+  // ratingChanged(newRating){
+  //   console.log(newRating);
+  // }
+  //
+  //
+  //
+  // onOpenModal(){
+  //   const {currentUser} = this.props;
+  //
+  //   (currentUser === null) ? null
+  //
+  //    : this.setState({ open: true })
+  // }
+  //
+  // onCloseModal(){
+  //   this.setState({ open: false })
+  // }
 
 
 
@@ -48,7 +48,7 @@ class RestaurantDetail extends React.Component{
 
 
     const {restaurant} = this.props;
-    const { open } = this.state;
+
 
     if (this.state.loaded !== true || typeof restaurant === undefined){
 
