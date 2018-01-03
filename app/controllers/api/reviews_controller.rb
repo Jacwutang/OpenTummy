@@ -2,7 +2,7 @@ class Api::ReviewsController < ApplicationController
 
   def index
     @reviews = Review.all
-    render "api/reviews/index"
+    render "api/restaurants/show"
 
   end
 
@@ -13,7 +13,7 @@ class Api::ReviewsController < ApplicationController
       render json: ["Please Login before leaving a review"], status: 401
 
     elsif @review.save && current_user
-      render "api/reviews/show"
+      render "api/restaurants/show"
     else
       render json: ["Please fill all input fields"], status: 401
 
