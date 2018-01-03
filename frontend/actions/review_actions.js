@@ -22,7 +22,7 @@ export const receiveAllReviews = (reviews) => ({
 });
 
 export const requestAllReviews = rest_id => dispatch => (
-  REVIEWutil.requestAllReviews(rest_id).then(reviews => (
+  REVIEWutil.fetchAllReviews(rest_id).then(reviews => (
     dispatch(receiveAllReview(reviews))), err => (dispatch(receiveReviewErrors(err.responseJSON)))
 ));
 
