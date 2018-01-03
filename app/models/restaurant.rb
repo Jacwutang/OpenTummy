@@ -18,6 +18,11 @@ class Restaurant < ApplicationRecord
   foreign_key: :restaurant_id,
   class_name: 'Favorite'
 
+  has_many :reviews,
+  primary_key: :id,
+  foreign_key: :restaurant_id,
+  class_name: 'Review'
+
   # def self.top_five_results(query_param)
   #   param = '%' + query_param.downcase + '%' #activerecord
   #   Restaurant.where('lower(title) LIKE ?', param) #where lowercase of title is LIKE param.limit(5)

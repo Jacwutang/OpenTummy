@@ -1,9 +1,7 @@
 import React from 'react';
-import ReactStars from 'react-stars'
-import Modal from 'react-responsive-modal';
 import ReservationContainer from '../reservation/reservation_container';
 import FavoriteContainer from '../favorite/favorite_container';
-
+import ReviewsContainer from '../review/review_container'
 
 class RestaurantDetail extends React.Component{
   constructor(props){
@@ -26,31 +24,13 @@ class RestaurantDetail extends React.Component{
     window.scrollTo(0,0);
   }
 
-  ratingChanged(newRating){
-    console.log(newRating);
-  }
-
-
-
-  onOpenModal(){
-    const {currentUser} = this.props;
-
-    (currentUser === null) ?
-    console.log("HERE")
-     : this.setState({ open: true })
-  }
-
-  onCloseModal(){
-    this.setState({ open: false })
-  }
-
 
 
   render(){
 
 
     const {restaurant} = this.props;
-    const { open } = this.state;
+
 
     if (this.state.loaded !== true || typeof restaurant === undefined){
 
@@ -105,30 +85,9 @@ class RestaurantDetail extends React.Component{
 
           <br/>
 
-          <div className = "content-div">
-            <h1 className="h1-content-div"> Ratings and Reviews
-            <button onClick={() => this.onOpenModal() }>Leave a Review</button>
-              <Modal open={open} onClose={() => {this.onCloseModal()} } little>
-                <h2>Leave a Review</h2>
-                <ReactStars
-                    className = "rating-div"
-                    count={5}
-                    onChange={(rating) => {this.ratingChanged(rating)} }
-                    size={24}
-                    value={0}
-                    half={false}
-                    color2={'#ffd700'}/>
-                    <textarea rows="5" cols="50"/>
-                    <button> Submit </button>
-              </Modal>
-            </h1>
+            <ReviewsContainer
+            restaurant={restaurant}/>
 
-            <hr/>
-            <span> Gooooood stuff. I love it </span>
-          </div>
-
-        <div className = "placeholder-div">
-        </div>
 
 
 
@@ -144,3 +103,36 @@ class RestaurantDetail extends React.Component{
 }
 
 export default RestaurantDetail;
+
+
+
+// <div className = "content-div">
+//   <h1 className="h1-content-div"> Ratings and Reviews
+//   <button onClick={() => this.onOpenModal() }>Leave a Review</button>
+//     <Modal open={open} onClose={() => {this.onCloseModal()} } little>
+//       <h2>Leave a Review</h2>
+//       <ReactStars
+//           className = "rating-div"
+//           count={5}
+//           onChange={(rating) => {this.ratingChanged(rating)} }
+//           size={24}
+//           value={0}
+//           half={false}
+//           color2={'#ffd700'}/>
+//           <textarea rows="5" cols="50"/>
+//           <button
+//           type="submit"
+//           onClick={this.}
+//           >
+//           Submit
+//
+//           </button>
+//     </Modal>
+//   </h1>
+//
+//   <hr/>
+//   <span> Gooooood stuff. I love it </span>
+// </div>
+//
+// <div className = "placeholder-div">
+// </div>

@@ -1,9 +1,13 @@
  json.extract! rest, :id, :name, :address,:city,:state,:postal_code, :country ,:price, :thumbnail, :lng, :lat, :owner_id, :category
 
- # :name, :address,:city,:state,:postal_code , :country ,:price ,:thumbnail, :lng,:lat
-
-# json.extract! rest, :name, :address,:city,:state,:postal_code,:country,:price,:category,:image_url
-# ,:owner_id,:lng,:lat
-
-
-# json.extract!
+if rest.reviews.count > 0
+  json.reviews do
+    rest.reviews.each do |review|
+      json.set! review.id do
+        json.extract! review, :id, :rating, :user_id, :restaurant_id
+      end
+    end
+  end
+else
+  json.reviews Object
+end
