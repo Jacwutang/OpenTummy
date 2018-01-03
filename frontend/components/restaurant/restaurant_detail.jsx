@@ -24,24 +24,6 @@ class RestaurantDetail extends React.Component{
     window.scrollTo(0,0);
   }
 
-  // ratingChanged(newRating){
-  //   console.log(newRating);
-  // }
-  //
-  //
-  //
-  // onOpenModal(){
-  //   const {currentUser} = this.props;
-  //
-  //   (currentUser === null) ? null
-  //
-  //    : this.setState({ open: true })
-  // }
-  //
-  // onCloseModal(){
-  //   this.setState({ open: false })
-  // }
-
 
 
   render(){
@@ -103,7 +85,8 @@ class RestaurantDetail extends React.Component{
 
           <br/>
 
-            <ReviewsContainer/>
+            <ReviewsContainer
+            restaurant={restaurant}/>
 
 
 

@@ -6,8 +6,13 @@ class Review extends React.Component{
   constructor(props){
     super(props);
     this.state = {
-      open:false
+      open: false,
+      loaded: false
     }
+  }
+
+  componentDidMount(){
+    this.props.requestAllReviews(this.props.restaurant_id).then(() => this.setState({loaded: true}));
   }
 
   ratingChanged(newRating){
@@ -29,39 +34,43 @@ class Review extends React.Component{
   }
 
   render(){
-    const { open } = this.state;
+    const { open, loaded } = this.state;
 
-    return(
-      <div className = "content-div">
-        <h1 className="h1-content-div"> Ratings and Reviews
-        <button onClick={() => this.onOpenModal() }>Leave a Review</button>
-          <Modal open={open} onClose={() => {this.onCloseModal()} } little>
-            <h2>Leave a Review</h2>
-            <ReactStars
-                className = "rating-div"
-                count={5}
-                onChange={(rating) => {this.ratingChanged(rating)} }
-                size={24}
-                value={0}
-                half={false}
-                color2={'#ffd700'}/>
-                <textarea rows="5" cols="50"/>
-                <button
-                type="submit"
+    if (loaded){
+      return(
+        <div className = "content-div">
+          <h1 className="h1-content-div"> Ratings and Reviews
+          <button onClick={() => this.onOpenModal() }>Leave a Review</button>
+            <Modal open={open} onClose={() => {this.onCloseModal()} } little>
+              <h2>Leave a Review</h2>
+              <ReactStars
+                  className = "rating-div"
+                  count={5}
+                  onChange={(rating) => {this.ratingChanged(rating)} }
+                  size={24}
+                  value={0}
+                  half={false}
+                  color2={'#ffd700'}/>
+                  <textarea rows="5" cols="50"/>
+                  <button
+                  type="submit"
 
-                >
-                Submit
+                  >
+                  Submit
 
-                </button>
-          </Modal>
-        </h1>
+                  </button>
+            </Modal>
+          </h1>
 
-        <hr/>
-        <span> Gooooood stuff. I love it </span>
-      </div>
+          <hr/>
+          <span> Gooooood stuff. I love it </span>
+        </div>
+      )
 
+    } else{
+      return null;
+    }
 
-    )
   }
 
 }
