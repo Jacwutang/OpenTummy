@@ -21,8 +21,8 @@ export const receiveAllReviews = (reviews) => ({
   reviews
 });
 
-export const requestAllReviews = id => dispatch => (
-  REVIEWutil.requestAllReviews(id).then(reviews => (
+export const requestAllReviews = rest_id => dispatch => (
+  REVIEWutil.requestAllReviews(rest_id).then(reviews => (
     dispatch(receiveAllReview(reviews))), err => (dispatch(receiveReviewErrors(err.responseJSON)))
 ));
 
