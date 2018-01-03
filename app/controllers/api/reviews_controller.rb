@@ -19,8 +19,6 @@ class Api::ReviewsController < ApplicationController
 
     end
 
-
-
   end
 
   def review_params
