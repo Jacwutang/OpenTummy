@@ -4,6 +4,7 @@
   flex-wrap: wrap;
   background-color: #D3D3D3;
   overflow: scroll;
+  margin-bottom: 50px;
 }
 
 .restaurant-detail-header{
@@ -38,9 +39,6 @@
     margin-top: 25px;
 }
 
-// .description-h1{
-//   font-family: 'Boogaloo', cursive;
-// }
 
 .fav-button-restaurant-item{
   height: 50px;
@@ -84,13 +82,6 @@
   overflow: hidden;
   margin-top: 10px;
 }
-
-
-
-// .content-div span{
-//   margin-right: 0;
-//
-// }
 
 .h1-content-div{
 font-size: 24px;
