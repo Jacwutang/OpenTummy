@@ -77,7 +77,7 @@ class RestaurantDetail extends React.Component{
               Not bad I like this place very wells
               Would definintely come again if i get a chance :).
               Not what happens next time. I'll try the lobster i guess.
-              Hopefully this text fucking wraps
+              Hopefully this text wraps
               I guess it don't
             </p>
 
