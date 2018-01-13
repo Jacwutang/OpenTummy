@@ -8,14 +8,13 @@ const reviewsReducer = (state = {}, action) => {
   // let newState = merge({},state);
 
   switch(action.type){
-    case RECEIVE_REVIEW:
-      const newReview = {[action.review.id]: action.review};
-        return merge({}, state , newReview);
+    // case RECEIVE_REVIEW:
+    //   const newReview = {[action.review.id]: action.review};
+    //     return merge({}, state , newReview);
 
 
     case RECEIVE_ALL_REVIEWS:
-        return merge({},state,action.reviews);
-
+        return action.reviews;
 
      default:
       return state;

@@ -7,8 +7,12 @@ class Review extends React.Component{
     super(props);
     this.state = {
       open: false,
-      loaded: false
+      loaded: false,
+      rating: 0,
+      body: null
     }
+
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   componentDidMount(){
@@ -16,7 +20,20 @@ class Review extends React.Component{
   }
 
   ratingChanged(newRating){
-    console.log(newRating);
+    this.setState({rating: newRating})
+  }
+
+  handleSubmit(){
+    // console.log(this.state.rating);
+    // console.log(this.state.content);
+
+    let review = {};
+    review.body = this.state.body;
+    review.rating = this.state.rating;
+    review.user_id = this.props.currentUser.id;
+    review.restaurant_id = this.props.restaurant_id;
+
+    this.props.createReview(review);
   }
 
 
@@ -24,9 +41,7 @@ class Review extends React.Component{
   onOpenModal(){
     const {currentUser} = this.props;
 
-    (currentUser === null) ? null
-
-     : this.setState({ open: true })
+    (currentUser === null) ? null : this.setState({ open: true })
   }
 
   onCloseModal(){
@@ -48,22 +63,21 @@ class Review extends React.Component{
                   count={5}
                   onChange={(rating) => {this.ratingChanged(rating)} }
                   size={24}
-                  value={0}
+                  value={this.state.rating}
                   half={false}
                   color2={'#ffd700'}/>
-                  <textarea rows="5" cols="50"/>
+                  <textarea rows="5" cols="50"
+                  onChange={(e) => this.setState({body: e.target.value})}
+                  />
                   <button
                   type="submit"
-
-                  >
-                  Submit
-
-                  </button>
+                  onClick={this.handleSubmit}>
+                  Submit</button>
             </Modal>
           </h1>
 
           <hr/>
-          <span> Gooooood stuff. I love it </span>
+          <span> Gooooood stuff. I hate it. </span>
         </div>
       )
 

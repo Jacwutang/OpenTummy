@@ -14,9 +14,7 @@ class MainPage extends React.Component{
     return(
       <div className = "main-page">
         <div className = "main-content">
-          <div className = "content-block-header">
-            <h1>Featured Areas </h1>
-          </div>
+
 
           <div className = "featured-areas">
             <div className = "media">
@@ -31,7 +29,7 @@ class MainPage extends React.Component{
 
             <div className = "media">
             <Link to="/Chicago">
-              <img className = "featured-areas-img" src="https://upload.wikimedia.org/wikipedia/commons/2/26/Chicago_Theatre_blend.jpg"/>
+              <img className = "featured-areas-img" src="https://tctechcrunch2011.files.wordpress.com/2015/02/chicago.jpg"/>
             </Link>
               <div className = "center">
                 Chicago
@@ -58,6 +56,11 @@ class MainPage extends React.Component{
 };
 
 export default MainPage;
+
+
+// <div className = "content-block-header">
+//   <h1>Featured Areas </h1>
+// </div>
 
 
 
