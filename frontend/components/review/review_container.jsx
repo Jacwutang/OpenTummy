@@ -5,14 +5,17 @@ import Review from './review';
 import {createReview, requestAllReviews} from '../../actions/review_actions';
 
 const mapStateToProps = (state, ownProps) => {
+  let user = (state.session.currentUser) === null? null: state.session.currentUser;
 
   return({
-    restaurant_id: ownProps.match.params.restId
+    restaurant_id: ownProps.match.params.restId,
+    currentUser: user
   });
 };
 
 const mapDispatchToProps = (dispatch,ownProps) => ({
-  requestAllReviews: (rest_id) => dispatch(requestAllReviews(rest_id))
+  requestAllReviews: (rest_id) => dispatch(requestAllReviews(rest_id)),
+  createReview: (review) => dispatch(createReview(review))
 
 
 });

@@ -9,7 +9,7 @@ class Review extends React.Component{
       open: false,
       loaded: false,
       rating: 0,
-      content: ''
+      body: null
     }
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -24,8 +24,16 @@ class Review extends React.Component{
   }
 
   handleSubmit(){
-    console.log(this.state.rating);
-    console.log(this.state.content);
+    // console.log(this.state.rating);
+    // console.log(this.state.content);
+
+    let review = {};
+    review.body = this.state.body;
+    review.rating = this.state.rating;
+    review.user_id = this.props.currentUser.id;
+    review.restaurant_id = this.props.restaurant_id;
+
+    this.props.createReview(review);
   }
 
 
@@ -59,7 +67,7 @@ class Review extends React.Component{
                   half={false}
                   color2={'#ffd700'}/>
                   <textarea rows="5" cols="50"
-                  onChange={(e) => this.setState({content: e.target.value})}
+                  onChange={(e) => this.setState({body: e.target.value})}
                   />
                   <button
                   type="submit"
