@@ -67,13 +67,19 @@ class RestaurantIndexItem extends React.Component{
           </div>
 
           <div className = "restaurant-index-right-div">
-          <h2>
-            $$$$
-          </h2>
+            <h2>
+            <ReactStars
+              count={5}
+              char={"$"}
+              size={24}
+              color2={'green'}
+              value={Math.floor(Math.random() * Math.floor(4)) + 1}
+              edit={false}/>
+            </h2>
 
-          <h2>
-            {rest.city}
-          </h2>
+            <h2>
+              {rest.city}
+            </h2>
 
           </div>
 
