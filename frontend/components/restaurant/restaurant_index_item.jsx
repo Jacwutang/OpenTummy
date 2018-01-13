@@ -50,7 +50,7 @@ class RestaurantIndexItem extends React.Component{
                     value={Math.floor(Math.random() * Math.floor(4)) + 1}
                     edit={false}/>
 
-                  <span> 165 Reviews </span>
+                  <span> {Math.floor(Math.random() * Math.floor(100))} reviews </span>
                 </h3>
               </span>
 
