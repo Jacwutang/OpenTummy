@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactStars from 'react-stars';
 import {Link, Route} from 'react-router-dom';
 
 
@@ -41,12 +42,16 @@ class RestaurantIndexItem extends React.Component{
 
 
               <span>
-              <h3>  *****
-              <span> 165 Reviews </span>
-              </h3>
+                <h3>
+                  <ReactStars
+                    count={5}
+                    size={24}
+                    color2={'#ffd700'}
+                    value={Math.floor(Math.random() * Math.floor(4)) + 1}
+                    edit={false}/>
 
-
-
+                  <span> {Math.floor(Math.random() * Math.floor(100))} reviews </span>
+                </h3>
               </span>
 
               <h3> {category} </h3>
@@ -62,13 +67,19 @@ class RestaurantIndexItem extends React.Component{
           </div>
 
           <div className = "restaurant-index-right-div">
-          <h2>
-            $$$$
-          </h2>
+            <h2>
+            <ReactStars
+              count={5}
+              char={"$"}
+              size={24}
+              color2={'green'}
+              value={Math.floor(Math.random() * Math.floor(4)) + 1}
+              edit={false}/>
+            </h2>
 
-          <h2>
-            {rest.city}
-          </h2>
+            <h2>
+              {rest.city}
+            </h2>
 
           </div>
 
@@ -88,8 +99,3 @@ class RestaurantIndexItem extends React.Component{
 };
 
 export default RestaurantIndexItem;
-
-// <div className = "restaurant-index-right-div">
-//   $$$$
-//   Chicago
-// </div>
