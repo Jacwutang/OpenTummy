@@ -29,7 +29,7 @@ class MainPage extends React.Component{
 
             <div className = "media">
             <Link to="/Chicago">
-              <img className = "featured-areas-img" src="https://tctechcrunch2011.files.wordpress.com/2015/02/chicago.jpg"/>
+              <img className = "featured-areas-img" src="https://upload.wikimedia.org/wikipedia/commons/2/26/Chicago_Theatre_blend.jpg"/>
             </Link>
               <div className = "center">
                 Chicago
