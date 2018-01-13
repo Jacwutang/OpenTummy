@@ -77,7 +77,7 @@ class Review extends React.Component{
           </h1>
 
           <hr/>
-          <span> Gooooood stuff. I hate it. </span>
+          <span> Gooooood stuff. </span>
         </div>
       )
 

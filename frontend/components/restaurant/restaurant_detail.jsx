@@ -73,17 +73,18 @@ class RestaurantDetail extends React.Component{
           <div className = "content-div">
             <h1 className="h1-content-div"> About {restaurant.name} </h1>
             <hr/>
-            <p className = "restaurant-detail-about"> {restaurant.description} Contemporary Food. Styled in Georgian
-              Not bad I like this place very wells
-              Would definintely come again if i get a chance :).
-              Not what happens next time. I'll try the lobster i guess.
-              Hopefully this text wraps
-              I guess it don't
+            <p className = "restaurant-detail-about"> {restaurant.description} Contemporary Food. Hippest place on earth.
             </p>
 
           </div>
 
           <br/>
+
+          <div className = "content-div">
+          <h1 className="h1-content-div"> Restaurant Photos </h1>
+          <hr/>
+
+          </div>
 
             <ReviewsContainer
             restaurant={restaurant}/>
