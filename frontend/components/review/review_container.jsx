@@ -16,8 +16,6 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch,ownProps) => ({
   requestAllReviews: (rest_id) => dispatch(requestAllReviews(rest_id)),
   createReview: (review) => dispatch(createReview(review))
-
-
 });
 
 export default withRouter(connect(mapStateToProps,mapDispatchToProps)(Review));

@@ -25,16 +25,7 @@ const restaurantsReducer = (state = {}, action) => {
 
      return merge({},action.restaurants);
 
-
-
-
-
-
-
-
-
-
-    default:
+     default:
       return state;
   }
 };

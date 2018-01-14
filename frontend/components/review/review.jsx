@@ -45,7 +45,8 @@ class Review extends React.Component{
   }
 
   onCloseModal(){
-    this.setState({ open: false })
+    this.setState({ open: false,rating: 0});
+
   }
 
   render(){
