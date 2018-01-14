@@ -15,7 +15,15 @@ class ReservationForm extends React.Component{
 
     } else{
 
-      this.state = {id: 0, timeslot: "12:00:00", head_count: 1, date: "2017-11-30"};
+      var time = new Date();
+      var today = time.getDate().toString();
+      var year = time.getFullYear().toString();
+
+      var month = (time.getMonth() + 1);
+      var date_month = month < 10? `0${month}`: month;
+
+      this.state = {id: 0, timeslot: "12:00:00", head_count: 1, date: `${year}-${date_month}-${today}` };
+
     }
 
   }
@@ -26,8 +34,6 @@ class ReservationForm extends React.Component{
   }
 
   handleSubmit(e){
-
-
     e.preventDefault();
 
     if(this.props.reservationId === undefined){
@@ -45,7 +51,7 @@ class ReservationForm extends React.Component{
 
     const reservation = this.state;
 
-    console.log(this.props.reservationId);
+
 
     if(this.props.reservationId !== null && this.props.reservationId !== undefined){
       console.log("HERE");
