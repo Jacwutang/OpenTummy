@@ -18,10 +18,10 @@ class ProfileReservations extends React.Component{
 
 
     var hours = time.slice(0,1) + time.slice(1,2);
-    // console.log(time, "TIME");
-    // console.log(time.slice(0,1));
-    // console.log(time.slice(1,2));
-    // console.log( parseInt(time.slice(0,1) + time.slice(1,2)) > 12 );
+    // (time, "TIME");
+    // (time.slice(0,1));
+    // (time.slice(1,2));
+    // ( parseInt(time.slice(0,1) + time.slice(1,2)) > 12 );
 
     if(parseInt(time.slice(0,1) + time.slice(1,2)) >= 12){
       if(parseInt(time.slice(0,1) + time.slice(1,2)) - 12 === 0){

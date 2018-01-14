@@ -70,8 +70,8 @@ class Search extends React.Component{
 
 
       // this.props.requestRestaurant(id);
-        // console.log($('location-header'))
-        // console.log(document.getElementById("location-header"));
+        // ($('location-header'))
+        // (document.getElementById("location-header"));
       // document.getElementById("location-header").style.visibility = "hidden";
       // document.getElementById("search-bar").style.visibility = "hidden";
 

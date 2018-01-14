@@ -14,10 +14,6 @@ const restaurantsReducer = (state = {}, action) => {
       const newRestaurant = {[action.restaurant.id]: action.restaurant};
         return merge({}, state , newRestaurant);
 
-    // case RECEIVE_REVIEW:
-    //   const newReview = {[action.review.id]: action.review};
-    //     return merge({}, state , newReview);
-
     case RECEIVE_REVIEW:
       const newReview = {[action.review.restaurant_id]: action.review };
         return merge({}, state , newReview);

@@ -17,7 +17,7 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = (dispatch, ownProps) => {
   //check the current url for formType
 
-  // console.log(ownProps.location.pathname);
+  // (ownProps.location.pathname);
 
   const formType = ownProps.location.pathname.slice(1);
   const processForm = (ownProps.location.pathname.slice(1) === "login") ? login : signup;

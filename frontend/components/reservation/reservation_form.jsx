@@ -54,10 +54,10 @@ class ReservationForm extends React.Component{
 
 
     if(this.props.reservationId !== null && this.props.reservationId !== undefined){
-      console.log("HERE");
+
       this.props.editReservation(reservation).then(() => this.props.history.push('/profile'));
     } else{
-      console.log("null reservationId");
+      
       this.props.createReservation(reservation).then(() => this.props.history.push('/profile'));
     }
 

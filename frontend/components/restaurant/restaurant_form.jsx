@@ -12,7 +12,7 @@ class RestaurantForm extends React.Component{
     //     name: '', address: '', city: '', state: '', postal_code: '', country: '', price: '',
     //     category: '', thumbnail: '', description: '', lat: '', lng: '', image_urls: [], max_reservations: '', owner_id: 0
     //   }
-    // console.log(this.props.editRestaurantState);
+    // (this.props.editRestaurantState);
 
     if(this.props.editRestaurantState !== undefined ){
 
@@ -59,7 +59,7 @@ class RestaurantForm extends React.Component{
     //   this.props.requestRestaurant(parseInt(this.props.match.params.restaurantId)).then(rest => this.setState({state}: rest));
     //
     // }
-    // debugger;
+    
    window.scrollTo(0,0);
   }
 
