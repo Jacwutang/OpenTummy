@@ -39,10 +39,9 @@ class RestaurantIndexItem extends React.Component{
                 <h2 className = "restaurant-index-title">     {rest.name} </h2>
               </Link>
 
-
-
               <span>
                 <h3>
+
                   <ReactStars
                     count={5}
                     size={24}
@@ -83,15 +82,7 @@ class RestaurantIndexItem extends React.Component{
 
           </div>
 
-
-
-
-
-
-
-
-
-      </li>
+        </li>
 
     );
   }
