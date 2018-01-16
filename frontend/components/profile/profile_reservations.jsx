@@ -18,11 +18,7 @@ class ProfileReservations extends React.Component{
 
 
     var hours = time.slice(0,1) + time.slice(1,2);
-    // (time, "TIME");
-    // (time.slice(0,1));
-    // (time.slice(1,2));
-    // ( parseInt(time.slice(0,1) + time.slice(1,2)) > 12 );
-
+    
     if(parseInt(time.slice(0,1) + time.slice(1,2)) >= 12){
       if(parseInt(time.slice(0,1) + time.slice(1,2)) - 12 === 0){
         hours = 12;
@@ -35,8 +31,6 @@ class ProfileReservations extends React.Component{
         hours + ':' + minutes + ' ' + 'PM'
       );
     }
-
-
 
 
     return(
@@ -73,7 +67,7 @@ class ProfileReservations extends React.Component{
 
     return(e => {
       e.preventDefault();
-      // this.props.deleteReservation(id)
+
     })
 
   }
@@ -166,31 +160,3 @@ class ProfileReservations extends React.Component{
 }
 
 export default ProfileReservations;
-// <img className = "thumbnail" src={res.restaurant.thumbnail}/>
-// <h2> {res.restaurant.name} </h2>
-
-
-
-// <div className = "profile-tabs">
-//
-//   <div className = "profile-tabs-left">
-//     <Link className="header-links" to="/restaurants/new">
-//       My Reservations
-//       </Link>
-//     <Link className="header-links" to="/profile/restaurants/my">
-//     My Restaurants
-//     </Link>
-//
-//   </div>
-//
-//   <div className = "profile-tabs-right">
-//
-//   <Link className="header-links" to="/restaurants">
-//     Browse all Restaurants
-//     </Link>
-//     <Link className="header-links" to= "/restaurants/new">
-//       Add a Restaurant
-//     </Link>
-//   </div>
-//
-// </div>
