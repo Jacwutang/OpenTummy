@@ -90,10 +90,7 @@ class RestaurantDetail extends React.Component{
             <ReviewsContainer
             restaurant={restaurant}/>
 
-
-
-
-        </section>
+          </section>
       );
     }
 

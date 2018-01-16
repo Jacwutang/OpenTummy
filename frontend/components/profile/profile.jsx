@@ -18,22 +18,12 @@ class Profile extends React.Component{
 
   }
 
-  // componentDidUpdate() {
-  //   let hash = this.props.location.hash.replace('#', '');
-  //   if (hash) {
-  //       let node = ReactDOM.findDOMNode(this.refs[hash]);
-  //       if (node) {
-  //           node.scrollIntoView();
-  //       }
-  //   }
-  // }
-
   handleClick(field){
 
     if(field === 'profile-reservations'){
 
       document.getElementById('profile-reservations').scrollIntoView(true);
-      // window.scrollTo(0,0);
+
     } else if (field === 'profile-restaurants'){
       document.getElementById('profile-restaurants').scrollIntoView(true);
     } else{
@@ -121,9 +111,8 @@ class Profile extends React.Component{
             deleteReservation={deleteReservation} />
           </div>
 
-          <div className ="placeholder-div">
 
-          </div>
+        
 
           <div id="profile-restaurants">
             <h1 className = "profile-restaurants-h1"> My Restaurants </h1>
