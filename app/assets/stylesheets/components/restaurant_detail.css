@@ -1,10 +1,10 @@
-/* .restaurant-detail-main {
+.restaurant-detail-main {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   background-color: #D3D3D3;
   overflow: scroll;
-  margin-bottom: 500px; }
+  margin-bottom: 50px; }
 
 .restaurant-detail-header {
   margin-top: 50px;
@@ -81,5 +81,8 @@
 .Modal-modal-0-1-3 {
   height: 250px; }
 
+.e-modal-0-1-3 {
+  height: 250px; }
+
 .rating-div {
-  height: auto; } */
+  height: auto; }
