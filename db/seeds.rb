@@ -6,6 +6,945 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+
+  MIAMI = [
+    {
+                  "name": "The Capital Grille - Miami",
+          "address": "444 Brickell Avenue",
+          "city": "Miami",
+          "state": "FL",
+          "postal_code": "33131",
+          "country": "US",
+          "lat": 25.769096,
+          "lng": -80.190251,
+          "price": 4,
+          "thumbnail": "https://www.opentable.com/img/restimages/2063.jpg"
+        },
+        {
+
+          "name": "LOBA",
+          "address": "7420 Biscayne Blvd.",
+          "city": "Miami",
+          "state": "FL",
+          "postal_code": "33138",
+          "country": "US",
+          "lat": 25.843499,
+          "lng": -80.184618,
+          "price": 2,
+
+          "thumbnail": "https://www.opentable.com/img/restimages/148015.jpg"
+      },
+      {
+                    "name": "De Rodriguez",
+          "address": "101-B Ocean Drive",
+          "city": "Miami Beach",
+          "state": "FL",
+          "postal_code": "33139",
+          "country": "US",
+          "lat": 25.769545,
+          "lng": -80.132225,
+          "price": 3,
+          "thumbnail": "https://www.opentable.com/img/restimages/50851.jpg"
+      },
+      {
+
+          "name": "Wine Depot 555",
+          "address": "555 Jefferson Avenue",
+          "city": "Miami",
+          "state": "FL",
+          "postal_code": "33139",
+          "country": "US",
+          "lat": 25.775593,
+          "lng": -80.136899,
+          "price": 3,
+
+          "thumbnail": "https://www.opentable.com/img/restimages/116566.jpg"
+      },
+      {
+
+          "name": "R House Wynwood",
+          "address": "2727 NW 2nd Ave.",
+          "city": "Miami",
+          "state": "FL",
+          "postal_code": "33127",
+          "country": "US",
+          "lat": 25.802668,
+          "lng": -80.198968,
+          "price": 3,
+
+          "thumbnail": "https://www.opentable.com/img/restimages/117238.jpg"
+      },
+      {
+
+          "name": "Babylon Turkish Restaurant",
+          "address": "560 Washington Avenue",
+          "city": "Miami Beach",
+          "state": "FL",
+          "postal_code": "33139",
+          "country": "US",
+          "lat": 25.775631,
+          "lng": -80.134244,
+          "price": 2,
+
+          "thumbnail": "https://www.opentable.com/img/restimages/149452.jpg"
+      },
+      {
+
+          "name": "Seasalt and Pepper",
+          "address": "422 NW North River Drive",
+          "city": "Miami",
+          "state": "FL",
+          "postal_code": "33128",
+          "country": "US",
+          "lat": 25.777679,
+          "lng": -80.204603,
+          "price": 3,
+
+          "thumbnail": "https://www.opentable.com/img/restimages/115654.jpg"
+      },
+      {
+
+          "name": "Porcao Farm to Grill",
+          "address": "901 S. Miami Ave",
+          "city": "Miami",
+          "state": "FL",
+          "postal_code": "33130",
+          "country": "US",
+          "lat": 25.764956,
+          "lng": -80.193743,
+          "price": 3,
+
+          "thumbnail": "https://www.opentable.com/img/restimages/110743.jpg"
+      },
+      {
+          "name": "Graziano's Brickell",
+          "address": "177 SW 7th Street",
+          "city": "Miami",
+          "state": "FL",
+          "postal_code": "33130",
+          "country": "US",
+          "lat": 25.767285,
+          "lng": -80.196691,
+          "price": 3,
+          "thumbnail": "https://www.opentable.com/img/restimages/33547.jpg"
+      },
+      {
+                    "name": "Cafe Avanti Restaurant",
+          "address": "732 41st Street",
+          "city": "Miami Beach",
+          "state": "FL",
+          "postal_code": "33140",
+          "country": "US",
+          "lat": 25.813709,
+          "lng": -80.131337,
+          "price": 3,
+          "thumbnail": "https://www.opentable.com/img/restimages/84808.jpg"
+      },
+      {
+                    "name": "Prime Italian",
+          "address": "101 Ocean Drive",
+          "city": "Miami Beach",
+          "state": "FL",
+          "postal_code": "33139",
+          "country": "US",
+          "lat": 25.769545,
+          "lng": -80.132225,
+          "price": 4,
+          "thumbnail": "https://www.opentable.com/img/restimages/26521.jpg"
+      },
+      {
+                    "name": "La Locanda",
+          "address": "419 Washington Avenue",
+          "city": "Miami Beach",
+          "state": "FL",
+          "postal_code": "33139",
+          "country": "US",
+          "lat": 25.77398,
+          "lng": -80.134115,
+          "price": 2,
+          "thumbnail": "https://www.opentable.com/img/restimages/49819.jpg"
+      },
+      {
+
+          "name": "Fez",
+          "address": "512 Espanola Way",
+          "city": "Miami Beach",
+          "state": "FL",
+          "postal_code": "33139",
+          "country": "US",
+          "lat": 25.78682,
+          "lng": -80.13328,
+          "price": 2,
+
+          "thumbnail": "https://www.opentable.com/img/restimages/102415.jpg"
+      },
+      {
+
+          "name": "Moyé",
+          "address": "80 SW 8th St.",
+          "city": "Miami",
+          "state": "FL",
+          "postal_code": "33130",
+          "country": "US",
+          "lat": 25.765619,
+          "lng": -80.194783,
+          "price": 2,
+
+          "thumbnail": "https://www.opentable.com/img/restimages/152629.jpg"
+      },
+      {
+
+          "name": "Shikany",
+          "address": "251 NW 25th St.",
+          "city": "Miami",
+          "state": "FL",
+          "postal_code": "33127",
+          "country": "US",
+          "lat": 25.800866,
+          "lng": -80.200187,
+          "price": 4,
+
+          "thumbnail": "https://www.opentable.com/img/restimages/150211.jpg"
+      },
+      {
+
+          "name": "Sushi Couture",
+          "address": "1144 Ocean Drive",
+          "city": "Miami Beach",
+          "state": "FL",
+          "postal_code": "33139",
+          "country": "US",
+          "lat": 25.782529,
+          "lng": -80.130475,
+          "price": 2,
+
+          "thumbnail": "https://www.opentable.com/img/restimages/145660.jpg"
+      },
+      {
+                    "name": "NAOE",
+          "address": "661 Brickell Key Drive",
+          "city": "Miami",
+          "state": "FL",
+          "postal_code": "33131",
+          "country": "US",
+          "lat": 25.767423,
+          "lng": -80.185358,
+          "price": 4,
+          "thumbnail": "https://www.opentable.com/img/restimages/31666.jpg"
+      },
+      {
+
+          "name": "Cantina La Veinte",
+          "address": "495 Brickell Av",
+          "city": "Miami",
+          "state": "FL",
+          "postal_code": "33131",
+          "country": "US",
+          "lat": 25.768305,
+          "lng": -80.188528,
+          "price": 3,
+
+          "thumbnail": "https://www.opentable.com/img/restimages/147730.jpg"
+      },
+      {
+                    "name": "Bianca",
+          "address": "1685 Collins Avenue",
+          "city": "Miami Beach",
+          "state": "FL",
+          "postal_code": "33139",
+          "country": "US",
+          "lat": 25.792059,
+          "lng": -80.12972,
+          "price": 4,
+          "thumbnail": "https://www.opentable.com/img/restimages/79360.jpg"
+      },
+      {
+
+          "name": "Batch Gastropub",
+          "address": "30 SW 12th St",
+          "city": "Miami",
+          "state": "FL",
+          "postal_code": "33130",
+          "country": "US",
+          "lat": 25.762475,
+          "lng": -80.196411,
+          "price": 2,
+
+          "thumbnail": "https://www.opentable.com/img/restimages/139735.jpg"
+      },
+      {
+
+          "name": "BLT Prime - Trump Doral",
+          "address": "4400 NW 87th Avenue",
+          "city": "Miami",
+          "state": "FL",
+          "postal_code": "33178",
+          "country": "US",
+          "lat": 25.814138,
+          "lng": -80.33836,
+          "price": 4,
+
+          "thumbnail": "https://www.opentable.com/img/restimages/139204.jpg"
+      },
+      {
+
+          "name": "Mignonette",
+          "address": "210 NE 18th Street",
+          "city": "Miami",
+          "state": "FL",
+          "postal_code": "33132",
+          "country": "US",
+          "lat": 25.793323,
+          "lng": -80.190472,
+          "price": 3,
+
+          "thumbnail": "https://www.opentable.com/img/restimages/147868.jpg"
+      },
+      {
+
+          "name": "Bistro BE",
+          "address": "1111 SW 1st Avenue",
+          "city": "Miami",
+          "state": "FL",
+          "postal_code": "33130",
+          "country": "US",
+          "lat": 25.763323,
+          "lng": -80.194951,
+          "price": 3,
+
+          "thumbnail": "https://www.opentable.com/img/restimages/148816.jpg"
+      },
+      {
+
+          "name": "Orange Blossom",
+          "address": "2000 Collins Avenue #7",
+          "city": "Miami Beach",
+          "state": "FL",
+          "postal_code": "33139",
+          "country": "US",
+          "lat": 25.796407,
+          "lng": -80.128856,
+          "price": 2,
+
+          "thumbnail": "https://www.opentable.com/img/restimages/103819.jpg"
+      },
+      {
+
+          "name": "Ni. Do. Caffé",
+          "address": "7295 Biscayne Blvd",
+          "city": "Miami",
+          "state": "FL",
+          "postal_code": "33138",
+          "country": "US",
+          "lat": 25.842344,
+          "lng": -80.184119,
+          "price": 3,
+
+          "thumbnail": "https://www.opentable.com/img/restimages/144457.jpg"
+      }
+  ]
+
+
+  LOS_ANGELES = [
+    {
+
+           "name": "Badmaash",
+           "address": "108 West 2nd Street #104",
+           "city": "Los Angeles",
+           "state": "CA",
+           "postal_code": "90012",
+           "country": "US",
+           "lat": 34.051061,
+           "lng": -118.244705,
+           "price": 2,
+           "thumbnail": "https://www.opentable.com/img/restimages/104173.jpg"
+       },
+       {
+
+           "name": "Q",
+           "address": "521 W. 7th Street",
+           "city": "Los Angeles",
+           "state": "CA",
+           "postal_code": "90014",
+           "country": "US",
+           "lat": 34.047135,
+           "lng": -118.256097,
+           "price": 4,
+           "thumbnail": "https://www.opentable.com/img/restimages/106741.jpg"
+       },
+       {
+                      "name": "Maria's Italian Kitchen - Downtown",
+           "address": "615 S. Flower Street",
+           "city": "Los Angeles",
+           "state": "CA",
+           "postal_code": "90017",
+           "country": "US",
+           "lat": 34.049342,
+           "lng": -118.258174,
+           "price": 2,  "thumbnail": "https://www.opentable.com/img/restimages/19183.jpg"
+       },
+       {
+                      "name": "Chalet Edelweiss",
+           "address": "8740 Sepulveda Blvd.",
+           "city": "Los Angeles",
+           "state": "CA",
+           "postal_code": "90045",
+           "country": "US",
+           "lat": 33.957675,
+           "lng": -118.39573,
+           "price": 2,  "thumbnail": "https://www.opentable.com/img/restimages/34459.jpg"
+       },
+       {
+
+           "name": "Red Hill Restaurant",
+           "address": "1325 Echo Park Avenue",
+           "city": "Los Angeles",
+           "state": "CA",
+           "postal_code": "90026",
+           "country": "US",
+           "lat": 34.077721,
+           "lng": -118.256968,
+           "price": 2,
+           "thumbnail": "https://www.opentable.com/img/restimages/151228.jpg"
+       },
+       {
+                    "name": "UPSTAIRS 2",
+           "address": "2311 Cotner Ave",
+           "city": "Los Angeles",
+           "state": "CA",
+           "postal_code": "90064",
+           "country": "US",
+           "lat": 34.038,
+           "lng": -118.438,
+           "price": 2,
+           "thumbnail": "https://www.opentable.com/img/restimages/6047.jpg"
+       },
+       {
+                      "name": "Drago Centro",
+           "address": "525 S. Flower St., Suite 120",
+           "city": "Los Angeles",
+           "state": "CA",
+           "postal_code": "90071",
+           "country": "US",
+           "lat": 34.051541,
+           "lng": -118.256939,
+           "price": 2,  "thumbnail": "https://www.opentable.com/img/restimages/24472.jpg"
+       },
+       {
+                      "name": "BLD",
+           "address": "7450 Beverly Blvd",
+           "city": "Los Angeles",
+           "state": "CA",
+           "postal_code": "90036",
+           "country": "US",
+           "lat": 34.076155,
+           "lng": -118.352245,
+           "price": 2,  "thumbnail": "https://www.opentable.com/img/restimages/13507.jpg"
+       },
+       {
+                      "name": "Craft Los Angeles",
+           "address": "10100 Constellation Boulevard",
+           "city": "Los Angeles",
+           "state": "CA",
+           "postal_code": "90067",
+           "country": "US",
+           "lat": 34.059818,
+           "lng": -118.414355,
+           "price": 3,  "thumbnail": "https://www.opentable.com/img/restimages/14356.jpg"
+       },
+       {
+                    "name": "Engine Co. No. 28",
+           "address": "644 S. Figueroa St.",
+           "city": "Los Angeles",
+           "state": "CA",
+           "postal_code": "90017",
+           "country": "US",
+           "lat": 34.05,
+           "lng": -118.259,
+           "price":3,
+           "thumbnail": "https://www.opentable.com/img/restimages/4579.jpg"
+       },
+       {
+                    "name": "West at Hotel Angeleno",
+           "address": "170 N Church Lane",
+           "city": "Los Angeles",
+           "state": "CA",
+           "postal_code": "90049",
+           "country": "US",
+           "lat": 34.074735,
+           "lng": -118.468974,
+           "price":5,
+          "thumbnail": "https://www.opentable.com/img/restimages/5805.jpg"
+       },
+       {
+
+           "name": "Pistola",
+           "address": "8022 W Third St",
+           "city": "Los Angeles",
+           "state": "CA",
+           "postal_code": "90048",
+           "country": "US",
+           "lat": 34.071851,
+           "lng": -118.36459,
+           "price": 3,
+           "thumbnail": "https://www.opentable.com/img/restimages/149794.jpg"
+       },
+       {
+                      "name": "Ba Restaurant",
+           "address": "5100 York Blvd.",
+           "city": "Los Angeles",
+           "state": "CA",
+           "postal_code": "90042",
+           "country": "US",
+           "lat": 34.120938,
+           "lng": -118.204672,
+           "price": 3,  "thumbnail": "https://www.opentable.com/img/restimages/95263.jpg"
+       },
+       {
+                      "name": "Picante Latin Fusion Restaurant",
+           "address": "1001 Maple Ave",
+           "city": "Los Angeles",
+           "state": "CA",
+           "postal_code": "90015",
+           "country": "US",
+           "lat": 34.038316,
+           "lng": -118.25402,
+           "price": 2,  "thumbnail": "https://www.opentable.com/img/restimages/97159.jpg"
+       },
+       {
+
+           "name": "Mo-Chica",
+           "address": "514 W 7th St",
+           "city": "Los Angeles",
+           "state": "CA",
+           "postal_code": "90014",
+           "country": "US",
+           "lat": 34.046755,
+           "lng": -118.256062,
+           "price": 2,
+           "thumbnail": "https://www.opentable.com/img/restimages/109447.jpg"
+       },
+       {
+                      "name": "Westside Tavern",
+           "address": "10850 W. Pico Blvd",
+           "city": "Los Angeles",
+           "state": "CA",
+           "postal_code": "90064",
+           "country": "US",
+           "lat": 34.040086,
+           "lng": -118.428538,
+           "price": 2,  "thumbnail": "https://www.opentable.com/img/restimages/29473.jpg"
+       },
+       {
+
+           "name": "Hyperion Public",
+           "address": "2538 Hyperion Avenue",
+           "city": "Los Angeles",
+           "state": "CA",
+           "postal_code": "90027",
+           "country": "US",
+           "lat": 34.105339,
+           "lng": -118.272702,
+           "price": 2,
+           "thumbnail": "https://www.opentable.com/img/restimages/104209.jpg"
+       },
+       {
+
+           "name": "Hutchinson Cocktails & Grill",
+           "address": "826 N La Cienega Blvd",
+           "city": "Los Angeles",
+           "state": "CA",
+           "postal_code": "90069",
+           "country": "US",
+           "lat": 34.086158,
+           "lng": -118.37609,
+           "price": 3,
+           "thumbnail": "https://www.opentable.com/img/restimages/145984.jpg"
+       },
+       {
+                      "name": "Palm Restaurant - Los Angeles - Downtown",
+           "address": "1100 South Flower Street",
+           "city": "Los Angeles",
+           "state": "CA",
+           "postal_code": "90015",
+           "country": "US",
+           "lat": 34.042947,
+           "lng": -118.264159,
+           "price": 3,  "thumbnail": "https://www.opentable.com/img/restimages/13378.jpg"
+       },
+       {
+                      "name": "BREADBAR Century City",
+           "address": "10250 Santa Monica Blvd",
+           "city": "Los Angeles",
+           "state": "CA",
+           "postal_code": "90067",
+           "country": "US",
+           "lat": 34.05949,
+           "lng": -118.420801,
+           "price": 2,  "thumbnail": "https://www.opentable.com/img/restimages/22567.jpg"
+       },
+       {
+
+           "name": "Pizzeria Il Fico",
+           "address": "310 S. Robertson Blvd.",
+           "city": "Los Angeles",
+           "state": "CA",
+           "postal_code": "90048",
+           "country": "US",
+           "lat": 34.073164,
+           "lng": -118.383473,
+           "price": 2,
+           "thumbnail": "https://www.opentable.com/img/restimages/147823.jpg"
+       },
+       {
+                      "name": "chi SPACCA",
+           "address": "6610 Melrose Ave.",
+           "city": "Los Angeles",
+           "state": "CA",
+           "postal_code": "90038",
+           "country": "US",
+           "lat": 34.083433,
+           "lng": -118.338544,
+           "price": 4,  "thumbnail": "https://www.opentable.com/img/restimages/64306.jpg"
+       },
+       {
+                      "name": "Maggiano's - Farmers Market",
+           "address": "189 The Grove Drive",
+           "city": "Los Angeles",
+           "state": "CA",
+           "postal_code": "90036",
+           "country": "US",
+           "lat": 34.071108,
+           "lng": -118.356302,
+           "price": 2,  "thumbnail": "https://www.opentable.com/img/restimages/15055.jpg"
+       },
+       {
+
+           "name": "Maximiliano",
+           "address": "5930 York Blvd",
+           "city": "Los Angeles",
+           "state": "CA",
+           "postal_code": "90042",
+           "country": "US",
+           "lat": 34.118007,
+           "lng": -118.189766,
+           "price": 2,
+           "thumbnail": "https://www.opentable.com/img/restimages/116647.jpg"
+       },
+       {
+                      "name": "Church & State",
+           "address": "1850 Industrial Street",
+           "city": "Los Angeles",
+           "state": "CA",
+           "postal_code": "90021",
+           "country": "US",
+           "lat": 34.035796,
+           "lng": -118.233655,
+           "price": 2,  "thumbnail": "https://www.opentable.com/img/restimages/19081.jpg"
+       },
+       {
+
+           "name": "LA Chapter - Ace Hotel",
+           "address": "929 S Broadway",
+           "city": "Los Angeles",
+           "state": "CA",
+           "postal_code": "90015",
+           "country": "US",
+           "lat": 34.041678,
+           "lng": -118.256694,
+           "price": 2,
+           "thumbnail": "https://www.opentable.com/img/restimages/117421.jpg"
+       },
+       {
+                      "name": "ROCK'N FISH L.A. LIVE",
+           "address": "800 W. Olympic Blvd. Suite A-160",
+           "city": "Los Angeles",
+           "state": "CA",
+           "postal_code": "90015",
+           "country": "US",
+           "lat": 34.044946,
+           "lng": -118.263924,
+           "price": 3,  "thumbnail": "https://www.opentable.com/img/restimages/26158.jpg"
+       },
+       {
+                      "name": "Post & Beam",
+           "address": "3767 Santa Rosalia Drive",
+           "city": "Los Angeles",
+           "state": "CA",
+           "postal_code": "90008",
+           "country": "US",
+           "lat": 34.00986,
+           "lng": -118.339044,
+           "price": 2,  "thumbnail": "https://www.opentable.com/img/restimages/96937.jpg"
+       },
+       {
+
+           "name": "A Food Affair Restaurant",
+           "address": "1513 South Robertson Blvd",
+           "city": "Los Angeles",
+           "state": "CA",
+           "postal_code": "90035",
+           "country": "US",
+           "lat": 34.051794,
+           "lng": -118.384294,
+           "price": 2,
+           "thumbnail": "https://www.opentable.com/img/restimages/100552.jpg"
+       },
+       {
+                      "name": "Salt's Cure",
+           "address": "7494 Santa Monica Blvd",
+           "city": "Los Angeles",
+           "state": "CA",
+           "postal_code": "90046",
+           "country": "US",
+           "lat": 34.090651,
+           "lng": -118.352823,
+           "price": 3,  "thumbnail": "https://www.opentable.com/img/restimages/93433.jpg"
+       },
+       {
+                      "name": "Shiloh's Restaurant",
+           "address": "8939 W. Pico Blvd",
+           "city": "Los Angeles",
+           "state": "CA",
+           "postal_code": "90035",
+           "country": "US",
+           "lat": 34.055439,
+           "lng": -118.386904,
+           "price": 3,  "thumbnail": "https://www.opentable.com/img/restimages/88273.jpg"
+       },
+       {
+                      "name": "Shaherzad Restaurant",
+           "address": "1422 Westwood Blvd",
+           "city": "Los Angeles",
+           "state": "CA",
+           "postal_code": "90024",
+           "country": "US",
+           "lat": 34.054916,
+           "lng": -118.441417,
+           "price": 2,  "thumbnail": "https://www.opentable.com/img/restimages/95998.jpg"
+       },
+       {
+                      "name": "Benihana - Puente Hills",
+           "address": "17877 Gale Ave.",
+           "city": "Los Angeles",
+           "state": "CA",
+           "postal_code": "91748",
+           "country": "US",
+           "lat": 33.995479,
+           "lng": -117.914296,
+           "price": 2,  "thumbnail": "https://www.opentable.com/img/restimages/86992.jpg"
+       },
+       {
+                      "name": "The Churchill",
+           "address": "8384 W. Third St.",
+           "city": "Los Angeles",
+           "state": "CA",
+           "postal_code": "90048",
+           "country": "US",
+           "lat": 34.072851,
+           "lng": -118.372953,
+           "price": 2,  "thumbnail": "https://www.opentable.com/img/restimages/76261.jpg"
+       },
+       {
+                      "name": "Cafe Sushi",
+           "address": "8459 Beverly Blvd",
+           "city": "Los Angeles",
+           "state": "CA",
+           "postal_code": "90048",
+           "country": "US",
+           "lat": 34.076033,
+           "lng": -118.37523,
+           "price": 2,  "thumbnail": "https://www.opentable.com/img/restimages/68494.jpg"
+       },
+       {
+                      "name": "Arashi Sushi",
+           "address": "1111 S. Hope St. #100",
+           "city": "Los Angeles",
+           "state": "CA",
+           "postal_code": "90015",
+           "country": "US",
+           "lat": 34.042397,
+           "lng": -118.26353,
+           "price": 2,  "thumbnail": "https://www.opentable.com/img/restimages/70549.jpg"
+       },
+       {
+                    "name": "Border Grill - Downtown LA",
+           "address": "445 S. Figueroa St.",
+           "city": "Los Angeles",
+           "state": "CA",
+           "postal_code": "90071",
+           "country": "US",
+           "lat": 34.0529,
+           "lng": -118.2564,
+           "price": 5,
+           "thumbnail": "https://www.opentable.com/img/restimages/2578.jpg"
+       },
+       {
+
+           "name": "Little Beast Restaurant",
+           "address": "1496 Colorado Blvd",
+           "city": "Los Angeles",
+           "state": "CA",
+           "postal_code": "90041",
+           "country": "US",
+           "lat": 34.138842,
+           "lng": -118.198027,
+           "price": 2,
+           "thumbnail": "https://www.opentable.com/img/restimages/148909.jpg"
+       },
+       {
+
+           "name": "Glass Lounge",
+           "address": "646 N Martel Ave",
+           "city": "Los Angeles",
+           "state": "CA",
+           "postal_code": "90036",
+           "country": "US",
+           "lat": 34.083062,
+           "lng": -118.351099,
+           "price": 2,
+           "thumbnail": "https://www.opentable.com/img/restimages/149038.jpg"
+       },
+       {
+
+           "name": "The Nice Guy",
+           "address": "401 N La Cienega Blvd",
+           "city": "Los Angeles",
+           "state": "CA",
+           "postal_code": "90048",
+           "country": "US",
+           "lat": 34.078724,
+           "lng": -118.376828,
+           "price": 2,
+           "thumbnail": "https://www.opentable.com/img/restimages/149638.jpg"
+       },
+       {
+                      "name": "Hamasaku",
+           "address": "11043 Santa Monica Blvd",
+           "city": "Los Angeles",
+           "state": "CA",
+           "postal_code": "90025-3523",
+           "country": "US",
+           "lat": 34.048065,
+           "lng": -118.442995,
+           "price": 4,  "thumbnail": "https://www.opentable.com/img/restimages/96235.jpg"
+       },
+       {
+
+           "name": "Juancho's Tacos and Beer",
+           "address": "3702 Medford St",
+           "city": "Los Angeles",
+           "state": "CA",
+           "postal_code": "90063",
+           "country": "US",
+           "lat": 34.059453,
+           "lng": -118.185916,
+           "price": 2,
+           "thumbnail": "https://www.opentable.com/img/restimages/144934.jpg"
+       },
+       {
+                    "name": "Morton's The Steakhouse - Los Angeles",
+           "address": "735 S. Figueroa Street",
+           "city": "Los Angeles",
+           "state": "CA",
+           "postal_code": "90017",
+           "country": "US",
+           "lat": 34.0488,
+           "lng": -118.2603,
+           "price": 3,
+           "thumbnail": "https://www.opentable.com/img/restimages/3112.jpg"
+       },
+       {
+
+           "name": "Farsi Cafe",
+           "address": "1916 Westwood Blvd.",
+           "city": "Los Angeles",
+           "state": "CA",
+           "postal_code": "90025",
+           "country": "US",
+           "lat": 34.047954,
+           "lng": -118.434929,
+           "price": 2,
+           "thumbnail": "https://www.opentable.com/img/restimages/145585.jpg"
+       },
+       {
+                    "name": "Smeraldi's Restaurant",
+           "address": "506 South Grand Ave.",
+           "city": "Los Angeles",
+           "state": "CA",
+           "postal_code": "90071",
+           "country": "US",
+           "lat": 34.049788,
+           "lng": -118.254057,
+           "price":5,
+           "thumbnail": "https://www.opentable.com/img/restimages/8074.jpg"
+       },
+       {
+
+           "name": "Rockwell Table & Stage Restaurant",
+           "address": "1714 N. Vermont Ave",
+           "city": "Los Angeles",
+           "state": "CA",
+           "postal_code": "90027",
+           "country": "US",
+           "lat": 34.102221,
+           "lng": -118.291545,
+           "price": 2,
+           "thumbnail": "https://www.opentable.com/img/restimages/150814.jpg"
+       },
+       {
+                      "name": "Nobu Los Angeles",
+           "address": "903 N. La Cienega Blvd",
+           "city": "Los Angeles",
+           "state": "CA",
+           "postal_code": "90069",
+           "country": "US",
+           "lat": 34.087137,
+           "lng": -118.377078,
+           "price": 4,  "thumbnail": "https://www.opentable.com/img/restimages/17077.jpg"
+       },
+       {
+                    "name": "Jar",
+           "address": "8225 Beverly Blvd",
+           "city": "Los Angeles",
+           "state": "CA",
+           "postal_code": "90048",
+           "country": "US",
+           "lat": 34.076153,
+           "lng": -118.368854,
+           "price": 5,
+           "thumbnail": "https://www.opentable.com/img/restimages/3254.jpg"
+       },
+       {
+
+           "name": "Bugis Street Brasserie",
+           "address": "501 S. Olive Street",
+           "city": "Los Angeles",
+           "state": "CA",
+           "postal_code": "90071",
+           "country": "US",
+           "lat": 34.049405,
+           "lng": -118.253121,
+           "price": 2,
+           "thumbnail": "https://www.opentable.com/img/restimages/113848.jpg"
+       },
+       {
+
+           "name": "AdoTeca",
+           "address": "11712 San Vicente Blvd",
+           "city": "Los Angeles",
+           "state": "CA",
+           "postal_code": "90049",
+           "country": "US",
+           "lat": 34.05338,
+           "lng": -118.466197,
+           "price": 4,
+           "thumbnail": "https://www.opentable.com/img/restimages/145843.jpg"
+       }
+  ]
+
+
+
   CHICAGO = [
         {
             "name": "10pin Bowling Lounge",
@@ -920,17 +1859,362 @@
   ]
 
 
+  LAS_VEGAS = [
+    {
+
+           "name": "Yong Kang Street",
+           "address": "3655 Las Vegas Blvd South",
+           "city": "Las Vegas",
+           "state": "NV",
+           "postal_code": "89109",
+           "country": "US",
+           "lat": 36.111912,
+           "lng": -115.171269,
+           "price": 2,
+
+
+           "thumbnail": "https://www.opentable.com/img/restimages/145417.jpg"
+       },
+       {
+                     "name": "Joel Robuchon - MGM Grand",
+           "address": "3799 Las Vegas Blvd South",
+           "city": "Las Vegas",
+           "state": "NV",
+           "postal_code": "89109",
+           "country": "US",
+           "lat": 36.101197,
+           "lng": -115.172426,
+           "price": 4,
+
+           "thumbnail": "https://www.opentable.com/img/restimages/91015.jpg"
+       },
+       {
+                     "name": "Center Cut Steakhouse - Flamingo Las Vegas",
+           "address": "3555 Las Vegas Blvd. S",
+           "city": "Las Vegas",
+           "state": "NV",
+           "postal_code": "89109",
+           "country": "US",
+           "lat": 36.11569,
+           "lng": -115.171394,
+           "price": 4,
+
+           "thumbnail": "https://www.opentable.com/img/restimages/96964.jpg"
+       },
+       {
+
+           "name": "Phil’s Italian Steak House",
+           "address": "3300 Las Vegas Blvd South",
+           "city": "Las Vegas",
+           "state": "NV",
+           "postal_code": "89109",
+           "country": "US",
+           "lat": 36.12403,
+           "lng": -115.171172,
+           "price": 4,
+
+
+           "thumbnail": "https://www.opentable.com/img/restimages/106273.jpg"
+       },
+       {
+                     "name": "Social House",
+           "address": "3720 S. Las Vegas Blvd. South #241",
+           "city": "Las Vegas",
+           "state": "NV",
+           "postal_code": "89158",
+           "country": "US",
+           "lat": 36.108546,
+           "lng": -115.173165,
+           "price": 4,
+
+           "thumbnail": "https://www.opentable.com/img/restimages/55747.jpg"
+       },
+       {
+                     "name": "BARMASA - Aria",
+           "address": "3730 Las Vegas Blvd South",
+           "city": "Las Vegas",
+           "state": "NV",
+           "postal_code": "89109",
+           "country": "US",
+           "lat": 36.106661,
+           "lng": -115.176909,
+           "price": 4,
+
+           "thumbnail": "https://www.opentable.com/img/restimages/90889.jpg"
+       },
+       {
+
+           "name": "Made.LV",
+           "address": "450 S Rampart Blvd Ste 120",
+           "city": "Las Vegas",
+           "state": "NV",
+           "postal_code": "89145",
+           "country": "US",
+           "lat": 36.167092,
+           "lng": -115.286925,
+           "price": 2,
+
+
+           "thumbnail": "https://www.opentable.com/img/restimages/149269.jpg"
+       },
+       {
+
+           "name": "The Griddle Café - SLS Las Vegas",
+           "address": "2535 Las Vegas Blvd South",
+           "city": "Las Vegas",
+           "state": "NV",
+           "postal_code": "89109",
+           "country": "US",
+           "lat": 36.142756,
+           "lng": -115.157874,
+           "price": 2,
+
+
+           "thumbnail": "https://www.opentable.com/img/restimages/146140.jpg"
+       },
+       {
+                     "name": "Ruth's Chris Steak House - Harrah's Las Vegas",
+           "address": "3475 Las Vegas Blvd South",
+           "city": "Las Vegas",
+           "state": "NV",
+           "postal_code": "89109",
+           "country": "US",
+           "lat": 36.119859,
+           "lng": -115.17238,
+           "price": 4,
+
+           "thumbnail": "https://www.opentable.com/img/restimages/96967.jpg"
+       },
+       {
+                   "name": "Lupo by Wolfgang",
+           "address": "3950 Las Vegas Boulevard, South",
+           "city": "Las Vegas",
+           "state": "NV",
+           "postal_code": "89119",
+           "country": "US",
+           "lat": 36.092318,
+           "lng": -115.17252,
+           "price": 3,
+
+           "thumbnail": "https://www.opentable.com/img/restimages/1655.jpg"
+       },
+       {
+                   "name": "Canonita",
+           "address": "3377 Las Vegas Blvd.",
+           "city": "Las Vegas",
+           "state": "NV",
+           "postal_code": "89109",
+           "country": "US",
+           "lat": 36.122343,
+           "lng": -115.17141,
+           "price": 2,
+
+           "thumbnail": "https://www.opentable.com/img/restimages/1883.jpg"
+       },
+       {
+                     "name": "Wine 5 Cafe",
+           "address": "3250 N Tenaya",
+           "city": "Las Vegas",
+           "state": "NV",
+           "postal_code": "89129",
+           "country": "US",
+           "lat": 36.219859,
+           "lng": -115.250331,
+           "price": 2,
+
+           "thumbnail": "https://www.opentable.com/img/restimages/95257.jpg"
+       },
+       {
+                   "name": "McCormick & Schmick's Seafood - Las Vegas",
+           "address": "335 Hughes Center Drive",
+           "city": "Las Vegas",
+           "state": "NV",
+           "postal_code": "89169",
+           "country": "US",
+           "lat": 36.115074,
+           "lng": -115.157498,
+           "price": 3,
+
+           "thumbnail": "https://www.opentable.com/img/restimages/6684.jpg"
+       },
+       {
+                     "name": "Morels Steakhouse & Bistro - Las Vegas",
+           "address": "3325 Las Vegas Boulevard South",
+           "city": "Las Vegas",
+           "state": "NV",
+           "postal_code": "89109",
+           "country": "US",
+           "lat": 36.122385,
+           "lng": -115.168712,
+           "price": 3,
+
+           "thumbnail": "https://www.opentable.com/img/restimages/18394.jpg"
+       },
+       {
+                     "name": "Pearl - MGM Grand",
+           "address": "3799 Las Vegas Blvd South",
+           "city": "Las Vegas",
+           "state": "NV",
+           "postal_code": "89109",
+           "country": "US",
+           "lat": 36.101197,
+           "lng": -115.172426,
+           "price": 3,
+
+           "thumbnail": "https://www.opentable.com/img/restimages/91012.jpg"
+       },
+       {
+                   "name": "Mon Ami Gabi - Las Vegas - Main Dining Room",
+           "address": "3655 Las Vegas Blvd. South",
+           "city": "Las Vegas",
+           "state": "NV",
+           "postal_code": "89109",
+           "country": "US",
+           "lat": 36.112451,
+           "lng": -115.17296,
+           "price": 3,
+
+           "thumbnail": "https://www.opentable.com/img/restimages/2028.jpg"
+       },
+       {
+
+           "name": "DB Brasserie - The Venetian",
+           "address": "3355 Las Vegas Blvd South",
+           "city": "Las Vegas",
+           "state": "NV",
+           "postal_code": "89109",
+           "country": "US",
+           "lat": 36.12269,
+           "lng": -115.170193,
+           "price": 3,
+
+
+           "thumbnail": "https://www.opentable.com/img/restimages/140863.jpg"
+       },
+       {
+
+           "name": "Chayo Mexican Kitchen + Tequila Bar",
+           "address": "3545 Las Vegas Blvd.",
+           "city": "Las Vegas",
+           "state": "NV",
+           "postal_code": "89109",
+           "country": "US",
+           "lat": 36.117661,
+           "lng": -115.172783,
+           "price": 2,
+
+
+           "thumbnail": "https://www.opentable.com/img/restimages/113863.jpg"
+       },
+       {
+                   "name": "Hofbrauhaus - Las Vegas",
+           "address": "4510 Paradise Rd",
+           "city": "Las Vegas",
+           "state": "NV",
+           "postal_code": "89169",
+           "country": "US",
+           "lat": 36.108,
+           "lng": -115.152,
+           "price": 2,
+
+           "thumbnail": "https://www.opentable.com/img/restimages/5689.jpg"
+       },
+       {
+                     "name": "McCall’s Heartland Grill – Stratosphere Hotel",
+           "address": "2000 Las Vegas Blvd. South",
+           "city": "Las Vegas",
+           "state": "NV",
+           "postal_code": "89104",
+           "country": "US",
+           "lat": 36.147371,
+           "lng": -115.155365,
+           "price": 2,
+
+           "thumbnail": "https://www.opentable.com/img/restimages/84277.jpg"
+       },
+       {
+                     "name": "Beach Cafe - Tropicana Las Vegas",
+           "address": "3801 Las Vegas Blvd South",
+           "city": "Las Vegas",
+           "state": "NV",
+           "postal_code": "89109",
+           "country": "US",
+           "lat": 36.099044,
+           "lng": -115.170452,
+           "price": 3,
+
+           "thumbnail": "https://www.opentable.com/img/restimages/55744.jpg"
+       },
+       {
+                     "name": "Fogo de Chao Brazilian Steakhouse - Las Vegas",
+           "address": "360 E. Flamingo Rd",
+           "city": "Las Vegas",
+           "state": "NV",
+           "postal_code": "89169",
+           "country": "US",
+           "lat": 36.115101,
+           "lng": -115.15654,
+           "price": 3,
+
+           "thumbnail": "https://www.opentable.com/img/restimages/74671.jpg"
+       },
+       {
+                     "name": "SEA Vegas: The Thai Experience",
+           "address": "3645 Las Vegas Blvd South",
+           "city": "Las Vegas",
+           "state": "NV",
+           "postal_code": "89109",
+           "country": "US",
+           "lat": 36.113428,
+           "lng": -115.168517,
+           "price": 2,
+
+           "thumbnail": "https://www.opentable.com/img/restimages/85840.jpg"
+       },
+       {
+
+           "name": "Giada - The Cromwell",
+           "address": "3595 Las Vegas Blvd South",
+           "city": "Las Vegas",
+           "state": "NV",
+           "postal_code": "89109",
+           "country": "US",
+           "lat": 36.115275,
+           "lng": -115.172253,
+           "price": 4,
+
+
+           "thumbnail": "https://www.opentable.com/img/restimages/139285.jpg"
+       },
+       {
+
+           "name": "Gordon Biersch - Las Vegas",
+           "address": "3987 Paradise Rd",
+           "city": "Las Vegas",
+           "state": "NV",
+           "postal_code": "89169",
+           "country": "US",
+           "lat": 36.116902,
+           "lng": -115.15578,
+           "price": 2,
+
+
+           "thumbnail": "https://www.opentable.com/img/restimages/144655.jpg"
+       }
+  ]
+
+
 
 require 'faker'
 User.destroy_all
 Restaurant.destroy_all
 Reservation.destroy_all
 
+
 User.create!(username: 'jack', password: 'password')
 User.create!(username: 'demo_user', password: 'password')
-# 5.times do
-#   User.create!(username: Faker::Name.name, password: Faker::Name.name)
-# end
+
+
 CITIES = CHICAGO + NEW_YORK + SAN_FRANCISCO
 
 CHICAGO.each do |restaurant|
@@ -945,6 +2229,19 @@ SAN_FRANCISCO.each do |restaurant|
   Restaurant.create!(restaurant)
 end
 
+MIAMI.each do |restaurant|
+  Restaurant.create!(restaurant)
+end
+
+LOS_ANGELES.each do |restaurant|
+  Restaurant.create!(restaurant)
+end
+
+LAS_VEGAS.each do |restaurant|
+  Restaurant.create!(restaurant)
+end
+
+
 
 
 Reservation.create!(user_id: User.first.id, restaurant_id: Restaurant.first.id, head_count: 5, date:" 17/11/28", timeslot: "07:00:00")
@@ -957,85 +2254,15 @@ Reservation.create!(user_id: User.first.id, restaurant_id: Restaurant.last.id, h
 Reservation.create!(user_id: User.first.id, restaurant_id: Restaurant.last.id, head_count: 5, date: "17/11/29", timeslot: "09:00:00")
 
 
-Favorite.create!(user_id:2, restaurant_id: 10)
-Favorite.create!(user_id:2, restaurant_id: 9)
-Favorite.create!(user_id:2, restaurant_id: 8)
-Favorite.create!(user_id:2, restaurant_id: 7)
-Favorite.create!(user_id:2, restaurant_id: 15)
+Favorite.create!(user_id: User.first.id, restaurant_id: 10)
+Favorite.create!(user_id: User.first.id, restaurant_id: 9)
+Favorite.create!(user_id: User.first.id, restaurant_id: 8)
+Favorite.create!(user_id: User.first.id, restaurant_id: 7)
+Favorite.create!(user_id: User.first.id, restaurant_id: 15)
 
 
-Favorite.create!(user_id:1, restaurant_id: 10)
-Favorite.create!(user_id:1, restaurant_id: 9)
-Favorite.create!(user_id:1, restaurant_id: 8)
-Favorite.create!(user_id:1, restaurant_id: 7)
-Favorite.create!(user_id:1, restaurant_id: 15)
-
-
-
-
-
-
-# CITIES.each do |city|
-#   city.each do |restaurant|
-#     # Restaurant.create!(restaurant)
-#     print restaurant
-#   end
-# end
-
-
-
-
-
-
-
-
-
-
-# Restaurant.create!(
-#   name: 'McDonalds',
-#   address: '825 Battery Street',
-#   city: 'SF',
-#   state: 'CA',
-#   postal_code: '94122',
-#   country: 'USA',
-#   price: 1,
-#   category: 'American',
-#   owner_id: 1
-# )
-#
-#
-# Restaurant.create!(
-#   name: 'Subway',
-#   address: '725 Battery Street',
-#   city: 'SF',
-#   state: 'CA',
-#   postal_code: '94122',
-#   country: 'USA',
-#   price: 1,
-#   category: 'American',
-#   owner_id: 1
-# )
-#
-# Restaurant.create!(
-#   name: 'Subway',
-#   address: '725 Battery Street',
-#   city: 'SF',
-#   state: 'CA',
-#   postal_code: '94122',
-#   country: 'USA',
-#   price: 1,
-#   category: 'American',
-#   owner_id: 2
-# )
-#
-# Restaurant.create!(
-#   name: 'Omars Taqueria',
-#   address: 'estacion 4',
-#   city: 'SF',
-#   state: 'CA',
-#   postal_code: '94122',
-#   country: 'USA',
-#   price: 1,
-#   category: 'Mexican',
-#   owner_id: 2
-# )
+Favorite.create!(user_id: User.first.id, restaurant_id: 10)
+Favorite.create!(user_id: User.first.id, restaurant_id: 9)
+Favorite.create!(user_id: User.first.id, restaurant_id: 8)
+Favorite.create!(user_id: User.first.id, restaurant_id: 7)
+Favorite.create!(user_id: User.first.id, restaurant_id: 15)
