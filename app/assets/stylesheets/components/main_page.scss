@@ -17,46 +17,32 @@
 
 }
 
-// .featured-areas{
-//   width: 65%;
-//   border: 1px gray;
-//   height: 40%;
-//   margin-top: 10%;
-//   margin-left: 35%;
-//   background: white;
-//   border-radius: 5px;
-//   position: relative;
-//   text-align: center;
-//
-// }
+
 .main-content{
   border: 1px gray;
   width: 60%;
-  // background: white;
+
   height: 40%;
   text-align: left;
   margin-right: 4%;
   margin-top: 10%;
-  border-radius: 3px;
+
 
 }
 .featured-areas{
   display: flex;
   height: 85%;
+  flex-wrap: wrap;
+  border-radius: 3px;
 }
 
 .media{
-  width: 33.34%;
+  width: 33.3%;
   margin: 0px;
   box-sizing: border-box;
+  position: relative;
 }
 
-
-// .content-block-header{
-//   border-bottom: 1px gray;
-//   height: 15%;
-//   margin-left: 5px;
-// }
 
 
 .featured-areas-row1{
@@ -71,32 +57,20 @@
   position: relative;
   opacity: 1;
   left: 0;
-  // width: 250px;
-  // height: 200px;
   border-radius: 0;
   filter: brightness(70%);
 }
 
-// .center{
-//    position: absolute;
-//    top: 75%;
-//    left: 50%;
-//    transform: translate(-50%, -50%);
-//    z-index: 100px;
-//    color: white;
-//    font-weight: bold;
-//    font-size: 20px;
-//    width: auto;
-// }
+
 
 .center{
   position: absolute;
   color: white;
   font-weight: bold;
-  font-size: 30px;
+  font-size: 35px;
   width: auto;
-  top: 35%;
-  margin-left: 6%;
+  margin-top: -85%;
+  margin-left: 25%;
   height:auto;
 
 }
@@ -125,23 +99,8 @@
   height: 44px;
   font-size: 20px;
 
-  // background-image: url(http://www.9zap.com/wp-content/uploads/2010/08/329.jpg);
-  // background-position: 10px 10px;
-  // background-repeat: no-repeat;
 }
 
-// .main-page-reservation{
-//   width: 75%;
-//
-// }
-
-// .main-page-reservation-select{
-//   width: 125px;
-//   height: 50px;
-//   font-size: 20px;
-//
-//
-// }
 
 
 
