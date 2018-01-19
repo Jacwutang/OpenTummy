@@ -6,6 +6,7 @@ class Search extends React.Component{
       super(props);
       this.state = {query: '', results: [], city: ''};
 
+
     }
 
     handleInput(e, query){
@@ -14,23 +15,18 @@ class Search extends React.Component{
 
         this.findMatches();
 
-        // var bool = true;
+
         $('.search-bar').css('display','block');
 
     }
 
     findMatches(){
-      // this.props.searchAllRestaurants(this.state.query)
-
       this.props.searchAllRestaurants(this.state.query);
-      // return(
-      //   this.props.searchAllRestaurants(this.state.query).then( (resturants) => this.renderMatches(restaurants) )
-      // );
-      //  this.props.processRestaurant(restaurant).then(() => this.props.history.push('/profile'));
+
     }
 
     renderMatches(){
-      // if(this.props.match.)
+
 
       if(this.props.results === undefined || Object.keys(this.props.results).length === 0){
         return;
@@ -66,45 +62,20 @@ class Search extends React.Component{
 
     }
 
-    handleListClick(id){
-
-
-      // this.props.requestRestaurant(id);
-        // ($('location-header'))
-        // (document.getElementById("location-header"));
-      // document.getElementById("location-header").style.visibility = "hidden";
-      // document.getElementById("search-bar").style.visibility = "hidden";
-
-
-    }
-
-
-    handleBlur(bool){
-      // $('ul').css('display', 'block');
-
-      // if(bool === true){
-      //   //but first redirect
-      //   document.getElementById('search-bar').style.visibility = "hidden";
-      // } else{
-        //  document.getElementById('search-bar').style.visibility = "visible";
-      // }
-
-
-    }
-
-
 
     render(){
 
-      // if(this.state.query !== ''){
-      //     this.findMatches();
-      // }
 
       window.onclick = function(event) {
         if (!event.target.matches('.search-bar') ){
             $('.search-bar').css('display', 'none');
+            // $('.media').css('z-index','-1');
+        } else{
+          // $('.media').css('z-index','-1');
         }
+
       }
+
           return(
         <span className = "location-search-container">
           <span>

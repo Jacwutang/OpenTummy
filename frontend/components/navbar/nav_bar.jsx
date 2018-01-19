@@ -17,7 +17,7 @@ const sessionLinks = (searchResults,searchAllRestaurants) => {
 
       />
 
-    
+
 
       <span className = "header-title">
 
@@ -92,15 +92,3 @@ const NavBar = ({currentUser,logout}) => (
 );
 
 export default NavBar;
-
-
-
-// <span className = "location-search-container">
-//   <span>
-//     <i className="fa fa-map-marker location-search-container" aria-hidden="true"></i>
-//   </span>
-//
-//   <input className = "location-search-input"
-//   type="text"
-//   placeholder="Locations"></input>
-// </span>
