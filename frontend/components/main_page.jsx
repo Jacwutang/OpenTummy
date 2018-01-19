@@ -74,7 +74,7 @@ class MainPage extends React.Component{
                  <img className = "featured-areas-img" src="https://wallpapercave.com/wp/MvtBAPM.jpg"/>
               </Link>
               <div className = "center">
-                  Las Veg
+                  Las Vegas
               </div>
             </div>
 
