@@ -23,7 +23,7 @@ const App = () => (
 
   <div>
     <Route path = "/" component={NavBarContainer}/>
-    <Route path = "/" component={FooterContainer} />
+
 
     <Switch>
       <AuthRoute path = "/login" component={SessionFormContainer} />
@@ -49,9 +49,11 @@ const App = () => (
       <Route exact path = "/" component={MainPageContainer} />
 
       <Route component={MainPageContainer} />
+
+
     </Switch>
 
-
+    <Route path = "/" component={FooterContainer} />
   </div>
 
 
