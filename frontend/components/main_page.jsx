@@ -19,69 +19,72 @@ class MainPage extends React.Component{
 
 
           <div className = "featured-areas">
+
             <div className = "media">
             <Link to = "/New-York">
-              <img className = "featured-areas-img" src="http://travelhdwallpapers.com/wp-content/uploads/2014/04/Statue-Of-Liberty-24.jpg"/>
-            </Link>
-              <div className = "center">
-                New York City
-              </div>
+                <img className = "featured-areas-img" src="http://travelhdwallpapers.com/wp-content/uploads/2014/04/Statue-Of-Liberty-24.jpg"/>
 
+                <div className = "center">
+                  New York City
+                </div>
+            </Link>
             </div>
 
               <div className = "media">
               <Link to="/Chicago">
-                <img className = "featured-areas-img" src="https://upload.wikimedia.org/wikipedia/commons/2/26/Chicago_Theatre_blend.jpg"/>
+                  <img className = "featured-areas-img" src="https://upload.wikimedia.org/wikipedia/commons/2/26/Chicago_Theatre_blend.jpg"/>
+
+                  <div className = "center">
+                    Chicago
+                  </div>
               </Link>
-                <div className = "center">
-                  Chicago
-                </div>
               </div>
 
               <div className = "media">
                 <Link to="/San-Francisco">
-                   <img className = "featured-areas-img" src="http://dobsonchronicles.com/wp-content/uploads/2016/08/SF.jpg"/>
+                    <img className = "featured-areas-img" src="http://dobsonchronicles.com/wp-content/uploads/2016/08/SF.jpg"/>
+
+                    <div className = "center">
+                       San Francisco
+                     </div>
                 </Link>
-                <div className = "center">
-                   San Francisco
-                 </div>
               </div>
 
 
             <div className = "media">
-              <Link to="/San-Francisco">
-                 <img className = "featured-areas-img" src="  https://wallpapercave.com/wp/amoYyVx.jpg"/>
-              </Link>
-              <div className = "center">
-                 Miami
+              <Link to="/Miami">
+                  <img className = "featured-areas-img" src="  https://wallpapercave.com/wp/amoYyVx.jpg"/>
 
-               </div>
+                  <div className = "center">
+                     Miami
+                  </div>
+
+              </Link>
+
             </div>
 
 
             <div className = "media">
-              <Link to="/San-Francisco">
-                 <img className = "featured-areas-img" src="  http://www.trbimg.com/img-58fe77bd/turbine/la-me-ln-hollywood-sign-20170415"/>
+              <Link to="/Los-Angeles">
+                  <img className = "featured-areas-img" src="  http://www.trbimg.com/img-58fe77bd/turbine/la-me-ln-hollywood-sign-20170415"/>
+
+                  <div className = "center">
+                     Los Angeles
+                  </div>
               </Link>
-              <div className = "center">
-                 Los Angeles
-              </div>
             </div>
 
 
             <div className = "media">
-              <Link to="/San-Francisco">
+              <Link to="/Las-Vegas">
                  <img className = "featured-areas-img" src="https://wallpapercave.com/wp/MvtBAPM.jpg"/>
+
+                  <div className = "center">
+                      Las Vegas
+                  </div>
+
               </Link>
-              <div className = "center">
-                  Las Vegas
-              </div>
             </div>
-
-
-
-
-
 
 
           </div>
