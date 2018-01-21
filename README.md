@@ -1,13 +1,12 @@
-# README
-
 # OpenTummy
 
 <br/>
 
 **OpenTummy is inspired by OpenTable, a popular Restaurant and Dining application connecting people and good food.**
 <br/>
-![] (https://puu.sh/z64Ts/f28a0ca0db.png)
-Check it out https://opentummy.herokuapp.com/#/
+![](https://puu.sh/z669Y/3e107fdf7f.png)
+<br/>
+Check it out: [Live Demo](https://opentummy.herokuapp.com/#/)
 
 ## Technologies Used
 - OpenTummy uses Ruby on Rails as the backend, Postgresql as the database, and React-Redux as the frontend. 
@@ -69,3 +68,4 @@ As a User types, the query is sent to the database. One keystroke at a time.
 Additional Features (To be implemented):
 1) Expand search parameters to search restaurants by address, price, reviews.
 2) Rating and Reviews for restaurants.
+
