@@ -18,9 +18,11 @@ var prodPlugins = [
   })
 ];
 
-var plugins = plugins.concat(
-  process.env.NODE_ENV === 'production' ? prodPlugins : devPlugins
-);
+// var plugins = plugins.concat(
+//   process.env.NODE_ENV === 'production' ? prodPlugins : devPlugins
+// );
+
+
 
 
 
@@ -31,7 +33,7 @@ module.exports = {
     path: path.resolve(__dirname, 'app','assets','javascripts'),
     filename: "bundle.js"
   },
-  plugins: plugins,
+  plugins: prodPlugins,
   module: {
     loaders: [
       {
