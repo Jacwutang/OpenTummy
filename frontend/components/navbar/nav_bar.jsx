@@ -6,7 +6,7 @@ const sessionLinks = (searchResults,searchAllRestaurants) => {
   return(
     <header className = "header-nav">
 
-    <div className = "main-div">
+    <div className = "left-nav-div">
       <span className = "header-nav-icon">
       <a href="/">
        <i className="fa fa-cutlery fa-3x" aria-hidden="false"></i>
@@ -14,34 +14,29 @@ const sessionLinks = (searchResults,searchAllRestaurants) => {
       </span>
 
       <SearchContainer
-
       />
 
 
+    </div>
 
-      <span className = "header-title">
-
-
-         OpenTummy
-
-
-      </span>
+    <div className="header-title">
+    OpenTummy
 
     </div>
 
 
 
 
-      <nav className = "header-nav-session">
+      <span className = "header-nav-session">
         <Link to= "/login">
           <button type="button">Login</button>
         </Link>
 
         <Link to= "/signup">
-          <button type="button">Sign Up</button>
+          <button type="button">Register</button>
         </Link>
 
-      </nav>
+      </span>
 
     </header>
   )
@@ -51,7 +46,7 @@ const sessionLinks = (searchResults,searchAllRestaurants) => {
 
 const loggedInShow = (currentUser,logout) => (
   <header className = "header-nav">
-  <div className = "main-div">
+  <div className = "left-header-div">
     <span className = "header-nav-icon">
       <a href="/">
       <i className="fa fa-cutlery fa-3x" aria-hidden="false"></i>
@@ -62,11 +57,12 @@ const loggedInShow = (currentUser,logout) => (
 
      />
 
-    <span className = "header-title">
-          OpenTummy
-    </span>
+  </div>
 
-    </div>
+  <div className="header-title">
+    OpenTummy
+
+  </div>
 
     <span className = "header-nav-session">
       Welcome, {currentUser.username}
@@ -92,3 +88,14 @@ const NavBar = ({currentUser,logout}) => (
 );
 
 export default NavBar;
+
+
+
+
+      // <span className = "header-title">
+      //
+      //
+      //    OpenTummy
+      //
+      //
+      // </span>

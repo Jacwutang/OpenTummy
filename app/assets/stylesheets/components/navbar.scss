@@ -1,26 +1,24 @@
 .header-nav{
-  // background: $light-blue;
+
   display: flex;
   justify-content: space-between;
-  // position: absolute;
-  // height: 10%;
-  // padding-top: 15px;
-  // width: 100%;
   height:50px;
-    width:100%;
-    top:0px;
-    left:0px;
-    background: white;
-    position:fixed;
-    border-bottom: 1px solid black;
-    z-index: 1;
+  width:100%;
+  position: absolute;
+  top:0px;
+  left:0px;
+  background: white;
+  
+  border-bottom: 1px solid black;
+  z-index: 1;
+
 
 }
 
-.main-div{
+.left-nav-div{
   display: flex;
   justify-content: flex-start;
-  max-width: 75%;
+  // max-width: 75%;
   margin-left: 0px;
   box-sizing: border-box;
 
@@ -61,19 +59,14 @@
  color: $red;
 }
 
-// .header-nav-session > a:last-child{
-//     padding-left: 10px;
-//     padding-right: 3px;
-// }
+
 
 .header-nav-session{
   padding-top: 10px;
   padding-right: 5px;
-  // padding-left: 5px;
   display: flex;
   justify-content: flex-end;
   font-family: $sans-serif;
-
 }
 
 
@@ -106,8 +99,6 @@
 .header-title{
   font-family: 'Quicksand', sans-serif;
   font-size: 40px;
-  text-align: center;
-  margin-left: 36%;
   font-weight: Bold;
 
 }
