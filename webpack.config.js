@@ -18,9 +18,9 @@ var prodPlugins = [
   })
 ];
 
-plugins = plugins.concat(
+var plugins = plugins.concat(
   process.env.NODE_ENV === 'production' ? prodPlugins : devPlugins
-)
+);
 
 
 
