@@ -11,6 +11,7 @@ if (process.env.NODE_ENV !== 'production') {
 const { logger } = require('redux-logger');
 middlewares.push(logger);
 console.log("HEREREE");
+console.log(process.env.NODE_ENV);
 }
 const configureStore = (preloadedState = {}) => {
 
