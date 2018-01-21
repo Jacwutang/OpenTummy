@@ -6,7 +6,7 @@
 
 **OpenTummy is inspired by OpenTable, a popular Restaurant and Dining application connecting people and good food.**
 <br/>
-![](http://puu.sh/z64Ts/f28a0ca0db.png)
+![] https://puu.sh/z64Ts/f28a0ca0db.png
 Check it out https://opentummy.herokuapp.com/#/
 
 ## Technologies Used
