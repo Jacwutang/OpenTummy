@@ -1,18 +1,43 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import Modal from 'react-responsive-modal';
 
 class MainPage extends React.Component{
   constructor(props){
     super(props);
+
+    // this.state = {
+    //   open: false
+    //
+    // }
+
   }
 
   componentDidMount(){
-    this.props.requestAllRestaurants();
+    this.props.requestAllRestaurants().then(() => this.openModal());
   }
+
+  openModal(){
+
+    debugger;
+    <Modal open={true} little>
+      <h2> Hi </h2>
+    </Modal>
+  }
+
+  // onOpenModal(){
+  //   this.setState({ open: true })
+  // }
+  //
+  // onCloseModal(){
+  //   this.setState({ open: false });
+  //
+  // }
 
 
 
   render(){
+
     return(
       <div className = "main-page">
         <div className = "main-content">

@@ -22,37 +22,7 @@ document.addEventListener("DOMContentLoaded", () =>{
   }
 
 
-  // window.getState = store.getState;
-  // window.dispatch = store.dispatch;
-  // window.store = store;
-  // window.signup = signup;
-  // window.login = login;
-  // window.logout = logout;
-  //
-  //
-  // window.createRestaurant = createRestaurant;
-  // window.requestAllRestaurants = requestAllRestaurants;
-  // window.createReservation = createReservation;
-  // window.deleteReservation = deleteReservation;
-  // window.searchAllRestaurants = searchAllRestaurants;
-  // window.editReservation = editReservation;
-  // window.createFavorite = createFavorite;
-  // window.deleteFavorite = deleteFavorite;
 
 
   ReactDOM.render(<Root store={store}/>, root);
 });
-
-//USE window.dispatch(logout())
-//
-
-// res = {restaurant: {  name: "10pin Bowling Lounge",
-//             address: "330 N State Street",
-//             city: "Chicago",
-//             state: "IL",
-//             postal_code: "60610",
-//             country: "US",
-//             price: 3,
-//             lat: 41.888634,
-//             lng: -87.628091,
-//             thumbnail: "https://www.opentable.com/img/restimages/7267.jpg"}

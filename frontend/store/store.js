@@ -10,7 +10,7 @@ if (process.env.NODE_ENV === 'production') {
 // must use 'require' (import only allowed at top of file)
 // const { logger } = require('redux-logger');
 // middlewares.push(logger);
-// console.log("HEREREE");
+
 // console.log(process.env.NODE_ENV);
 }
 const configureStore = (preloadedState = {}) => {

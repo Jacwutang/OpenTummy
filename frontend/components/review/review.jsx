@@ -24,8 +24,7 @@ class Review extends React.Component{
   }
 
   handleSubmit(){
-    // (this.state.rating);
-    // (this.state.content);
+  
 
     let review = {};
     review.body = this.state.body;
