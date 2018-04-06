@@ -21,8 +21,9 @@ class ReservationForm extends React.Component{
 
       var month = (time.getMonth() + 1);
       var date_month = month < 10? `0${month}`: month;
+      var formatted_today = today >= 10? today: `0${today}`;
 
-      this.state = {id: 0, timeslot: "12:00:00", head_count: 1, date: `${year}-${date_month}-${today}` };
+      this.state = {id: 0, timeslot: "", head_count: "", date: `${year}-${date_month}-${formatted_today}` };
 
     }
 
@@ -57,7 +58,7 @@ class ReservationForm extends React.Component{
 
       this.props.editReservation(reservation).then(() => this.props.history.push('/profile'));
     } else{
-      
+
       this.props.createReservation(reservation).then(() => this.props.history.push('/profile'));
     }
 
@@ -93,7 +94,7 @@ class ReservationForm extends React.Component{
 
   render(){
     let restaurantId = parseInt(this.props.match.params.restaurantId);
-
+    console.log(this.state.date);
 
     return(
     <div>
