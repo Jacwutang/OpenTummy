@@ -58,7 +58,7 @@ class RestaurantIndexItem extends React.Component{
 
               <div>
                 <i className="fa fa-fire fa-2x" aria-hidden="true"></i>
-                <span className = "icon-span-restaurant-index"> Booked 25 times today! </span>
+                <span className = "icon-span-restaurant-index"> Booked {Math.floor(Math.random() * Math.floor(100))} times today! </span>
               </div>
 
             </div>
