@@ -73,30 +73,33 @@ class ReservationForm extends React.Component{
   handleSubmit(e){
     e.preventDefault();
 
-    if(this.props.reservationId === undefined){
-          this.state.id = null;
-
-    }else{
-      this.state.id = this.props.reservationId;
-    }
 
 
 
-    this.props.currentUser === undefined ? this.state.user_id = 0 : this.state.user_id = this.props.currentUser.id
-    this.state.restaurant_id = this.props.match.params.restId;
-    this.state.thumbnail = this.props.restaurant.thumbnail;
-
-    const reservation = this.state;
-
-
-
-    if(this.props.reservationId !== null && this.props.reservationId !== undefined){
-
-      this.props.editReservation(reservation).then(() => this.props.history.push('/profile'));
-    } else{
-
-      this.props.createReservation(reservation).then(() => this.props.history.push('/profile'));
-    }
+    // if(this.props.reservationId === undefined){
+    //       this.state.id = null;
+    //
+    // }else{
+    //   this.state.id = this.props.reservationId;
+    // }
+    //
+    //
+    //
+    // this.props.currentUser === undefined ? this.state.user_id = 0 : this.state.user_id = this.props.currentUser.id
+    // this.state.restaurant_id = this.props.match.params.restId;
+    // this.state.thumbnail = this.props.restaurant.thumbnail;
+    //
+    // const reservation = this.state;
+    //
+    //
+    //
+    // if(this.props.reservationId !== null && this.props.reservationId !== undefined){
+    //
+    //   this.props.editReservation(reservation).then(() => this.props.history.push('/profile'));
+    // } else{
+    //
+    //   this.props.createReservation(reservation).then(() => this.props.history.push('/profile'));
+    // }
 
 
 
@@ -129,7 +132,7 @@ class ReservationForm extends React.Component{
 
 
   render(){
-    let restaurantId = parseInt(this.props.match.params.restaurantId);
+    // let restaurantId = parseInt(this.props.match.params.restaurantId);
     // console.log(this.state.timeslot);
     // if(this.state.loaded === false){
     //   return null;
