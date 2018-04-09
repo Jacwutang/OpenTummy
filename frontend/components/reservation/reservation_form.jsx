@@ -6,27 +6,63 @@ class ReservationForm extends React.Component{
     super(props);
     this.handleSubmit = this.handleSubmit.bind(this);
 
+    this.state = ({
+      loaded: false,
+      head_count: "",
+      timeslot: "",
+      date: ""
 
-    if(this.props.formType === 'Edit this Reservation') {
-      this.state = this.props.reservation[this.props.reservationId];
-      this.state.date = this.props.reservation[this.props.reservationId].date.slice(0,10);
+    })
 
-      this.state.timeslot = this.props.reservation[this.props.reservationId].timeslot.slice(11,19);
+    // if(this.props.formType === 'Edit this Reservation') {
+    //   this.state = this.props.reservation[this.props.reservationId];
+    //   this.state.date = this.props.reservation[this.props.reservationId].date.slice(0,10);
+    //
+    //   this.state.timeslot = this.props.reservation[this.props.reservationId].timeslot.slice(11,19);
+    //
+    // }
 
+  }
+
+  componentDidMount(){
+    if(this.props.formType === 'Book this Restaurant'){
+      this.loadDefaultValues();
     } else{
-
-      var time = new Date();
-      var today = time.getDate().toString();
-      var year = time.getFullYear().toString();
-
-      var month = (time.getMonth() + 1);
-      var date_month = month < 10? `0${month}`: month;
-      var formatted_today = today >= 10? today: `0${today}`;
-
-      this.state = {id: 0, timeslot: "", head_count: "", date: `${year}-${date_month}-${formatted_today}` };
-
+      this.loadEditValues();
     }
+  }
 
+  loadEditValues(){
+    const {date,timeslot,head_count} =  this.props.reservation[this.props.reservationId];
+    console.log(date,timeslot)
+
+    // "2017-02-10"
+    // "12:34"
+    this.setState({
+      loaded: true,
+      head_count: head_count,
+      timeslot: timeslot,
+      date: date
+    });
+  }
+
+  loadDefaultValues(){
+    let time = new Date();
+
+    let today = time.getDate().toString();
+
+    let year = time.getFullYear().toString();
+
+    let month = (time.getMonth() + 1);
+    let format_month = month < 10? `0${month}`: month;
+    let format_today = today >= 10? today: `0${today}`;
+
+    let hour = time.getHours();
+    let mins = time.getMinutes();
+
+    this.setState({
+        timeslot: `${hour}:${mins}`, head_count: "", date: `${year}-${format_month}-${format_today}`,loaded: true
+      });
   }
 
   componentWillMount(){
@@ -94,17 +130,20 @@ class ReservationForm extends React.Component{
 
   render(){
     let restaurantId = parseInt(this.props.match.params.restaurantId);
-    console.log(this.state.date);
-
+    // console.log(this.state.timeslot);
+    // if(this.state.loaded === false){
+    //   return null;
+    // }
+    // console.log(this.state.date, "HERE");
     return(
     <div>
       <div className = "reservation-div">
 
-      <input className = "reservation-input"
-      onChange={this.handleInput('head_count')}
-      value={this.state.head_count}
-      placeholder = "Party Size"
-      type="text"/>
+        <input className = "reservation-input"
+        onChange={this.handleInput('head_count')}
+        value={this.state.head_count}
+        placeholder = "Party Size"
+        type="text"/>
 
 
         <input className = "reservation-input"
@@ -116,8 +155,7 @@ class ReservationForm extends React.Component{
         <input className = "reservation-input"
         onChange={this.handleInput('timeslot')}
         value={this.state.timeslot}
-        placeholder = "Enter timeslot in hh::mm:ss format"
-        type="text"/>
+        type="time"/>
 
 
 
