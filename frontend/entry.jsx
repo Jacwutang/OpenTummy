@@ -7,6 +7,7 @@ import {createRestaurant, requestAllRestaurants,searchAllRestaurants} from './ac
 import {createReservation, deleteReservation, editReservation} from './actions/reservation_actions';
 import {createFavorite, deleteFavorite} from './actions/favorite_actions';
 
+
 document.addEventListener("DOMContentLoaded", () =>{
   const root = document.getElementById('root');
 
