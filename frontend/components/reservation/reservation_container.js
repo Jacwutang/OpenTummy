@@ -16,24 +16,33 @@ const mapStateToProps = (state,ownProps) => {
     };
   }
 
-   let resValues = Object.values(state.session.currentUser.reservations);
+   let {reservations} = state.session.currentUser;
+
+   let resValues = Object.values(reservations);
 
 
+   // Find the reservation id that corresponds to the restaurant_id
     let reservationId = null;
+    let route_params_rest_id = ownProps.match.params.restId;
     resValues.forEach( (el) => {
-     if (el.restaurant_id === parseInt(ownProps.match.params.restId)){
+     if (el.restaurant_id === parseInt(route_params_rest_id)){
          reservationId = el.id;
+
      }
     });
 
+    // console.log(resValues);
+    // console.log(reservationId, "REST_ID");
+    // console.log(route_params_rest_id, "ROUTE")
 
 
-   var permittedValues = _.map(resValues, 'restaurant_id');
+   // var permittedValues = _.map(resValues, 'restaurant_id');
+   //
+   // var permittedValuesToString = permittedValues.map(value => value.toString());
+   //
+   // const formType = permittedValuesToString.includes(route_params_rest_id)? 'Edit this Reservation': 'Book this Restaurant'
 
-   var permittedValuesToString = permittedValues.map(value => value.toString());
-
-   const formType = permittedValuesToString.includes(ownProps.match.params.restId)? 'Edit this Reservation': 'Book this Restaurant'
-
+   const formType = reservationId === null? 'Book this Restaurant': 'Edit this Reservation'
 
 
 
