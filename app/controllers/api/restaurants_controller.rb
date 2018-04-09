@@ -14,8 +14,6 @@ class Api::RestaurantsController < ApplicationController
       else
         @restaurants = Restaurant.all
         render "api/restaurants/index"
-        
-
     end
 
 
@@ -32,9 +30,7 @@ class Api::RestaurantsController < ApplicationController
 
     @rest = Restaurant.new(rest_params)
     if @rest.save
-      # print ("hello world")
-      # print(@rest.id)
-      # print( @rest)
+
 
       render "api/restaurants/show"
 

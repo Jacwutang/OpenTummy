@@ -1,6 +1,6 @@
 class Review < ApplicationRecord
 
-  validates :user_id, :restaurant_id, :body, presence: true
+  validates :user_id, :restaurant_id, :body, :rating, presence: true
 
   belongs_to :user,
     primary_key: :id,
@@ -12,6 +12,8 @@ class Review < ApplicationRecord
     primary_key: :id,
     foreign_key: :restaurant_id,
     class_name: 'Restaurant'
+
+
 
 
 

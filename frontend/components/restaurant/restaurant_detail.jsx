@@ -13,12 +13,7 @@ class RestaurantDetail extends React.Component{
     };
   }
 
-  // componentWillReceiveProps(nextProps){
-  //   if(this.props.location.pathname !== nextProps.location.pathname){
-  //     this.props.requestRestaurant(this.props.match.params.restId);
-  //   }
-  // }
-
+  
   componentDidMount(){
     this.props.requestRestaurant(this.props.match.params.restId).then(() => this.setState({loaded:true}));
     window.scrollTo(0,0);
@@ -102,36 +97,3 @@ class RestaurantDetail extends React.Component{
 }
 
 export default RestaurantDetail;
-
-
-
-// <div className = "content-div">
-//   <h1 className="h1-content-div"> Ratings and Reviews
-//   <button onClick={() => this.onOpenModal() }>Leave a Review</button>
-//     <Modal open={open} onClose={() => {this.onCloseModal()} } little>
-//       <h2>Leave a Review</h2>
-//       <ReactStars
-//           className = "rating-div"
-//           count={5}
-//           onChange={(rating) => {this.ratingChanged(rating)} }
-//           size={24}
-//           value={0}
-//           half={false}
-//           color2={'#ffd700'}/>
-//           <textarea rows="5" cols="50"/>
-//           <button
-//           type="submit"
-//           onClick={this.}
-//           >
-//           Submit
-//
-//           </button>
-//     </Modal>
-//   </h1>
-//
-//   <hr/>
-//   <span> Gooooood stuff. I love it </span>
-// </div>
-//
-// <div className = "placeholder-div">
-// </div>
