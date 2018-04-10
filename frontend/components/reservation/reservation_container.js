@@ -51,7 +51,7 @@ const mapStateToProps = (state,ownProps) => {
     errors: state.errors.reservation,
     formType,
     reservationId,
-    reservation: state.session.currentUser.reservations,
+    reservations: state.session.currentUser.reservations,
 
   }
 

@@ -20,7 +20,7 @@ export const receiveReservation = (reservation) => ({
   reservation
 });
 
-
+// thunk action creators
 export const createReservation = reservation => dispatch => (
   RESERVATIONutil.createReservation(reservation).then(reservation => (
     dispatch(receiveReservation(reservation))), err => (dispatch(receiveReservationErrors(err.responseJSON)))
@@ -35,4 +35,4 @@ export const editReservation = reservation => dispatch => (
 export const deleteReservation = (id) => dispatch => (
     RESERVATIONutil.deleteReservation(id).then (resp => (
       dispatch(removeReservation(resp))
-    )));
+)));

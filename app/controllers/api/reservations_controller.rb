@@ -10,7 +10,7 @@ class Api::ReservationsController < ApplicationController
     if !current_user
       render json: ["Please Login before making a reservation"], status: 401
 
-    elsif @reservation.save && current_user
+    elsif @reservation.save
       render "api/reservations/show"
     else
       render json: ["Please fill all input fields"], status: 401

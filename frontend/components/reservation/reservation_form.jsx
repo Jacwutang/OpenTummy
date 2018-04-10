@@ -10,8 +10,8 @@ class ReservationForm extends React.Component{
       loaded: false,
       head_count: "",
       timeslot: "",
-      date: ""
-
+      date: "",
+      edit: false
     })
 
     // if(this.props.formType === 'Edit this Reservation') {
@@ -33,20 +33,24 @@ class ReservationForm extends React.Component{
   }
 
   loadEditValues(){
-    const {date,timeslot,head_count} =  this.props.reservation[this.props.reservationId];
-    console.log(date,timeslot)
+    const {date,timeslot,head_count} =  this.props.reservations[this.props.reservationId];
+    // console.log(date,timeslot)
 
     // "2017-02-10"
     // "12:34"
+    console.log(date,timeslot,head_count);
+
     this.setState({
       loaded: true,
       head_count: head_count,
       timeslot: timeslot,
-      date: date
+      date: date,
+      edit: true
     });
   }
 
   loadDefaultValues(){
+
     let time = new Date();
 
     let today = time.getDate().toString();
@@ -57,11 +61,16 @@ class ReservationForm extends React.Component{
     let format_month = month < 10? `0${month}`: month;
     let format_today = today >= 10? today: `0${today}`;
 
-    let hour = time.getHours();
-    let mins = time.getMinutes();
+    let hour = time.getHours() < 10? `0${time.getHours()}`: time.getHours();
+    let mins = time.getMinutes() < 10? `0${time.getMinutes()}`: time.getMinutes();
 
+    // console.log(hour,mins, "HERE");
     this.setState({
-        timeslot: `${hour}:${mins}`, head_count: "", date: `${year}-${format_month}-${format_today}`,loaded: true
+        timeslot: `${hour}:${mins}`,
+        head_count: "",
+        date: `${year}-${format_month}-${format_today}`,
+        loaded: true,
+        edit: false
       });
   }
 
@@ -73,35 +82,37 @@ class ReservationForm extends React.Component{
   handleSubmit(e){
     e.preventDefault();
 
+    //edit --> reservation_id
+    //create --> restaurant_id
 
 
 
-    // if(this.props.reservationId === undefined){
-    //       this.state.id = null;
-    //
-    // }else{
-    //   this.state.id = this.props.reservationId;
-    // }
-    //
-    //
-    //
-    // this.props.currentUser === undefined ? this.state.user_id = 0 : this.state.user_id = this.props.currentUser.id
-    // this.state.restaurant_id = this.props.match.params.restId;
-    // this.state.thumbnail = this.props.restaurant.thumbnail;
-    //
-    // const reservation = this.state;
-    //
-    //
-    //
-    // if(this.props.reservationId !== null && this.props.reservationId !== undefined){
-    //
-    //   this.props.editReservation(reservation).then(() => this.props.history.push('/profile'));
-    // } else{
-    //
-    //   this.props.createReservation(reservation).then(() => this.props.history.push('/profile'));
-    // }
+    const reservationPrototype = {
+      head_count:this.state.head_count,
+      timeslot: this.state.timeslot,
+      date: this.state.date
+    };
+
+    if(this.state.edit === true){
+      // const reservation_id = this.props.reservationId;
+      // const reservation = {head_count:head_count, timeslot: timeslot, date: date, reservation_id: reservation_id};
+      let reservation = Object.assign({},reservationPrototype, this.props.reservationId )
+
+      this.props.editReservation(reservation),then( () => this.props.history.push('/profile'));
+    } else {
 
 
+        let reservation = Object.assign(
+          {},
+          reservationPrototype,
+          {user_id:this.props.currentUser.id},
+          {restaurant_id:this.props.match.params.restId}
+        );
+
+        console.log(reservation, "reservation object");
+
+        this.props.createReservation(reservation).then(() => this.props.history.push('/profile'));
+    }
 
   }
 
