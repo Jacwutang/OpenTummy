@@ -96,9 +96,18 @@ class ReservationForm extends React.Component{
     if(this.state.edit === true){
       // const reservation_id = this.props.reservationId;
       // const reservation = {head_count:head_count, timeslot: timeslot, date: date, reservation_id: reservation_id};
-      let reservation = Object.assign({},reservationPrototype, this.props.reservationId )
+      let reservation = Object.assign(
+        {},
+        reservationPrototype,
+        {id: this.props.reservationId},
+        {user_id: this.props.currentUser.id},
+        {restaurant_id: this.props.match.params.restId}
+      );
 
-      this.props.editReservation(reservation),then( () => this.props.history.push('/profile'));
+      console.log(reservation, "res OBJECT");
+
+      this.props.editReservation(reservation).then(() => this.props.history.push('/profile'));
+
     } else {
 
 
