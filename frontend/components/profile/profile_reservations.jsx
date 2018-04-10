@@ -6,24 +6,12 @@ class ProfileReservations extends React.Component{
   constructor(props){
     super(props);
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.handleEdit = this.handleEdit.bind(this);
+
   }
 
   componentDidMount(){
     console.log(this.props);
   }
-
-
-  // handleTime(timeslot){
-  //
-  //
-  //
-  // }
-  //
-  // handleDate(date){
-  //
-  // }
-
 
   handleSubmit(id){
 
@@ -34,19 +22,10 @@ class ProfileReservations extends React.Component{
 
   }
 
-  handleEdit(id){
-
-    return(e => {
-      e.preventDefault();
-
-    })
-
-  }
-
   render(){
 
     const {reservations,restaurantsIndex} = this.props;
-    let x = 2;
+    // let x = 2;
 
 
     if(Object.keys(reservations).length === 0){
