@@ -2440,8 +2440,6 @@ NEGATIVE_REVIEW_BODIES = [
 
 
 
-
-
 require 'faker'
 User.destroy_all
 Restaurant.destroy_all
@@ -2459,6 +2457,7 @@ User.create!(username: 'jack', password: 'password')
 CITIES = CHICAGO + NEW_YORK + SAN_FRANCISCO
 
 CHICAGO.each do |restaurant|
+  
   Restaurant.create!(restaurant)
 end
 
@@ -2481,6 +2480,8 @@ end
 LAS_VEGAS.each do |restaurant|
   Restaurant.create!(restaurant)
 end
+
+
 
 
   (Restaurant.all.count * 3).times do
