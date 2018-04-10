@@ -14,14 +14,6 @@ class ReservationForm extends React.Component{
       edit: false
     })
 
-    // if(this.props.formType === 'Edit this Reservation') {
-    //   this.state = this.props.reservation[this.props.reservationId];
-    //   this.state.date = this.props.reservation[this.props.reservationId].date.slice(0,10);
-    //
-    //   this.state.timeslot = this.props.reservation[this.props.reservationId].timeslot.slice(11,19);
-    //
-    // }
-
   }
 
   componentDidMount(){
@@ -34,10 +26,7 @@ class ReservationForm extends React.Component{
 
   loadEditValues(){
     const {date,timeslot,head_count} =  this.props.reservations[this.props.reservationId];
-    // console.log(date,timeslot)
 
-    // "2017-02-10"
-    // "12:34"
     console.log(date,timeslot,head_count);
 
     this.setState({
@@ -94,8 +83,7 @@ class ReservationForm extends React.Component{
     };
 
     if(this.state.edit === true){
-      // const reservation_id = this.props.reservationId;
-      // const reservation = {head_count:head_count, timeslot: timeslot, date: date, reservation_id: reservation_id};
+
       let reservation = Object.assign(
         {},
         reservationPrototype,
@@ -152,12 +140,7 @@ class ReservationForm extends React.Component{
 
 
   render(){
-    // let restaurantId = parseInt(this.props.match.params.restaurantId);
-    // console.log(this.state.timeslot);
-    // if(this.state.loaded === false){
-    //   return null;
-    // }
-    // console.log(this.state.date, "HERE");
+  
     return(
     <div>
       <div className = "reservation-div">
