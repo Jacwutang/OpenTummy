@@ -2204,7 +2204,8 @@
   ]
 
 
-ABOUT = ["Our Mission is to establish beneficial business relationships with diverse suppliers who share our commitment to customer service, quality and competitive pricing.", "To provide an exceptional dining experience that satisfies our guests’ grown-up tastes by being a “Cut-Above” in everything we do", "Our aim is to provide happiness and joy through, food, music and art.", "We are Committed to using the finest ingredients in our recipes. No food leaves our kitchen that we ourselves would not eat.", "To ensure that each guest receives prompt, professional, friendly and courteous service. To maintain a clean, comfortable and well maintained premises for our guests and staff. To provide at a fair price – nutritional, well-prepared meals – using only quality ingredients.", "To inspire healthier communities by connecting people to real food", "Make amazing food - Offer warm welcoming service - Give back to the neighborhood", "To help citizens live better"];
+ABOUT = ["Our Mission is to establish beneficial business relationships with diverse suppliers who share our commitment to customer service, quality and competitive pricing.", "To provide an exceptional dining experience that satisfies our guests’ grown-up tastes by being a “Cut-Above” in everything we do", "Our aim is to provide happiness and joy through, food, music and art.", "We are Committed to using the finest ingredients in our recipes. No food leaves our kitchen that we ourselves would not eat.", "To ensure that each guest receives prompt, professional, friendly and courteous service. To maintain a clean, comfortable and well maintained premises for our guests and staff. To provide at a fair price – nutritional, well-prepared meals – using only quality ingredients.", "To inspire healthier communities by connecting people to real food", "Make amazing food - Offer warm welcoming service - Give back to the neighborhood", "To help people eat better","Do No Evil",
+"To create awesome food, served quickly by warm and friendly people", "To be the very best, like no restaurant ever was. To cook food is my test"];
 
 #array of cloudinary seed photos
 PHOTOS = [
@@ -2437,6 +2438,7 @@ NEGATIVE_REVIEW_BODIES = [
   "Food is bland. Very bland, flavorless, dry (oh and it came with a free stone too on my salad!)."
 ];
 
+CATEGORY = ["Chinese", "American", "Fusion", "Japanese", "Carribean", "Thai", "Egyptian","Italian","Casual","Fine-Dining"];
 
 
 
@@ -2457,29 +2459,43 @@ User.create!(username: 'jack', password: 'password')
 CITIES = CHICAGO + NEW_YORK + SAN_FRANCISCO
 
 CHICAGO.each do |restaurant|
-  
+  restaurant['category'] = CATEGORY.sample
+  restaurant['description'] = ABOUT.sample
   Restaurant.create!(restaurant)
 end
 
 NEW_YORK.each do |restaurant|
+  restaurant['category'] = CATEGORY.sample
+  restaurant['description'] = ABOUT.sample
   Restaurant.create!(restaurant)
 end
 
 SAN_FRANCISCO.each do |restaurant|
+  restaurant['category'] = CATEGORY.sample
+  restaurant['description'] = ABOUT.sample
   Restaurant.create!(restaurant)
 end
 
 MIAMI.each do |restaurant|
+  restaurant['category'] = CATEGORY.sample
+  restaurant['description'] = ABOUT.sample
   Restaurant.create!(restaurant)
 end
 
 LOS_ANGELES.each do |restaurant|
+  restaurant['category'] = CATEGORY.sample
+  restaurant['description'] = ABOUT.sample
   Restaurant.create!(restaurant)
 end
 
 LAS_VEGAS.each do |restaurant|
+  restaurant['category'] = CATEGORY.sample
+  restaurant['description'] = ABOUT.sample
   Restaurant.create!(restaurant)
 end
+
+
+
 
 
 

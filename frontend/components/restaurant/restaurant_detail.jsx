@@ -13,7 +13,7 @@ class RestaurantDetail extends React.Component{
     };
   }
 
-  
+
   componentDidMount(){
     this.props.requestRestaurant(this.props.match.params.restId).then(() => this.setState({loaded:true}));
     window.scrollTo(0,0);
@@ -68,8 +68,7 @@ class RestaurantDetail extends React.Component{
           <div className = "content-div">
             <h1 className="h1-content-div"> About {restaurant.name} </h1>
             <hr/>
-            <p className = "restaurant-detail-about"> {restaurant.description} Contemporary Food. Hippest place on earth.
-            </p>
+            <h2 className = "restaurant-detail-about">  "{restaurant.description}" </h2> 
 
           </div>
 
