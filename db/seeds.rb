@@ -2500,14 +2500,14 @@ end
 
 
 
-Reservation.create!(user_id: User.first.id, restaurant_id: Restaurant.all.sample.id, head_count: 5, date:" 17/11/28", timeslot: "07:00:00")
-Reservation.create!(user_id: User.first.id, restaurant_id: Restaurant.all.sample.id, head_count: 4, date: "17/11/28", timeslot: "08:00:00")
-Reservation.create!(user_id: User.first.id, restaurant_id: Restaurant.all.sample.id, head_count: 3, date: "17/11/29", timeslot: "09:00:00")
+Reservation.create!(user_id: User.first.id, restaurant_id: Restaurant.all.sample.id, head_count: 5, date:"2018-11-28", timeslot: "07:30")
+Reservation.create!(user_id: User.first.id, restaurant_id: Restaurant.all.sample.id, head_count: 4, date: "2018-11-28", timeslot: "08:25")
+Reservation.create!(user_id: User.first.id, restaurant_id: Restaurant.all.sample.id, head_count: 3, date: "2018-04-09", timeslot: "09:00")
 
 
-Reservation.create!(user_id: User.first.id, restaurant_id: Restaurant.all.sample.id, head_count: 5, date: "17/11/27", timeslot: "07:00:00")
-Reservation.create!(user_id: User.first.id, restaurant_id: Restaurant.all.sample.id, head_count: 5, date: "17/11/28", timeslot: "08:00:00")
-Reservation.create!(user_id: User.first.id, restaurant_id: Restaurant.all.sample.id, head_count: 5, date: "17/11/29", timeslot: "09:00:00")
+Reservation.create!(user_id: User.first.id, restaurant_id: Restaurant.all.sample.id, head_count: 5, date: "2018-10-28", timeslot: "07:00")
+Reservation.create!(user_id: User.first.id, restaurant_id: Restaurant.all.sample.id, head_count: 5, date: "2018-09-28", timeslot: "08:00")
+Reservation.create!(user_id: User.first.id, restaurant_id: Restaurant.all.sample.id, head_count: 5, date: "2018-10-28", timeslot: "09:00")
 
 (User.all.count * 5).times do
   Favorite.create!(user_id: User.all.sample.id, restaurant_id: Restaurant.all.sample.id)

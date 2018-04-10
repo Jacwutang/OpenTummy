@@ -26,7 +26,6 @@ ActiveRecord::Schema.define(version: 20180409071737) do
     t.integer "head_count", null: false
     t.string "date", null: false
     t.string "timeslot", null: false
-    t.string "thumbnail"
     t.index ["restaurant_id"], name: "index_reservations_on_restaurant_id"
     t.index ["user_id"], name: "index_reservations_on_user_id"
   end
