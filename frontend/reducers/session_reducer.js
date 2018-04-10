@@ -15,11 +15,14 @@ const _nullUser = {
 const sessionReducer = (state = _nullUser, action) => {
   Object.freeze(state);
   let newState = merge({},state)
+
   switch(action.type){
     case RECEIVE_CURRENT_USER:
       const currentUser = action.currentUser;
       return merge({}, {currentUser}) ;
-      //merge merges empty {} with {currentUser: id:2, username: jack2}
+      // returns {currentUser: {favorite_restaurants: x, reservations: }
+
+
 
 
     case REMOVE_RESTAURANT:
@@ -29,7 +32,7 @@ const sessionReducer = (state = _nullUser, action) => {
 
 
     case RECEIVE_FAVORITE:
-    
+
     newState = merge({},state);
     newState.currentUser.favorite_restaurants[action.favorite.id] = action.favorite;
     return newState;
