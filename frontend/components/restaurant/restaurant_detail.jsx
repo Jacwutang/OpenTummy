@@ -2,7 +2,7 @@ import React from 'react';
 import ReservationContainer from '../reservation/reservation_container';
 import FavoriteContainer from '../favorite/favorite_container';
 import ReviewsContainer from '../review/review_container';
-import SimpleSlider from './simple_slider';
+import PhotoSlider from '../misc/photo_slider';
 
 class RestaurantDetail extends React.Component{
   constructor(props){
@@ -79,8 +79,7 @@ class RestaurantDetail extends React.Component{
           <div className = "content-div content-photos">
             <h1 className="h1-content-div"> Restaurant Photos </h1>
             <hr style={{marginBottom: '0'}}/>
-
-            <SimpleSlider />
+            <PhotoSlider />
 
           </div>
 
