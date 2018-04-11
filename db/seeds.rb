@@ -2451,68 +2451,140 @@ Favorite.destroy_all
 
 User.create!(username: 'demo_user', password: 'password')
 User.create!(username: 'jack', password: 'password')
-# User.create!(username: 'bruce', password: 'password')
-# User.create!(username: 'mitch', password: 'password')
 
 
 
-CITIES = CHICAGO + NEW_YORK + SAN_FRANCISCO
+CITIES = [CHICAGO,NEW_YORK , SAN_FRANCISCO , MIAMI , LAS_VEGAS , LOS_ANGELES]
 
-CHICAGO.each do |restaurant|
-  restaurant['category'] = CATEGORY.sample
-  restaurant['description'] = ABOUT.sample
-  Restaurant.create!(restaurant)
-end
+CITIES.each do |city|
+    city.each do |restaurant|
+      rest = Restaurant.new
+      rest.name = restaurant[:name]
+      rest.address = restaurant[:address]
+      rest.city = restaurant[:city]
+      rest.state = restaurant[:state]
+      rest.postal_code = restaurant[:postal_code]
+      rest.country = restaurant[:country]
+      rest.price = restaurant[:price]
+      rest.lat = restaurant[:lat]
+      rest.lng = restaurant[:lng]
+      rest.thumbnail = restaurant[:thumbnail]
 
-NEW_YORK.each do |restaurant|
-  restaurant['category'] = CATEGORY.sample
-  restaurant['description'] = ABOUT.sample
-  Restaurant.create!(restaurant)
-end
+      rest.category = CATEGORY.sample
+      rest.description = ABOUT.sample
 
-SAN_FRANCISCO.each do |restaurant|
-  restaurant['category'] = CATEGORY.sample
-  restaurant['description'] = ABOUT.sample
-  Restaurant.create!(restaurant)
-end
+      4.times do
+        rest.image_urls.push(PHOTOS.first)
+        PHOTOS.rotate!
+      end
+      if rest.valid?
+        rest.save!
+      end
 
-MIAMI.each do |restaurant|
-  restaurant['category'] = CATEGORY.sample
-  restaurant['description'] = ABOUT.sample
-  Restaurant.create!(restaurant)
-end
-
-LOS_ANGELES.each do |restaurant|
-  restaurant['category'] = CATEGORY.sample
-  restaurant['description'] = ABOUT.sample
-  Restaurant.create!(restaurant)
-end
-
-LAS_VEGAS.each do |restaurant|
-  restaurant['category'] = CATEGORY.sample
-  restaurant['description'] = ABOUT.sample
-  Restaurant.create!(restaurant)
-end
-
-
-
-
-
-
-
-  (Restaurant.all.count * 3).times do
-    rev = Review.new
-    rev.rating = (1..5).to_a.sample
-    if rev.rating < 3
-      rev.body = NEGATIVE_REVIEW_BODIES.sample
-    else
-      rev.body = POSITIVE_REVIEW_BODIES.sample
-    end
-
-    rev.user_id = User.all.sample.id
-    rev.restaurant_id = Restaurant.all.sample.id
-    rev.save! if rev.valid?
   end
+
+
+
+end
+
+
+
+# CHICAGO.each do |restaurant|
+#
+#   rest = Restaurant.new
+#   rest.name = restaurant[:name]
+#   rest.address = restaurant[:address]
+#   rest.city = restaurant[:city]
+#   rest.state = restaurant[:state]
+#   rest.postal_code = restaurant[:postal_code]
+#   rest.country = restaurant[:country]
+#   rest.price = restaurant[:price]
+#   rest.lat = restaurant[:lat]
+#   rest.lng = restaurant[:lng]
+#   rest.thumbnail = restaurant[:thumbnail]
+#
+#   rest.category = CATEGORY.sample
+#   rest.description = ABOUT.sample
+#
+#   3.times do
+#     rest.image_urls.push(PHOTOS.first)
+#     PHOTOS.rotate!
+#   end
+#
+#
+#   if rest.valid?
+#     rest.save!
+#   end
+# end
+
+# NEW_YORK.each do |restaurant|
+#   restaurant.image_urls = []
+#   3.times do
+#     restaurant.image_urls.push(PHOTOS.sample)
+#   end
+#   restaurant['category'] = CATEGORY.sample
+#   restaurant['description'] = ABOUT.sample
+#   Restaurant.create!(restaurant)
+# end
+
+# SAN_FRANCISCO.each do |restaurant|
+#   3.times do
+#     restaurant['image_urls']=(PHOTOS.sample)
+#   end
+#   restaurant['category'] = CATEGORY.sample
+#   restaurant['description'] = ABOUT.sample
+#   Restaurant.create!(restaurant)
+# end
+#
+# MIAMI.each do |restaurant|
+#   3.times do
+#     restaurant['image_urls']=(PHOTOS.sample)
+#   end
+#   restaurant['category'] = CATEGORY.sample
+#   restaurant['description'] = ABOUT.sample
+#   Restaurant.create!(restaurant)
+# end
+#
+# LOS_ANGELES.each do |restaurant|
+#   3.times do
+#     restaurant['image_urls']=(PHOTOS.sample)
+#   end
+#   restaurant['category'] = CATEGORY.sample
+#   restaurant['description'] = ABOUT.sample
+#   Restaurant.create!(restaurant)
+# end
+#
+# LAS_VEGAS.each do |restaurant|
+#   3.times do
+#     restaurant['image_urls']=(PHOTOS.sample)
+#   end
+#   restaurant['category'] = CATEGORY.sample
+#   restaurant['description'] = ABOUT.sample
+#   Restaurant.create!(restaurant)
+# end
+
+
+
+print Restaurant.all.count
+
+
+  #
+  # (Restaurant.all.count * 3).times do
+  #   rev = Review.new
+  #   rev.rating = (1..5).to_a.sample
+  #   if rev.rating < 3
+  #     rev.body = NEGATIVE_REVIEW_BODIES.sample
+  #   else
+  #     rev.body = POSITIVE_REVIEW_BODIES.sample
+  #   end
+  #
+  #   rev.user_id = User.all.sample.id
+  #   rev.restaurant_id = Restaurant.all.sample.id
+  #   rev.save! if rev.valid?
+  #
+  #
+  #
+  # end
 
 
 
@@ -2530,15 +2602,15 @@ Reservation.create!(user_id: User.first.id, restaurant_id: Restaurant.all.sample
   Favorite.create!(user_id: User.all.sample.id, restaurant_id: Restaurant.all.sample.id)
 end
 
-# Favorite.create!(user_id: User.first.id, restaurant_id: Restaurant.all.sample.id)
-# Favorite.create!(user_id: User.first.id, restaurant_id: Restaurant.all.sample.id)
-# Favorite.create!(user_id: User.first.id, restaurant_id: Restaurant.all.sample.id)
-# Favorite.create!(user_id: User.first.id, restaurant_id: Restaurant.all.sample.id)
-# Favorite.create!(user_id: User.first.id, restaurant_id: Restaurant.all.sample.id)
-#
-#
-# Favorite.create!(user_id: User.first.id, restaurant_id: Restaurant.all.sample.id)
-# Favorite.create!(user_id: User.first.id, restaurant_id: Restaurant.all.sample.id)
-# Favorite.create!(user_id: User.first.id, restaurant_id: Restaurant.all.sample.id)
-# Favorite.create!(user_id: User.first.id, restaurant_id: Restaurant.all.sample.id)
-# Favorite.create!(user_id: User.first.id, restaurant_id: Restaurant.all.sample.id)
+Favorite.create!(user_id: User.first.id, restaurant_id: Restaurant.all.sample.id)
+Favorite.create!(user_id: User.first.id, restaurant_id: Restaurant.all.sample.id)
+Favorite.create!(user_id: User.first.id, restaurant_id: Restaurant.all.sample.id)
+Favorite.create!(user_id: User.first.id, restaurant_id: Restaurant.all.sample.id)
+Favorite.create!(user_id: User.first.id, restaurant_id: Restaurant.all.sample.id)
+
+
+Favorite.create!(user_id: User.first.id, restaurant_id: Restaurant.all.sample.id)
+Favorite.create!(user_id: User.first.id, restaurant_id: Restaurant.all.sample.id)
+Favorite.create!(user_id: User.first.id, restaurant_id: Restaurant.all.sample.id)
+Favorite.create!(user_id: User.first.id, restaurant_id: Restaurant.all.sample.id)
+Favorite.create!(user_id: User.first.id, restaurant_id: Restaurant.all.sample.id)

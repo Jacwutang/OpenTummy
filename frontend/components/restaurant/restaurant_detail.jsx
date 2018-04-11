@@ -79,7 +79,10 @@ class RestaurantDetail extends React.Component{
           <div className = "content-div content-photos">
             <h1 className="h1-content-div"> Restaurant Photos </h1>
             <hr style={{marginBottom: '0'}}/>
-            <PhotoSlider />
+
+            <PhotoSlider
+              images={restaurant.image_urls}
+            />
 
           </div>
 
@@ -104,3 +107,5 @@ class RestaurantDetail extends React.Component{
 }
 
 export default RestaurantDetail;
+
+// images={restaurant.image_urls}
