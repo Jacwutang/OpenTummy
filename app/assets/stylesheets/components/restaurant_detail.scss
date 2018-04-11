@@ -53,11 +53,22 @@
 .content-div{
   text-align: center;
   background-color: #F8F8F8;
-
   width: 90%;
   border-radius: 5px;
   height: 250px;
   margin-bottom: 10px;
+}
+
+.content-photos{
+  height: 350px;
+}
+
+.slick-list{
+  height: 250px;
+}
+
+.slick-slider.slick-initialized{
+  height: 250px;
 }
 
 .content-div:first-of-type{

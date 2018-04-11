@@ -1,4 +1,4 @@
- json.extract! rest, :id, :name, :address,:city,:state,:postal_code, :country ,:price, :thumbnail, :lng, :lat, :owner_id, :category,:description
+ json.extract! rest, :id, :name, :address,:city,:state,:postal_code, :country ,:price, :thumbnail, :lng, :lat, :owner_id, :category,:description, :image_urls
 
 # if rest.reviews.count > 0
 #   json.reviews do

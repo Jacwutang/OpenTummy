@@ -1,7 +1,8 @@
 import React from 'react';
 import ReservationContainer from '../reservation/reservation_container';
 import FavoriteContainer from '../favorite/favorite_container';
-import ReviewsContainer from '../review/review_container'
+import ReviewsContainer from '../review/review_container';
+import PhotoSlider from '../misc/photo_slider';
 
 class RestaurantDetail extends React.Component{
   constructor(props){
@@ -38,6 +39,7 @@ class RestaurantDetail extends React.Component{
 
       let reservationId = parseInt(this.props.match.params.reservationId);
 
+
       return(
         <section className = "restaurant-detail-main">
 
@@ -68,21 +70,30 @@ class RestaurantDetail extends React.Component{
           <div className = "content-div">
             <h1 className="h1-content-div"> About {restaurant.name} </h1>
             <hr/>
-            <h2 className = "restaurant-detail-about">  "{restaurant.description}" </h2> 
+            <h2 className = "restaurant-detail-about">  "{restaurant.description}" </h2>
 
           </div>
 
           <br/>
 
-          <div className = "content-div">
-          <h1 className="h1-content-div"> Restaurant Photos </h1>
-          <hr/>
+          <div className = "content-div content-photos">
+            <h1 className="h1-content-div"> Restaurant Photos </h1>
+            <hr style={{marginBottom: '0'}}/>
+
+            <PhotoSlider
+              images={restaurant.image_urls}
+            />
+
           </div>
+
 
           <br/>
 
             <ReviewsContainer
             restaurant={restaurant}/>
+
+
+
 
           </section>
       );
@@ -96,3 +107,5 @@ class RestaurantDetail extends React.Component{
 }
 
 export default RestaurantDetail;
+
+// images={restaurant.image_urls}
