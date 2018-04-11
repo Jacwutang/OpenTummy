@@ -2,16 +2,19 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  background-color: #D3D3D3;
+  background-color: #ededed;
   overflow: scroll;
   margin-bottom: 50px;
 }
 
 .restaurant-detail-header{
   margin-top: 50px;
-  height: 210px;
+  // height: 210px;
+  height: 200px;
   width: 100%;
-  background: linear-gradient(gray, #c19b6c);
+  // background: linear-gradient(gray, #c19b6c);
+  background: linear-gradient(to right, #eb3349, #eb3349);
+  // box-shadow: 5px 5px 5px;
   display: flex;
   justify-content: space-between;
   margin-bottom: 15px;
@@ -33,7 +36,7 @@
     font-weight: bold;
     font-family: 'Boogaloo', cursive;
     font-size: 45px;
-    margin-top: 25px;
+    margin-top: 30px;
 }
 
 
