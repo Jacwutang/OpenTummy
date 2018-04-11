@@ -37,7 +37,7 @@ class RestaurantDetail extends React.Component{
 
       $('ul').css('display', 'none');
 
-      let reservationId = parseInt(this.props.match.params.reservationId);
+      // let reservationId = parseInt(this.props.match.params.reservationId);
 
 
       return(

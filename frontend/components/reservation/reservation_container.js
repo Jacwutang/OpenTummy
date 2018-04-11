@@ -10,9 +10,9 @@ const mapStateToProps = (state,ownProps) => {
 
   if(state.session.currentUser === null){
     return {
-      formType: 'Book this Reservation',
-      errors: state.errors.reservation
-
+      formType: 'Book this Restaurant',
+      errors: state.errors.reservation,
+      currentUser: {id: null}
     };
   }
 
