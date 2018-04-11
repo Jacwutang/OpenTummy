@@ -67,7 +67,7 @@ class RestaurantDetail extends React.Component{
 
           <br/>
 
-          <div className = "content-div">
+          <div className = "content-div-first">
             <h1 className="h1-content-div"> About {restaurant.name} </h1>
             <hr/>
             <h2 className = "restaurant-detail-about">  "{restaurant.description}" </h2>
