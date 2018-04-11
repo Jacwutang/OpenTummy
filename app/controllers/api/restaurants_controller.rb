@@ -11,6 +11,16 @@ class Api::RestaurantsController < ApplicationController
       when "New-York"
         @restaurants = Restaurant.list_matches("New York")
         render "api/restaurants/index"
+      when "Miami"
+        @restaurants = Restaurant.list_matches("Miami")
+        render "api/restaurants/index"
+      when "Los-Angeles"
+        @restaurants = Restaurant.list_matches("Los Angeles")
+        render "api/restaurants/index"
+      when "Las-Vegas"
+        @restaurants = Restaurant.list_matches("Las Vegas")
+        render "api/restaurants/index"
+
       else
         @restaurants = Restaurant.all
         render "api/restaurants/index"

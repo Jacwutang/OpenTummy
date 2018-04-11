@@ -35,6 +35,9 @@ const App = () => (
       <Route exact path = "/New-York" component={RestaurantIndexContainer} />
       <Route exact path = "/Chicago" component={RestaurantIndexContainer} />
       <Route exact path = "/San-Francisco" component={RestaurantIndexContainer} />
+      <Route exact path = "/Miami" component={RestaurantIndexContainer} />
+      <Route exact path = "/Los-Angeles" component={RestaurantIndexContainer} />
+      <Route exact path = "/Las-Vegas" component={RestaurantIndexContainer} />
 
       <ProtectedRoute path = "/profile" component={ProfileContainer} />
 
