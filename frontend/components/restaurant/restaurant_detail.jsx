@@ -37,8 +37,6 @@ class RestaurantDetail extends React.Component{
 
       $('ul').css('display', 'none');
 
-      // let reservationId = parseInt(this.props.match.params.reservationId);
-
 
       return(
         <section className = "restaurant-detail-main">
@@ -49,8 +47,6 @@ class RestaurantDetail extends React.Component{
 
             <div className = "restaurant-detail-header-left">
               <h1 className = "h1-restaurant-title">{restaurant.name} </h1>
-              <span> <h4> <i className="fa fa-star" aria-hidden="true"></i> <i className="fa fa-star" aria-hidden="true"></i> <i className="fa fa-star" aria-hidden="true"></i></h4> <h4> 40 Reviews </h4> </span>
-              <br/>
             </div>
 
             <FavoriteContainer
@@ -70,7 +66,8 @@ class RestaurantDetail extends React.Component{
           <div className = "content-div-first">
             <h1 className="h1-content-div"> About {restaurant.name} </h1>
             <hr/>
-            <blockquote className = "restaurant-detail-about">  {restaurant.description} </blockquote>
+            <blockquote className = "restaurant-detail-about">  {restaurant.description}
+            </blockquote>
 
           </div>
 
@@ -108,4 +105,5 @@ class RestaurantDetail extends React.Component{
 
 export default RestaurantDetail;
 
-// images={restaurant.image_urls}
+// <span> <h4> <i className="fa fa-star" aria-hidden="true"></i> <i className="fa fa-star" aria-hidden="true"></i> <i className="fa fa-star" aria-hidden="true"></i></h4> <h4> 40 Reviews </h4> </span>
+// <br/>

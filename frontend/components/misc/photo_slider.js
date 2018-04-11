@@ -15,7 +15,7 @@ class PhotoSlider extends React.Component {
 
     const [img1,img2,img3,img4] = this.props.images;
 
-    console.log(img1);
+    
 
     return (
       <Slider {...settings}>
