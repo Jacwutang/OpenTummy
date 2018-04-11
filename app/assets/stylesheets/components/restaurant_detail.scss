@@ -74,7 +74,7 @@
 }
 
 .content-photos{
-  height: 300px;
+  height: 275px;
 }
 
 .slick-list{
@@ -126,7 +126,7 @@ margin-top: 5px;
 // }
 .restaurant-detail-about{
   font-family: Georgia, serif;
-font-size: 18px;
+font-size: 16px;
 font-style: italic;
 width: 500px;
 margin: 0.25em 0;
@@ -140,7 +140,7 @@ margin: 0 auto;
 .restaurant-detail-about:before{
   display: block;
 content: "\201C";
-font-size: 80px;
+font-size: 50px;
 position: absolute;
 left: -20px;
 top: -20px;
@@ -150,7 +150,7 @@ color: #7a7a7a;
 .restaurant-detail-about:after{
 display: block;
 content: "\201D";
-font-size: 80px;
+font-size: 50px;
 position: absolute;
 color: #7a7a7a;
 right: 0;
