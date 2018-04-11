@@ -37,7 +37,7 @@ class RestaurantDetail extends React.Component{
 
       $('ul').css('display', 'none');
 
-      let reservationId = parseInt(this.props.match.params.reservationId);
+      // let reservationId = parseInt(this.props.match.params.reservationId);
 
 
       return(
@@ -70,7 +70,7 @@ class RestaurantDetail extends React.Component{
           <div className = "content-div-first">
             <h1 className="h1-content-div"> About {restaurant.name} </h1>
             <hr/>
-            <h2 className = "restaurant-detail-about">  "{restaurant.description}" </h2>
+            <blockquote className = "restaurant-detail-about">  {restaurant.description} </blockquote>
 
           </div>
 
