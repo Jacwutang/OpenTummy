@@ -56,7 +56,7 @@ Feel free to browse through OpenTummy's culinary partners. Search by Location.
 ![](http://g.recordit.co/7luygq64AU.gif)
 <hr/>
 As a User types, the query is sent to the database with each keystroke.
-<br/>
+
 ```
  handleInput(e, query){
 
@@ -67,15 +67,15 @@ As a User types, the query is sent to the database with each keystroke.
 ```  
 
 Here is whats happening on the Rails backend, in particular inside the Restaurant model.
-<br/>
+
 ```
   def self.list_matches(query_param)
     param = '%' + query_param.downcase + '%'
     Restaurant.where('lower(city) LIKE ?', param)
   end
 ```  
-<br/>
-  The query is executed through activerecord, and a list of restaurants that match are returned.
+
+The query is executed through activerecord, and a list of restaurants that match are returned.
 
 
 
