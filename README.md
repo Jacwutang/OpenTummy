@@ -9,53 +9,67 @@
 Check it out: [Live Demo](https://opentummy.herokuapp.com/#/)
 
 ## Technologies Used
-- OpenTummy uses Ruby on Rails as the backend, Postgresql as the database, and React-Redux as the frontend. 
+- OpenTummy uses Ruby on Rails on the backend, PostgreSQL on the database, and React-Redux on the frontend.
 
 
 # Core Features
 
 ## 1) Make Reservations
-User's can make Reservations while they're browsing a particular restaurant. The reservation is automatically added to the User's profile upon completion.
-![](http://g.recordit.co/nUdbWtILrj.gif)
+Like what you see? Go ahead and make a reservation. The reservation system automatically detects the local time and date of where the user is located.
+
+The reservation is automatically added to the User's profile upon completion.
+![](http://g.recordit.co/uPG2UBDdOG.gif)
 
 ### Implementation of Make Reservations feature
 There are several challenging aspects of this feature. The first one is requiring a logged in user in order to make reservations. If a user has already made an reservation, then the reservation form will present the option of editing the reservation, otherwise it will prompt the user to book a reservation.
 
-case 1: ![](https://puu.sh/yxvfH/382dc46b52.png)
+case 1: ![](http://g.recordit.co/oxmQ991Lyc.gif)
 ---------------------------------------------------------------------------------------------------------------------------
-case 2: ![](https://puu.sh/yxvgl/2d588a67ac.png)
+case 2: ![]()
 
-The url location is used to determine whether to show the 'Edit Reservation' or 'Book a Reservation' option. Any particular Restaurant's page will contain a wildcard parameter in the url `localhost:3000/restaurants/:restaurant_id`. The `restaurant_id` can be used to associate a `reservation's` and a `user's` details.
-   
-  `let resValues = Object.values(state.session.currentUser.reservations);`
+Using React's HashRouter allows the application to extract the Restaurant's meta-information and corroborate with the current_user's reservations. Based on the comparison, either 'Edit Reservation' or 'Book a Reservation' will be presented to the user. Any particular Restaurant's page will contain a wildcard parameter in the url `localhost:3000/restaurants/:restaurant_id`. The `restaurant_id` can be used to associate a `reservation's` and a `user's` details.
 
 
-   `var permittedValues = _.map(resValues, 'restaurant_id');`
+ The snippet belows finds the reservation id that corresponds to the restaurant_id
+ `let reservationId = null;`
+ `let route_params_rest_id = ownProps.match.params.restId;`
+ `resValues.forEach( (el) => {
+  if (el.restaurant_id === parseInt(route_params_rest_id)){
+      reservationId = el.id;
 
-   `var permittedValuesToString = permittedValues.map(value => value.toString());`
+  }
+ });`
 
-   `const formType = permittedValuesToString.includes(ownProps.match.params.restId)? 'Edit this Reservation': 'Book this Restaurant' `
 
+
+`const formType = reservationId === null? 'Book this Restaurant': 'Edit this Reservation'`
 
 
 ## 2)  Explore Restaurants
-Feel free to browse through OpenTummy's culinary partners. Search by Location (only San Francisco, Chicago, and New York markets are currently featured).
+Feel free to browse through OpenTummy's culinary partners. Search by Location.
 
 
 ![](http://g.recordit.co/7luygq64AU.gif)
 <hr/>
-As a User types, the query is sent to the database. One keystroke at a time.
+As a User types, the query is sent to the database with each keystroke.
 <br/>
  `handleInput(e, query){
 
         this.setState({query: e.target.value });
-      
+
         this.findMatches();
 
-        
-        $('.search-bar').css('display','block');
+  `}`
 
-    `}`
+Here is whats happening on the Rails backend, in particular inside the Restaurant model.
+  `def self.list_matches(query_param)
+    param = '%' + query_param.downcase + '%'
+    Restaurant.where('lower(city) LIKE ?', param)
+  end`
+
+  The query is executed through activerecord, and a list of restaurants that match are returned.
+
+
 
 
 
@@ -67,5 +81,5 @@ As a User types, the query is sent to the database. One keystroke at a time.
 
 Additional Features (To be implemented):
 1) Expand search parameters to search restaurants by address, price, reviews.
-2) Rating and Reviews for restaurants.
-
+2) Integrate DevOps( Continous Integration/ Continous Deployment)
+3) Extensive unit testing with Jest and RSpec

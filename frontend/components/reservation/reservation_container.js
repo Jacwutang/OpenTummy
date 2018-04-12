@@ -31,16 +31,7 @@ const mapStateToProps = (state,ownProps) => {
      }
     });
 
-    // console.log(resValues);
-    // console.log(reservationId, "REST_ID");
-    // console.log(route_params_rest_id, "ROUTE")
-
-
-   // var permittedValues = _.map(resValues, 'restaurant_id');
-   //
-   // var permittedValuesToString = permittedValues.map(value => value.toString());
-   //
-   // const formType = permittedValuesToString.includes(route_params_rest_id)? 'Edit this Reservation': 'Book this Restaurant'
+    
 
    const formType = reservationId === null? 'Book this Restaurant': 'Edit this Reservation'
 
