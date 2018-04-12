@@ -25,7 +25,7 @@ There are several challenging aspects of this feature. The first one is requirin
 
 case 1: ![](http://g.recordit.co/oxmQ991Lyc.gif)
 ---------------------------------------------------------------------------------------------------------------------------
-case 2: ![]()
+case 2: ![](http://g.recordit.co/FH4eSV1i02.gif)
 
 Using React's HashRouter allows the application to extract the Restaurant's meta-information and corroborate with the current_user's reservations. Based on the comparison, either 'Edit Reservation' or 'Book a Reservation' will be presented to the user. Any particular Restaurant's page will contain a wildcard parameter in the url `/restaurants/:restaurant_id`. The `restaurant_id` can be used to associate a `reservation's` and a `user's` details.
 
@@ -50,7 +50,7 @@ Using React's HashRouter allows the application to extract the Restaurant's meta
 
 
 ## 2)  Explore Restaurants
-Feel free to browse through OpenTummy's culinary partners. Search by Location.
+Feel free to browse through OpenTummy's culinary partners. Live Search by Location.
 
 
 ![](http://g.recordit.co/7luygq64AU.gif)
