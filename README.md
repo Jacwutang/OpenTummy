@@ -27,26 +27,26 @@ case 1: ![](http://g.recordit.co/oxmQ991Lyc.gif)
 ---------------------------------------------------------------------------------------------------------------------------
 case 2: ![]()
 
-Using React's HashRouter allows the application to extract the Restaurant's meta-information and corroborate with the current_user's reservations. Based on the comparison, either 'Edit Reservation' or 'Book a Reservation' will be presented to the user. Any particular Restaurant's page will contain a wildcard parameter in the url `localhost:3000/restaurants/:restaurant_id`. The `restaurant_id` can be used to associate a `reservation's` and a `user's` details.
+Using React's HashRouter allows the application to extract the Restaurant's meta-information and corroborate with the current_user's reservations. Based on the comparison, either 'Edit Reservation' or 'Book a Reservation' will be presented to the user. Any particular Restaurant's page will contain a wildcard parameter in the url `/restaurants/:restaurant_id`. The `restaurant_id` can be used to associate a `reservation's` and a `user's` details.
 
 
- The snippet belows finds the reservation id that corresponds to the restaurant_id
- `let reservationId = null;`
- <br/>
- `let route_params_rest_id = ownProps.match.params.restId;`
- <br/>
- `resValues.forEach( (el) => {
+ The snippet below finds the reservation id that corresponds to the restaurant_id
+
+```
+ let reservationId = null;
+
+ let route_params_rest_id = ownProps.match.params.restId;
+
+ resValues.forEach( (el) => {
   if (el.restaurant_id === parseInt(route_params_rest_id)){
       reservationId = el.id;
 
   }
- });`
+ });
 
- <br/>
+ const formType = reservationId === null? 'Book this Restaurant': 'Edit this Reservation'
 
-
-
-`const formType = reservationId === null? 'Book this Restaurant': 'Edit this Reservation'`
+```
 
 
 ## 2)  Explore Restaurants
@@ -57,20 +57,23 @@ Feel free to browse through OpenTummy's culinary partners. Search by Location.
 <hr/>
 As a User types, the query is sent to the database with each keystroke.
 <br/>
- `handleInput(e, query){
+```
+ handleInput(e, query){
 
         this.setState({query: e.target.value });
 
         this.findMatches();
-
-  `}`
+  }
+```  
 
 Here is whats happening on the Rails backend, in particular inside the Restaurant model.
 <br/>
-  `def self.list_matches(query_param)
+```
+  def self.list_matches(query_param)
     param = '%' + query_param.downcase + '%'
     Restaurant.where('lower(city) LIKE ?', param)
-  end`
+  end
+```  
 <br/>
   The query is executed through activerecord, and a list of restaurants that match are returned.
 
