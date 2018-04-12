@@ -32,7 +32,7 @@ Using React's HashRouter allows the application to extract the Restaurant's meta
 
  The snippet below finds the reservation id that corresponds to the restaurant_id
 
-```
+```javascript
  let reservationId = null;
 
  let route_params_rest_id = ownProps.match.params.restId;
@@ -57,22 +57,24 @@ Feel free to browse through OpenTummy's culinary partners. Search by Location.
 <hr/>
 As a User types, the query is sent to the database with each keystroke.
 
-```
+```javascript
  handleInput(e, query){
 
         this.setState({query: e.target.value });
 
         this.findMatches();
   }
+
 ```  
 
 Here is whats happening on the Rails backend, in particular inside the Restaurant model.
 
-```
+```ruby
   def self.list_matches(query_param)
     param = '%' + query_param.downcase + '%'
     Restaurant.where('lower(city) LIKE ?', param)
   end
+
 ```  
 
 The query is executed through activerecord, and a list of restaurants that match are returned.
