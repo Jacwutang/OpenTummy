@@ -32,13 +32,17 @@ Using React's HashRouter allows the application to extract the Restaurant's meta
 
  The snippet belows finds the reservation id that corresponds to the restaurant_id
  `let reservationId = null;`
+ <br/>
  `let route_params_rest_id = ownProps.match.params.restId;`
+ <br/>
  `resValues.forEach( (el) => {
   if (el.restaurant_id === parseInt(route_params_rest_id)){
       reservationId = el.id;
 
   }
  });`
+
+ <br/>
 
 
 
@@ -62,11 +66,12 @@ As a User types, the query is sent to the database with each keystroke.
   `}`
 
 Here is whats happening on the Rails backend, in particular inside the Restaurant model.
+<br/>
   `def self.list_matches(query_param)
     param = '%' + query_param.downcase + '%'
     Restaurant.where('lower(city) LIKE ?', param)
   end`
-
+<br/>
   The query is executed through activerecord, and a list of restaurants that match are returned.
 
 
