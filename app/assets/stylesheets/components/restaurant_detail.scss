@@ -72,6 +72,8 @@
   height: 150px;
   font-weight: bold;
   border: 1px solid #e0e0e0;
+  overflow: scroll;
+
 }
 
 .content-photos{
@@ -168,4 +170,8 @@ top: 30px;
 
 .rating-div{
   height: auto;
+}
+
+.restaurant-detail-main > :last-child{
+  margin-bottom: 35px;
 }
