@@ -70,7 +70,7 @@ const loggedInShow = (currentUser,logout) => (
         <button type="button">Profile</button>
       </Link>
 
-      <button type="button" onClick={logout}>Logout</button>
+      <button onClick={logout}>Logout</button>
 
     </span>
 

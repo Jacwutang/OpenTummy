@@ -18,14 +18,14 @@ Check it out: [Live Demo](https://opentummy.herokuapp.com/#/)
 Like what you see? Go ahead and make a reservation. The reservation system automatically detects the local time and date of where the user is located.
 
 The reservation is automatically added to the User's profile upon completion.
-![](http://g.recordit.co/uPG2UBDdOG.gif)
+![]()
 
 ### Implementation of Make Reservations feature
 There are several challenging aspects of this feature. The first one is requiring a logged in user in order to make reservations. If a user has already made an reservation, then the reservation form will present the option of editing the reservation, otherwise it will prompt the user to book a reservation.
 
-case 1: ![](http://g.recordit.co/oxmQ991Lyc.gif)
+## Case 1: ![](http://g.recordit.co/oxmQ991Lyc.gif)
 ---------------------------------------------------------------------------------------------------------------------------
-case 2: ![](http://g.recordit.co/FH4eSV1i02.gif)
+## Case 2: ![](http://g.recordit.co/FH4eSV1i02.gif)
 
 Using React's HashRouter allows the application to extract the Restaurant's meta-information and corroborate with the current_user's reservations. Based on the comparison, either 'Edit Reservation' or 'Book a Reservation' will be presented to the user. Any particular Restaurant's page will contain a wildcard parameter in the url `/restaurants/:restaurant_id`. The `restaurant_id` can be used to associate a `reservation's` and a `user's` details.
 
@@ -67,7 +67,7 @@ As a User types, the query is sent to the database with each keystroke.
 
 ```  
 
-Here is whats happening on the Rails backend, in particular inside the Restaurant model.
+Here is whats happening on the Rails backend inside the Restaurant model.
 
 ```ruby
   def self.list_matches(query_param)
