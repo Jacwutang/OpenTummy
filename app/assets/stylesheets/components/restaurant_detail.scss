@@ -13,8 +13,9 @@
   height: 200px;
   width: 100%;
   // background: linear-gradient(gray, #c19b6c);
-  background: linear-gradient(to right, #eb3349, #eb3349);
+  // background: linear-gradient(to right, #eb3349, #eb3349);
   // box-shadow: 5px 5px 5px;
+  background-color: #666;
   display: flex;
   justify-content: space-between;
   margin-bottom: 15px;
@@ -34,8 +35,8 @@
     color: white;
     text-shadow: 5px;
     font-weight: bold;
-    font-family: 'Boogaloo', cursive;
-    font-size: 45px;
+    font-family: 'sans-serif';
+    font-size: 35px;
     margin-top: 30px;
 }
 
@@ -125,7 +126,7 @@ margin-top: 5px;
 //   line-height: 200%;
 // }
 .restaurant-detail-about{
-  font-family: Georgia, serif;
+  font-family: sans-serif;
 font-size: 16px;
 font-style: italic;
 width: 500px;
@@ -133,7 +134,7 @@ margin: 0.25em 0;
 padding: 0.25em 40px;
 line-height: 1.45;
 position: relative;
-color: #383838;
+// color: #383838;
 margin: 0 auto;
 }
 
