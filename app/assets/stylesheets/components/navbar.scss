@@ -8,7 +8,7 @@
   top:0px;
   left:0px;
   background: white;
-  
+
   border-bottom: 1px solid black;
   z-index: 1;
 
@@ -63,7 +63,7 @@
 
 .header-nav-session{
   padding-top: 10px;
-  padding-right: 5px;
+  padding-right: 15px;
   display: flex;
   justify-content: flex-end;
   font-family: $sans-serif;
@@ -94,6 +94,10 @@
 .fa-cutlery {
     color: $red;
     margin-top: 5px;
+}
+
+.left-header-div{
+  padding-left: 15px;
 }
 
 .header-title{
