@@ -2,6 +2,10 @@
   display: flex;
   flex-wrap: wrap;
   overflow: scroll;
+  width: 75%;
+  margin: 0 auto;
+  box-shadow: rgba(0,0,0,0.1) 0px 4px 8px 0px;
+  margin-bottom: 65px;
 
 }
 
@@ -46,9 +50,10 @@
 .profile-restaurants-index-li{
   width: 100%;
   box-sizing: border-box;
-  border-bottom: 1px solid black;
+  // border-bottom: 1px solid black;
   display: flex;
   margin-top: 10px;
+  border-bottom: 1px solid #e6e6e6
 }
 
 div[class^="profile"] img:last-of-type{
