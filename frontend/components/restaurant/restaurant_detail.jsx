@@ -21,10 +21,7 @@ class RestaurantDetail extends React.Component{
 
   }
 
-  componentWillReceiveProps(nextProps){
-    console.log(this.props.restaurant, nextProps.restaurant);
-    // this.setState(this.state);
-  }
+
 
 
 
