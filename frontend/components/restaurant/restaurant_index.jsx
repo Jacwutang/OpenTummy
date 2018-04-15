@@ -14,7 +14,7 @@ class RestaurantIndex extends React.Component{
 
 
   render(){
-
+    
     const {restaurants} = this.props;
 
     if(Object.keys(restaurants).length === 0){

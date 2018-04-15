@@ -7,8 +7,6 @@ import {searchAllRestaurants, requestRestaurant} from '../../actions/restaurant_
 
 const mapStateToProps = (state) => {
 
-
-
     return{
       currentUser:  state.session.currentUser,
       results: state.search.restaurants

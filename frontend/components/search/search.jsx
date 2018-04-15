@@ -5,8 +5,6 @@ class Search extends React.Component{
     constructor(props){
       super(props);
       this.state = {query: '', results: [], city: ''};
-
-
     }
 
     handleInput(e, query){
@@ -40,22 +38,20 @@ class Search extends React.Component{
       return(
         <ul id="search-bar" className = "search-bar">
           <h1> {this.state.results[0].city} </h1>
-          {results.map( (restaurant) =>
+            {results.map( (restaurant) =>
+              <Link to={`/restaurants/${restaurant.id}`}>
 
+                <li id ="search-bar-item"
+                className ="search-bar-item"
+                onClick={() =>this.handleListClick(restaurant.id)}
+                key={restaurant.id}>
 
-             <Link to={`/restaurants/${restaurant.id}`}>
+                  {restaurant.name}
 
-            <li id ="search-bar-item" className ="search-bar-item" onClick={() =>this.handleListClick(restaurant.id)}
+                </li>
+              </Link>
 
-            key={restaurant.id}>
-
-            {restaurant.name}
-
-
-            </li>
-            </Link>
-
-           )}
+            )}
 
         </ul>
       );

@@ -18,12 +18,19 @@ class RestaurantDetail extends React.Component{
   componentDidMount(){
     this.props.requestRestaurant(this.props.match.params.restId).then(() => this.setState({loaded:true}));
     window.scrollTo(0,0);
+
+  }
+
+  componentWillReceiveProps(nextProps){
+    console.log(this.props.restaurant, nextProps.restaurant);
+    // this.setState(this.state);
   }
 
 
 
   render(){
 
+    // console.log(this.props);
 
     const {restaurant} = this.props;
 
@@ -104,6 +111,3 @@ class RestaurantDetail extends React.Component{
 }
 
 export default RestaurantDetail;
-
-// <span> <h4> <i className="fa fa-star" aria-hidden="true"></i> <i className="fa fa-star" aria-hidden="true"></i> <i className="fa fa-star" aria-hidden="true"></i></h4> <h4> 40 Reviews </h4> </span>
-// <br/>

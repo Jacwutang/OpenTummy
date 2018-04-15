@@ -17,6 +17,7 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch,ownProps) => ({
   //make reservation, //favorite,
   requestRestaurant: (id) => dispatch(requestRestaurant(id))
+  
 
 
 });

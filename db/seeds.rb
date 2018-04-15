@@ -2487,88 +2487,10 @@ CITIES.each do |city|
 
 end
 
-
-
-# CHICAGO.each do |restaurant|
-#
-#   rest = Restaurant.new
-#   rest.name = restaurant[:name]
-#   rest.address = restaurant[:address]
-#   rest.city = restaurant[:city]
-#   rest.state = restaurant[:state]
-#   rest.postal_code = restaurant[:postal_code]
-#   rest.country = restaurant[:country]
-#   rest.price = restaurant[:price]
-#   rest.lat = restaurant[:lat]
-#   rest.lng = restaurant[:lng]
-#   rest.thumbnail = restaurant[:thumbnail]
-#
-#   rest.category = CATEGORY.sample
-#   rest.description = ABOUT.sample
-#
-#   3.times do
-#     rest.image_urls.push(PHOTOS.first)
-#     PHOTOS.rotate!
-#   end
-#
-#
-#   if rest.valid?
-#     rest.save!
-#   end
-# end
-
-# NEW_YORK.each do |restaurant|
-#   restaurant.image_urls = []
-#   3.times do
-#     restaurant.image_urls.push(PHOTOS.sample)
-#   end
-#   restaurant['category'] = CATEGORY.sample
-#   restaurant['description'] = ABOUT.sample
-#   Restaurant.create!(restaurant)
-# end
-
-# SAN_FRANCISCO.each do |restaurant|
-#   3.times do
-#     restaurant['image_urls']=(PHOTOS.sample)
-#   end
-#   restaurant['category'] = CATEGORY.sample
-#   restaurant['description'] = ABOUT.sample
-#   Restaurant.create!(restaurant)
-# end
-#
-# MIAMI.each do |restaurant|
-#   3.times do
-#     restaurant['image_urls']=(PHOTOS.sample)
-#   end
-#   restaurant['category'] = CATEGORY.sample
-#   restaurant['description'] = ABOUT.sample
-#   Restaurant.create!(restaurant)
-# end
-#
-# LOS_ANGELES.each do |restaurant|
-#   3.times do
-#     restaurant['image_urls']=(PHOTOS.sample)
-#   end
-#   restaurant['category'] = CATEGORY.sample
-#   restaurant['description'] = ABOUT.sample
-#   Restaurant.create!(restaurant)
-# end
-#
-# LAS_VEGAS.each do |restaurant|
-#   3.times do
-#     restaurant['image_urls']=(PHOTOS.sample)
-#   end
-#   restaurant['category'] = CATEGORY.sample
-#   restaurant['description'] = ABOUT.sample
-#   Restaurant.create!(restaurant)
-# end
-
-
-
 print Restaurant.all.count
 
 
-  #
+
   # (Restaurant.all.count * 3).times do
   #   rev = Review.new
   #   rev.rating = (1..5).to_a.sample
