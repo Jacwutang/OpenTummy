@@ -24,7 +24,7 @@ class Review extends React.Component{
   }
 
   handleSubmit(){
-  
+
 
     let review = {};
     review.body = this.state.body;
@@ -68,16 +68,14 @@ class Review extends React.Component{
                   color2={'#ffd700'}/>
                   <textarea rows="5" cols="50"
                   onChange={(e) => this.setState({body: e.target.value})}
+                  placeholder="This feature is not available yet"
                   />
-                  <button
-                  type="submit"
-                  onClick={this.handleSubmit}>
-                  Submit</button>
+
             </Modal>
           </h1>
 
           <hr/>
-          <span> Gooooood stuff. </span>
+
         </div>
       )
 
@@ -88,6 +86,11 @@ class Review extends React.Component{
   }
 
 }
+
+// <button
+// type="submit"
+// onClick={this.handleSubmit}>
+// Submit</button>
 
 
 export default Review;
