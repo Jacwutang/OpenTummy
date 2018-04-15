@@ -43,7 +43,6 @@ class Search extends React.Component{
 
                 <li id ="search-bar-item"
                 className ="search-bar-item"
-                onClick={() =>this.handleListClick(restaurant.id)}
                 key={restaurant.id}>
 
                   {restaurant.name}
@@ -101,7 +100,4 @@ class Search extends React.Component{
 
 export default Search;
 
-// onClick={ () => this.handleBlur(false)}
-//onBlur={ () => this.handleBlur(true)}>
-
-// onBlur= {() => this.handleBlur(true)}
+// onClick={() =>this.handleListClick(restaurant.id)}
