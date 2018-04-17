@@ -16,7 +16,8 @@ class RestaurantDetail extends React.Component{
 
 
   componentDidMount(){
-    this.props.requestRestaurant(this.props.match.params.restId).then(() => this.setState({loaded:true}));
+    // this.props.requestRestaurant(this.props.match.params.restId).then(() => this.setState({loaded:true}));
+    this.props.requestAllRestaurants().then(() => this.setState({loaded:true}));
     window.scrollTo(0,0);
 
   }
@@ -27,17 +28,14 @@ class RestaurantDetail extends React.Component{
 
   render(){
 
-    // console.log(this.props);
-
-    const {restaurant} = this.props;
-
-
-    if (this.state.loaded !== true || typeof restaurant === undefined){
+    if (this.state.loaded !== true){
 
       return null;
     }
 
     else{
+      const {restaurant} =  this.props;
+
 
       $('ul').css('display', 'none');
 
