@@ -161,9 +161,17 @@ right: 0;
 top: 30px;
 }
 
-.slick-arrow{
-  background: linear-gradient(to right, #eb3349, #eb3349);
-  border-radius:50px;
+.slick-prev:before{
+  color: red !important;
+}
+.slick-next:before
+{
+    font-family: 'slick';
+    font-size: 20px;
+    line-height: 1;
+
+    opacity: .75;
+    color: red !important;
 }
 
 .Modal-modal-0-1-3{
