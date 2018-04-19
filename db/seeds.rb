@@ -2491,7 +2491,7 @@ end
 
 
 
-  (Restaurant.all.count * 3).times do
+  (Restaurant.all.count * 5).times do
     rev = Review.new
     rev.rating = (1..5).to_a.sample
     if rev.rating < 3
