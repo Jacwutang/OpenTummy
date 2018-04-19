@@ -2,9 +2,11 @@ import React from 'react';
 import ReactStars from 'react-stars'
 import Modal from 'react-responsive-modal';
 
+
 class Review extends React.Component{
   constructor(props){
     super(props);
+
     this.state = {
       open: false,
       loaded: false,
@@ -16,7 +18,11 @@ class Review extends React.Component{
   }
 
   componentDidMount(){
-    this.props.requestAllReviews(this.props.restaurant_id).then(() => this.setState({loaded: true}));
+    // this.props.requestAllReviews(this.props.restaurant_id).then(() => this.setState({loaded: true}));
+    // console.log(this.props.reviews)
+
+
+    this.setState({loaded:true})
   }
 
   ratingChanged(newRating){
@@ -48,14 +54,54 @@ class Review extends React.Component{
 
   }
 
+  renderReviews(){
+    // <ReactStars
+    //   count={5}
+    //   size={24}
+    //   color2={'#ffd700'}
+    //   value={Math.floor(Math.random() * Math.floor(4)) + 1}
+    //   edit={false}/>
+    const {reviews} = this.props;
+
+    return(
+      <ul className="reviews-ul">
+        {reviews.map( (review) => (
+
+            <div className="reviews-wrapper">
+              <div className="review-content">
+              {review.body}
+              </div>
+
+              <div className="review-content">
+                <ReactStars
+                  count={5}
+                  size={18}
+                  color2={'#ffd700'}
+                  value={review.rating}
+                  edit={false}/>
+              </div>
+            </div>
+
+
+
+
+        ))
+        }
+
+      </ul>
+    );
+  }
+
   render(){
     const { open, loaded } = this.state;
 
     if (loaded){
       return(
-        <div className = "content-div">
+        <div className = "content-div-last">
           <h1 className="h1-content-div"> Ratings and Reviews
           <button onClick={() => this.onOpenModal() }>Leave a Review</button>
+
+
             <Modal open={open} onClose={() => {this.onCloseModal()} } little>
               <h2>Leave a Review</h2>
               <ReactStars
@@ -73,8 +119,10 @@ class Review extends React.Component{
 
             </Modal>
           </h1>
+          <div>
+            {this.renderReviews()}
+          </div>
 
-          <hr/>
 
         </div>
       )
@@ -87,10 +135,7 @@ class Review extends React.Component{
 
 }
 
-// <button
-// type="submit"
-// onClick={this.handleSubmit}>
-// Submit</button>
+
 
 
 export default Review;

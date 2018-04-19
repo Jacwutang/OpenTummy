@@ -2487,26 +2487,26 @@ CITIES.each do |city|
 
 end
 
-print Restaurant.all.count
 
 
 
-  # (Restaurant.all.count * 3).times do
-  #   rev = Review.new
-  #   rev.rating = (1..5).to_a.sample
-  #   if rev.rating < 3
-  #     rev.body = NEGATIVE_REVIEW_BODIES.sample
-  #   else
-  #     rev.body = POSITIVE_REVIEW_BODIES.sample
-  #   end
-  #
-  #   rev.user_id = User.all.sample.id
-  #   rev.restaurant_id = Restaurant.all.sample.id
-  #   rev.save! if rev.valid?
-  #
-  #
-  #
-  # end
+
+  (Restaurant.all.count * 3).times do
+    rev = Review.new
+    rev.rating = (1..5).to_a.sample
+    if rev.rating < 3
+      rev.body = NEGATIVE_REVIEW_BODIES.sample
+    else
+      rev.body = POSITIVE_REVIEW_BODIES.sample
+    end
+
+    rev.user_id = User.all.sample.id
+    rev.restaurant_id = Restaurant.all.sample.id
+    rev.save! if rev.valid?
+
+
+
+  end
 
 
 

@@ -31,14 +31,3 @@ export const createReview = review => dispatch => (
   REVIEWutil.createReview(review).then(review => (
     dispatch(receiveReview(review))), err => (dispatch(receiveReviewErrors(err.responseJSON)))
 ));
-
-// export const editReservation = reservation => dispatch => (
-//   RESERVATIONutil.editReservation(reservation).then(reservation => (
-//     dispatch(receiveReservation(reservation))), err => (dispatch(receiveReservationErrors(err.responseJSON)))
-// ));
-//
-//
-// export const deleteReservation = (id) => dispatch => (
-//     RESERVATIONutil.deleteReservation(id).then (resp => (
-//       dispatch(removeReservation(resp))
-//     )));

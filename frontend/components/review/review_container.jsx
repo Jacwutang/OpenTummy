@@ -9,12 +9,12 @@ const mapStateToProps = (state, ownProps) => {
 
   return({
     restaurant_id: ownProps.match.params.restId,
-    currentUser: user
+    currentUser: user,
+    reviews: Object.values(state.restaurants[ownProps.match.params.restId].reviews)
   });
 };
 
 const mapDispatchToProps = (dispatch,ownProps) => ({
-  requestAllReviews: (rest_id) => dispatch(requestAllReviews(rest_id)),
   createReview: (review) => dispatch(createReview(review))
 });
 

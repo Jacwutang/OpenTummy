@@ -5,10 +5,10 @@ import {RECEIVE_REVIEW, RECEIVE_ALL_REVIEWS} from '../actions/review_actions';
 const reviewsReducer = (state = {}, action) => {
   Object.freeze(state);
 
-  // let newState = merge({},state);
+  
 
   switch(action.type){
-  
+
 
 
     case RECEIVE_ALL_REVIEWS:

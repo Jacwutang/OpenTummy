@@ -7,6 +7,45 @@
   margin-bottom: 50px;
 }
 
+.reviews-wrapper{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  border-bottom: 1px solid #e6e6e6;
+  width:100%;
+  margin-left: 15%;
+
+}
+
+.reviews-ul{
+  border: none;
+  list-style: none;
+}
+
+.review-content{
+  margin-bottom: 15px;
+  font-size: 18px;
+  font-weight: lighter;
+  margin-top: 15px;
+
+}
+
+.content-div-last{
+  text-align: center;
+  background-color: #F8F8F8;
+  width: 65%;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #e0e0e0;
+  display: flex;
+  flex-direction: column;
+  align-items:stretch;
+
+}
+
+
+
+
 .restaurant-detail-header{
   margin-top: 50px;
   // height: 210px;
@@ -61,6 +100,7 @@
   height: 250px;
   margin-bottom: 10px;
   border: 1px solid #e0e0e0;
+
 }
 
 .content-div-first{
@@ -117,6 +157,9 @@ font-size: 20px;
 margin-left: 5px;
 text-align: -webkit-auto;
 margin-top: 5px;
+display: flex;
+justify-content: space-between;
+
 
 }
 

@@ -1,23 +1,17 @@
 class Api::ReviewsController < ApplicationController
 
-  def index
-    @reviews = Review.all
-
-
-  end
 
   def show
-
+    @review = Review.find(params[:id])
+    render "api/reviews/show"
   end
 
   def create
     @review = Review.new(review_params)
 
-    # if !current_user
-    #   render json: ["Please Login before leaving a review"], status: 401
-    #
-    # elsif @review.save && current_user
-    #   render "api/reviews/show"
+    if !current_user
+      render json: ["Please Login before leaving a review"], status: 401
+
     if !@review.save
       render json: ["Please fill all input fields"], status: 401
     elsif @review.save

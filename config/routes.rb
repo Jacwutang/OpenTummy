@@ -21,11 +21,9 @@ Rails.application.routes.draw do
     resources :reservations, only: [:create,:destroy,:edit,:update]
     resources :searches, only:[ :index]
     resources :favorites, only:[:index,:create,:destroy]
-    resources :reviews, only:[:index,:create,:show]
-    # resources :music_searches, only: [:index] do
-    #   get "songs by artist", on: :collection
-    #
-    # end
+    resources :reviews, only:[:create,:show]
+
+
 
   end
 
