@@ -11,6 +11,7 @@ class Api::ReviewsController < ApplicationController
 
     if !current_user
       render json: ["Please Login before leaving a review"], status: 401
+    end
 
     if !@review.save
       render json: ["Please fill all input fields"], status: 401
