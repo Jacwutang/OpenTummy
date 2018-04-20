@@ -30,9 +30,11 @@ class Favorite extends React.Component{
       return null;
     }
     else{
-      
+
       return(
-        <button onClick={this.handleSubmit} type="button" className = "fav-button-restaurant-item"> <i className="fa fa-star" aria-hidden="true"></i> Fav </button>
+        <button onClick={this.handleSubmit} type="button" className = "fav-button-restaurant-item"> <i className="fa fa-heart-o" aria-hidden="true">
+        <span className="fav-button-span"> Add to Favorites</span>
+        </i>  </button>
       );
     }
 
