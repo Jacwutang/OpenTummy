@@ -13,7 +13,6 @@ class Search extends React.Component{
 
         this.findMatches();
 
-
         $('.search-bar').css('display','block');
 
     }
