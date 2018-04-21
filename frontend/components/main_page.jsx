@@ -11,25 +11,9 @@ class MainPage extends React.Component{
   }
 
   componentDidMount(){
-    this.props.requestAllRestaurants().then(() => this.openModal());
+    this.props.requestAllRestaurants();
   }
 
-  openModal(){
-
-    debugger;
-    <Modal open={true} little>
-      <h2> Hi </h2>
-    </Modal>
-  }
-
-  // onOpenModal(){
-  //   this.setState({ open: true })
-  // }
-  //
-  // onCloseModal(){
-  //   this.setState({ open: false });
-  //
-  // }
 
 
 

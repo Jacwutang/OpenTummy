@@ -27,7 +27,7 @@ class ReservationForm extends React.Component{
   loadEditValues(){
     const {date,timeslot,head_count} =  this.props.reservations[this.props.reservationId];
 
-    console.log(date,timeslot,head_count);
+
 
     this.setState({
       loaded: true,
@@ -92,8 +92,6 @@ class ReservationForm extends React.Component{
         {restaurant_id: this.props.match.params.restId}
       );
 
-      console.log(reservation, "res OBJECT");
-
       this.props.editReservation(reservation).then(() => this.props.history.push('/profile'));
 
     } else {
@@ -106,7 +104,7 @@ class ReservationForm extends React.Component{
           {restaurant_id:this.props.match.params.restId}
         );
 
-        console.log(reservation, "reservation object");
+      
 
         this.props.createReservation(reservation).then(() => this.props.history.push('/profile'));
     }
@@ -140,7 +138,7 @@ class ReservationForm extends React.Component{
 
 
   render(){
-  
+
     return(
     <div>
       <div className = "reservation-div">

@@ -9,9 +9,7 @@ class ProfileReservations extends React.Component{
 
   }
 
-  componentDidMount(){
-    console.log(this.props);
-  }
+  
 
   handleSubmit(id){
 

@@ -67,7 +67,7 @@ class Review extends React.Component{
       <ul className="reviews-ul">
         {reviews.map( (review) => (
 
-            <div className="reviews-wrapper">
+            <div className="reviews-wrapper" key={review.id}>
               <div className="review-content">
               {review.body}
               </div>
